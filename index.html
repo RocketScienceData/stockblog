@@ -77,12 +77,12 @@
         <div class="kpi-card">
           <div class="kpi-label">Verified Win Rate</div>
           <div class="kpi-value positive" id="stat-winrate">0.0%</div>
-          <div class="kpi-meta">15m high_before_low verified</div>
+          <div class="kpi-meta">Break-even floor: &ge;37.5% (pre-cost)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Total Trades Logged</div>
           <div class="kpi-value" id="stat-total">0</div>
-          <div class="kpi-meta">Wins: 0 · Losses: 0</div>
+          <div class="kpi-meta">Wins: 0 &middot; Losses: 0 (bar-by-bar &ge;09:15 CET)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Intraday Target</div>
@@ -90,14 +90,14 @@
           <div class="kpi-meta">Morning Set &amp; Forget Limit</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Volatility Floor</div>
+          <div class="kpi-label">Volatility &amp; VWAP</div>
           <div class="kpi-value">ATR &ge; 1.2%</div>
-          <div class="kpi-meta">Stop-Loss: max(0.6×ATR, 1.2%)</div>
+          <div class="kpi-meta">Stop: max(0.6&times;ATR, 1.2%) &middot; Above VWAP</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Default Universe</div>
           <div class="kpi-value">EUROZONE</div>
-          <div class="kpi-meta">~140 EUR (€) Stocks · 0 FX Fee</div>
+          <div class="kpi-meta">Deduplicated EUR (&euro;) Liquids &middot; CET Normalized</div>
         </div>
       </div>
       <!-- AGENT_STATS_END -->
@@ -211,11 +211,12 @@
       <div class="article-section" style="margin-bottom: 0;">
         <!-- AGENT_LESSONS_START -->
         <ul style="margin-bottom: 0;">
-          <li><strong>Rule #1 (Volatility Floor):</strong> Avoid stocks with <code class="mono">atr_14_pct &lt; 1.2%</code> for intraday <code class="mono">+2.0%</code> targets unless a major earnings or M&amp;A catalyst is confirmed.</li>
-          <li><strong>Rule #2 (Macro Circuit Breaker):</strong> Always check <code class="mono">macro_indices</code> (<code class="mono">^STOXX50E</code>, <code class="mono">^GDAXI</code>, <code class="mono">^AEX</code>, <code class="mono">^FCHI</code>) before going long; declare <code class="mono">NO_TRADE</code> (Cash) during broad risk-off sell-offs rather than forcing low-probability setups.</li>
-          <li><strong>Rule #3 (Strict Timestamp Honesty):</strong> Verify 15-minute <code class="mono">intraday_session</code> timestamps (<code class="mono">high_time</code> vs <code class="mono">low_time</code>) during evening evaluation: a target hit before 09:15 CET or after <code class="mono">stop_loss</code> was breached never counts as a win.</li>
+          <li><strong>Rule #1:</strong> Avoid stocks with atr_14_pct &lt; 1.2% for intraday +2% targets unless a major earnings or M&amp;A catalyst is confirmed.</li>
+          <li><strong>Rule #2:</strong> Always check macro_indices (^STOXX50E, ^GDAXI, ^AEX) before going long; avoid forcing trades during broad market sell-offs.</li>
+          <li><strong>Rule #3:</strong> Evaluate post-09:15 CET 15-minute bars chronologically bar-by-bar (tools.py evaluate): a target hit at 10:00 CET before a 12:00 CET drop is a WIN, and pre-09:15 spikes are ignored.</li>
+          <li><strong>Rule #4:</strong> Reject stocks trading ex-dividend today (event_risk.ex_dividend_today == true) or printing an opening gap fade below session VWAP (RFC-0002 &amp; RFC-0004).</li>
         </ul>
-        <!-- AGENT_LESSONS_END -->
+      <!-- AGENT_LESSONS_END -->
       </div>
     </section>
 
@@ -247,6 +248,79 @@
           <h3>15m Timestamp Post-Mortem</h3>
           <p>Audits whether <code class="mono">today_high &ge; +2.0%</code> occurred after 09:15 CET and prior to any stop-loss breach, updating <code class="mono">memory.json</code> and this blog.</p>
         </div>
+      </div>
+    </section>
+
+
+    <!-- RFC & Validation Roadmap Section (Synced via CI Pipeline) -->
+    <section class="section" id="rfcs" style="padding-top: 0.5rem;">
+      <div class="section-header">
+        <h2 class="section-title">📋 Engineering RFCs &amp; Quantitative Validation Roadmap</h2>
+        <span class="section-subtitle">Tracked via GitHub Issues (#1–#6) &amp; Verified by Automated CI Pipeline</span>
+      </div>
+
+      <div class="table-wrap">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>RFC</th>
+              <th>Title &amp; Quantitative Scope</th>
+              <th>Target Component</th>
+              <th>GitHub Issue</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="mono"><strong>RFC-0001</strong></td>
+              <td>Pan-European Multi-Exchange Engine &amp; Multi-Agent Governance</td>
+              <td class="mono">tools.py, CONTRIBUTING.md</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/blob/main/rfcs/0001-pan-european-multi-agent-architecture.md" class="mono">Spec ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+            <tr>
+              <td class="mono"><strong>RFC-0006</strong></td>
+              <td>Code Review Findings &amp; 5-Phase Validation Roadmap (13 Audit Findings: Post-09:15 Bar-by-Bar Outcome Logic, Least-Privilege CLI, Time-Adjusted RVOL, CET Timezone Normalization, Deduplicated Universe)</td>
+              <td class="mono">tools.py, run_agent.sh, build_site.py</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/issues/1" class="mono">Issue #1 ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+            <tr>
+              <td class="mono"><strong>RFC-0003</strong></td>
+              <td>Historical Backtesting &amp; Paper-Trade Verification Engine (&ge;37.5% Pre-Cost Break-Even &amp; Random Baseline Comparison)</td>
+              <td class="mono">backtest.py, paper_trades.json</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/issues/2" class="mono">Issue #2 ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+            <tr>
+              <td class="mono"><strong>RFC-0002</strong></td>
+              <td>Intraday Session VWAP &amp; 15-Minute Opening Range Breakout (ORB) / Gap-Fade Filter</td>
+              <td class="mono">tools.py</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/issues/3" class="mono">Issue #3 ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+            <tr>
+              <td class="mono"><strong>RFC-0004</strong></td>
+              <td>Automated Earnings Date &amp; Ex-Dividend Event-Risk Guardrail</td>
+              <td class="mono">tools.py</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/issues/4" class="mono">Issue #4 ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+            <tr>
+              <td class="mono"><strong>RFC-0005</strong></td>
+              <td>European Sector Rotation &amp; Benchmark Index Relative Strength Scoring (<code class="mono">rs_vs_index_pct</code>)</td>
+              <td class="mono">tools.py</td>
+              <td><a href="https://github.com/RocketScienceData/rocketBidder/issues/5" class="mono">Issue #5 ↗</a></td>
+              <td><span class="badge badge-win">IMPLEMENTED</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="article-section" style="margin-top: 1rem; margin-bottom: 0; border-left: 3px solid #f59e0b;">
+        <p style="margin-bottom: 0; font-size: 0.88rem; color: var(--text-secondary);">
+          <strong>⚠️ Regulatory &amp; Paper-Trading Notice (AFM / MiFID II Compliance):</strong> RocketBidder is an open-source software engineering and quantitative research experiment. All entries, <code class="mono">+2.0%</code> targets, and stop-loss levels published on this dashboard represent automated <strong>paper-trading simulations</strong> and do not constitute personalized investment advice or financial recommendations.
+        </p>
       </div>
     </section>
 
