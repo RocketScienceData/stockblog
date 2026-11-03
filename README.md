@@ -25,6 +25,7 @@ This repository hosts the automated daily HTML research blog and performance das
 
 ```text
 stockblog/
+├── .nojekyll                            # Bypasses Jekyll processing on GitHub Pages
 ├── index.html                           # Main Dashboard, KPI telemetry, Featured Pick & Trade Archive
 ├── assets/
 │   ├── style.css                        # Dark-mode quantitative terminal stylesheet
