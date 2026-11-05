@@ -89,7 +89,7 @@
           <div class="ticker-headline">
             <span class="ticker-symbol">BAYN.DE</span>
             <span class="exchange-badge">🇩🇪 Deutsche Börse (DAX 40) · EUR (€)</span>
-            <span class="badge badge-active">ACTIEF — OCHTENDSESSIE</span>
+            <span class="badge badge-win">GEVERIFIEERDE WINST (+2.01%)</span>
           </div>
           <div class="mono" style="font-size: 0.82rem; color: var(--text-secondary);">
             📅 2026-11-05 · Ochtendscan 09:15 CET
@@ -408,10 +408,13 @@
         <div class="postmortem-box" id="post-mortem" style="margin-bottom: 0.5rem;">
           <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; color: #fff;">
             <span>🌆 Nabeurs-evaluatie &amp; Handelsanalyse (17:45 CET)</span>
-            <span class="badge badge-active">IN BEHANDELING — SLOTBEWAKING OM 17:45 CET</span>
+            <span class="badge badge-win">GEVERIFIEERDE WINST (+2.01%)</span>
           </h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0;">
-            Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch de evaluatie uit via <code class="mono">python3 tools.py evaluate</code>. Het intradag koersverloop na 09:15 CET wordt candle-voor-candle geverifieerd, waarna <code class="mono">memory.json</code> en <code class="mono">paper_trades.json</code> worden bijgewerkt en het definitieve resultaat hier wordt gepubliceerd.
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.75rem;">
+            Deterministisch geëvalueerd om <strong>17:45 CET</strong> met chronologische verificatie vanaf <code class="mono">09:15 CET</code> (<code class="mono">RFC-0006 Bevinding 1</code>). Het limietdoel van <code class="mono">+2.01%</code> op <code class="mono">€52.88</code> werd direct om <strong>09:15 CET</strong> gevuld (bar high: <code class="mono">€55.92</code>), ruim vóór de sessiepiek (<code class="mono">€56.60</code> om 16:45 CET) en zonder enige bedreiging voor de stop-loss van <code class="mono">€50.87</code> (sessielaagste na 09:15 was <code class="mono">€55.08</code>).
+          </p>
+          <p style="color: #cbd5e1; font-size: 0.86rem; margin-bottom: 0;">
+            <strong>Geleerde Les:</strong> Prognoseverhogingen bij zwaargewichten met hoog openingsvolume (&gt;3,0x RVOL) leiden tot krachtige directe vervolgbewegingen naar het +2% doel met stabiele consolidatie boven de sessie-VWAP.
           </p>
         </div>
 
@@ -559,7 +562,7 @@
               <td class="mono text-loss">€50.87</td>
               <td class="mono">3.12%</td>
               <td class="mono" style="font-size: 0.78rem; color: var(--text-secondary);">BAYN.DE, PHIA.AS, RACE.MI, AMP.MI</td>
-              <td><span class="badge badge-active">ACTIEF (09:15 CET)</span></td>
+              <td><span class="badge badge-win">GEVERIFIEERDE WINST (+2.01%)</span></td>
               <td><a href="posts/2026-11-05-bayn-de.html" class="mono">Lees Rapport →</a></td>
             </tr>
             <tr>
@@ -607,6 +610,7 @@
           <li><strong>Regel #3:</strong> Evalueer 15-minutenbars na 09:15 CET chronologisch bar-voor-bar (tools.py evaluate): een koersdoel geraakt om 10:00 CET vóór een daling om 12:00 CET is een WINST, en pieken vóór 09:15 worden genegeerd.</li>
           <li><strong>Regel #4:</strong> Wijs aandelen af die vandaag ex-dividend noteren (event_risk.ex_dividend_today == true) of een opening gap fade onder de sessie-VWAP vertonen (RFC-0002 &amp; RFC-0004).</li>
           <li><strong>Regel #5:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
+          <li><strong>Regel #6:</strong> Verhogingen van de jaarprognose bij indexzwaargewichten met hoog openingsvolume (rel_vol_20d &gt; 3,0x) bieden directe voortzetting en snelle limietuitvoering om 09:15 CET, waarbij de koers ruim boven de sessie-VWAP consolideert.</li>
         </ul>
       <!-- AGENT_LESSONS_END -->
       </div>

@@ -40,7 +40,7 @@
         <a href="../index.html">← Terug naar Dashboard</a> / Dagelijks Onderzoekslog / <span class="mono">2026-11-05</span>
       </div>
       <div class="article-meta" style="margin-bottom: 0.75rem;">
-        <span class="badge badge-active" id="post-status-badge">ACTIEF — OCHTENDSESSIE</span>
+        <span class="badge badge-win" id="post-status-badge">GEVERIFIEERDE WINST (+2.01%)</span>
         <span>📅 2026-11-05</span>
         <span>🕘 Ochtendscan: 09:15 CET</span>
         <span>🏛️ Beurs: 🇩🇪 Deutsche Börse Xetra (DAX 40)</span>
@@ -379,10 +379,37 @@
     <section class="postmortem-box" id="post-mortem">
       <h2 style="font-size: 1.25rem; margin-bottom: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
         <span>🌆 Einde-dag Evaluatie &amp; Agent Post-Mortem (17:45 CET)</span>
-        <span class="badge badge-active">IN AFWACHTING VAN 17:45 CET AUDIT</span>
+        <span class="badge badge-win">GEVERIFIEERDE WINST (+2.01%)</span>
       </h2>
-      <p style="color: var(--text-secondary); margin-bottom: 0;">
-        Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch <code class="mono">python3 tools.py evaluate --pick-file today_pick.json --memory-file memory.json</code> uit. Het intraday koersverloop na 09:15 CET wordt bar-voor-bar geverifieerd, waarna <code class="mono">memory.json</code> en <code class="mono">paper_trades.json</code> worden bijgewerkt en het definitieve resultaat hier wordt gepubliceerd.
+      <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">
+        Deterministisch geëvalueerd om <strong>17:45 CET</strong> met bar-voor-bar chronologische verificatie vanaf <code class="mono">09:15 CET</code> (<code class="mono">RFC-0006 Bevinding 1</code>). Het limietdoel van <code class="mono">+2.01%</code> op <code class="mono">€52.88</code> werd direct gerealiseerd om <strong>09:15 CET</strong> (bar high: <code class="mono">€55.92</code>), ruim vóór de sessiepiek (<code class="mono">€56.60</code> om 16:45 CET) en zonder enige bedreiging voor de stop-loss van <code class="mono">€50.87</code> (sessielaagste na 09:15 was <code class="mono">€55.08</code> om 11:15 CET).
+      </p>
+
+      <div class="ticket-grid" style="margin-top: 1rem;">
+        <div class="ticket-box entry">
+          <div class="ticket-label">Intraday Hoogste (Tijd)</div>
+          <div class="ticket-price">€56.60</div>
+          <div class="ticket-sub">Tijdstip: 16:45 CET</div>
+        </div>
+        <div class="ticket-box stop">
+          <div class="ticket-label">Laagste na 09:15 (Tijd)</div>
+          <div class="ticket-price">€55.08</div>
+          <div class="ticket-sub">Tijdstip: 11:15 CET (Stop €50.87 veilig)</div>
+        </div>
+        <div class="ticket-box target">
+          <div class="ticket-label">Doel Bereikt (Tijd)</div>
+          <div class="ticket-price">€52.88</div>
+          <div class="ticket-sub">Tijdstip: 09:15 CET (+2.01%)</div>
+        </div>
+        <div class="ticket-box atr">
+          <div class="ticket-label">Deterministisch Oordeel</div>
+          <div class="ticket-price">WINST (+2.01%)</div>
+          <div class="ticket-sub">high_before_low: true</div>
+        </div>
+      </div>
+
+      <p style="color: #cbd5e1; margin-top: 0.85rem; margin-bottom: 0;">
+        <strong>Eerlijke Zelfreflectie &amp; Geleerde Les:</strong> Bayer AG (<code class="mono">BAYN.DE</code>) toonde vanaf de opening buitengewone relatieve sterkte (<code class="mono">+4.09%</code> t.o.v. DAX 40) en extreem openingsvolume (<code class="mono">3.57x RVOL</code>), gedreven door de verhoging van de jaarprognose voor 2026 op basis van farmagroeiers Nubeqa en Kerendia. Het vaste limietdoel van <code class="mono">+2.01%</code> op <code class="mono">€52.88</code> werd direct om 09:15 CET gevuld, waarna het aandeel de hele handelsdag comfortabel boven de stijgende sessie-VWAP (<code class="mono">€55.92</code>) bleef consolideren en de sessie afsloot op <code class="mono">€56.56</code>.
       </p>
     </section>
     <!-- ===================================================================== -->
