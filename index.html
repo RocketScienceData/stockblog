@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>RocketBidder — Autonome Pan-Europese Kwantitatieve Handelsblog</title>
-  <meta name="description" content="Dagelijks autonoom Pan-Europees aandelenonderzoek (AEX, DAX, CAC 40, BEL 20, IBEX 35, FTSE MIB). Ochtend 09:15 CET +2% Set & Forget orderbiljetten en 17:45 CET geverifieerde evaluaties." />
+  <meta name="description" content="Dagelijks autonoom Pan-Europees kwantitatief aandelenonderzoek (AEX, DAX, CAC 40, BEL 20, IBEX 35, FTSE MIB). 09:15 CET trade setups met +2% koersdoelen en 17:45 CET geverifieerde evaluaties." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -21,12 +21,12 @@
         <span class="brand-sub">EU KWANT AGENT</span>
       </a>
       <nav class="nav-links">
-        <a href="#latest" class="active">Nieuwste Analyse</a>
+        <a href="#latest" class="active">Dagelijkse Selectie</a>
         <a href="#runs">DAG Executies ⏱️</a>
         <a href="#archive">Transactiearchief</a>
-        <a href="#lessons">Agent Geheugen</a>
-        <a href="#strategy">4-Fasen Trechter</a>
-        <a href="stats.html">Runner Statistieken ⏱️</a>
+        <a href="#lessons">Strategiegeheugen</a>
+        <a href="#strategy">Selectietrechter</a>
+        <a href="stats.html">Runner Telemetrie ⏱️</a>
         <a href="https://github.com/RocketScienceData/rocketBidder" target="_blank" rel="noopener">Engine Opslagplaats ↗</a>
       </nav>
       <div class="schedule-pill">
@@ -48,29 +48,29 @@
       <!-- AGENT_STATS_START -->
       <div class="kpi-grid">
         <div class="kpi-card">
-          <div class="kpi-label">Geverifieerd Winpercentage</div>
+          <div class="kpi-label">Geverifieerde Winrate</div>
           <div class="kpi-value positive" id="stat-winrate">100.0%</div>
-          <div class="kpi-meta">Break-even ondergrens: &ge;37.5% (vóór transactiekosten)</div>
+          <div class="kpi-meta">Theoretische break-even: &ge;37.5% (vóór frictiekosten)</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Totaal Gelogde Transacties</div>
+          <div class="kpi-label">Afgeronde Transacties</div>
           <div class="kpi-value" id="stat-total">1</div>
-          <div class="kpi-meta">Winsten: 1 &middot; Verliezen: 0 (bar-voor-bar &ge;09:15 CET)</div>
+          <div class="kpi-meta">Winst: 1 &middot; Verlies: 0 (candle-verificatie &ge;09:15 CET)</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Intraday Doel</div>
+          <div class="kpi-label">Intradag Koersdoel</div>
           <div class="kpi-value accent">+2.00%</div>
-          <div class="kpi-meta">Ochtend Set &amp; Forget Limietorder</div>
+          <div class="kpi-meta">Vaste intradag winstneming (Limiet)</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Volatiliteit &amp; VWAP</div>
+          <div class="kpi-label">Volatiliteit &amp; Trendfilter</div>
           <div class="kpi-value">ATR &ge; 1.2%</div>
-          <div class="kpi-meta">Stop: max(0.6&times;ATR, 1.2%) &middot; Boven VWAP</div>
+          <div class="kpi-meta">Stop: max(0,6&times;ATR, 1,2%) &middot; Boven VWAP</div>
         </div>
         <div class="kpi-card">
-          <div class="kpi-label">Standaard Universum</div>
+          <div class="kpi-label">Handelsuniversum</div>
           <div class="kpi-value">EUROZONE</div>
-          <div class="kpi-meta">Ontdubbeld EUR (&euro;) Liquide &middot; CET Genormaliseerd</div>
+          <div class="kpi-meta">Liquide Eurozone-aandelen (EUR) &middot; CET-tijdzone</div>
         </div>
       </div>
       <!-- AGENT_STATS_END -->
@@ -79,7 +79,7 @@
     <!-- Uitgelichte Volledige Dagelijkse Analyse -->
     <section class="section" id="latest" style="padding-top: 1rem;">
       <div class="section-header">
-        <h2 class="section-title">🎯 Dagelijkse Analyse &amp; Orderbiljet: Bayer AG (<span class="mono">BAYN.DE</span>)</h2>
+        <h2 class="section-title">🎯 Trade Setup &amp; Daganalyse: Bayer AG (<span class="mono">BAYN.DE</span>)</h2>
         <span class="section-subtitle">Vastgesteld om 09:15 CET (Instap) &middot; Automatische Evaluatie om 17:45 CET</span>
       </div>
 
@@ -96,27 +96,27 @@
           </div>
         </div>
 
-        <!-- 1. Orderbiljet -->
+        <!-- 1. Orderoverzicht & Niveaus -->
         <div class="ticket-grid">
           <div class="ticket-box entry">
-            <div class="ticket-label">1. Marktinstap (09:15 CET)</div>
+            <div class="ticket-label">1. Instapniveau (09:15 CET)</div>
             <div class="ticket-price">€51.84</div>
-            <div class="ticket-sub">Uitvoering na openingveiling (96 aandelen · €4.977)</div>
+            <div class="ticket-sub">Uitvoering na openingsveiling (96 aandelen · €4.977)</div>
           </div>
           <div class="ticket-box target">
-            <div class="ticket-label">2. Limietverkoop Koersdoel (+2.0%)</div>
+            <div class="ticket-label">2. Winstdoel (+2,0% Limiet)</div>
             <div class="ticket-price">€52.88</div>
-            <div class="ticket-sub">+€1.04 per aandeel geautomatiseerd limietdoel</div>
+            <div class="ticket-sub">+€1,04 per aandeel vaste winstneming</div>
           </div>
           <div class="ticket-box stop">
-            <div class="ticket-label">3. Stop-Loss (ATR Beschermd)</div>
+            <div class="ticket-label">3. Stop-Loss (ATR-bewaakt)</div>
             <div class="ticket-price">€50.87</div>
-            <div class="ticket-sub">-1.87% maximaal neerwaarts risico (0.6×ATR)</div>
+            <div class="ticket-sub">-1,87% maximaal neerwaarts risico (0,6×ATR)</div>
           </div>
           <div class="ticket-box atr">
-            <div class="ticket-label">4. Selectiewaarden</div>
+            <div class="ticket-label">4. Technische Selectiewaarden</div>
             <div class="ticket-price">ATR 3.12%</div>
-            <div class="ticket-sub">RSI-14: 71.0 · RelVol: 3.57x</div>
+            <div class="ticket-sub">RSI-14: 71,0 · RelVol: 3,57x</div>
           </div>
         </div>
 
@@ -126,11 +126,11 @@
           <div class="chart-panel">
             <div>
               <div class="panel-header">
-                <span class="panel-title">📈 15m Intraday Koersgrafiek &amp; VWAP (<span class="mono">BAYN.DE</span>)</span>
+                <span class="panel-title">📈 15m Intraday Koersverloop &amp; VWAP (<span class="mono">BAYN.DE</span>)</span>
                 <div class="chart-legend">
                   <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Koers (15m)</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#c084fc;"></span>Sessie-VWAP</span>
-                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Doel (+2%)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Koersdoel (+2%)</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>ATR Stop-Loss</span>
                 </div>
               </div>
@@ -183,7 +183,7 @@
 </div>
             </div>
             <div style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.76rem; color:var(--text-secondary);" class="mono">
-              <span>15m ORB Bandbreedte: €51.36 – €52.65</span>
+              <span>15m Openingsbereik: €51.36 – €52.65</span>
               <span>VWAP: €53.46 (Koers &gt; VWAP ✅)</span>
               <span>Tijdzone: Europe/Amsterdam (CET)</span>
             </div>
@@ -198,7 +198,7 @@
 
             <div class="ta-metrics-list">
               <div class="ta-metric-row">
-                <span class="ta-metric-name">SMA-20 / SMA-50 Trend</span>
+                <span class="ta-metric-name">Kortetermijntrend (SMA-20 / SMA-50)</span>
                 <span class="ta-metric-val">
                   <span>€45.50 <span class="text-win">(+13.9%)</span></span>
                   <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">&gt; SMA20/50</span>
@@ -206,17 +206,17 @@
               </div>
 
               <div class="ta-metric-row">
-                <span class="ta-metric-name">Langetermijn SMA-200</span>
+                <span class="ta-metric-name">Langetermijntrend (SMA-200)</span>
                 <span class="ta-metric-val">
                   <span>€43.62 <span class="text-win">(+18.8%)</span></span>
-                  <span style="color:var(--color-win); font-size:0.75rem;">Stijgende trend</span>
+                  <span style="color:var(--color-win); font-size:0.75rem;">Opwaartse trend</span>
                 </span>
               </div>
 
               <div class="ta-metric-row" style="flex-direction:column; align-items:stretch;">
                 <div style="display:flex; justify-content:space-between; align-items:center;">
-                  <span class="ta-metric-name">RSI-14 Oscillator</span>
-                  <span class="ta-metric-val">71.0 <span style="font-size:0.7rem; color:var(--accent-blue);">(NEUTRAAL / UITGEREKT)</span></span>
+                  <span class="ta-metric-name">RSI Momentum (14-daags)</span>
+                  <span class="ta-metric-val">71.0 <span style="font-size:0.7rem; color:var(--accent-blue);">(NEUTRAAL / OVERBOUGHT)</span></span>
                 </div>
                 <div class="rsi-bar-track">
                   <div class="rsi-bar-thumb" style="left:71.0%;"></div>
@@ -224,7 +224,7 @@
               </div>
 
               <div class="ta-metric-row">
-                <span class="ta-metric-name">Intraday VWAP &amp; Gap Check</span>
+                <span class="ta-metric-name">Sessie-VWAP &amp; Gap-analyse</span>
                 <span class="ta-metric-val">
                   <span>€53.46</span>
                   <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">GEEN GAP FADE</span>
@@ -232,23 +232,23 @@
               </div>
 
               <div class="ta-metric-row">
-                <span class="ta-metric-name">Rel. Volume (09:15 Tijd-Geschaald)</span>
+                <span class="ta-metric-name">Relatief Volume (RVOL, gecorrigeerd)</span>
                 <span class="ta-metric-val">
                   <span class="text-win">3.57x</span>
-                  <span style="font-size:0.72rem; color:var(--text-secondary);">t.o.v. 20d opening</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">t.o.v. 20d openingsvolume</span>
                 </span>
               </div>
 
               <div class="ta-metric-row">
-                <span class="ta-metric-name">Relatieve Sterkte vs Index</span>
+                <span class="ta-metric-name">Relatieve Sterkte t.o.v. Benchmark</span>
                 <span class="ta-metric-val">
                   <span class="text-win">+4.09%</span>
-                  <span style="font-size:0.72rem; color:var(--text-secondary);">Beter dan benchmark</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">Outperformance vs index</span>
                 </span>
               </div>
 
               <div class="ta-metric-row">
-                <span class="ta-metric-name">ATR-14 &amp; Risico/Rendement</span>
+                <span class="ta-metric-name">ATR-14 &amp; Risk/Reward Ratio</span>
                 <span class="ta-metric-val">
                   <span>ATR 3.12%</span>
                   <span style="color:var(--accent-blue); font-size:0.75rem;">R/R 1:1.07 (BE 37,5%)</span>
@@ -259,19 +259,19 @@
         </div>
         <!-- AGENT_TA_CHART_END -->
 
-        <!-- Kwantitatieve Thesis -->
+        <!-- Handelsthese & Katalysator -->
         <div class="article-section" style="margin-top: 1rem; margin-bottom: 1.25rem;">
-          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">💡 Kwantitatieve Thesis</h3>
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">💡 Handelsthese &amp; Katalysator</h3>
           <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 0;">
-            Bayer AG (<code class="mono">BAYN.DE</code>) leidt vandaag de Duitse markt met <code class="mono">+4,09%</code> relatieve sterkte ten opzichte van de DAX 40, een openingsvolume van <code class="mono">3,57x</code> het 20-daags gemiddelde en een sterke ATR-14 van <code class="mono">3,12%</code>. Na een opwaartse herziening van de winstverwachting voor geheel 2026 dankzij kaskrakers Nubeqa en Kerendia, noteert het aandeel overtuigend boven alle belangrijke voortschrijdende gemiddelden (SMA-20/50/200) zonder enig ex-dividend- of agendarisico (<code class="mono">RFC-0004</code>).
+            Bayer AG (<code class="mono">BAYN.DE</code>) voert vandaag de Duitse markt aan met <code class="mono">+4,09%</code> relatieve sterkte ten opzichte van de DAX 40, een openingsvolume van <code class="mono">3,57x</code> het 20-daags gemiddelde en een solide ATR-14 van <code class="mono">3,12%</code>. Na een opwaartse herziening van de winstverwachting voor geheel 2026 dankzij farmakaskrakers Nubeqa en Kerendia, noteert het aandeel overtuigend boven alle toonaangevende voortschrijdende gemiddelden (SMA-20/50/200) zonder enig ex-dividend- of agendarisico (<code class="mono">RFC-0004</code>).
           </p>
         </div>
 
-        <!-- Fase 1: Pan-Europees Macro Regiem -->
+        <!-- Fase 1: Macro-klimaat & Beursregime -->
         <div class="article-section" style="margin-bottom: 1.25rem;">
-          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🌍 Fase 1: Pan-Europees Macro Regiem (09:15 CET)</h3>
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🌍 Fase 1: Macro-klimaat &amp; Beursregime (09:15 CET)</h3>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">
-            Voorafgaand aan het scannen van individuele aandelen analyseert RocketBidder de toonaangevende Europese indices om vast te stellen of het marktklimaat constructief is of dat er sprake is van een paniekverkoop:
+            Voorafgaand aan het scannen van individuele aandelen analyseert RocketBidder de toonaangevende Europese indices om vast te stellen of het marktklimaat constructief is of dat er sprake is van een brede verkoopgolf:
           </p>
           <div class="macro-grid">
             <div class="macro-card">
@@ -304,15 +304,15 @@
             </div>
           </div>
           <p style="color: #cbd5e1; font-size: 0.88rem; margin-top: 0.75rem; margin-bottom: 0;">
-            <strong>Regiem Oordeel:</strong> De Europese markten laten een ordelijke consolidatie zien na eerdere stijgingen. De Euro Stoxx 50 staat op -0,51%, ruim boven de -1,80% noodstop NO_TRADE drempelwaarde. De marktliquiditeit is uitstekend, wat een ideaal klimaat biedt voor aandelenspecifieke selectie op basis van duidelijke bedrijfscijfers en katalysatoren.
+            <strong>Regiem Oordeel:</strong> De Europese beurzen laten een ordelijke consolidatie zien na eerdere stijgingen. De Euro Stoxx 50 staat op -0,51%, ruim boven de -1,80% noodstop NO_TRADE drempelwaarde. De marktliquiditeit is uitstekend, wat een ideaal klimaat biedt voor aandelenspecifieke selectie op basis van duidelijke bedrijfscijfers en katalysatoren.
           </p>
         </div>
 
-        <!-- Fase 2 & 3: 4-Aandelen Selectietrechter -->
+        <!-- Fase 2 & 3: De Selectietrechter -->
         <div class="article-section" style="margin-bottom: 1.25rem;">
-          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🔬 Fase 2 &amp; 3: De 4-Aandelen Selectietrechter</h3>
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🔬 Fase 2 &amp; 3: De Selectietrechter (Top-4 Analyse)</h3>
           <p style="color: var(--text-secondary); font-size: 0.9rem;">
-            Van 143 gescande Eurozone-aandelen met <code class="mono">atr_14_pct &ge; 1.2%</code> zijn 4 topkandidaten diepgaand geëvalueerd (<code class="mono">tools.py deepdive</code>):
+            Van 143 gescande Eurozone-aandelen met <code class="mono">atr_14_pct &ge; 1.2%</code> zijn 4 topkandidaten diepgaand doorgelicht (<code class="mono">tools.py deepdive</code>):
           </p>
           <div class="candidate-grid">
             <div class="candidate-card winner">
@@ -326,7 +326,7 @@
                 <span>RelVol: 3.57x</span>
               </div>
               <p style="font-size: 0.86rem; margin-bottom: 0;">
-                <strong>Waarom Geselecteerd:</strong> Opwaartse herziening van de EBITDA-jaarprognose voor 2026 dankzij oncologie (Nubeqa) en cardiovasculair (Kerendia) momentum. Sterke +4,09% relatieve sterkte, openings-RVOL van 3,57x en koersvorming boven de sessie-VWAP zonder gap fade.
+                <strong>Selectie-argumentatie:</strong> Opwaartse herziening van de EBITDA-jaarprognose voor 2026 dankzij oncologie (Nubeqa) en cardiovasculair (Kerendia) momentum. Sterke +4,09% relatieve sterkte, openings-RVOL van 3,57x en koersvorming boven de sessie-VWAP zonder gap fade.
               </p>
             </div>
 
@@ -341,7 +341,7 @@
                 <span>RelVol: 3.24x</span>
               </div>
               <p style="font-size: 0.86rem; margin-bottom: 0;">
-                <strong>Waarom Afgewezen:</strong> Goede fundamentele schikking van €288m met het Amerikaanse ministerie van Justitie, maar de RSI-14 is met 82,2 extreem overbought geraakt met een lagere ATR (2,13%), waardoor het neerwaarts risico groter is dan bij BAYN.DE.
+                <strong>Reden van afwijzing:</strong> Gunstige schikking van €288m met het Amerikaanse ministerie van Justitie, maar de RSI-14 is met 82,2 technisch overbought geraakt met een lagere ATR (2,13%), waardoor de risk/reward-verhouding minder gunstig is dan bij BAYN.DE.
               </p>
             </div>
 
@@ -356,7 +356,7 @@
                 <span>RelVol: 3.78x</span>
               </div>
               <p style="font-size: 0.86rem; margin-bottom: 0;">
-                <strong>Waarom Afgewezen:</strong> Automatisch afgewezen door RFC-0002 beveiliging (<code class="mono">opening_gap_fade == true</code>). Ondanks positieve vraagberichten naar Luce EV zakte de openingssprong tijdens de vroege handel direct onder de sessie-VWAP.
+                <strong>Reden van afwijzing:</strong> Automatisch gefilterd door het openingsfilter (<code class="mono">opening_gap_fade == true</code>). Ondanks positieve vraagberichten naar Luce EV zakte de openingssprong tijdens de vroege handel direct onder de sessie-VWAP.
               </p>
             </div>
 
@@ -371,19 +371,19 @@
                 <span>RelVol: 1.45x</span>
               </div>
               <p style="font-size: 0.86rem; margin-bottom: 0;">
-                <strong>Waarom Afgewezen:</strong> Technisch verzwakt onder dalende 20-daags (€12,46) en 50-daags (€12,03) gemiddelden met merkbaar lager relatief volume (1,45x) vergeleken met de Duitse marktleider.
+                <strong>Reden van afwijzing:</strong> Technisch verzwakt onder dalende 20-daags (€12,46) en 50-daags (€12,03) gemiddelden met beduidend lager relatief volume (1,45x) vergeleken met de DAX-koploper.
               </p>
             </div>
           </div>
         </div>
 
-        <!-- Fase 4: Diepte-analyse Winnaar & Katalysator -->
+        <!-- Fase 4: Technische & Fundamentele Verdieping -->
         <div class="article-section" style="margin-bottom: 1.25rem;">
-          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🎯 Fase 4: Diepte-analyse &amp; Katalysator (<span class="mono">BAYN.DE</span>)</h3>
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">🎯 Fase 4: Technische &amp; Fundamentele Verdieping (<span class="mono">BAYN.DE</span>)</h3>
           <ul style="color: #cbd5e1; font-size: 0.9rem; margin-bottom: 0;">
             <li><strong>Trendstructuur:</strong> De koers (€51,84) noteert ruim boven SMA-20 (€45,50 / +13,9%), SMA-50 (€47,27 / +9,7%) en langetermijn SMA-200 (€43,62 / +18,8%), wat een krachtige middellangetermijn trendomslag bevestigt.</li>
-            <li><strong>Intraday VWAP &amp; Openingsbereik (09:00–09:15 CET):</strong> Zuiver openingsbereik van €51,36 – €52,65; noteert overtuigend boven de sessie-VWAP (€52,10) met positieve volume-expansie.</li>
-            <li><strong>Agendarisico Veiligheidsgrens (RFC-0004):</strong> Ex-dividenddatum is pas op 2026-04-27 (<code class="mono">ex_dividend_today: false</code>); Q3-kwartaalcijfers zijn al gerapporteerd op 2026-11-03 (<code class="mono">earnings_within_2d: false</code>). Geen binair agendarisico.</li>
+            <li><strong>Sessie-VWAP &amp; Openingsbereik (09:00–09:15 CET):</strong> Zuiver openingsbereik van €51,36 – €52,65; noteert overtuigend boven de sessie-VWAP (€52,10) met positieve volume-expansie.</li>
+            <li><strong>Agendarisico &amp; Cijferfilter (RFC-0004):</strong> Ex-dividenddatum is pas op 2026-04-27 (<code class="mono">ex_dividend_today: false</code>); Q3-kwartaalcijfers zijn al gerapporteerd op 2026-11-03 (<code class="mono">earnings_within_2d: false</code>). Geen binair agendarisico.</li>
             <li><strong>Geverifieerde RSS Nieuwsberichten:</strong>
               <ul>
                 <li><em>"Wat vertelt Bayer (XTRA:BAYN) beleggers met de hogere winstprognose voor 2026? — Yahoo Finance"</em></li>
@@ -394,14 +394,14 @@
           </ul>
         </div>
 
-        <!-- Einde-dag Evaluatie & Agent Post-Mortem -->
+        <!-- Nabeurs-evaluatie & Handelsanalyse -->
         <div class="postmortem-box" id="post-mortem" style="margin-bottom: 0.5rem;">
           <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; color: #fff;">
-            <span>🌆 Einde-dag Evaluatie &amp; Agent Post-Mortem (17:45 CET)</span>
-            <span class="badge badge-active">IN AFWACHTING VAN 17:45 CET AUDIT</span>
+            <span>🌆 Nabeurs-evaluatie &amp; Handelsanalyse (17:45 CET)</span>
+            <span class="badge badge-active">IN BEHANDELING — SLOTBEWAKING OM 17:45 CET</span>
           </h3>
           <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0;">
-            Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch <code class="mono">python3 tools.py evaluate --pick-file today_pick.json --memory-file memory.json</code> uit. Het intraday koersverloop na 09:15 CET wordt bar-voor-bar geverifieerd, waarna <code class="mono">memory.json</code> en <code class="mono">paper_trades.json</code> worden bijgewerkt en het definitieve resultaat hier wordt gepubliceerd.
+            Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch de evaluatie uit via <code class="mono">python3 tools.py evaluate</code>. Het intradag koersverloop na 09:15 CET wordt candle-voor-candle geverifieerd, waarna <code class="mono">memory.json</code> en <code class="mono">paper_trades.json</code> worden bijgewerkt en het definitieve resultaat hier wordt gepubliceerd.
           </p>
         </div>
 
@@ -484,7 +484,7 @@
               <div style="display: flex; align-items: center; padding-left: 178px; gap: 6px; margin-bottom: 6px;">
                 <div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">00:15</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">23:48</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">23:46</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">22:34</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">17:35</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">17:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">16:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">15:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">14:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">13:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">12:00</div><div style="width: 28px; text-align: center; font-size: 9.5px; font-family: monospace; color: #64748b;">11:00</div>
               </div>
-              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Git Sync & Auto-Pull</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Auto-Pull (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Auto-Pull (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Auto-Pull (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Auto-Pull (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Macro Regiem Filter</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macro Regiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macro Regiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macro Regiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macro Regiem Filter (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">AI Kwantitatief Besluit</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="AI Kwantitatief Besluit (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="AI Kwantitatief Besluit (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="AI Kwantitatief Besluit (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="AI Kwantitatief Besluit (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="AI Kwantitatief Besluit (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="AI Kwantitatief Besluit (Overgeslagen in INTRADAY modus - 0 tokens)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">15m Bar-voor-Bar Evaluatie</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Bar-voor-Bar Evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Bar-voor-Bar Evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Bar-voor-Bar Evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Bar-voor-Bar Evaluatie (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Deterministische Site Generatie</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site Generatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site Generatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site Generatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site Generatie (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Publicatie naar StockBlog</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div></div></div>
+              <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Git Sync & Code-update</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Code-update (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Code-update (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Git Sync & Code-update (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Git Sync & Code-update (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Macroregiem Filter</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macroregiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macroregiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Macroregiem Filter (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Macroregiem Filter (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Kwantitatieve Selectie</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Kwantitatieve Selectie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Kwantitatieve Selectie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Kwantitatieve Selectie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Kwantitatieve Selectie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Kwantitatieve Selectie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #374151; opacity: 0.45; border: 1px dashed #6b7280;" title="Kwantitatieve Selectie (Overgeslagen in INTRADAY modus - 0 tokens)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">15m Candle-evaluatie</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Candle-evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Candle-evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="15m Candle-evaluatie (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="15m Candle-evaluatie (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Deterministische Site-opbouw</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site-opbouw (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site-opbouw (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Deterministische Site-opbouw (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Deterministische Site-opbouw (GESLAAGD)"></div></div></div><div style="display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">  <div style="width: 170px; font-size: 11.5px; font-family: monospace; color: #cbd5e1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">Publicatie naar StockBlog</div>  <div style="display: flex; gap: 6px;"><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #ef4444;" title="Publicatie naar StockBlog (GEFAALD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div><div style="width: 28px; height: 18px; border-radius: 3px; background: #10b981;" title="Publicatie naar StockBlog (GESLAAGD)"></div></div></div>
             </div>
           </div>
         </div>
@@ -496,12 +496,12 @@
           <thead>
             <tr>
               <th>Status</th>
-              <th>Wanneer (Starttijd CET)</th>
-              <th>Hoelang (Duur)</th>
+              <th>Starttijd (CET)</th>
+              <th>Doorlooptijd</th>
               <th>Modus</th>
               <th>Engine</th>
-              <th>Primaire Selectie</th>
-              <th>Actie &amp; Telemetrie Details</th>
+              <th>Focusaandeel</th>
+              <th>Actie &amp; Details</th>
             </tr>
           </thead>
           <tbody>
@@ -606,29 +606,29 @@
     <section class="section" id="strategy">
       <div class="section-header">
         <h2 class="section-title">⚙️ Het 4-Fasen Pan-Europese Selectieproces</h2>
-        <span class="section-subtitle">Deterministische Python Berekeningen + Autonome AI Analyse</span>
+        <span class="section-subtitle">Deterministische Kwantitatieve Berekeningen + Autonome AI Analyse</span>
       </div>
 
       <div class="funnel-grid">
         <div class="funnel-step">
           <div class="funnel-num">Fase 01 · 09:15 CET</div>
-          <h3>Macro Regiem Controle</h3>
-          <p>Evalueert de Euro Stoxx 50, DAX, AEX en CAC 40 15 minuten na de openingsbel. Schakelt over naar een <code class="mono">NO_TRADE</code> dag in cash wanneer brede markten in paniekverkoop verkeren.</p>
+          <h3>Macroregiem &amp; Beursklimaat</h3>
+          <p>Evalueert de Euro Stoxx 50, DAX, AEX en CAC 40 15 minuten na opening. Schakelt over naar een <code class="mono">NO_TRADE</code> dag in liquiditeit wanneer brede markten in paniekverkoop verkeren.</p>
         </div>
         <div class="funnel-step">
           <div class="funnel-num">Fase 02 · Voorselectie</div>
           <h3>ATR-14 Volatiliteitsfilter</h3>
-          <p>Filtert defensieve aandelen met lage bèta (<code class="mono">ATR-14 &lt; 1.2%</code>) weg die het dagelijkse bereik missen om een intraday limietdoel van <code class="mono">+2.0%</code> te halen.</p>
+          <p>Filtert laagvolatiele aandelen (<code class="mono">ATR-14 &lt; 1,2%</code>) weg die onvoldoende intradag bandbreedte bezitten om een winstdoel van <code class="mono">+2,0%</code> te realiseren.</p>
         </div>
         <div class="funnel-step">
-          <div class="funnel-num">Fase 03 · Diepte-analyse</div>
-          <h3>4-Aandelen Trechter &amp; Nieuws</h3>
-          <p>Onderzoekt 15m openingscandles, SMA-20/50/200 uitlijning, RSI-14, relatief volume en actuele RSS-nieuwsberichten voor de top 3–4 kandidaten.</p>
+          <div class="funnel-num">Fase 03 · Verdieping</div>
+          <h3>Selectietrechter &amp; Katalysatordetectie</h3>
+          <p>Onderzoekt 15m openingscandles, trenduitlijning (SMA-20/50/200), RSI-momentum, gecorrigeerd RVOL en bedrijfsnieuws voor de 4 sterkste kandidaten.</p>
         </div>
         <div class="funnel-step">
           <div class="funnel-num">Fase 04 · 17:45 CET</div>
-          <h3>15m Bar Evaluatie &amp; Post-Mortem</h3>
-          <p>Controleert of de dagpiek (<code class="mono">&ge; +2.0%</code>) optrad na 09:15 CET en vóór enig stop-loss niveau werd geraakt, waarna <code class="mono">memory.json</code> en deze blog worden bijgewerkt.</p>
+          <h3>Nabeurs-evaluatie &amp; Geheugen</h3>
+          <p>Verifieert candle-voor-candle of het koersdoel (<code class="mono">&ge; +2,0%</code>) werd bereikt vóór de stop-loss, waarna het strategiegeheugen en de blog worden bijgewerkt.</p>
         </div>
       </div>
     </section>
