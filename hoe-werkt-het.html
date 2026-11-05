@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hoe Werkt Het? — RocketBidder Kwantitatieve Handelsagent &amp; Infographic</title>
+  <meta name="description" content="Volledige visuele infographic en kwantitatieve uitleg van RocketBidder: de 5-fasen handelsdag, Set &amp; Forget +2% limietorders, WorldQuant Alpha guardrails en deterministische 17:45 CET nabeurs-audit." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+
+  <!-- Bovenste Navigatiebalk met Monochroom Logo -->
+  <header class="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" class="brand" aria-label="RocketBidder Home">
+        <span class="brand-icon" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="rotate(45 16 16)">
+              <path d="M16 4C16 4 20.5 9 20.5 16L23.5 19V22L19.5 20.5L17.5 24.5H14.5L12.5 20.5L8.5 22V19L11.5 16C11.5 9 16 4 16 4Z" fill="#f8fafc"/>
+              <line x1="16" y1="7" x2="16" y2="16.5" stroke="#090d16" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="16" cy="11" r="1.1" fill="#090d16"/>
+              <path d="M14.5 26.5L16 29L17.5 26.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </span>
+        <span class="brand-text">RocketBidder</span>
+        <span class="brand-sub">KWANT AGENT</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html">Dagelijkse Selectie</a>
+        <a href="hoe-werkt-het.html" class="active">Hoe Werkt Het? 💡</a>
+        <a href="index.html#runs">DAG Executies ⏱️</a>
+        <a href="index.html#archive">Transactiearchief</a>
+        <a href="index.html#strategy">Selectietrechter</a>
+        <a href="stats.html">Runner Telemetrie ⏱️</a>
+        <a href="https://github.com/RocketScienceData/rocketBidder" target="_blank" rel="noopener">Engine Opslagplaats ↗</a>
+      </nav>
+      <div class="schedule-pill">
+        <span class="pulse-dot"></span>
+        <span>09:15 CET Instap · 17:45 CET Audit</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Pagina Kop & Inleiding -->
+    <section class="section" style="padding-top: 2rem; padding-bottom: 1rem;">
+      <div class="breadcrumb" style="margin-bottom: 1rem;">
+        <a href="index.html">← Terug naar Dashboard</a> / Architectuur &amp; Methodologie / <span class="mono">Hoe Werkt Het?</span>
+      </div>
+
+      <div style="max-width: 860px;">
+        <h1 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; letter-spacing: -0.025em; line-height: 1.2; margin-bottom: 0.75rem;">
+          Hoe Werkt RocketBidder?
+        </h1>
+        <p style="font-size: 1.1rem; color: #cbd5e1; line-height: 1.6; margin-bottom: 1.25rem;">
+          RocketBidder is een <strong>100% autonoom kwantitatief handelssysteem</strong> dat dagelijks de liquide Eurozone-aandelenmarkten (AEX, DAX 40, CAC 40, FTSE MIB, BEL 20, IBEX 35) scant. Het systeem identificeert om <strong>09:15 CET</strong> exact één hoogwaardige momentum-uitbraak, plaatst een wiskundig asymmetrisch orderbiljet (<code class="mono">+2,0% winstdoel</code>) en voert om <strong>17:45 CET</strong> een onafhankelijke, deterministische nabeurs-audit uit.
+        </p>
+      </div>
+
+      <!-- Kernparameters Header Grid -->
+      <div class="kpi-grid" style="margin-top: 1.25rem;">
+        <div class="kpi-card">
+          <div class="kpi-label">Handelsuniversum</div>
+          <div class="kpi-value" style="font-size: 1.25rem;">EUROZONE</div>
+          <div class="kpi-meta">140+ liquide aandelen &middot; EUR (€) &middot; CET-tijdzone</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Vast Winstdoel</div>
+          <div class="kpi-value accent">+2.00%</div>
+          <div class="kpi-meta">Limietorder ingelegd om 09:15 CET (Set &amp; Forget)</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Risicobescherming</div>
+          <div class="kpi-value">0.6× ATR-14</div>
+          <div class="kpi-meta">Dynamische stoploss &middot; Minimaal 1,20% buffer</div>
+        </div>
+        <div class="kpi-card">
+          <div class="kpi-label">Theoretische Break-even</div>
+          <div class="kpi-value positive">&ge;37.5%</div>
+          <div class="kpi-meta">Wiskundig winstgevend bij winrate boven 37,5%</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- VISUELE INFOGRAPHIC: DE 5 FASEN VAN EEN HANDELSDAG                   -->
+    <!-- ===================================================================== -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="infographic-wrapper">
+        <div class="infographic-header">
+          <span class="timeline-phase-pill" style="margin-bottom: 0.6rem; display: inline-block;">Infographic • Dagelijkse Uitvoeringscyclus</span>
+          <h2 class="infographic-title">De 5 Fasen van de RocketBidder Handelsdag</h2>
+          <p class="infographic-subtitle">
+            Van de ochtendopening op Beursplein 5 en Frankfurt Xetra tot de deterministische slotcontrole om 17:45 CET. Volledig geautomatiseerd via Apache Airflow en Docker op remote server <code>eltorro</code>.
+          </p>
+        </div>
+
+        <!-- Grote Visuele SVG Architectuur-Diagram Flow -->
+        <div style="margin-bottom: 2.5rem; overflow-x: auto;">
+          <svg viewBox="0 0 1000 240" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 100%; min-width: 820px; height: auto;">
+            <defs>
+              <linearGradient id="flowLineGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#334155"/>
+                <stop offset="25%" stop-color="#38bdf8"/>
+                <stop offset="50%" stop-color="#818cf8"/>
+                <stop offset="75%" stop-color="#c084fc"/>
+                <stop offset="100%" stop-color="#34d399"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Horizontale verbindingslijn met pijl -->
+            <line x1="80" y1="110" x2="920" y2="110" stroke="url(#flowLineGrad)" stroke-width="2.5" stroke-dasharray="6,4"/>
+            <polygon points="926,110 916,104 916,116" fill="#34d399"/>
+
+            <!-- Fase 1: 08:30 CET -->
+            <g transform="translate(60, 20)">
+              <rect x="0" y="0" width="150" height="175" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+              <rect x="12" y="12" width="126" height="24" rx="4" fill="rgba(255,255,255,0.05)"/>
+              <text x="75" y="28" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" text-anchor="middle">08:30 CET</text>
+              <circle cx="75" cy="62" r="18" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+              <text x="75" y="67" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">🌍</text>
+              <text x="75" y="102" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">1. Macro Regime</text>
+              <text x="75" y="120" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Euro Stoxx &ge; -1,8%?</text>
+              <text x="75" y="134" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Paniekfilter actief</text>
+              <rect x="18" y="146" width="114" height="18" rx="3" fill="rgba(56,189,248,0.12)" stroke="#38bdf8" stroke-width="0.8"/>
+              <text x="75" y="159" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" text-anchor="middle">NO_TRADE POORT</text>
+            </g>
+
+            <!-- Fase 2: 09:00 CET -->
+            <g transform="translate(245, 20)">
+              <rect x="0" y="0" width="150" height="175" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+              <rect x="12" y="12" width="126" height="24" rx="4" fill="rgba(255,255,255,0.05)"/>
+              <text x="75" y="28" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" text-anchor="middle">09:00–09:15 CET</text>
+              <circle cx="75" cy="62" r="18" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5"/>
+              <text x="75" y="67" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">📊</text>
+              <text x="75" y="102" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">2. Openings-ORB</text>
+              <text x="75" y="120" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">15m Bandbreedte</text>
+              <text x="75" y="134" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">RVOL &ge; 1,3x vs 20d</text>
+              <rect x="18" y="146" width="114" height="18" rx="3" fill="rgba(56,189,248,0.12)" stroke="#38bdf8" stroke-width="0.8"/>
+              <text x="75" y="159" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" text-anchor="middle">VOLUME &amp; VWAP</text>
+            </g>
+
+            <!-- Fase 3: 09:15 CET Scan & AI Selectie -->
+            <g transform="translate(430, 20)">
+              <rect x="0" y="0" width="150" height="175" rx="10" fill="#0f172a" stroke="#818cf8" stroke-width="1.5"/>
+              <rect x="12" y="12" width="126" height="24" rx="4" fill="rgba(129,140,248,0.15)"/>
+              <text x="75" y="28" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" text-anchor="middle">09:15 CET SCAN</text>
+              <circle cx="75" cy="62" r="18" fill="#1e293b" stroke="#818cf8" stroke-width="1.5"/>
+              <text x="75" y="67" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">🔬</text>
+              <text x="75" y="102" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">3. Alpha Noodrem</text>
+              <text x="75" y="120" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">WorldQuant Alpha#10</text>
+              <text x="75" y="134" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">WorldQuant Alpha#20</text>
+              <rect x="18" y="146" width="114" height="18" rx="3" fill="rgba(129,140,248,0.15)" stroke="#818cf8" stroke-width="0.8"/>
+              <text x="75" y="159" fill="#818cf8" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" text-anchor="middle">TOP-4 DEEPDIVE</text>
+            </g>
+
+            <!-- Fase 4: 09:15 CET Orderinleg (Set & Forget) -->
+            <g transform="translate(615, 20)">
+              <rect x="0" y="0" width="150" height="175" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1.2"/>
+              <rect x="12" y="12" width="126" height="24" rx="4" fill="rgba(255,255,255,0.05)"/>
+              <text x="75" y="28" fill="#94a3b8" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" text-anchor="middle">09:15 ORDER</text>
+              <circle cx="75" cy="62" r="18" fill="#1e293b" stroke="#c084fc" stroke-width="1.5"/>
+              <text x="75" y="67" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">🎯</text>
+              <text x="75" y="102" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">4. Set &amp; Forget</text>
+              <text x="75" y="120" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Doel: +2,00% Limiet</text>
+              <text x="75" y="134" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Stop: 0,6× ATR-14</text>
+              <rect x="18" y="146" width="114" height="18" rx="3" fill="rgba(192,132,252,0.12)" stroke="#c084fc" stroke-width="0.8"/>
+              <text x="75" y="159" fill="#c084fc" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" text-anchor="middle">GEEN EMOTIE</text>
+            </g>
+
+            <!-- Fase 5: 17:45 CET Deterministiche Audit -->
+            <g transform="translate(800, 20)">
+              <rect x="0" y="0" width="150" height="175" rx="10" fill="#0f172a" stroke="#34d399" stroke-width="1.5"/>
+              <rect x="12" y="12" width="126" height="24" rx="4" fill="rgba(52,211,153,0.15)"/>
+              <text x="75" y="28" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="10.5" font-weight="700" text-anchor="middle">17:45 CET AUDIT</text>
+              <circle cx="75" cy="62" r="18" fill="#1e293b" stroke="#34d399" stroke-width="1.5"/>
+              <text x="75" y="67" fill="#f8fafc" font-family="Inter, sans-serif" font-size="14" font-weight="800" text-anchor="middle">⚖️</text>
+              <text x="75" y="102" fill="#ffffff" font-family="Inter, sans-serif" font-size="12" font-weight="700" text-anchor="middle">5. Nabeurs Audit</text>
+              <text x="75" y="120" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Bar-voor-bar audit</text>
+              <text x="75" y="134" fill="#94a3b8" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle">Slotveiling sluiting</text>
+              <rect x="18" y="146" width="114" height="18" rx="3" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="0.8"/>
+              <text x="75" y="159" fill="#34d399" font-family="JetBrains Mono, monospace" font-size="8.5" font-weight="600" text-anchor="middle">DETERMINISTISCH</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- Gedetailleerde Tijdslijn Stappen -->
+        <div class="timeline-flow">
+
+          <!-- Stap 1 -->
+          <div class="timeline-step">
+            <div class="timeline-time-col">
+              <span class="timeline-time">08:30 CET</span>
+              <span class="timeline-phase-pill">Fase 1 • Macro</span>
+            </div>
+            <div class="timeline-content">
+              <h3>🌍 Macro-klimaat &amp; Systeemwijde Noodrem (Circuit Breaker)</h3>
+              <p>
+                Voordat ook maar één individueel aandeel wordt bekeken, inspecteert RocketBidder de toonaangevende Europese indices: de <strong>Euro Stoxx 50</strong> (<code>^STOXX50E</code>), Frankfurt DAX 40 (<code>^GDAXI</code>), Amsterdam AEX (<code>^AEX</code>) en Parijs CAC 40 (<code>^FCHI</code>).
+              </p>
+              <p>
+                Wanneer de Euro Stoxx 50 zakt met <strong>meer dan -1,80%</strong> (of 2 van de 3 indices &lt; -1,50%), schakelt het algoritme direct over naar <code>NO_TRADE</code>. Het forceren van long-posities tijdens brede marktpaniek is wiskundig verliesgevend en wordt resoluut geblokkeerd.
+              </p>
+              <div class="timeline-chips">
+                <span class="chip">Regime Filter: Stoxx 50 &ge; -1.80%</span>
+                <span class="chip">Geen overnight gaps forceren</span>
+                <span class="chip">Kapitaalbehoud = Alpha #1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stap 2 -->
+          <div class="timeline-step">
+            <div class="timeline-time-col">
+              <span class="timeline-time">09:00 CET</span>
+              <span class="timeline-phase-pill">Fase 2 • Open</span>
+            </div>
+            <div class="timeline-content">
+              <h3>🔔 Het Openingskwartier &amp; Opening Range Breakout (ORB)</h3>
+              <p>
+                Tussen 09:00 en 09:15 CET opent de Europese contante handel (opening call &amp; veiling). RocketBidder plaatst in deze eerste 15 minuten <strong>nooit orders</strong>. De eerste 15-minuten candle vormt het <em>Openingsbereik</em> (ORB High en ORB Low).
+              </p>
+              <p>
+                Tevens wordt de Sessie-VWAP berekend en het tijd-geschaalde Relatieve Volume (<strong>RVOL</strong>) vastgesteld ten opzichte van het 20-daags historisch openingsvolume. Aandelen waarvan de koers onder de sessie-VWAP zakt (gap fade), vallen direct af.
+              </p>
+              <div class="timeline-chips">
+                <span class="chip">15m ORB Bandbreedte</span>
+                <span class="chip">RVOL &ge; 1.30x (Institutioneel Volume)</span>
+                <span class="chip">Opening Gap Fade Check</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stap 3 -->
+          <div class="timeline-step">
+            <div class="timeline-time-col">
+              <span class="timeline-time">09:15 CET</span>
+              <span class="timeline-phase-pill">Fase 3 • Funnel</span>
+            </div>
+            <div class="timeline-content">
+              <h3>🔬 Kwantitatieve Trechterselectie &amp; Alpha Noodremmen</h3>
+              <p>
+                Om exact 09:15 CET analyseert de engine meer dan 140 liquide aandelen uit de Eurozone. De top 4 kandidaten worden onderworpen aan een strenge diepgaande analyse (<code>tools.py deepdive</code>):
+              </p>
+              <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                <li><strong>WorldQuant Alpha#10:</strong> Filtert aandelen die vastzitten in een mean-reverting chop zonder duidelijke trend (<code class="mono">ts_min_4d &lt; -0.80</code>).</li>
+                <li><strong>WorldQuant Alpha#20:</strong> Noodrem tegen uitputtingsgaps (exhaustion gap risk) waarbij de openingskoers extreem ver boven de voorgaande dagpiek ligt (<code class="mono">gap_atr_ratio &gt; 1.40</code>).</li>
+                <li><strong>RFC-0004 Agendarisico:</strong> Uitsluiting van aandelen die vandaag ex-dividend noteren of binnen 2 handelsdagen kwartaalcijfers publiceren.</li>
+                <li><strong>RFC-0009 AI Trechter:</strong> Het LLM weegt fundamentele katalysatoren (buitengewone cijfers, contractwinsten, overnames) af om de #1 kandidaat te selecteren.</li>
+              </ul>
+              <div class="timeline-chips">
+                <span class="chip">ATR-14 &ge; 1.20%</span>
+                <span class="chip">WorldQuant Alpha#10 &amp; #20</span>
+                <span class="chip">RFC-0004 Cijfer- &amp; Dividendfilter</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stap 4 -->
+          <div class="timeline-step">
+            <div class="timeline-time-col">
+              <span class="timeline-time">09:15 CET</span>
+              <span class="timeline-phase-pill">Fase 4 • Order</span>
+            </div>
+            <div class="timeline-content">
+              <h3>🎯 De "Set &amp; Forget" Orderinleg (+2% Winstdoel)</h3>
+              <p>
+                Direct om 09:15 CET wordt het tradebiljet definitief vastgelegd op het dashboard. Er is geen sprake van emotioneel beheer of handmatige bijsturing gedurende de dag:
+              </p>
+              <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                <li><strong>Instapniveau:</strong> Exacte slotkoers / openingskoers van de 09:15 CET candle.</li>
+                <li><strong>Winstdoel (+2,00% Limiet):</strong> Vaste winstneming op <code class="mono">Instap &times; 1,0200</code>.</li>
+                <li><strong>Stop-Loss (ATR-bewaakt):</strong> Dynamische stop onder <code class="mono">Instap - max(0,6 &times; ATR-14, Instap &times; 1,2%)</code>.</li>
+                <li><strong>Positiegrootte:</strong> Vaste fictieve toewijzing van €5.000 per positie (maximaal 20% van de totale portefeuille).</li>
+              </ul>
+              <div class="timeline-chips">
+                <span class="chip">Vast Winstdoel: +2.00%</span>
+                <span class="chip">Stop: max(0.6×ATR, 1.2%)</span>
+                <span class="chip">Zero Token Intraday Tracking</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stap 5 -->
+          <div class="timeline-step">
+            <div class="timeline-time-col">
+              <span class="timeline-time">17:45 CET</span>
+              <span class="timeline-phase-pill">Fase 5 • Audit</span>
+            </div>
+            <div class="timeline-content">
+              <h3>🌆 Deterministische Nabeurs Audit &amp; Slotveiling Evaluatie</h3>
+              <p>
+                Na het sluiten van de beursvloer om 17:30 CET start om 17:45 CET de onafhankelijke audit (<code>tools.py evaluate</code>). Deze evaluatie werkt bar-voor-bar op basis van de werkelijke 15-minuten beursdata na 09:15 CET:
+              </p>
+              <ul style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.75rem; padding-left: 1.25rem;">
+                <li><strong>Uitkomst WIN (+2,00%):</strong> Zodra een 15m candle high &ge; koersdoel bereikt vóórdat de stoploss wordt geraakt.</li>
+                <li><strong>Uitkomst LOSS_STOPPED:</strong> Indien een 15m candle low &le; stoploss zakt vóórdat het doel werd bereikt.</li>
+                <li><strong>Uitkomst GESLOTEN OP SLOT (EOD CLOSE):</strong> Indien noch het doel noch de stop werd geraakt, sluit RocketBidder de positie gedisciplineerd op de officiële 17:30 CET slotveilingkoers (met winst- of verliesbehoud).</li>
+              </ul>
+              <p style="margin-bottom: 0;">
+                Alle metrieken worden deterministisch weggeschreven naar <code class="mono">memory.json</code>, waarna de blog en de Airflow-telemetrie automatisch opnieuw worden gebouwd en gepubliceerd.
+              </p>
+              <div class="timeline-chips" style="margin-top: 0.75rem;">
+                <span class="chip">Chronologische Verificatie &ge;09:15</span>
+                <span class="chip">EOD Slotveiling Discipline</span>
+                <span class="chip">Atomair memory.json Auditlog</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- WISKUNDIG RISICOMODEL & BREAK-EVEN WINRATE                           -->
+    <!-- ===================================================================== -->
+    <section class="section" id="wiskunde">
+      <div class="section-header">
+        <h2 class="section-title">📐 Het Wiskundig Asymmetrisch Rendement-Model</h2>
+        <span class="section-subtitle">Waarom RocketBidder statistisch winstgevend is bij een bescheiden winrate van &ge;37,5%</span>
+      </div>
+
+      <div class="math-hero-box">
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">
+          De Wiskunde van Positieve Verwachtingswaarde (Expectancy)
+        </h3>
+        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6;">
+          De meeste particuliere beleggers verliezen geld door een omgekeerde risico/rendement-verhouding (grote verliezen uitzitten, kleine winsten snel afkappen). RocketBidder hanteert een <strong>strikt asymmetrisch model</strong>: het vaste winstdoel is altijd <code class="mono">+2,00%</code>, terwijl het maximale risico per transactie begrensd is op gemiddeld <code class="mono">1,20%</code> (tot maximaal 1,87% bij hogere ATR).
+        </p>
+
+        <div class="math-formula-box">
+          $$\text{Theoretische Break-even Winrate} = \frac{\text{Gemiddeld Verlies}}{\text{Gemiddelde Winst} + \text{Gemiddeld Verlies}} = \frac{1,20\%}{2,00\% + 1,20\%} = \mathbf{37,5\%}$$
+        </div>
+
+        <p style="color: #cbd5e1; font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+          Dit betekent dat het systeem in <strong>meer dan 62,5% van de gevallen ongelijk mag hebben</strong> zonder kapitaal te verliezen (vóór transactiekosten). Bij een behaalde winrate van 50% genereert het systeem een robuuste structurele alpha:
+        </p>
+
+        <!-- Verwachtingswaarde Simulatie Tabel -->
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Gerealiseerde Winrate</th>
+                <th>Verwacht Rendement per Trade</th>
+                <th>Resultaat na 100 Transacties</th>
+                <th>Kwantitatief Oordeel</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="mono font-bold" style="color: #f87171;">30.0%</td>
+                <td class="mono" style="color: #f87171;">-0.24%</td>
+                <td class="mono text-loss">-24.0%</td>
+                <td><span class="badge badge-loss">VERLIESGEVEND</span></td>
+              </tr>
+              <tr>
+                <td class="mono font-bold" style="color: #94a3b8;">37.5%</td>
+                <td class="mono" style="color: #94a3b8;">0.00%</td>
+                <td class="mono">0.0%</td>
+                <td><span class="badge" style="background: rgba(148, 163, 184, 0.2); color: #cbd5e1;">BREAK-EVEN GRENS</span></td>
+              </tr>
+              <tr>
+                <td class="mono font-bold text-win">50.0%</td>
+                <td class="mono text-win font-bold">+0.40%</td>
+                <td class="mono text-win font-bold">+40.0%</td>
+                <td><span class="badge badge-win">SOLIDE WINSTGEVEND</span></td>
+              </tr>
+              <tr>
+                <td class="mono font-bold text-win">60.0%</td>
+                <td class="mono text-win font-bold">+0.72%</td>
+                <td class="mono text-win font-bold">+72.0%</td>
+                <td><span class="badge badge-win">SUPERIEURE ALPHA</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- DE 6 GOUDEN REGELS VAN HET SYSTEEM                                    -->
+    <!-- ===================================================================== -->
+    <section class="section" style="padding-top: 1rem;">
+      <div class="section-header">
+        <h2 class="section-title">🛡️ De 6 Gouden Regels van het Algoritme</h2>
+        <span class="section-subtitle">Strikte heuristieken vastgelegd in AGENT_INSTRUCTIONS.md en bewaakt via unittests</span>
+      </div>
+
+      <div class="funnel-grid">
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #1</span>
+            <span class="badge badge-win">TIMING</span>
+          </div>
+          <h4>Geen Orders Vóór 09:15 CET</h4>
+          <p>
+            De openingsveiling en de eerste 15 minuten bevatten institutionele orderbalancering en ruis. Instappen vindt pas plaats nadat de eerste 15m candle is afgesloten.
+          </p>
+        </div>
+
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #2</span>
+            <span class="badge badge-win">VWAP STEUN</span>
+          </div>
+          <h4>Altijd Boven de Sessie-VWAP</h4>
+          <p>
+            RocketBidder koopt nooit "vallende messen". De marktprijs om 09:15 CET moet strikt boven de volumegewogen gemiddelde prijs (VWAP) noteren zonder gap fade.
+          </p>
+        </div>
+
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #3</span>
+            <span class="badge badge-win">LIQUIDITEIT</span>
+          </div>
+          <h4>Relatief Volume RVOL &ge; 1,30x</h4>
+          <p>
+            Zonder buitengewoon volume is een uitbraak waardeloos. Het openingsvolume moet minimaal 130% bedragen van het gemiddelde van de afgelopen 20 beursdagen.
+          </p>
+        </div>
+
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #4</span>
+            <span class="badge badge-loss">RISICOFILTER</span>
+          </div>
+          <h4>Geen Binair Agendarisico</h4>
+          <p>
+            Aandelen die vandaag ex-dividend noteren of binnen 48 uur kwartaalcijfers publiceren worden onverbiddelijk afgekeurd (conform RFC-0004).
+          </p>
+        </div>
+
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #5</span>
+            <span class="badge badge-win">DISCIPLINE</span>
+          </div>
+          <h4>Strikte "Set &amp; Forget" Inleg</h4>
+          <p>
+            Geen trailing stops die winsten te vroeg afsnijden, geen paniekverkopen. De limiet van +2% en de ATR stop-loss blijven de hele sessie ongewijzigd staan.
+          </p>
+        </div>
+
+        <div class="funnel-card">
+          <div class="funnel-card-header">
+            <span class="funnel-card-num">REGEL #6</span>
+            <span class="badge badge-win">SLOTDISCIPLINE</span>
+          </div>
+          <h4>Geen Weekend- of Nachtrisico</h4>
+          <p>
+            Posities die om 17:30 CET noch doel noch stop hebben bereikt, worden op de slotveiling gesloten. Geen posities aanhouden tijdens gesloten beursuren.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================================================================== -->
+    <!-- TECHNOLOGIE & INFRASTRUCTUUR STACK                                    -->
+    <!-- ===================================================================== -->
+    <section class="section" style="padding-top: 1rem; padding-bottom: 2rem;">
+      <div class="section-header">
+        <h2 class="section-title">⚙️ Autonome Technologie &amp; CI/CD Stack</h2>
+        <span class="section-subtitle">Draait 24/7 op een dedicated Linux-server zonder handmatige tussenkomst</span>
+      </div>
+
+      <div class="article-section" style="margin-bottom: 1.5rem;">
+        <ul style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.8; margin-bottom: 0;">
+          <li><strong>Executie Host:</strong> Dedicated Linux-server <code>eltorro</code> binnen een geïsoleerde Docker container (<code>rocketbidder-agent</code>).</li>
+          <li><strong>Schedulingsarchitectuur:</strong> Gestuurd via cron en Apache Airflow DAG-compatibele telemetrielogging (<code>runs.json</code>).</li>
+          <li><strong>Data-integriteit:</strong> Directe marktfeedkoppeling naar Xetra, Euronext en Borsa Italiana met automatische CET-tijdzonenormalisatie.</li>
+          <li><strong>Nul Tokens Overdag:</strong> De intraday VWAP- en candle-tracking gebeurt 100% in snelle, deterministische Python-code; nul taalmodel-tokens tijdens markturensessies.</li>
+          <li><strong>Statische Publicatie:</strong> Volledig zelfstandig compilatieresultaat naar statische HTML en vector-SVG's via <code>build_site.py</code>, direct gehost via GitHub Pages.</li>
+        </ul>
+      </div>
+
+      <div style="display: flex; gap: 0.75rem; flex-wrap: wrap;">
+        <a href="index.html" class="btn">Bekijk Vandaag's Focusaandeel →</a>
+        <a href="stats.html" class="btn btn-outline">Open Airflow Telemetrie Console ⏱️</a>
+        <a href="https://github.com/RocketScienceData/rocketBidder" target="_blank" rel="noopener" class="btn btn-outline">Bekijk Broncode op GitHub ↗</a>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div style="display: flex; align-items: center; gap: 0.75rem;">
+        <span class="brand-icon" style="width: 24px; height: 24px;" aria-hidden="true">
+          <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g transform="rotate(45 16 16)">
+              <path d="M16 4C16 4 20.5 9 20.5 16L23.5 19V22L19.5 20.5L17.5 24.5H14.5L12.5 20.5L8.5 22V19L11.5 16C11.5 9 16 4 16 4Z" fill="#f8fafc"/>
+            </g>
+          </svg>
+        </span>
+        <span><strong>RocketBidder</strong> — Autonome Pan-Europese Kwantitatieve Handelsagent.</span>
+      </div>
+      <div>
+        <em>Uitsluitend voor kwantitatief onderzoek &amp; educatieve doeleinden. Geen financieel advies (AFM / MiFID II).</em>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

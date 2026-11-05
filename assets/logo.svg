@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32" fill="none">
+  <!-- Background Badge (Monochrome Graphite) -->
+  <rect width="32" height="32" rx="7" fill="#0b0f19" stroke="#334155" stroke-width="1"/>
+  <!-- Rocket Icon (Monochrome White & Slate) -->
+  <g transform="rotate(45 16 16)">
+    <!-- Main Fuselage -->
+    <path d="M16 4C16 4 20.5 9 20.5 16L23.5 19V22L19.5 20.5L17.5 24.5H14.5L12.5 20.5L8.5 22V19L11.5 16C11.5 9 16 4 16 4Z" fill="#f8fafc"/>
+    <!-- Center Precision Line -->
+    <line x1="16" y1="7" x2="16" y2="16.5" stroke="#0b0f19" stroke-width="1.2" stroke-linecap="round"/>
+    <!-- Port View / Sensor Dot -->
+    <circle cx="16" cy="11" r="1.1" fill="#0b0f19"/>
+    <!-- Minimalist Thrust Vectors -->
+    <path d="M14.5 26.5L16 29L17.5 26.5" stroke="#94a3b8" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>
