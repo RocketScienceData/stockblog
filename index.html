@@ -605,31 +605,12 @@
       <div class="article-section" style="margin-bottom: 0;">
         <!-- AGENT_LESSONS_START -->
         <ul style="margin-bottom: 0;">
-          <li><strong>Regel #1:</strong> ```rfc-0007```
-```
-REPORT_ID: RKB-RISK-20240725-BAYN.DE-001
-DATE: 2024-07-25
-ANALYST: Risicomanager &amp; Kwantitatief Onderzoeker, RocketBidder
-SUBJECT: Post-Trade Analyse &amp; Risicobeoordeling - BAYN.DE
-
-TRADE_DETAILS:
-  ASSET: BAYN.DE (Bayer AG)
-  STRATEGY: Long Position
-  ENTRY_PRICE: €55.78
-  PROFIT_TARGET: €56.90
-  STOP_LOSS: €54.66
-  HIGH_AFTER_ENTRY: €56.60
-  OUTCOME: SCRATCH / CLOSE
-  REALIZED_PNL_PERCENTAGE: +0.90%
-
-OUTCOME_ANALYSIS:
-De initiële long positie in BAYN.DE toonde na instap een positieve price action, met een intraday high van €56.60. Deze piek bleef</li>
-          <li><strong>Regel #2:</strong> Wanneer het vaste limietdoel (+2,0% op €56,90) intraday net niet wordt geraakt (sessiepiek BAYN.DE €56,60 om 16:45 CET), beschermt een strakke stop-loss onder sessie-VWAP het kapitaal en wordt conform discipline om 17:30 CET gesloten op slotkoers met winstbehoud (+0,90%).</li>
-          <li><strong>Regel #3:</strong> Vermijd aandelen met atr_14_pct &lt; 1,2% voor intraday +2% koersdoelen, tenzij een grote kwartaalcijfer- of overnamekatalysator is bevestigd.</li>
-          <li><strong>Regel #4:</strong> Controleer altijd macro-indices (^STOXX50E, ^GDAXI, ^AEX) alvorens long te gaan; forceer geen posities tijdens brede marktverkoopgolven.</li>
-          <li><strong>Regel #5:</strong> Evalueer 15-minutenbars na 09:15 CET chronologisch bar-voor-bar (tools.py evaluate): een koersdoel geraakt om 10:00 CET vóór een daling om 12:00 CET is een WINST, en pieken vóór 09:15 worden genegeerd.</li>
-          <li><strong>Regel #6:</strong> Wijs aandelen af die vandaag ex-dividend noteren (event_risk.ex_dividend_today == true) of een opening gap fade onder de sessie-VWAP vertonen (RFC-0002 &amp; RFC-0004).</li>
-          <li><strong>Regel #7:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
+          <li><strong>Regel #1:</strong> Vermijd aandelen met atr_14_pct &lt; 1,2% voor intraday +2% koersdoelen, tenzij een grote kwartaalcijfer- of overnamekatalysator is bevestigd.</li>
+          <li><strong>Regel #2:</strong> Controleer altijd macro-indices (^STOXX50E, ^GDAXI, ^AEX) alvorens long te gaan; forceer geen posities tijdens brede marktverkoopgolven.</li>
+          <li><strong>Regel #3:</strong> Evalueer 15-minutenbars na 09:15 CET chronologisch bar-voor-bar (tools.py evaluate): een koersdoel geraakt om 10:00 CET vóór een daling om 12:00 CET is een WINST, en pieken vóór 09:15 worden genegeerd.</li>
+          <li><strong>Regel #4:</strong> Wijs aandelen af die vandaag ex-dividend noteren (event_risk.ex_dividend_today == true) of een opening gap fade onder de sessie-VWAP vertonen (RFC-0002 &amp; RFC-0004).</li>
+          <li><strong>Regel #5:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
+          <li><strong>Regel #6:</strong> Wanneer een liquide koploper met hoog openingsvolume (&gt;3,0x RVOL) gestaag oploopt (+1,47%) maar het strikte +2% limietdoel net niet bereikt, beschermt een strakke stop onder VWAP de positie en wordt om 17:30 CET gedisciplineerd winst genomen op de slotkoers (+0,90%).</li>
         </ul>
       <!-- AGENT_LESSONS_END -->
       </div>
