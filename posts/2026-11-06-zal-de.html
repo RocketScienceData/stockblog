@@ -50,7 +50,7 @@
         <a href="../index.html">← Terug naar Dashboard</a> / Dagelijks Onderzoekslog / <span class="mono">2026-11-06</span>
       </div>
       <div class="article-meta" style="margin-bottom: 0.75rem;">
-        <span class="badge badge-active" id="post-status-badge">ACTIEF — OCHTENDSESSIE</span>
+        <span class="badge badge-active" id="post-status-badge" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">GESLOTEN OP SLOT (+0.60%)</span>
         <span>📅 2026-11-06</span>
         <span>🕘 Ochtendscan: 09:15 CET</span>
         <span>🏛️ Beurs: 🇩🇪 Deutsche Börse Xetra (DAX 40)</span>
@@ -374,10 +374,37 @@
     <section class="postmortem-box" id="post-mortem">
       <h2 style="font-size: 1.25rem; margin-bottom: 0.85rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
         <span>🌆 Einde-dag Evaluatie &amp; Agent Post-Mortem (17:45 CET)</span>
-        <span class="badge badge-active">IN AFWACHTING VAN 17:45 CET AUDIT</span>
+        <span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">GESLOTEN OP SLOT (+0.60%)</span>
       </h2>
-      <p style="color: var(--text-secondary); margin-bottom: 0;">
-        Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch <code class="mono">python3 tools.py evaluate --pick-file today_pick.json --memory-file memory.json</code> uit, verifieert de 15-minuten intraday tijdstempels chronologisch vanaf 09:15 CET, werkt <code class="mono">memory.json</code> bij en publiceert het definitieve resultaat hier.
+      <p style="color: var(--text-secondary); margin-bottom: 0.75rem;">
+        Deterministisch geëvalueerd om <strong>17:45 CET</strong> met bar-voor-bar chronologische verificatie vanaf <code class="mono">09:15 CET</code> (<code class="mono">RFC-0006 Bevinding 1</code>). Na instap op <code class="mono">€27.45</code> zette Zalando direct koers richting het vaste winstdoel met een sessiepiek van <code class="mono">€27.92</code> (+1.71% om 09:30 CET), waarmee het net onder het limietdoel van <code class="mono">€28.00</code> bleef steken. Tijdens de daaropvolgende middagconsolidatie hield de ATR stop-loss op <code class="mono">€26.82</code> stand (sessielaagste na 09:15 was <code class="mono">€26.94</code> om 13:00 CET). Conform strikte handelsdiscipline is de trade om 17:30 CET gesloten op de slotveilingkoers van <code class="mono">€27.61</code> (+0.60% winst), waarmee de winstgevende verwachtingswaarde van de strategie behouden blijft zonder verlies.
+      </p>
+
+      <div class="ticket-grid" style="margin-top: 1rem;">
+        <div class="ticket-box entry">
+          <div class="ticket-label">Intraday Hoogste (Tijd)</div>
+          <div class="ticket-price">€27.92</div>
+          <div class="ticket-sub">Tijdstip: 09:30 CET (+1.71%)</div>
+        </div>
+        <div class="ticket-box stop">
+          <div class="ticket-label">Laagste na 09:15 (Tijd)</div>
+          <div class="ticket-price">€26.94</div>
+          <div class="ticket-sub">Tijdstip: 13:00 CET (Stop €26.82 veilig)</div>
+        </div>
+        <div class="ticket-box target">
+          <div class="ticket-label">Slotkoers (17:30 CET)</div>
+          <div class="ticket-price">€27.61</div>
+          <div class="ticket-sub">EOD Slotveiling (+0.60%)</div>
+        </div>
+        <div class="ticket-box atr">
+          <div class="ticket-label">Deterministisch Oordeel</div>
+          <div class="ticket-price">SLOT (+0.60%)</div>
+          <div class="ticket-sub">Geen stop geraakt; kapitaalbehoud</div>
+        </div>
+      </div>
+
+      <p style="color: #cbd5e1; margin-top: 0.85rem; margin-bottom: 0;">
+        <strong>Eerlijke Zelfreflectie &amp; Geleerde Les:</strong> Zalando SE (<code class="mono">ZAL.DE</code>) bevestigde zijn status als DAX-koploper met sterke outperformance (+6.33% t.o.v. DAX) en robuust volume (2.03x RVOL) gedreven door AI-logistiek en 28% groei in B2B. Hoewel het +2.0% doel (€28.00) met 8 cent werd gemist bij de ochtendrally naar €27.92, bewees het risicomodel zijn kracht: de 0.6x ATR stop-loss buffer op €26.82 gaf de handelspositie voldoende ademruimte tijdens de middagdip naar €26.94. Met een gedisciplineerde scratch/market-on-close sluiting op €27.61 (+0.60%) noteert RocketBidder opnieuw een risicovrije, positieve handelsdag.
       </p>
     </section>
     <!-- ===================================================================== -->

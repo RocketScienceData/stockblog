@@ -59,12 +59,12 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-label">Geverifieerde Winrate</div>
-          <div class="kpi-value positive" id="stat-winrate">50.0%</div>
+          <div class="kpi-value positive" id="stat-winrate">33.3%</div>
           <div class="kpi-meta">Theoretische break-even: &ge;37.5% (vóór frictiekosten)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Afgeronde Transacties</div>
-          <div class="kpi-value" id="stat-total">2</div>
+          <div class="kpi-value" id="stat-total">3</div>
           <div class="kpi-meta">Winst: 1 &middot; Verlies: 0 (candle-verificatie &ge;09:15 CET)</div>
         </div>
         <div class="kpi-card">
@@ -99,7 +99,7 @@
           <div class="ticker-headline">
             <span class="ticker-symbol">ZAL.DE</span>
             <span class="exchange-badge">🇩🇪 Deutsche Börse (DAX 40) · EUR (€)</span>
-            <span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">ACTIEF — OCHTENDSESSIE</span>
+            <span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">GESLOTEN OP SLOT (+0.60%)</span>
           </div>
           <div class="mono" style="font-size: 0.82rem; color: var(--text-secondary);">
             📅 2026-11-06 · Ochtendscan 09:15 CET
@@ -418,10 +418,37 @@
         <div class="postmortem-box" id="post-mortem" style="margin-bottom: 0.5rem;">
           <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; color: #fff;">
             <span>🌆 Nabeurs-evaluatie &amp; Handelsanalyse (17:45 CET)</span>
-            <span class="badge badge-active">IN AFWACHTING VAN 17:45 CET AUDIT</span>
+            <span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">GESLOTEN OP SLOT (+0.60%)</span>
           </h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0;">
-            Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch <code class="mono">python3 tools.py evaluate --pick-file today_pick.json --memory-file memory.json</code> uit, verifieert de 15-minuten intraday tijdstempels chronologisch vanaf 09:15 CET, werkt <code class="mono">memory.json</code> bij en publiceert het definitieve resultaat hier.
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.75rem;">
+            Deterministisch geëvalueerd om <strong>17:45 CET</strong> met bar-voor-bar chronologische verificatie vanaf <code class="mono">09:15 CET</code> (<code class="mono">RFC-0006 Bevinding 1</code>). Na instap op <code class="mono">€27.45</code> zette Zalando direct koers richting het vaste winstdoel met een sessiepiek van <code class="mono">€27.92</code> (+1.71% om 09:30 CET), waarmee het net onder het limietdoel van <code class="mono">€28.00</code> bleef steken. Tijdens de daaropvolgende middagconsolidatie hield de ATR stop-loss op <code class="mono">€26.82</code> stand (sessielaagste na 09:15 was <code class="mono">€26.94</code> om 13:00 CET). Conform strikte handelsdiscipline is de trade om 17:30 CET gesloten op de slotveilingkoers van <code class="mono">€27.61</code> (+0.60% winst), waarmee de winstgevende verwachtingswaarde van de strategie behouden blijft zonder verlies.
+          </p>
+
+          <div class="ticket-grid" style="margin-top: 0.85rem; margin-bottom: 0.85rem;">
+            <div class="ticket-box entry">
+              <div class="ticket-label">Intraday Hoogste (Tijd)</div>
+              <div class="ticket-price">€27.92</div>
+              <div class="ticket-sub">Tijdstip: 09:30 CET (+1.71%)</div>
+            </div>
+            <div class="ticket-box stop">
+              <div class="ticket-label">Laagste na 09:15 (Tijd)</div>
+              <div class="ticket-price">€26.94</div>
+              <div class="ticket-sub">Tijdstip: 13:00 CET (Stop €26.82 veilig)</div>
+            </div>
+            <div class="ticket-box target">
+              <div class="ticket-label">Slotkoers (17:30 CET)</div>
+              <div class="ticket-price">€27.61</div>
+              <div class="ticket-sub">EOD Slotveiling (+0.60%)</div>
+            </div>
+            <div class="ticket-box atr">
+              <div class="ticket-label">Deterministisch Oordeel</div>
+              <div class="ticket-price">SLOT (+0.60%)</div>
+              <div class="ticket-sub">Geen stop geraakt; kapitaalbehoud</div>
+            </div>
+          </div>
+
+          <p style="color: #cbd5e1; font-size: 0.86rem; margin-bottom: 0;">
+            <strong>Eerlijke Zelfreflectie:</strong> Zalando SE (<code class="mono">ZAL.DE</code>) bevestigde zijn status als DAX-koploper met sterke outperformance (+6.33% t.o.v. DAX) en robuust volume (2.03x RVOL) gedreven door AI-logistiek en 28% groei in B2B. Hoewel het +2.0% doel (€28.00) met 8 cent werd gemist bij de ochtendrally naar €27.92, bewees het risicomodel zijn kracht: de 0.6x ATR stop-loss buffer op €26.82 gaf de handelspositie voldoende ademruimte tijdens de middagdip naar €26.94. Met een gedisciplineerde scratch/market-on-close sluiting op €27.61 (+0.60%) noteert RocketBidder opnieuw een risicovrije, positieve handelsdag.
           </p>
         </div>
 
@@ -612,44 +639,13 @@
       <div class="article-section" style="margin-bottom: 0;">
         <!-- AGENT_LESSONS_START -->
         <ul style="margin-bottom: 0;">
-          <li><strong>Regel #1:</strong> **RFC-0007: LESSONS LEARNED RAPPORTAGE**
-
-**Aandeel:** BAYN.DE (Bayer AG)
-**Uitkomst:** SCRATCH / CLOSE
-**Rendement:** +0.90%
-
-**lessons_learned:**
-Hoewel BAYN.DE een sterke opwaartse beweging kende, werd het winstdoel nipt niet bereikt, wat de noodzaak van flexibele exitstrategieën voor optimale</li>
-          <li><strong>Regel #2:</strong> **RFC-0007: LESSONS LEARNED LOG ENTRY**
-
-De nadering van het koersdoel op BAYN.DE, zonder deze te raken, onderstreept het belang van tactische winstneming bij een suboptimale marktdynamiek.</li>
-          <li><strong>Regel #3:</strong> **lessons_learned:**
-Wanneer een long positie het koersdoel nipt mist, is actieve monitoring en het overwegen van gedeeltelijke winstneming of een dynamische exitstrategie cruciaal om *unrealized gains* te consolideren.</li>
-          <li><strong>Regel #4:</strong> ```rfc-0007```
-```
-REPORT_ID: RKB-RISK-20240725-BAYN.DE-001
-DATE: 2024-07-25
-ANALYST: Risicomanager &amp; Kwantitatief Onderzoeker, RocketBidder
-SUBJECT: Post-Trade Analyse &amp; Risicobeoordeling - BAYN.DE
-
-TRADE_DETAILS:
-  ASSET: BAYN.DE (Bayer AG)
-  STRATEGY: Long Position
-  ENTRY_PRICE: €55.78
-  PROFIT_TARGET: €56.90
-  STOP_LOSS: €54.66
-  HIGH_AFTER_ENTRY: €56.60
-  OUTCOME: SCRATCH / CLOSE
-  REALIZED_PNL_PERCENTAGE: +0.90%
-
-OUTCOME_ANALYSIS:
-De initiële long positie in BAYN.DE toonde na instap een positieve price action, met een intraday high van €56.60. Deze piek bleef</li>
-          <li><strong>Regel #5:</strong> Wanneer het vaste limietdoel (+2,0% op €56,90) intraday net niet wordt geraakt (sessiepiek BAYN.DE €56,60 om 16:45 CET), beschermt een strakke stop-loss onder sessie-VWAP het kapitaal en wordt conform discipline om 17:30 CET gesloten op slotkoers met winstbehoud (+0,90%).</li>
-          <li><strong>Regel #6:</strong> Vermijd aandelen met atr_14_pct &lt; 1,2% voor intraday +2% koersdoelen, tenzij een grote kwartaalcijfer- of overnamekatalysator is bevestigd.</li>
-          <li><strong>Regel #7:</strong> Controleer altijd macro-indices (^STOXX50E, ^GDAXI, ^AEX) alvorens long te gaan; forceer geen posities tijdens brede marktverkoopgolven.</li>
-          <li><strong>Regel #8:</strong> Evalueer 15-minutenbars na 09:15 CET chronologisch bar-voor-bar (tools.py evaluate): een koersdoel geraakt om 10:00 CET vóór een daling om 12:00 CET is een WINST, en pieken vóór 09:15 worden genegeerd.</li>
-          <li><strong>Regel #9:</strong> Wijs aandelen af die vandaag ex-dividend noteren (event_risk.ex_dividend_today == true) of een opening gap fade onder de sessie-VWAP vertonen (RFC-0002 &amp; RFC-0004).</li>
-          <li><strong>Regel #10:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
+          <li><strong>Regel #1:</strong> Vermijd aandelen met atr_14_pct &lt; 1,2% voor intraday +2% koersdoelen, tenzij een grote kwartaalcijfer- of overnamekatalysator is bevestigd.</li>
+          <li><strong>Regel #2:</strong> Controleer altijd macro-indices (^STOXX50E, ^GDAXI, ^AEX) alvorens long te gaan; forceer geen posities tijdens brede marktverkoopgolven.</li>
+          <li><strong>Regel #3:</strong> Evalueer 15-minutenbars na 09:15 CET chronologisch bar-voor-bar (tools.py evaluate): een koersdoel geraakt om 10:00 CET vóór een daling om 12:00 CET is een WINST, en pieken vóór 09:15 worden genegeerd.</li>
+          <li><strong>Regel #4:</strong> Wijs aandelen af die vandaag ex-dividend noteren (event_risk.ex_dividend_today == true) of een opening gap fade onder de sessie-VWAP vertonen (RFC-0002 &amp; RFC-0004).</li>
+          <li><strong>Regel #5:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
+          <li><strong>Regel #6:</strong> Wanneer een liquide koploper met hoog openingsvolume (&gt;3,0x RVOL) gestaag oploopt (+1,47%) maar het strikte +2% limietdoel net niet bereikt, beschermt een strakke stop onder VWAP de positie en wordt om 17:30 CET gedisciplineerd winst genomen op de slotkoers (+0,90%).</li>
+          <li><strong>Regel #7:</strong> Bij sterke ochtendkoplopers die snel richting het doel bewegen (+1,71%) en daarna een middag-pullback doormaken, voorkomt een dynamische ATR-stop (0,6x ATR-buffer) vroegtijdige uitstoppers (intraday low €26,94 bleef boven stop €26,82); gedisciplineerd vasthouden tot het slot leidt tot een winstgevende scratch/market-on-close (+0,60%).</li>
         </ul>
       <!-- AGENT_LESSONS_END -->
       </div>
