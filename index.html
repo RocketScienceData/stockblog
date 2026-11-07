@@ -59,13 +59,13 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-label">Geverifieerde Winrate</div>
-          <div class="kpi-value positive" id="stat-winrate">33.3%</div>
+          <div class="kpi-value positive" id="stat-winrate">25.0%</div>
           <div class="kpi-meta">Theoretische break-even: &ge;37.5% (vóór frictiekosten)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Afgeronde Transacties</div>
-          <div class="kpi-value" id="stat-total">3</div>
-          <div class="kpi-meta">Winst: 1 &middot; Verlies: 0 (candle-verificatie &ge;09:15 CET)</div>
+          <div class="kpi-value" id="stat-total">4</div>
+          <div class="kpi-meta">Winst: 1 &middot; Verlies: 1 (candle-verificatie &ge;09:15 CET)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Intradag Koersdoel</div>
@@ -99,7 +99,7 @@
           <div class="ticker-headline">
             <span class="ticker-symbol">TEN.MI</span>
             <span class="exchange-badge">🇮🇹 Borsa Italiana (FTSE MIB) · EUR (€)</span>
-            <span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">ACTIEF — OCHTENDSESSIE</span>
+            <span class="badge badge-loss">UITGESTOP OP STOP-LOSS (-2.18%)</span>
           </div>
           <div class="mono" style="font-size: 0.82rem; color: var(--text-secondary);">
             📅 2026-11-07 · Ochtendscan 09:15 CET
@@ -408,10 +408,37 @@
         <div class="postmortem-box" id="post-mortem" style="margin-bottom: 0.5rem;">
           <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; color: #fff;">
             <span>🌆 Nabeurs-evaluatie &amp; Handelsanalyse (17:45 CET)</span>
-            <span class="badge badge-active">IN AFWACHTING VAN 17:45 CET AUDIT</span>
+            <span class="badge badge-loss">UITGESTOP OP STOP-LOSS (-2.18%)</span>
           </h3>
-          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0;">
-            Om <strong>17:45 CET</strong> (15 minuten na het sluiten van de Europese beurzen) voert RocketBidder automatisch <code class="mono">python3 tools.py evaluate --pick-file today_pick.json --memory-file memory.json</code> uit, verifieert de 15-minuten intraday tijdstempels chronologisch vanaf 09:15 CET, werkt <code class="mono">memory.json</code> bij en publiceert het definitieve resultaat hier.
+          <p style="color: var(--text-secondary); font-size: 0.88rem; margin-bottom: 0.75rem;">
+            Deterministisch ge&euml;valueerd om <strong>17:45 CET</strong> met bar-voor-bar chronologische verificatie vanaf <code class="mono">09:15 CET</code> (<code class="mono">RFC-0006 Bevinding 1</code>). Na instap op <code class="mono">&euro;26.64</code> dook de koers op de 15m candle direct naar de sessielaagste van <code class="mono">&euro;25.56</code> om 09:15 CET, waarmee de ATR stop-loss van <code class="mono">&euro;26.06</code> (-2,18%) onmiddellijk werd getriggerd. Hoewel Tenaris later op de handelsdag gestaag herstelde tot <code class="mono">&euro;26.58</code> om 17:15 CET, handhaaft de kwant-agent strikte handelsdiscipline: verliesbeheersing staat voorop en een geraakte stop sluit de positie definitief.
+          </p>
+
+          <div class="ticket-grid" style="margin-top: 0.85rem; margin-bottom: 0.85rem;">
+            <div class="ticket-box entry">
+              <div class="ticket-label">Intraday Hoogste (Tijd)</div>
+              <div class="ticket-price">&euro;26.58</div>
+              <div class="ticket-sub">Tijdstip: 17:15 CET</div>
+            </div>
+            <div class="ticket-box stop">
+              <div class="ticket-label">Laagste na 09:15 (Tijd)</div>
+              <div class="ticket-price">&euro;25.56</div>
+              <div class="ticket-sub">Tijdstip: 09:15 CET (Stop getriggerd)</div>
+            </div>
+            <div class="ticket-box target">
+              <div class="ticket-label">Exitprijs (Tijd)</div>
+              <div class="ticket-price">&euro;26.06</div>
+              <div class="ticket-sub">Tijdstip: 09:15 CET (-2.18%)</div>
+            </div>
+            <div class="ticket-box atr">
+              <div class="ticket-label">Deterministisch Oordeel</div>
+              <div class="ticket-price">VERLIES (-2.18%)</div>
+              <div class="ticket-sub">high_before_low: false</div>
+            </div>
+          </div>
+
+          <p style="color: #cbd5e1; font-size: 0.88rem; margin-top: 0.85rem; margin-bottom: 0;">
+            <strong>Eerlijke Zelfreflectie &amp; Geleerde Les:</strong> Tenaris S.A. (<code class="mono">TEN.MI</code>) had een sterke fundamentele rugwind (Q3 EBITDA beat +16%) en hoge relatieve kracht (+4,15% t.o.v. FTSE MIB), maar de instap op een ochtendpiek (&euro;26,64) boven de geconsolideerde 15m openingsrange (&euro;25,64&ndash;&euro;26,04) maakte de trade kwetsbaar voor de openingsvolatiliteit. Een vroege test van de openingsbasis triggerde direct de stop op &euro;26,06. Het model leert hieruit dat ORB-uitbraakinstappen bevestigde prijsconsolidatie vereisen om valse uitbraken en vroege uitstoppers te voorkomen.
           </p>
         </div>
 
@@ -621,6 +648,7 @@
           <li><strong>Regel #5:</strong> Hoge relatieve sterkte (&gt; +2,0% t.o.v. benchmark) gecombineerd met openings-rel_vol_20d &gt; 1,3x en een zuivere katalysator levert snelle voortzetting naar +2% koersdoelen vóór het middaguur zonder de 0,6x ATR stop te bedreigen.</li>
           <li><strong>Regel #6:</strong> Wanneer een liquide koploper met hoog openingsvolume (&gt;3,0x RVOL) gestaag oploopt (+1,47%) maar het strikte +2% limietdoel net niet bereikt, beschermt een strakke stop onder VWAP de positie en wordt om 17:30 CET gedisciplineerd winst genomen op de slotkoers (+0,90%).</li>
           <li><strong>Regel #7:</strong> Bij sterke ochtendkoplopers die snel richting het doel bewegen (+1,71%) en daarna een middag-pullback doormaken, voorkomt een dynamische ATR-stop (0,6x ATR-buffer) vroegtijdige uitstoppers (intraday low €26,94 bleef boven stop €26,82); gedisciplineerd vasthouden tot het slot leidt tot een winstgevende scratch/market-on-close (+0,60%).</li>
+          <li><strong>Regel #8:</strong> Instappen op een uitbraak boven de openingsrange (ORB) vereist bevestigde consolidatie; een instap op een ochtendpiek (€26,64) met een 0,6x ATR-stop (€26,06) boven de 15m openingsrange (€25,64–€26,04) resulteert bij de eerste pullback om 09:15 direct in een uitstopper (low €25,56, -2,18%), waarna het aandeel pas later in de middag herstelt naar €26,58.</li>
         </ul>
       <!-- AGENT_LESSONS_END -->
       </div>
