@@ -1194,3 +1194,20 @@ html {
   .container { padding: 0 1.25rem; }
   .ticket-price { font-size: 1.6rem; }
 }
+
+/* Multi-Timeframe Grafiek & Crosshair (RFC-0014) */
+.timeframe-tabs .tf-btn {
+  transition: all 0.15s ease;
+  user-select: none;
+}
+.timeframe-tabs .tf-btn:hover {
+  color: #fff !important;
+}
+.chart-viewport-container svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.chart-hover-bar {
+  cursor: crosshair;
+}
