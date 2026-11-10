@@ -57,12 +57,12 @@
       <div class="kpi-grid">
         <div class="kpi-card">
           <div class="kpi-label">Geverifieerde Winrate</div>
-          <div class="kpi-value positive" id="stat-winrate">20.0%</div>
+          <div class="kpi-value positive" id="stat-winrate">25.0%</div>
           <div class="kpi-meta">Theoretische break-even: &ge;37.5% (vóór frictiekosten)</div>
         </div>
         <div class="kpi-card">
           <div class="kpi-label">Afgeronde Transacties</div>
-          <div class="kpi-value" id="stat-total">5</div>
+          <div class="kpi-value" id="stat-total">4</div>
           <div class="kpi-meta">Winst: 1 &middot; Verlies: 1 (candle-verificatie &ge;09:15 CET)</div>
         </div>
         <div class="kpi-card">
@@ -87,32 +87,579 @@
     <!-- Uitgelichte Volledige Dagelijkse Analyse -->
     <section class="section" id="latest" style="padding-top: 1rem;">
       <div class="section-header">
-        <h2 class="section-title">🛡️ Kapitaalbescherming &amp; Marktstatus (<span class="mono">CASH</span>)</h2>
-        <span class="section-subtitle">Geen trade geforceerd &middot; Kapitaalbehoud in volatiele markt</span>
+        <h2 class="section-title">🎯 Dual-Market Daganalyse: ArcelorMittal SA (MT.AS) &amp; Broadcom Inc. (AVGO)</h2>
+        <span class="section-subtitle">Actieve selecties vastgesteld om 09:15 CET (Eurozone) en 15:45 CET (Wall Street)</span>
       </div>
 
       <!-- AGENT_FEATURED_PICK_START -->
       <div class="featured-card">
-<!-- AGENT_TA_CHART_START -->
-        <div class="ta-chart-grid" style="grid-template-columns: 1fr;">
-          <div class="chart-panel" style="border-left: 4px solid #f59e0b; background: rgba(245, 158, 11, 0.05); padding: 1.5rem; border-radius: 8px;">
-            <div class="panel-header" style="margin-bottom: 1rem; display: flex; justify-content: space-between; align-items: center;">
-              <span class="panel-title" style="font-size: 1.15rem; color: #f59e0b; display: flex; align-items: center; gap: 0.5rem; font-weight: 600;">
-                🛡️ 100% Kapitaalbescherming op Cash (Geen Focusaandeel)
-              </span>
-              <span class="badge" style="background:#f59e0b; color:#fff; font-weight:600; padding:3px 10px; border-radius:4px; font-size:0.75rem;">NO_TRADE</span>
+        <div style="margin-bottom: 0.9rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.06em; color: #a78bfa; background: rgba(167, 139, 250, 0.15); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(167, 139, 250, 0.4);">
+            🇪🇺 Eurozone Handelssessie (09:15 CET)
+          </span>
+          <span style="color: var(--text-secondary); font-size: 0.85rem;">ArcelorMittal SA</span>
+        </div>
+        <div class="featured-top">
+          <div class="ticker-headline">
+            <span class="ticker-symbol">MT.AS</span>
+            <span class="exchange-badge">🇳🇱 AEX &middot; EUR (€)</span>
+            <span class="badge badge-loss">STOP-LOSS GERAAKT (-2.52%)</span>
+          </div>
+          <div class="mono" style="font-size: 0.82rem; color: var(--text-secondary);">
+            📅 2026-11-10 &middot; Instap 09:45 CET &middot; Stop geactiveerd om 14:30 CET
+          </div>
+        </div>
+
+        <!-- 1. Orderoverzicht & Niveaus -->
+        <div class="ticket-grid">
+          <div class="ticket-box entry">
+            <div class="ticket-label">1. Instapniveau (09:45 CET)</div>
+            <div class="ticket-price">€59.04</div>
+            <div class="ticket-sub">Uitvoering na openingsveiling (84 aandelen &middot; €4959.36)</div>
+          </div>
+          <div class="ticket-box target">
+            <div class="ticket-label">2. Winstdoel (+2,0% Limiet)</div>
+            <div class="ticket-price">€60.22</div>
+            <div class="ticket-sub">+€1.18 per aandeel vaste winstneming</div>
+          </div>
+          <div class="ticket-box stop">
+            <div class="ticket-label">3. Stop-Loss (ATR-bewaakt)</div>
+            <div class="ticket-price">€57.55</div>
+            <div class="ticket-sub">-2.52% maximaal neerwaarts risico (0,6&times;ATR)</div>
+          </div>
+          <div class="ticket-box atr">
+            <div class="ticket-label">4. Technische Selectiewaarden</div>
+            <div class="ticket-price">ATR 4.23%</div>
+            <div class="ticket-sub">RSI-14: 57.8 &middot; RelVol: 1.60x</div>
+          </div>
+        </div>
+
+        <!-- AGENT_TA_CHART_START -->
+        <div class="ta-chart-grid">
+          <!-- Bovenste rij (schermbreed): Visuele Multi-Timeframe Koersgrafiek, VWAP & Orderniveaus (RFC-0014) -->
+          <div class="chart-panel">
+            <div>
+              <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+                <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+                  <span class="panel-title">📈 Koersverloop &amp; Context (<span class="mono">MT.AS</span>)</span>
+                  <div class="timeframe-tabs" style="display:inline-flex; background:rgba(30,41,59,0.7); border:1px solid #1e2d4a; border-radius:6px; padding:2px; gap:2px;">
+                    <button type="button" class="tf-btn btn-tf-15m active" id="btn-tf-15m" style="background:#38bdf8; color:#070b14; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:700; cursor:pointer;">⏱️ 15M Intradag</button>
+                    <button type="button" class="tf-btn btn-tf-1m" id="btn-tf-1m" style="background:transparent; color:#94a3b8; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:600; cursor:pointer;">📅 1M Dagkoersen</button>
+                  </div>
+                </div>
+                <div class="chart-legend chart-legend-15m" id="chart-legend-15m" style="display:flex;">
+                  <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Koers (15m)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#c084fc;"></span>Sessie-VWAP</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Take Profit (+2%)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>ATR Stop-Loss</span>
+                </div>
+                <div class="chart-legend chart-legend-1m" id="chart-legend-1m" style="display:none;">
+                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Candle Stijgend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>Candle Dalend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#06b6d4;"></span>SMA-20 Maandtrend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Instapniveau</span>
+                </div>
+              </div>
+
+              <div class="chart-viewport-container" style="position:relative; width:100%; overflow:hidden;">
+                <div id="chart-viewport-15m" class="chart-viewport chart-viewport-15m" style="display:block;">
+                  <div class="svg-chart-wrap" role="img" aria-label="15m Intraday Koers-, VWAP- en Orderniveaugrafiek voor MT.AS. Eenvoudige uitleg van de 15-minuten grafiek voor MT.AS: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP (€58.25), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% (€60.22). De rode stippellijn is de beschermende stop-loss risicogrens (€57.55) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.">
+  <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+    <desc>Eenvoudige uitleg van de 15-minuten grafiek voor MT.AS: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP (€58.25), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% (€60.22). De rode stippellijn is de beschermende stop-loss risicogrens (€57.55) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.</desc>
+    <defs>
+      <linearGradient id="priceAreaGrad_MT_AS" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Achtergrondraster -->
+    <line x1="64" y1="26" x2="900" y2="26" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" />
+    <line x1="64" y1="138.0" x2="900" y2="138.0" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" />
+    <line x1="64" y1="250" x2="900" y2="250" stroke="#1e2d4a" stroke-width="1" />
+
+    <!-- Take Profit (+2,0%) Horizontaal Niveau -->
+    <line x1="64" y1="32.7" x2="900" y2="32.7" stroke="#10b981" stroke-width="1.8" stroke-dasharray="6,3" />
+    <text x="892" text-anchor="end" y="28.7" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Take Profit (+2,0%): €60.22</text>
+    <rect x="904" y="22.7" width="88" height="20" rx="3" fill="rgba(16, 185, 129, 0.22)" stroke="#10b981" stroke-width="1.0" />
+    <text x="948" y="37.2" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">TP: €60.22</text>
+
+    <!-- Instap Horizontale & Verticale Markering -->
+    <line x1="153.6" y1="26" x2="153.6" y2="250" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.65" />
+    <text x="157.6" y="37" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600">09:45 Instap</text>
+    <line x1="64" y1="120.3" x2="900" y2="120.3" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,4" />
+    <rect x="904" y="110.3" width="88" height="20" rx="3" fill="rgba(56, 189, 248, 0.18)" stroke="#38bdf8" stroke-width="0.8" />
+    <text x="948" y="124.8" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">I: €59.04</text>
+
+    <!-- Stop-Loss (ATR) Horizontaal Niveau -->
+    <line x1="64" y1="231.0" x2="900" y2="231.0" stroke="#f43f5e" stroke-width="1.4" stroke-dasharray="5,4" />
+    <text x="892" text-anchor="end" y="227.0" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Stop-Loss (ATR): €57.55</text>
+    <rect x="904" y="221.0" width="88" height="20" rx="3" fill="rgba(244, 63, 94, 0.18)" stroke="#f43f5e" stroke-width="0.8" />
+    <text x="948" y="235.5" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">SL: €57.55</text>
+
+    <!-- Koersvlak & Lijnen -->
+    <polygon points="64.0,250 64.0,170.8 93.9,153.0 123.7,141.1 153.6,120.3 183.4,153.0 213.3,141.1 243.1,157.5 273.0,172.3 302.9,178.3 332.7,182.7 362.6,187.2 392.4,170.8 422.3,170.8 452.1,159.0 482.0,172.3 511.9,175.3 541.7,175.3 571.6,175.3 601.4,194.6 631.3,178.3 661.1,190.1 691.0,194.6 720.9,215.4 750.7,236.2 780.6,222.8 810.4,224.3 840.3,215.4 870.1,151.5 900.0,142.6 900.0,250" fill="url(#priceAreaGrad_MT_AS)" />
+    <polyline points="64.0,184.2 93.9,176.0 123.7,171.6 153.6,163.4 183.4,161.2 213.3,161.2 243.1,160.4 273.0,160.4 302.9,161.2 332.7,161.9 362.6,162.7 392.4,162.7 422.3,162.7 452.1,162.7 482.0,162.7 511.9,162.7 541.7,163.4 571.6,163.4 601.4,164.9 631.3,164.9 661.1,166.4 691.0,167.9 720.9,170.8 750.7,173.8 780.6,174.5 810.4,175.3 840.3,179.7 870.1,179.0 900.0,179.0" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-dasharray="4,3" />
+    <polyline points="64.0,170.8 93.9,153.0 123.7,141.1 153.6,120.3 183.4,153.0 213.3,141.1 243.1,157.5 273.0,172.3 302.9,178.3 332.7,182.7 362.6,187.2 392.4,170.8 422.3,170.8 452.1,159.0 482.0,172.3 511.9,175.3 541.7,175.3 571.6,175.3 601.4,194.6 631.3,178.3 661.1,190.1 691.0,194.6 720.9,215.4 750.7,236.2 780.6,222.8 810.4,224.3 840.3,215.4 870.1,151.5 900.0,142.6" fill="none" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Candle Wicks & Slotkoers Punten -->
+    <line x1="64.0" y1="150.0" x2="64.0" y2="231.7" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="64.0" cy="170.8" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="93.9" y1="138.2" x2="93.9" y2="172.3" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="93.9" cy="153.0" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="123.7" y1="132.2" x2="123.7" y2="156.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="123.7" cy="141.1" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="153.6" y1="114.4" x2="153.6" y2="144.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="153.6" cy="120.3" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="183.4" y1="123.3" x2="183.4" y2="170.8" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="183.4" cy="153.0" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="213.3" y1="141.1" x2="213.3" y2="163.4" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="213.3" cy="141.1" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="243.1" y1="135.2" x2="243.1" y2="161.9" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="243.1" cy="157.5" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="273.0" y1="151.5" x2="273.0" y2="172.3" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="273.0" cy="172.3" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="302.9" y1="169.3" x2="302.9" y2="181.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="302.9" cy="178.3" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="332.7" y1="173.8" x2="332.7" y2="187.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="332.7" cy="182.7" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="362.6" y1="173.8" x2="362.6" y2="191.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="362.6" cy="187.2" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="392.4" y1="166.4" x2="392.4" y2="188.7" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="392.4" cy="170.8" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="422.3" y1="166.4" x2="422.3" y2="175.3" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="422.3" cy="170.8" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="452.1" y1="159.0" x2="452.1" y2="172.3" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="452.1" cy="159.0" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="482.0" y1="159.0" x2="482.0" y2="176.8" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="482.0" cy="172.3" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="511.9" y1="170.8" x2="511.9" y2="178.3" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="511.9" cy="175.3" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="541.7" y1="167.9" x2="541.7" y2="182.7" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="541.7" cy="175.3" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="571.6" y1="172.3" x2="571.6" y2="179.7" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="571.6" cy="175.3" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="601.4" y1="176.8" x2="601.4" y2="194.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="601.4" cy="194.6" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="631.3" y1="178.3" x2="631.3" y2="197.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="631.3" cy="178.3" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="661.1" y1="175.3" x2="661.1" y2="191.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="661.1" cy="190.1" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="691.0" y1="178.3" x2="691.0" y2="199.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="691.0" cy="194.6" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="720.9" y1="191.6" x2="720.9" y2="243.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="720.9" cy="215.4" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="750.7" y1="213.9" x2="750.7" y2="236.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="750.7" cy="236.2" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="780.6" y1="218.4" x2="780.6" y2="236.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="780.6" cy="222.8" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="810.4" y1="215.4" x2="810.4" y2="227.3" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="810.4" cy="224.3" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" /><line x1="840.3" y1="215.4" x2="840.3" y2="239.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="840.3" cy="215.4" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="870.1" y1="151.5" x2="870.1" y2="225.8" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="870.1" cy="151.5" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="900.0" y1="136.7" x2="900.0" y2="154.5" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="900.0" cy="142.6" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" />
+
+    <!-- Intraday Volume Histogram -->
+    <text x="64" y="260.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11">15m VOL</text>
+    <rect x="56.0" y="262.0" width="15.9" height="34.0" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="86.0" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="115.8" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="145.7" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="175.5" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="205.4" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="235.2" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="265.1" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="294.9" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="324.8" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="354.7" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="384.4" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="414.4" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="444.2" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="474.1" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="503.9" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="533.8" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="563.6" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="593.4" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="623.3" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="653.1" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="683.0" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="712.9" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="742.8" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="772.6" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="802.4" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#f43f5e" fill-opacity="0.35" /><rect x="832.3" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="862.1" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="892.0" y="274.8" width="15.9" height="21.2" rx="1.5" fill="#10b981" fill-opacity="0.35" />
+
+    <!-- CET Tijdas Labels -->
+    <text x="64.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">09:00</text><text x="183.4" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">10:00</text><text x="302.9" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">11:00</text><text x="422.3" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">12:00</text><text x="541.7" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">13:00</text><text x="661.1" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">14:00</text><text x="780.6" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">15:00</text><text x="900.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">16:00</text>
+
+    <!-- Interactieve Hover Zones (RFC-0014) -->
+    <rect class="chart-hover-bar" x="49.6" y="26" width="28.8" height="224" fill="transparent" data-time="09:00" data-close="58.36" data-vwap="58.18" data-pnl="-1.15" data-vol="16" data-cx="64.0" data-cy="170.8" data-curr="€" /><rect class="chart-hover-bar" x="79.5" y="26" width="28.8" height="224" fill="transparent" data-time="09:15" data-close="58.60" data-vwap="58.29" data-pnl="-0.75" data-vol="10" data-cx="93.9" data-cy="153.0" data-curr="€" /><rect class="chart-hover-bar" x="109.3" y="26" width="28.8" height="224" fill="transparent" data-time="09:30" data-close="58.76" data-vwap="58.35" data-pnl="-0.47" data-vol="10" data-cx="123.7" data-cy="141.1" data-curr="€" /><rect class="chart-hover-bar" x="139.2" y="26" width="28.8" height="224" fill="transparent" data-time="09:45" data-close="59.04" data-vwap="58.46" data-pnl="+0.00" data-vol="10" data-cx="153.6" data-cy="120.3" data-curr="€" /><rect class="chart-hover-bar" x="169.0" y="26" width="28.8" height="224" fill="transparent" data-time="10:00" data-close="58.60" data-vwap="58.49" data-pnl="-0.75" data-vol="10" data-cx="183.4" data-cy="153.0" data-curr="€" /><rect class="chart-hover-bar" x="198.9" y="26" width="28.8" height="224" fill="transparent" data-time="10:15" data-close="58.76" data-vwap="58.49" data-pnl="-0.47" data-vol="10" data-cx="213.3" data-cy="141.1" data-curr="€" /><rect class="chart-hover-bar" x="228.7" y="26" width="28.8" height="224" fill="transparent" data-time="10:30" data-close="58.54" data-vwap="58.50" data-pnl="-0.85" data-vol="10" data-cx="243.1" data-cy="157.5" data-curr="€" /><rect class="chart-hover-bar" x="258.6" y="26" width="28.8" height="224" fill="transparent" data-time="10:45" data-close="58.34" data-vwap="58.50" data-pnl="-1.19" data-vol="10" data-cx="273.0" data-cy="172.3" data-curr="€" /><rect class="chart-hover-bar" x="288.5" y="26" width="28.8" height="224" fill="transparent" data-time="11:00" data-close="58.26" data-vwap="58.49" data-pnl="-1.32" data-vol="10" data-cx="302.9" data-cy="178.3" data-curr="€" /><rect class="chart-hover-bar" x="318.3" y="26" width="28.8" height="224" fill="transparent" data-time="11:15" data-close="58.20" data-vwap="58.48" data-pnl="-1.42" data-vol="10" data-cx="332.7" data-cy="182.7" data-curr="€" /><rect class="chart-hover-bar" x="348.2" y="26" width="28.8" height="224" fill="transparent" data-time="11:30" data-close="58.14" data-vwap="58.47" data-pnl="-1.52" data-vol="10" data-cx="362.6" data-cy="187.2" data-curr="€" /><rect class="chart-hover-bar" x="378.0" y="26" width="28.8" height="224" fill="transparent" data-time="11:45" data-close="58.36" data-vwap="58.47" data-pnl="-1.15" data-vol="10" data-cx="392.4" data-cy="170.8" data-curr="€" /><rect class="chart-hover-bar" x="407.9" y="26" width="28.8" height="224" fill="transparent" data-time="12:00" data-close="58.36" data-vwap="58.47" data-pnl="-1.15" data-vol="10" data-cx="422.3" data-cy="170.8" data-curr="€" /><rect class="chart-hover-bar" x="437.7" y="26" width="28.8" height="224" fill="transparent" data-time="12:15" data-close="58.52" data-vwap="58.47" data-pnl="-0.88" data-vol="10" data-cx="452.1" data-cy="159.0" data-curr="€" /><rect class="chart-hover-bar" x="467.6" y="26" width="28.8" height="224" fill="transparent" data-time="12:30" data-close="58.34" data-vwap="58.47" data-pnl="-1.19" data-vol="10" data-cx="482.0" data-cy="172.3" data-curr="€" /><rect class="chart-hover-bar" x="497.5" y="26" width="28.8" height="224" fill="transparent" data-time="12:45" data-close="58.30" data-vwap="58.47" data-pnl="-1.25" data-vol="10" data-cx="511.9" data-cy="175.3" data-curr="€" /><rect class="chart-hover-bar" x="527.3" y="26" width="28.8" height="224" fill="transparent" data-time="13:00" data-close="58.30" data-vwap="58.46" data-pnl="-1.25" data-vol="10" data-cx="541.7" data-cy="175.3" data-curr="€" /><rect class="chart-hover-bar" x="557.2" y="26" width="28.8" height="224" fill="transparent" data-time="13:15" data-close="58.30" data-vwap="58.46" data-pnl="-1.25" data-vol="10" data-cx="571.6" data-cy="175.3" data-curr="€" /><rect class="chart-hover-bar" x="587.0" y="26" width="28.8" height="224" fill="transparent" data-time="13:30" data-close="58.04" data-vwap="58.44" data-pnl="-1.69" data-vol="10" data-cx="601.4" data-cy="194.6" data-curr="€" /><rect class="chart-hover-bar" x="616.9" y="26" width="28.8" height="224" fill="transparent" data-time="13:45" data-close="58.26" data-vwap="58.44" data-pnl="-1.32" data-vol="10" data-cx="631.3" data-cy="178.3" data-curr="€" /><rect class="chart-hover-bar" x="646.7" y="26" width="28.8" height="224" fill="transparent" data-time="14:00" data-close="58.10" data-vwap="58.42" data-pnl="-1.59" data-vol="10" data-cx="661.1" data-cy="190.1" data-curr="€" /><rect class="chart-hover-bar" x="676.6" y="26" width="28.8" height="224" fill="transparent" data-time="14:15" data-close="58.04" data-vwap="58.40" data-pnl="-1.69" data-vol="10" data-cx="691.0" data-cy="194.6" data-curr="€" /><rect class="chart-hover-bar" x="706.5" y="26" width="28.8" height="224" fill="transparent" data-time="14:30" data-close="57.76" data-vwap="58.36" data-pnl="-2.17" data-vol="10" data-cx="720.9" data-cy="215.4" data-curr="€" /><rect class="chart-hover-bar" x="736.3" y="26" width="28.8" height="224" fill="transparent" data-time="14:45" data-close="57.48" data-vwap="58.32" data-pnl="-2.64" data-vol="10" data-cx="750.7" data-cy="236.2" data-curr="€" /><rect class="chart-hover-bar" x="766.2" y="26" width="28.8" height="224" fill="transparent" data-time="15:00" data-close="57.66" data-vwap="58.31" data-pnl="-2.34" data-vol="10" data-cx="780.6" data-cy="222.8" data-curr="€" /><rect class="chart-hover-bar" x="796.0" y="26" width="28.8" height="224" fill="transparent" data-time="15:15" data-close="57.64" data-vwap="58.30" data-pnl="-2.37" data-vol="10" data-cx="810.4" data-cy="224.3" data-curr="€" /><rect class="chart-hover-bar" x="825.9" y="26" width="28.8" height="224" fill="transparent" data-time="15:30" data-close="57.76" data-vwap="58.24" data-pnl="-2.17" data-vol="10" data-cx="840.3" data-cy="215.4" data-curr="€" /><rect class="chart-hover-bar" x="855.7" y="26" width="28.8" height="224" fill="transparent" data-time="15:45" data-close="58.62" data-vwap="58.25" data-pnl="-0.71" data-vol="10" data-cx="870.1" data-cy="151.5" data-curr="€" /><rect class="chart-hover-bar" x="885.6" y="26" width="28.8" height="224" fill="transparent" data-time="16:00" data-close="58.74" data-vwap="58.25" data-pnl="-0.51" data-vol="10" data-cx="900.0" data-cy="142.6" data-curr="€" />
+  </svg>
+</div>
+                </div>
+                <div id="chart-viewport-1m" class="chart-viewport chart-viewport-1m" style="display:none;">
+                  <div class="svg-chart-wrap" role="img" aria-label="1-Maand Dagkoers- en SMA-20 Grafiek voor MT.AS. Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor MT.AS: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op €59.04.">
+  <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+    <desc>Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor MT.AS: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op €59.04.</desc>
+    <!-- Achtergrondraster & Prijslabels -->
+    <line x1="64" y1="26" x2="900" y2="26" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" /><line x1="64" y1="138.0" x2="900" y2="138.0" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" /><line x1="64" y1="250" x2="900" y2="250" stroke="#1e2d4a" stroke-width="1" />
+    <text x="56" y="30" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">€64.95</text><text x="56" y="142.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">€58.58</text><text x="56" y="254" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">€52.20</text>
+
+    <!-- Referentielijn Instap -->
+    <line x1="64" y1="129.8" x2="900" y2="129.8" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,4" /><rect x="904" y="119.8" width="88" height="20" rx="3" fill="rgba(56, 189, 248, 0.18)" stroke="#38bdf8" stroke-width="0.8" /><text x="948" y="134.3" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">I: €59.04</text>
+
+    <!-- Candlesticks & SMA-20 Polyline -->
+    <line x1="64.0" y1="37.5" x2="64.0" y2="61.0" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="56.2" y="39.2" width="15.5" height="14.4" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="88.6" y1="47.0" x2="88.6" y2="77.9" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="80.8" y="62.1" width="15.5" height="15.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="113.2" y1="46.6" x2="113.2" y2="81.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="105.5" y="60.3" width="15.5" height="21.4" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="137.8" y1="80.7" x2="137.8" y2="119.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="130.1" y="90.2" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="162.4" y1="76.5" x2="162.4" y2="116.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="154.7" y="82.1" width="15.5" height="34.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="186.9" y1="104.9" x2="186.9" y2="127.4" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="179.2" y="113.3" width="15.5" height="10.9" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="211.5" y1="119.7" x2="211.5" y2="174.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="203.8" y="130.5" width="15.5" height="39.7" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="236.1" y1="147.8" x2="236.1" y2="176.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="228.3" y="160.7" width="15.5" height="2.9" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="260.7" y1="153.7" x2="260.7" y2="183.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="252.9" y="155.1" width="15.5" height="15.5" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="285.3" y1="126.0" x2="285.3" y2="159.3" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="277.6" y="143.9" width="15.5" height="4.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="309.9" y1="149.2" x2="309.9" y2="191.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="302.1" y="154.8" width="15.5" height="35.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="334.5" y1="201.1" x2="334.5" y2="232.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="326.8" y="209.2" width="15.5" height="5.3" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="359.1" y1="154.8" x2="359.1" y2="196.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="351.4" y="160.7" width="15.5" height="34.8" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="383.6" y1="156.2" x2="383.6" y2="182.5" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="375.9" y="168.5" width="15.5" height="2.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="408.2" y1="154.8" x2="408.2" y2="175.5" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="400.4" y="174.4" width="15.5" height="2.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="432.8" y1="160.0" x2="432.8" y2="183.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="425.1" y="165.7" width="15.5" height="13.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="457.4" y1="170.6" x2="457.4" y2="202.9" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="449.6" y="171.3" width="15.5" height="31.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="482.0" y1="156.9" x2="482.0" y2="170.9" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="474.2" y="162.9" width="15.5" height="6.3" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="506.6" y1="161.1" x2="506.6" y2="190.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="498.9" y="174.1" width="15.5" height="8.4" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="531.2" y1="161.8" x2="531.2" y2="205.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="523.5" y="181.1" width="15.5" height="6.3" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="555.8" y1="168.5" x2="555.8" y2="193.4" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="548.0" y="179.0" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="580.4" y1="192.7" x2="580.4" y2="222.9" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="572.6" y="196.9" width="15.5" height="22.9" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="604.9" y1="219.8" x2="604.9" y2="245.4" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="597.1" y="222.6" width="15.5" height="8.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="629.5" y1="225.0" x2="629.5" y2="241.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="621.8" y="231.7" width="15.5" height="7.4" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="654.1" y1="204.3" x2="654.1" y2="242.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="646.4" y="208.9" width="15.5" height="23.8" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="678.7" y1="195.2" x2="678.7" y2="240.5" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="671.0" y="200.4" width="15.5" height="26.7" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="703.3" y1="198.2" x2="703.3" y2="227.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="695.5" y="204.7" width="15.5" height="21.4" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="727.9" y1="210.6" x2="727.9" y2="231.0" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="720.1" y="217.3" width="15.5" height="8.1" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="752.5" y1="187.8" x2="752.5" y2="225.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="744.8" y="192.0" width="15.5" height="30.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="777.1" y1="183.9" x2="777.1" y2="227.8" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="769.4" y="215.5" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="801.6" y1="166.7" x2="801.6" y2="216.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="793.9" y="198.7" width="15.5" height="12.6" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="826.2" y1="134.4" x2="826.2" y2="240.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="818.5" y="164.3" width="15.5" height="45.3" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="850.8" y1="173.0" x2="850.8" y2="237.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="843.0" y="203.9" width="15.5" height="31.7" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="875.4" y1="160.4" x2="875.4" y2="202.5" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="867.6" y="168.5" width="15.5" height="30.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="900.0" y1="128.4" x2="900.0" y2="156.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="892.2" y="139.0" width="15.5" height="14.7" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" />
+    <polyline points="64.0,31.7 88.6,33.3 113.2,35.7 137.8,38.2 162.4,41.7 186.9,45.9 211.5,53.8 236.1,62.6 260.7,71.4 285.3,78.9 309.9,88.4 334.5,97.5 359.1,103.9 383.6,108.9 408.2,114.9 432.8,122.3 457.4,130.0 482.0,135.6 506.6,141.1 531.2,147.9 555.8,154.3 580.4,161.3 604.9,168.7 629.5,176.2 654.1,180.8 678.7,186.0 703.3,187.6 727.9,191.0 752.5,192.7 777.1,196.4 801.6,196.7 826.2,196.6 850.8,198.7 875.4,198.7 900.0,196.7" fill="none" stroke="#06b6d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Dagelijks Volume Histogram -->
+    <text x="64" y="260.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11">DAG VOL</text>
+    <rect x="56.2" y="283.7" width="15.5" height="12.3" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="80.8" y="281.9" width="15.5" height="14.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="105.5" y="281.8" width="15.5" height="14.2" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="130.1" y="265.7" width="15.5" height="30.3" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="154.7" y="275.9" width="15.5" height="20.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="179.2" y="281.0" width="15.5" height="15.0" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="203.8" y="268.8" width="15.5" height="27.2" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="228.3" y="275.0" width="15.5" height="21.0" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="252.9" y="279.9" width="15.5" height="16.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="277.6" y="279.2" width="15.5" height="16.8" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="302.1" y="276.4" width="15.5" height="19.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="326.8" y="266.1" width="15.5" height="29.9" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="351.4" y="274.1" width="15.5" height="21.9" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="375.9" y="284.8" width="15.5" height="11.2" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="400.4" y="284.0" width="15.5" height="12.0" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="425.1" y="281.9" width="15.5" height="14.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="449.6" y="277.9" width="15.5" height="18.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="474.2" y="280.9" width="15.5" height="15.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="498.9" y="279.3" width="15.5" height="16.7" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="523.5" y="280.8" width="15.5" height="15.2" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="548.0" y="283.9" width="15.5" height="12.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="572.6" y="281.4" width="15.5" height="14.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="597.1" y="275.8" width="15.5" height="20.2" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="621.8" y="281.4" width="15.5" height="14.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="646.4" y="280.3" width="15.5" height="15.7" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="671.0" y="276.5" width="15.5" height="19.5" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="695.5" y="282.0" width="15.5" height="14.0" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="720.1" y="277.1" width="15.5" height="18.9" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="744.8" y="281.3" width="15.5" height="14.7" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="769.4" y="280.9" width="15.5" height="15.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="793.9" y="273.6" width="15.5" height="22.4" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="818.5" y="262.0" width="15.5" height="34.0" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="843.0" y="274.7" width="15.5" height="21.3" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="867.6" y="277.6" width="15.5" height="18.4" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="892.2" y="290.6" width="15.5" height="5.4" rx="1.0" fill="#10b981" fill-opacity="0.32" />
+
+    <!-- Datum X-as Labels -->
+    <text x="64.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">23 sep</text><text x="186.9" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">30 sep</text><text x="309.9" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">7 okt</text><text x="432.8" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">14 okt</text><text x="555.8" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">21 okt</text><text x="678.7" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">28 okt</text><text x="801.6" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">4 nov</text><text x="900.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">10 nov</text>
+
+    <!-- Interactieve Hover Zones (RFC-0014) -->
+    <rect class="chart-hover-bar" x="52.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-23" data-open="64.20" data-high="64.30" data-low="62.96" data-close="63.38" data-vol="1032597" data-sma20="64.63" data-cx="64.0" data-cy="53.6" data-curr="€" /><rect class="chart-hover-bar" x="76.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-24" data-open="62.90" data-high="63.76" data-low="62.00" data-close="62.00" data-vol="1183522" data-sma20="64.54" data-cx="88.6" data-cy="77.9" data-curr="€" /><rect class="chart-hover-bar" x="101.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-25" data-open="63.00" data-high="63.78" data-low="61.78" data-close="61.78" data-vol="1191480" data-sma20="64.40" data-cx="113.2" data-cy="81.7" data-curr="€" /><rect class="chart-hover-bar" x="125.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-28" data-open="61.30" data-high="61.84" data-low="59.66" data-close="61.30" data-vol="2541333" data-sma20="64.26" data-cx="137.8" data-cy="90.2" data-curr="€" /><rect class="chart-hover-bar" x="150.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-29" data-open="61.76" data-high="62.08" data-low="59.82" data-close="59.82" data-vol="1681730" data-sma20="64.06" data-cx="162.4" data-cy="116.1" data-curr="€" /><rect class="chart-hover-bar" x="175.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-30" data-open="59.98" data-high="60.46" data-low="59.18" data-close="59.36" data-vol="1253769" data-sma20="63.82" data-cx="186.9" data-cy="124.2" data-curr="€" /><rect class="chart-hover-bar" x="199.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-01" data-open="59.00" data-high="59.62" data-low="56.52" data-close="56.74" data-vol="2277560" data-sma20="63.37" data-cx="211.5" data-cy="170.2" data-curr="€" /><rect class="chart-hover-bar" x="224.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-02" data-open="57.12" data-high="58.02" data-low="56.40" data-close="57.28" data-vol="1760241" data-sma20="62.87" data-cx="236.1" data-cy="160.7" data-curr="€" /><rect class="chart-hover-bar" x="248.8" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-05" data-open="56.72" data-high="57.68" data-low="55.98" data-close="57.60" data-vol="1349972" data-sma20="62.37" data-cx="260.7" data-cy="155.1" data-curr="€" /><rect class="chart-hover-bar" x="273.4" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-06" data-open="58.00" data-high="59.26" data-low="57.36" data-close="58.24" data-vol="1410067" data-sma20="61.94" data-cx="285.3" data-cy="143.9" data-curr="€" /><rect class="chart-hover-bar" x="298.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-07" data-open="57.62" data-high="57.94" data-low="55.52" data-close="55.58" data-vol="1647154" data-sma20="61.40" data-cx="309.9" data-cy="190.6" data-curr="€" /><rect class="chart-hover-bar" x="322.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-08" data-open="54.52" data-high="54.98" data-low="53.18" data-close="54.22" data-vol="2506427" data-sma20="60.88" data-cx="334.5" data-cy="214.5" data-curr="€" /><rect class="chart-hover-bar" x="347.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-09" data-open="55.30" data-high="57.62" data-low="55.26" data-close="57.28" data-vol="1838066" data-sma20="60.52" data-cx="359.1" data-cy="160.7" data-curr="€" /><rect class="chart-hover-bar" x="371.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-12" data-open="56.84" data-high="57.54" data-low="56.04" data-close="56.82" data-vol="935239" data-sma20="60.23" data-cx="383.6" data-cy="168.8" data-curr="€" /><rect class="chart-hover-bar" x="396.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-13" data-open="56.50" data-high="57.62" data-low="56.44" data-close="56.44" data-vol="1006027" data-sma20="59.89" data-cx="408.2" data-cy="175.5" data-curr="€" /><rect class="chart-hover-bar" x="420.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-14" data-open="57.00" data-high="57.32" data-low="56.00" data-close="56.26" data-vol="1179390" data-sma20="59.47" data-cx="432.8" data-cy="178.7" data-curr="€" /><rect class="chart-hover-bar" x="445.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-15" data-open="54.90" data-high="56.72" data-low="54.88" data-close="56.68" data-vol="1515368" data-sma20="59.03" data-cx="457.4" data-cy="171.3" data-curr="€" /><rect class="chart-hover-bar" x="470.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-16" data-open="57.16" data-high="57.50" data-low="56.70" data-close="56.80" data-vol="1265648" data-sma20="58.71" data-cx="482.0" data-cy="169.2" data-curr="€" /><rect class="chart-hover-bar" x="494.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-19" data-open="56.04" data-high="57.26" data-low="55.58" data-close="56.52" data-vol="1401505" data-sma20="58.40" data-cx="506.6" data-cy="174.1" data-curr="€" /><rect class="chart-hover-bar" x="519.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-20" data-open="55.76" data-high="57.22" data-low="54.76" data-close="56.12" data-vol="1274712" data-sma20="58.01" data-cx="531.2" data-cy="181.1" data-curr="€" /><rect class="chart-hover-bar" x="543.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-21" data-open="56.22" data-high="56.84" data-low="55.42" data-close="56.24" data-vol="1012063" data-sma20="57.65" data-cx="555.8" data-cy="179.0" data-curr="€" /><rect class="chart-hover-bar" x="568.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-22" data-open="55.22" data-high="55.46" data-low="53.74" data-close="53.92" data-vol="1226044" data-sma20="57.25" data-cx="580.4" data-cy="219.8" data-curr="€" /><rect class="chart-hover-bar" x="593.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-23" data-open="53.76" data-high="53.92" data-low="52.46" data-close="53.30" data-vol="1691626" data-sma20="56.83" data-cx="604.9" data-cy="230.6" data-curr="€" /><rect class="chart-hover-bar" x="617.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-26" data-open="53.24" data-high="53.62" data-low="52.70" data-close="52.82" data-vol="1223128" data-sma20="56.40" data-cx="629.5" data-cy="239.1" data-curr="€" /><rect class="chart-hover-bar" x="642.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-27" data-open="53.18" data-high="54.80" data-low="52.62" data-close="54.54" data-vol="1318395" data-sma20="56.14" data-cx="654.1" data-cy="208.9" data-curr="€" /><rect class="chart-hover-bar" x="666.8" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-28" data-open="55.02" data-high="55.32" data-low="52.74" data-close="53.50" data-vol="1631680" data-sma20="55.84" data-cx="678.7" data-cy="227.1" data-curr="€" /><rect class="chart-hover-bar" x="691.4" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-29" data-open="53.56" data-high="55.15" data-low="53.50" data-close="54.78" data-vol="1172848" data-sma20="55.75" data-cx="703.3" data-cy="204.7" data-curr="€" /><rect class="chart-hover-bar" x="716.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-30" data-open="54.06" data-high="54.44" data-low="53.28" data-close="53.60" data-vol="1585528" data-sma20="55.56" data-cx="727.9" data-cy="225.4" data-curr="€" /><rect class="chart-hover-bar" x="740.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-02" data-open="53.78" data-high="55.74" data-low="53.62" data-close="55.50" data-vol="1235463" data-sma20="55.46" data-cx="752.5" data-cy="192.0" data-curr="€" /><rect class="chart-hover-bar" x="765.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-03" data-open="54.08" data-high="55.96" data-low="53.46" data-close="54.16" data-vol="1269003" data-sma20="55.25" data-cx="777.1" data-cy="215.5" data-curr="€" /><rect class="chart-hover-bar" x="789.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-04" data-open="54.40" data-high="56.94" data-low="54.10" data-close="55.12" data-vol="1878368" data-sma20="55.23" data-cx="801.6" data-cy="198.7" data-curr="€" /><rect class="chart-hover-bar" x="814.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-05" data-open="57.08" data-high="58.78" data-low="52.76" data-close="54.50" data-vol="2850273" data-sma20="55.24" data-cx="826.2" data-cy="209.6" data-curr="€" /><rect class="chart-hover-bar" x="838.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-06" data-open="53.02" data-high="56.58" data-low="52.94" data-close="54.82" data-vol="1788430" data-sma20="55.12" data-cx="850.8" data-cy="203.9" data-curr="€" /><rect class="chart-hover-bar" x="863.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-09" data-open="55.12" data-high="57.30" data-low="54.90" data-close="56.84" data-vol="1541255" data-sma20="55.12" data-cx="875.4" data-cy="168.5" data-curr="€" /><rect class="chart-hover-bar" x="888.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-10" data-open="57.68" data-high="59.12" data-low="57.54" data-close="58.52" data-vol="451720" data-sma20="55.23" data-cx="900.0" data-cy="139.0" data-curr="€" />
+  </svg>
+</div>
+                </div>
+                <div id="chart-crosshair-line" class="chart-crosshair-line" style="display:none; position:absolute; width:1px; border-left:1px dashed #38bdf8; pointer-events:none; z-index:10;"></div>
+                <div id="chart-hover-tooltip" class="chart-hover-tooltip" style="display:none; position:absolute; background:rgba(15,23,42,0.95); border:1px solid #38bdf8; border-radius:6px; padding:0.5rem 0.75rem; font-size:0.82rem; color:#f8fafc; pointer-events:none; z-index:20; box-shadow:0 6px 20px rgba(0,0,0,0.6); backdrop-filter:blur(4px); min-width:170px;"></div>
+              </div>
             </div>
-            <p style="font-size: 1rem; line-height: 1.6; color: var(--text-primary); margin: 0 0 1.25rem 0;">
-              Geen gekwalificeerde finalisten na risico-, agenda- en VWAP-filtering. Kapitaalbescherming actief: 100% cashpositie.
-            </p>
-            <div style="font-size: 0.85rem; color: var(--text-muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 0.85rem;" class="mono">
-              <span>Beoordeelde kandidaten: Geen</span>
-              <span>Besluitbron: <code>quant_no_candidates</code></span>
-              <span>Marktrisico: 0,00% (Volledige Cash Reserve)</span>
+
+            <div id="chart-subtitle-15m" class="chart-subtitle-15m mono" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
+              <span>15m Openingsbereik: €57.54 – €58.64</span>
+              <span>VWAP: €58.25 (Koers &gt; VWAP ✅)</span>
+              <span>Tijdzone: Europe/Amsterdam (CET)</span>
+            </div>
+            <div id="chart-subtitle-1m" class="chart-subtitle-1m mono" style="display:none; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
+              <span>1-Maand Context: Dagcandles &amp; SMA-20 Trend</span>
+              <span>Kortetermijntrend: €55.23 (+6.9%)</span>
+              <span>Bron: Officiële Dagkoersen</span>
+            </div>
+
+            <!-- Eenvoudige Uitleg van de Technische Analyse (Toegankelijkheid & Beginners) -->
+            <div class="chart-simple-explanation" style="margin-top:0.85rem; padding:0.9rem 1.15rem; background:rgba(15,23,42,0.7); border:1px solid #1e2d4a; border-radius:8px; font-size:0.86rem; color:#cbd5e1; line-height:1.55;">
+              <div style="font-weight:700; color:#38bdf8; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem; font-size:0.92rem;">
+                <span>💡</span> <span>Eenvoudige Uitleg van de Grafiek &amp; Indicatoren (<span class="mono">MT.AS</span>)</span>
+              </div>
+              <p style="margin:0 0 0.55rem 0; font-size:0.83rem; color:#94a3b8;">
+                Helder en begrijpelijk: wat betekenen de lijnen, kleuren en niveaus in deze grafiek?
+              </p>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.65rem;">
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #38bdf8;">
+                  <strong style="color:#38bdf8;">• Koersverloop (Blauw):</strong> De werkelijke prijsontwikkeling per kwartier. De stippen geven de slotkoers van elke 15m-periode aan.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #c084fc;">
+                  <strong style="color:#c084fc;">• Sessie-VWAP (Paars):</strong> De volume-gewogen gemiddelde instapprijs (€58.25). Boven deze lijn hebben kopers de overhand.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #10b981;">
+                  <strong style="color:#10b981;">• Winstdoel (Groen, +2,0%):</strong> Ons vaste verkoopdoel (€60.22). Bij dit niveau wordt de winst automatisch veiliggesteld.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #f43f5e;">
+                  <strong style="color:#f43f5e;">• Noodrem (Rood, Stop-Loss):</strong> De risicogrens (€57.55). Als de koers hieronder daalt, sluit de positie direct om verlies te beperken.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Onderste rij: Kwantitatieve Technische Analyse (TA) Scorekaart (meerkolomsraster via CSS) -->
+          <div class="ta-panel">
+            <div class="panel-header">
+              <span class="panel-title">🔬 Technische Analyse (TA) Scorecard</span>
+              <span class="badge badge-win">BULLISH SETUP</span>
+            </div>
+
+            <div class="ta-metrics-list">
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Kortetermijntrend (SMA-20 / SMA-50)</span>
+                <span class="ta-metric-val">
+                  <span>€55.23 <span class="text-win">(+6.9%)</span></span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">&gt; SMA20/50</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Langetermijntrend (SMA-200)</span>
+                <span class="ta-metric-val">
+                  <span>€55.65 <span class="text-win">(+6.1%)</span></span>
+                  <span style="color:var(--color-win); font-size:0.75rem;">Opwaartse trend</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row" style="flex-direction:column; align-items:stretch;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="ta-metric-name">RSI Momentum (14-daags)</span>
+                  <span class="ta-metric-val">57.8 <span style="font-size:0.7rem; color:var(--accent-blue);">(BULLISH MOMENTUM)</span></span>
+                </div>
+                <div class="rsi-bar-track">
+                  <div class="rsi-bar-thumb" style="left:57.8%;"></div>
+                </div>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Sessie-VWAP &amp; Gap-analyse</span>
+                <span class="ta-metric-val">
+                  <span>€58.25</span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">GEEN GAP FADE</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Relatief Volume (RVOL, gecorrigeerd)</span>
+                <span class="ta-metric-val">
+                  <span class="text-win">1.60x</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">t.o.v. 20d openingsvolume</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Relatieve Sterkte t.o.v. Benchmark</span>
+                <span class="ta-metric-val">
+                  <span class="text-win">+1.20%</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">Outperformance vs index</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">ATR-14 &amp; Risk/Reward Ratio</span>
+                <span class="ta-metric-val">
+                  <span>ATR 4.23%</span>
+                  <span style="color:var(--accent-blue); font-size:0.75rem;">R/R 1:0.79 (BE 37,5%)</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">WorldQuant Kwant-Noodrem (RFC-0008)</span>
+                <span class="ta-metric-val">
+                  <span>Alpha#10 &amp; #20</span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">GEEN MEAN-REVERSION TRAP</span>
+                </span>
+              </div>
             </div>
           </div>
         </div>
         <!-- AGENT_TA_CHART_END -->
+
+        <!-- AGENT_THESIS_START -->
+        <div class="article-section" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">💡 Handelsthese &amp; Katalysator</h3>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 0;">
+            De Selectietrechter van RocketBidder wijst vandaag op ArcelorMittal (MT.AS) als Focusaandeel van de dag. De Handelsthese &amp; Katalysator is gebaseerd op de zojuist gepubliceerde, robuuste Q3-resultaten met een indrukwekkende EBITDA-groei en een opwaarts bijgestelde outlook voor 2027. Deze fundamentele kracht, gecombineerd met een gunstige Trade Setup &amp; Orderoverzicht, creëert een solide basis voor een potentiële opwaartse beweging richting ons Winstdoel (+2,0% Limiet), met een Stop-Loss (ATR-bewaakt) om kapitaal te beschermen.
+          </p>
+        </div>
+        <!-- AGENT_THESIS_END -->
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+          <a href="posts/2026-11-10-mt-as.html" class="btn">Bekijk Zelfstandige Artikelpagina &rarr;</a>
+        </div>
+      </div>
+
+      <div class="featured-card">
+        <div style="margin-bottom: 0.9rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem;">
+          <span style="font-weight: 700; font-size: 0.88rem; text-transform: uppercase; letter-spacing: 0.06em; color: #38bdf8; background: rgba(56, 189, 248, 0.15); padding: 4px 12px; border-radius: 6px; border: 1px solid rgba(56, 189, 248, 0.4);">
+            🇺🇸 Wall Street Handelssessie (15:45 CET)
+          </span>
+          <span style="color: var(--text-secondary); font-size: 0.85rem;">Broadcom Inc.</span>
+        </div>
+        <div class="featured-top">
+          <div class="ticker-headline">
+            <span class="ticker-symbol">AVGO</span>
+            <span class="exchange-badge">🇺🇸 US &middot; USD ($)</span>
+            <span class="badge badge-win">DOEL BEREIKT (+-0.03%)</span>
+          </div>
+          <div class="mono" style="font-size: 0.82rem; color: var(--text-secondary);">
+            📅 2026-11-09 &middot; Instap 15:45 CET &middot; Sessie Gesloten
+          </div>
+        </div>
+
+        <!-- 1. Orderoverzicht & Niveaus -->
+        <div class="ticket-grid">
+          <div class="ticket-box entry">
+            <div class="ticket-label">1. Instapniveau (15:45 CET)</div>
+            <div class="ticket-price">$319.61</div>
+            <div class="ticket-sub">Uitvoering na openingsveiling (15 aandelen &middot; $4794.15)</div>
+          </div>
+          <div class="ticket-box target">
+            <div class="ticket-label">2. Winstdoel (+2,0% Limiet)</div>
+            <div class="ticket-price">$326.00</div>
+            <div class="ticket-sub">+$6.39 per aandeel vaste winstneming</div>
+          </div>
+          <div class="ticket-box stop">
+            <div class="ticket-label">3. Stop-Loss (ATR-bewaakt)</div>
+            <div class="ticket-price">$309.77</div>
+            <div class="ticket-sub">-3.08% maximaal neerwaarts risico (0,6&times;ATR)</div>
+          </div>
+          <div class="ticket-box atr">
+            <div class="ticket-label">4. Technische Selectiewaarden</div>
+            <div class="ticket-price">ATR 5.13%</div>
+            <div class="ticket-sub">RSI-14: 44.7 &middot; RelVol: 1.26x</div>
+          </div>
+        </div>
+
+        <!-- AGENT_TA_CHART_START -->
+        <div class="ta-chart-grid">
+          <!-- Bovenste rij (schermbreed): Visuele Multi-Timeframe Koersgrafiek, VWAP & Orderniveaus (RFC-0014) -->
+          <div class="chart-panel">
+            <div>
+              <div class="panel-header" style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem;">
+                <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
+                  <span class="panel-title">📈 Koersverloop &amp; Context (<span class="mono">AVGO</span>)</span>
+                  <div class="timeframe-tabs" style="display:inline-flex; background:rgba(30,41,59,0.7); border:1px solid #1e2d4a; border-radius:6px; padding:2px; gap:2px;">
+                    <button type="button" class="tf-btn btn-tf-15m active" id="btn-tf-15m" style="background:#38bdf8; color:#070b14; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:700; cursor:pointer;">⏱️ 15M Intradag</button>
+                    <button type="button" class="tf-btn btn-tf-1m" id="btn-tf-1m" style="background:transparent; color:#94a3b8; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:600; cursor:pointer;">📅 1M Dagkoersen</button>
+                  </div>
+                </div>
+                <div class="chart-legend chart-legend-15m" id="chart-legend-15m" style="display:flex;">
+                  <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Koers (15m)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#c084fc;"></span>Sessie-VWAP</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Take Profit (+2%)</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>ATR Stop-Loss</span>
+                </div>
+                <div class="chart-legend chart-legend-1m" id="chart-legend-1m" style="display:none;">
+                  <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Candle Stijgend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>Candle Dalend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#06b6d4;"></span>SMA-20 Maandtrend</span>
+                  <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Instapniveau</span>
+                </div>
+              </div>
+
+              <div class="chart-viewport-container" style="position:relative; width:100%; overflow:hidden;">
+                <div id="chart-viewport-15m" class="chart-viewport chart-viewport-15m" style="display:block;">
+                  <div class="svg-chart-wrap" role="img" aria-label="15m Intraday Koers-, VWAP- en Orderniveaugrafiek voor AVGO. Eenvoudige uitleg van de 15-minuten grafiek voor AVGO: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP ($328.01), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% ($326.00). De rode stippellijn is de beschermende stop-loss risicogrens ($309.77) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.">
+  <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+    <desc>Eenvoudige uitleg van de 15-minuten grafiek voor AVGO: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP ($328.01), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% ($326.00). De rode stippellijn is de beschermende stop-loss risicogrens ($309.77) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.</desc>
+    <defs>
+      <linearGradient id="priceAreaGrad_AVGO" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.28"/>
+        <stop offset="100%" stop-color="#38bdf8" stop-opacity="0.0"/>
+      </linearGradient>
+    </defs>
+
+    <!-- Achtergrondraster -->
+    <line x1="64" y1="26" x2="900" y2="26" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" />
+    <line x1="64" y1="138.0" x2="900" y2="138.0" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" />
+    <line x1="64" y1="250" x2="900" y2="250" stroke="#1e2d4a" stroke-width="1" />
+
+    <!-- Take Profit (+2,0%) Horizontaal Niveau -->
+    <line x1="64" y1="105.4" x2="900" y2="105.4" stroke="#10b981" stroke-width="1.8" stroke-dasharray="6,3" />
+    <text x="892" text-anchor="end" y="101.4" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Take Profit (+2,0%): $326.00</text>
+    <rect x="904" y="95.4" width="88" height="20" rx="3" fill="rgba(16, 185, 129, 0.22)" stroke="#10b981" stroke-width="1.0" />
+    <text x="948" y="109.9" fill="#10b981" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">TP: $326.00</text>
+
+    <!-- Instap Horizontale & Verticale Markering -->
+    <line x1="342.7" y1="26" x2="342.7" y2="250" stroke="#38bdf8" stroke-width="1" stroke-dasharray="3,3" stroke-opacity="0.65" />
+    <text x="346.7" y="37" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="11.5" font-weight="600">15:45 Instap</text>
+    <line x1="64" y1="160.8" x2="900" y2="160.8" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,4" />
+    <rect x="904" y="150.8" width="88" height="20" rx="3" fill="rgba(56, 189, 248, 0.18)" stroke="#38bdf8" stroke-width="0.8" />
+    <text x="948" y="165.3" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">I: $319.61</text>
+
+    <!-- Stop-Loss (ATR) Horizontaal Niveau -->
+    <line x1="64" y1="246.0" x2="900" y2="246.0" stroke="#f43f5e" stroke-width="1.4" stroke-dasharray="5,4" />
+    <text x="892" text-anchor="end" y="242.0" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700">Stop-Loss (ATR): $309.77</text>
+    <rect x="904" y="236.0" width="88" height="20" rx="3" fill="rgba(244, 63, 94, 0.18)" stroke="#f43f5e" stroke-width="0.8" />
+    <text x="948" y="250.5" fill="#f43f5e" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">SL: $309.77</text>
+
+    <!-- Koersvlak & Lijnen -->
+    <polygon points="64.0,250 64.0,117.5 342.7,57.6 621.3,39.5 900.0,50.9 900.0,250" fill="url(#priceAreaGrad_AVGO)" />
+    <polyline points="64.0,139.7 342.7,110.1 621.3,90.8 900.0,88.0" fill="none" stroke="#c084fc" stroke-width="1.8" stroke-dasharray="4,3" />
+    <polyline points="64.0,117.5 342.7,57.6 621.3,39.5 900.0,50.9" fill="none" stroke="#38bdf8" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Candle Wicks & Slotkoers Punten -->
+    <line x1="64.0" y1="115.6" x2="64.0" y2="186.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="64.0" cy="117.5" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="342.7" y1="49.8" x2="342.7" y2="126.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="342.7" cy="57.6" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="621.3" y1="30.3" x2="621.3" y2="64.7" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="621.3" cy="39.5" r="4" fill="#10b981" stroke="#070b14" stroke-width="1.2" /><line x1="900.0" y1="38.7" x2="900.0" y2="62.0" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.7" /><circle cx="900.0" cy="50.9" r="4" fill="#f43f5e" stroke="#070b14" stroke-width="1.2" />
+
+    <!-- Intraday Volume Histogram -->
+    <text x="64" y="260.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11">15m VOL</text>
+    <rect x="56.0" y="262.0" width="16.0" height="34.0" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="334.7" y="264.6" width="16.0" height="31.4" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="613.3" y="268.5" width="16.0" height="27.5" rx="1.5" fill="#10b981" fill-opacity="0.35" /><rect x="892.0" y="289.2" width="16.0" height="6.8" rx="1.5" fill="#f43f5e" fill-opacity="0.35" />
+
+    <!-- CET Tijdas Labels -->
+    <text x="64.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">15:30</text><text x="621.3" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">16:00</text>
+
+    <!-- Interactieve Hover Zones (RFC-0014) -->
+    <rect class="chart-hover-bar" x="-40.5" y="26" width="209.0" height="224" fill="transparent" data-time="15:30" data-close="324.61" data-vwap="322.04" data-pnl="+1.56" data-vol="278" data-cx="64.0" data-cy="117.5" data-curr="$" /><rect class="chart-hover-bar" x="238.2" y="26" width="209.0" height="224" fill="transparent" data-time="15:45" data-close="331.52" data-vwap="325.46" data-pnl="+3.73" data-vol="257" data-cx="342.7" data-cy="57.6" data-curr="$" /><rect class="chart-hover-bar" x="516.8" y="26" width="209.0" height="224" fill="transparent" data-time="16:00" data-close="333.61" data-vwap="327.69" data-pnl="+4.38" data-vol="225" data-cx="621.3" data-cy="39.5" data-curr="$" /><rect class="chart-hover-bar" x="795.5" y="26" width="209.0" height="224" fill="transparent" data-time="16:15" data-close="332.30" data-vwap="328.01" data-pnl="+3.97" data-vol="56" data-cx="900.0" data-cy="50.9" data-curr="$" />
+  </svg>
+</div>
+                </div>
+                <div id="chart-viewport-1m" class="chart-viewport chart-viewport-1m" style="display:none;">
+                  <div class="svg-chart-wrap" role="img" aria-label="1-Maand Dagkoers- en SMA-20 Grafiek voor AVGO. Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor AVGO: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op $319.61.">
+  <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
+    <desc>Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor AVGO: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op $319.61.</desc>
+    <!-- Achtergrondraster & Prijslabels -->
+    <line x1="64" y1="26" x2="900" y2="26" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" /><line x1="64" y1="138.0" x2="900" y2="138.0" stroke="#1e2d4a" stroke-width="1" stroke-dasharray="2,3" /><line x1="64" y1="250" x2="900" y2="250" stroke="#1e2d4a" stroke-width="1" />
+    <text x="56" y="30" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">$382.74</text><text x="56" y="142.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">$335.53</text><text x="56" y="254" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="end">$288.32</text>
+
+    <!-- Referentielijn Instap -->
+    <line x1="64" y1="175.8" x2="900" y2="175.8" stroke="#38bdf8" stroke-width="1.2" stroke-dasharray="4,4" /><rect x="904" y="165.8" width="88" height="20" rx="3" fill="rgba(56, 189, 248, 0.18)" stroke="#38bdf8" stroke-width="0.8" /><text x="948" y="180.3" fill="#38bdf8" font-family="JetBrains Mono, monospace" font-size="12" font-weight="700" text-anchor="middle">I: $319.61</text>
+
+    <!-- Candlesticks & SMA-20 Polyline -->
+    <line x1="64.0" y1="64.4" x2="64.0" y2="81.6" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="56.2" y="69.2" width="15.5" height="3.1" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="88.6" y1="73.1" x2="88.6" y2="94.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="80.8" y="74.7" width="15.5" height="17.1" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="113.2" y1="100.3" x2="113.2" y2="111.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="105.5" y="102.8" width="15.5" height="2.8" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="137.8" y1="93.2" x2="137.8" y2="105.0" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="130.1" y="97.0" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="162.4" y1="89.8" x2="162.4" y2="110.0" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="154.7" y="96.9" width="15.5" height="7.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="186.9" y1="75.5" x2="186.9" y2="94.2" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="179.2" y="87.1" width="15.5" height="4.5" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="211.5" y1="84.9" x2="211.5" y2="102.0" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="203.8" y="87.3" width="15.5" height="13.6" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="236.1" y1="93.1" x2="236.1" y2="119.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="228.3" y="98.6" width="15.5" height="20.2" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="260.7" y1="86.2" x2="260.7" y2="109.8" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="252.9" y="91.5" width="15.5" height="12.5" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="285.3" y1="70.8" x2="285.3" y2="89.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="277.6" y="74.0" width="15.5" height="11.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="309.9" y1="30.5" x2="309.9" y2="70.4" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="302.1" y="42.5" width="15.5" height="20.8" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="334.5" y1="39.7" x2="334.5" y2="58.3" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="326.8" y="40.8" width="15.5" height="9.3" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="359.1" y1="48.3" x2="359.1" y2="86.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="351.4" y="54.8" width="15.5" height="24.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="383.6" y1="64.2" x2="383.6" y2="77.3" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="375.9" y="66.7" width="15.5" height="9.6" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="408.2" y1="78.3" x2="408.2" y2="93.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="400.4" y="81.3" width="15.5" height="11.2" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="432.8" y1="81.7" x2="432.8" y2="108.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="425.1" y="86.3" width="15.5" height="18.3" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="457.4" y1="93.6" x2="457.4" y2="120.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="449.6" y="98.5" width="15.5" height="14.1" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="482.0" y1="116.3" x2="482.0" y2="140.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="474.2" y="117.1" width="15.5" height="14.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="506.6" y1="128.4" x2="506.6" y2="154.5" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="498.9" y="131.0" width="15.5" height="23.1" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="531.2" y1="126.9" x2="531.2" y2="142.1" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="523.5" y="130.4" width="15.5" height="9.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="555.8" y1="124.8" x2="555.8" y2="149.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="548.0" y="140.8" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="580.4" y1="129.2" x2="580.4" y2="145.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="572.6" y="132.1" width="15.5" height="2.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="604.9" y1="149.2" x2="604.9" y2="172.4" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="597.1" y="159.4" width="15.5" height="7.8" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="629.5" y1="156.6" x2="629.5" y2="174.3" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="621.8" y="170.9" width="15.5" height="2.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="654.1" y1="146.1" x2="654.1" y2="167.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="646.4" y="153.1" width="15.5" height="11.0" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="678.7" y1="114.0" x2="678.7" y2="134.8" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="671.0" y="121.9" width="15.5" height="5.8" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="703.3" y1="98.0" x2="703.3" y2="117.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="695.5" y="99.4" width="15.5" height="6.1" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="727.9" y1="112.8" x2="727.9" y2="130.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="720.1" y="115.5" width="15.5" height="7.2" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="752.5" y1="146.4" x2="752.5" y2="176.5" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="744.8" y="149.4" width="15.5" height="11.0" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="777.1" y1="142.7" x2="777.1" y2="170.4" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="769.4" y="155.0" width="15.5" height="14.6" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="801.6" y1="137.5" x2="801.6" y2="159.2" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="793.9" y="146.1" width="15.5" height="7.5" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" /><line x1="826.2" y1="141.4" x2="826.2" y2="170.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="818.5" y="158.6" width="15.5" height="3.2" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="850.8" y1="189.1" x2="850.8" y2="245.7" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="843.0" y="194.1" width="15.5" height="48.3" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="875.4" y1="195.0" x2="875.4" y2="246.6" stroke="#f43f5e" stroke-width="1.5" stroke-opacity="0.85" /><rect x="867.6" y="195.9" width="15.5" height="41.4" rx="1.5" fill="#f43f5e" stroke="#f43f5e" stroke-width="0.8" /><line x1="900.0" y1="170.7" x2="900.0" y2="212.1" stroke="#10b981" stroke-width="1.5" stroke-opacity="0.85" /><rect x="892.2" y="175.8" width="15.5" height="33.9" rx="1.5" fill="#10b981" stroke="#10b981" stroke-width="0.8" />
+    <polyline points="64.0,83.0 88.6,83.1 113.2,83.6 137.8,85.8 162.4,88.0 186.9,89.7 211.5,91.8 236.1,94.5 260.7,94.7 285.3,94.1 309.9,93.1 334.5,91.6 359.1,91.6 383.6,91.6 408.2,90.3 432.8,88.1 457.4,87.3 482.0,87.5 506.6,90.9 531.2,94.2 555.8,97.8 580.4,99.8 604.9,103.0 629.5,106.7 654.1,109.2 678.7,110.7 703.3,110.6 727.9,110.4 752.5,113.9 777.1,118.7 801.6,123.8 826.2,129.9 850.8,138.0 875.4,146.1 900.0,150.2" fill="none" stroke="#06b6d4" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+
+    <!-- Dagelijks Volume Histogram -->
+    <text x="64" y="260.0" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11">DAG VOL</text>
+    <rect x="56.2" y="283.0" width="15.5" height="13.0" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="80.8" y="281.2" width="15.5" height="14.8" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="105.5" y="282.8" width="15.5" height="13.2" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="130.1" y="285.7" width="15.5" height="10.3" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="154.7" y="282.4" width="15.5" height="13.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="179.2" y="283.9" width="15.5" height="12.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="203.8" y="283.5" width="15.5" height="12.5" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="228.3" y="280.5" width="15.5" height="15.5" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="252.9" y="280.4" width="15.5" height="15.6" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="277.6" y="282.4" width="15.5" height="13.6" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="302.1" y="276.5" width="15.5" height="19.5" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="326.8" y="284.6" width="15.5" height="11.4" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="351.4" y="278.9" width="15.5" height="17.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="375.9" y="285.4" width="15.5" height="10.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="400.4" y="285.7" width="15.5" height="10.3" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="425.1" y="285.1" width="15.5" height="10.9" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="449.6" y="281.4" width="15.5" height="14.6" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="474.2" y="278.0" width="15.5" height="18.0" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="498.9" y="277.2" width="15.5" height="18.8" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="523.5" y="285.0" width="15.5" height="11.0" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="548.0" y="285.9" width="15.5" height="10.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="572.6" y="285.2" width="15.5" height="10.8" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="597.1" y="278.2" width="15.5" height="17.8" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="621.8" y="285.9" width="15.5" height="10.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="646.4" y="284.2" width="15.5" height="11.8" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="671.0" y="279.9" width="15.5" height="16.1" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="695.5" y="281.7" width="15.5" height="14.3" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="720.1" y="285.2" width="15.5" height="10.8" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="744.8" y="272.9" width="15.5" height="23.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="769.4" y="283.2" width="15.5" height="12.8" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="793.9" y="285.1" width="15.5" height="10.9" rx="1.0" fill="#10b981" fill-opacity="0.32" /><rect x="818.5" y="280.9" width="15.5" height="15.1" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="843.0" y="262.0" width="15.5" height="34.0" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="867.6" y="275.6" width="15.5" height="20.4" rx="1.0" fill="#f43f5e" fill-opacity="0.32" /><rect x="892.2" y="285.1" width="15.5" height="10.9" rx="1.0" fill="#10b981" fill-opacity="0.32" />
+
+    <!-- Datum X-as Labels -->
+    <text x="64.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">22 sep</text><text x="186.9" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">29 sep</text><text x="309.9" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">6 okt</text><text x="432.8" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">13 okt</text><text x="555.8" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">20 okt</text><text x="678.7" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">27 okt</text><text x="801.6" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">3 nov</text><text x="900.0" y="314" fill="#64748b" font-family="JetBrains Mono, monospace" font-size="11" text-anchor="middle">9 nov</text>
+
+    <!-- Interactieve Hover Zones (RFC-0014) -->
+    <rect class="chart-hover-bar" x="52.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-22" data-open="363.23" data-high="366.55" data-low="359.29" data-close="364.54" data-vol="20570800" data-sma20="358.73" data-cx="64.0" data-cy="69.2" data-curr="$" /><rect class="chart-hover-bar" x="76.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-23" data-open="362.20" data-high="362.90" data-low="354.01" data-close="354.99" data-vol="23387700" data-sma20="358.68" data-cx="88.6" data-cy="91.8" data-curr="$" /><rect class="chart-hover-bar" x="101.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-24" data-open="349.21" data-high="351.44" data-low="346.89" data-close="350.36" data-vol="20930400" data-sma20="358.45" data-cx="113.2" data-cy="102.8" data-curr="$" /><rect class="chart-hover-bar" x="125.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-25" data-open="352.62" data-high="354.43" data-low="349.43" data-close="352.81" data-vol="16255500" data-sma20="357.54" data-cx="137.8" data-cy="97.0" data-curr="$" /><rect class="chart-hover-bar" x="150.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-28" data-open="352.87" data-high="355.86" data-low="347.32" data-close="349.57" data-vol="21527900" data-sma20="356.62" data-cx="162.4" data-cy="104.7" data-curr="$" /><rect class="chart-hover-bar" x="175.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-29" data-open="357.00" data-high="361.86" data-low="354.00" data-close="355.10" data-vol="19187400" data-sma20="355.89" data-cx="186.9" data-cy="91.6" data-curr="$" /><rect class="chart-hover-bar" x="199.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-09-30" data-open="356.90" data-high="357.90" data-low="350.69" data-close="351.19" data-vol="19760700" data-sma20="355.00" data-cx="211.5" data-cy="100.9" data-curr="$" /><rect class="chart-hover-bar" x="224.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-01" data-open="352.15" data-high="354.45" data-low="343.29" data-close="343.64" data-vol="24574100" data-sma20="353.85" data-cx="236.1" data-cy="118.8" data-curr="$" /><rect class="chart-hover-bar" x="248.8" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-02" data-open="349.86" data-high="357.35" data-low="347.42" data-close="355.14" data-vol="24639600" data-sma20="353.78" data-cx="260.7" data-cy="91.5" data-curr="$" /><rect class="chart-hover-bar" x="273.4" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-05" data-open="357.79" data-high="363.87" data-low="356.14" data-close="362.51" data-vol="21481600" data-sma20="354.04" data-cx="285.3" data-cy="74.0" data-curr="$" /><rect class="chart-hover-bar" x="298.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-06" data-open="367.03" data-high="380.84" data-low="364.01" data-close="375.81" data-vol="30834300" data-sma20="354.44" data-cx="309.9" data-cy="42.5" data-curr="$" /><rect class="chart-hover-bar" x="322.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-07" data-open="372.60" data-high="376.97" data-low="369.12" data-close="376.51" data-vol="18046100" data-sma20="355.08" data-cx="334.5" data-cy="40.8" data-curr="$" /><rect class="chart-hover-bar" x="347.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-08" data-open="370.62" data-high="373.35" data-low="357.41" data-close="360.14" data-vol="27145200" data-sma20="355.08" data-cx="359.1" data-cy="79.6" data-curr="$" /><rect class="chart-hover-bar" x="371.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-09" data-open="365.59" data-high="366.63" data-low="361.10" data-close="361.54" data-vol="16843800" data-sma20="355.09" data-cx="383.6" data-cy="76.3" data-curr="$" /><rect class="chart-hover-bar" x="396.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-12" data-open="359.43" data-high="360.69" data-low="354.22" data-close="354.73" data-vol="16336800" data-sma20="355.62" data-cx="408.2" data-cy="92.5" data-curr="$" /><rect class="chart-hover-bar" x="420.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-13" data-open="349.60" data-high="359.25" data-low="348.11" data-close="357.31" data-vol="17266700" data-sma20="356.55" data-cx="432.8" data-cy="86.3" data-curr="$" /><rect class="chart-hover-bar" x="445.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-14" data-open="352.19" data-high="354.25" data-low="342.82" data-close="346.25" data-vol="23127400" data-sma20="356.92" data-cx="457.4" data-cy="112.6" data-curr="$" /><rect class="chart-hover-bar" x="470.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-15" data-open="338.34" data-high="344.70" data-low="334.61" data-close="344.33" data-vol="28455800" data-sma20="356.80" data-cx="482.0" data-cy="117.1" data-curr="$" /><rect class="chart-hover-bar" x="494.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-16" data-open="338.48" data-high="339.59" data-low="328.58" data-close="328.75" data-vol="29839600" data-sma20="355.39" data-cx="506.6" data-cy="154.1" data-curr="$" /><rect class="chart-hover-bar" x="519.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-19" data-open="338.75" data-high="340.20" data-low="333.82" data-close="334.59" data-vol="17457600" data-sma20="353.99" data-cx="531.2" data-cy="140.2" data-curr="$" /><rect class="chart-hover-bar" x="543.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-20" data-open="334.00" data-high="341.10" data-low="330.80" data-close="334.37" data-vol="15951800" data-sma20="352.48" data-cx="555.8" data-cy="140.8" data-curr="$" /><rect class="chart-hover-bar" x="568.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-21" data-open="338.03" data-high="339.24" data-low="332.29" data-close="337.80" data-vol="17123600" data-sma20="351.62" data-cx="580.4" data-cy="132.6" data-curr="$" /><rect class="chart-hover-bar" x="593.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-22" data-open="326.53" data-high="330.82" data-low="321.02" data-close="323.24" data-vol="28139100" data-sma20="350.27" data-cx="604.9" data-cy="167.2" data-curr="$" /><rect class="chart-hover-bar" x="617.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-23" data-open="321.50" data-high="327.70" data-low="320.23" data-close="321.68" data-vol="15917000" data-sma20="348.71" data-cx="629.5" data-cy="170.9" data-curr="$" /><rect class="chart-hover-bar" x="642.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-26" data-open="324.53" data-high="332.12" data-low="323.25" data-close="329.17" data-vol="18646700" data-sma20="347.69" data-cx="654.1" data-cy="153.1" data-curr="$" /><rect class="chart-hover-bar" x="666.8" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-27" data-open="339.87" data-high="345.67" data-low="336.87" data-close="342.33" data-vol="25567200" data-sma20="347.05" data-cx="678.7" data-cy="121.9" data-curr="$" /><rect class="chart-hover-bar" x="691.4" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-28" data-open="349.22" data-high="352.40" data-low="344.35" data-close="351.81" data-vol="22718200" data-sma20="347.08" data-cx="703.3" data-cy="99.4" data-curr="$" /><rect class="chart-hover-bar" x="716.0" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-29" data-open="342.00" data-high="346.15" data-low="338.80" data-close="345.00" data-vol="17052700" data-sma20="347.15" data-cx="727.9" data-cy="115.5" data-curr="$" /><rect class="chart-hover-bar" x="740.6" y="26" width="23.9" height="224" fill="transparent" data-date="2026-10-30" data-open="330.72" data-high="331.98" data-low="319.30" data-close="326.08" data-vol="36511800" data-sma20="345.70" data-cx="752.5" data-cy="160.4" data-curr="$" /><rect class="chart-hover-bar" x="765.2" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-02" data-open="328.37" data-high="333.56" data-low="321.87" data-close="322.23" data-vol="20326900" data-sma20="343.68" data-cx="777.1" data-cy="169.6" data-curr="$" /><rect class="chart-hover-bar" x="789.7" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-03" data-open="328.97" data-high="335.74" data-low="326.60" data-close="332.13" data-vol="17274500" data-sma20="341.50" data-cx="801.6" data-cy="146.1" data-curr="$" /><rect class="chart-hover-bar" x="814.3" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-04" data-open="326.86" data-high="334.12" data-low="321.74" data-close="325.48" data-vol="23881800" data-sma20="338.95" data-cx="826.2" data-cy="161.8" data-curr="$" /><rect class="chart-hover-bar" x="838.9" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-05" data-open="311.89" data-high="314.00" data-low="290.12" data-close="291.53" data-vol="53835500" data-sma20="335.52" data-cx="850.8" data-cy="242.4" data-curr="$" /><rect class="chart-hover-bar" x="863.5" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-06" data-open="311.13" data-high="311.52" data-low="289.77" data-close="293.69" data-vol="32379300" data-sma20="332.12" data-cx="875.4" data-cy="237.3" data-curr="$" /><rect class="chart-hover-bar" x="888.1" y="26" width="23.9" height="224" fill="transparent" data-date="2026-11-09" data-open="305.29" data-high="321.73" data-low="304.29" data-close="319.61" data-vol="17202334" data-sma20="330.37" data-cx="900.0" data-cy="175.8" data-curr="$" />
+  </svg>
+</div>
+                </div>
+                <div id="chart-crosshair-line" class="chart-crosshair-line" style="display:none; position:absolute; width:1px; border-left:1px dashed #38bdf8; pointer-events:none; z-index:10;"></div>
+                <div id="chart-hover-tooltip" class="chart-hover-tooltip" style="display:none; position:absolute; background:rgba(15,23,42,0.95); border:1px solid #38bdf8; border-radius:6px; padding:0.5rem 0.75rem; font-size:0.82rem; color:#f8fafc; pointer-events:none; z-index:20; box-shadow:0 6px 20px rgba(0,0,0,0.6); backdrop-filter:blur(4px); min-width:170px;"></div>
+              </div>
+            </div>
+
+            <div id="chart-subtitle-15m" class="chart-subtitle-15m mono" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
+              <span>15m Openingsbereik: $304.29 – $313.53</span>
+              <span>VWAP: $328.01 (Koers &gt; VWAP ✅)</span>
+              <span>Tijdzone: Europe/Amsterdam (CET)</span>
+            </div>
+            <div id="chart-subtitle-1m" class="chart-subtitle-1m mono" style="display:none; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
+              <span>1-Maand Context: Dagcandles &amp; SMA-20 Trend</span>
+              <span>Kortetermijntrend: $330.37 (-3.3%)</span>
+              <span>Bron: Officiële Dagkoersen</span>
+            </div>
+
+            <!-- Eenvoudige Uitleg van de Technische Analyse (Toegankelijkheid & Beginners) -->
+            <div class="chart-simple-explanation" style="margin-top:0.85rem; padding:0.9rem 1.15rem; background:rgba(15,23,42,0.7); border:1px solid #1e2d4a; border-radius:8px; font-size:0.86rem; color:#cbd5e1; line-height:1.55;">
+              <div style="font-weight:700; color:#38bdf8; margin-bottom:0.4rem; display:flex; align-items:center; gap:0.4rem; font-size:0.92rem;">
+                <span>💡</span> <span>Eenvoudige Uitleg van de Grafiek &amp; Indicatoren (<span class="mono">AVGO</span>)</span>
+              </div>
+              <p style="margin:0 0 0.55rem 0; font-size:0.83rem; color:#94a3b8;">
+                Helder en begrijpelijk: wat betekenen de lijnen, kleuren en niveaus in deze grafiek?
+              </p>
+              <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(210px, 1fr)); gap:0.65rem;">
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #38bdf8;">
+                  <strong style="color:#38bdf8;">• Koersverloop (Blauw):</strong> De werkelijke prijsontwikkeling per kwartier. De stippen geven de slotkoers van elke 15m-periode aan.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #c084fc;">
+                  <strong style="color:#c084fc;">• Sessie-VWAP (Paars):</strong> De volume-gewogen gemiddelde instapprijs ($328.01). Boven deze lijn hebben kopers de overhand.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #10b981;">
+                  <strong style="color:#10b981;">• Winstdoel (Groen, +2,0%):</strong> Ons vaste verkoopdoel ($326.00). Bij dit niveau wordt de winst automatisch veiliggesteld.
+                </div>
+                <div style="background:rgba(30,41,59,0.5); padding:0.55rem 0.75rem; border-radius:6px; border-left:3px solid #f43f5e;">
+                  <strong style="color:#f43f5e;">• Noodrem (Rood, Stop-Loss):</strong> De risicogrens ($309.77). Als de koers hieronder daalt, sluit de positie direct om verlies te beperken.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Onderste rij: Kwantitatieve Technische Analyse (TA) Scorekaart (meerkolomsraster via CSS) -->
+          <div class="ta-panel">
+            <div class="panel-header">
+              <span class="panel-title">🔬 Technische Analyse (TA) Scorecard</span>
+              <span class="badge badge-win">BULLISH SETUP</span>
+            </div>
+
+            <div class="ta-metrics-list">
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Kortetermijntrend (SMA-20 / SMA-50)</span>
+                <span class="ta-metric-val">
+                  <span>$330.37 <span class="text-win">(-3.3%)</span></span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">&gt; SMA20/50</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Langetermijntrend (SMA-200)</span>
+                <span class="ta-metric-val">
+                  <span>$366.11 <span class="text-win">(+-12.7%)</span></span>
+                  <span style="color:var(--color-win); font-size:0.75rem;">Opwaartse trend</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row" style="flex-direction:column; align-items:stretch;">
+                <div style="display:flex; justify-content:space-between; align-items:center;">
+                  <span class="ta-metric-name">RSI Momentum (14-daags)</span>
+                  <span class="ta-metric-val">44.7 <span style="font-size:0.7rem; color:var(--accent-blue);">(NEUTRAAL / OVERBOUGHT)</span></span>
+                </div>
+                <div class="rsi-bar-track">
+                  <div class="rsi-bar-thumb" style="left:44.7%;"></div>
+                </div>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Sessie-VWAP &amp; Gap-analyse</span>
+                <span class="ta-metric-val">
+                  <span>$328.01</span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">GEEN GAP FADE</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Relatief Volume (RVOL, gecorrigeerd)</span>
+                <span class="ta-metric-val">
+                  <span class="text-win">1.26x</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">t.o.v. 20d openingsvolume</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">Relatieve Sterkte t.o.v. Benchmark</span>
+                <span class="ta-metric-val">
+                  <span class="text-win">+6.52%</span>
+                  <span style="font-size:0.72rem; color:var(--text-secondary);">Outperformance vs index</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">ATR-14 &amp; Risk/Reward Ratio</span>
+                <span class="ta-metric-val">
+                  <span>ATR 5.13%</span>
+                  <span style="color:var(--accent-blue); font-size:0.75rem;">R/R 1:0.65 (BE 37,5%)</span>
+                </span>
+              </div>
+
+              <div class="ta-metric-row">
+                <span class="ta-metric-name">WorldQuant Kwant-Noodrem (RFC-0008)</span>
+                <span class="ta-metric-val">
+                  <span>Alpha#10 &amp; #20</span>
+                  <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">GEEN MEAN-REVERSION TRAP</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- AGENT_TA_CHART_END -->
+
+        <!-- AGENT_THESIS_START -->
+        <div class="article-section" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+          <h3 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: #fff;">💡 Handelsthese &amp; Katalysator</h3>
+          <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 0;">
+            RocketBidder initieert vandaag een longpositie in Broadcom (AVGO), gedreven door een positieve analystenupdate die aanzienlijk opwaarts potentieel signaleert en de strategische positionering van het bedrijf in de snelgroeiende AI-infrastructuurmarkt. De recente bijdrage aan de Cloud Native Computing Foundation onderstreept tevens de innovatiekracht van AVGO. Wij anticiperen op aanhoudende institutionele koopdruk die de koers richting ons intradag-winstdoel zal stuwen, ondanks de reeds gerealiseerde beweging.
+          </p>
+        </div>
+        <!-- AGENT_THESIS_END -->
+
+        <div style="display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 1rem;">
+          <a href="posts/2026-11-09-avgo.html" class="btn">Bekijk Zelfstandige Artikelpagina &rarr;</a>
+        </div>
       </div>
       <!-- AGENT_FEATURED_PICK_END -->
     </section>
@@ -143,18 +690,6 @@
           </thead>
           <tbody>
             <!-- AGENT_ARCHIVE_ROWS_START -->
-            <tr>
-              <td class="mono">2026-11-09</td>
-              <td class="mono"><strong>AVGO</strong></td>
-              <td class="mono">🇺🇸 US</td>
-              <td class="mono">$319.61</td>
-              <td class="mono text-win">$326.00</td>
-              <td class="mono text-loss">$309.77</td>
-              <td class="mono">2.73%</td>
-              <td class="mono" style="font-size: 0.78rem; color: var(--text-secondary);">AVGO</td>
-              <td><span class="badge badge-active" style="background: rgba(56, 189, 248, 0.2); color: #38bdf8; border: 1px solid #38bdf8;">GESLOTEN OP SLOT (-0.03%)</span></td>
-              <td><a href="posts/2026-11-09-avgo.html" class="mono">Lees Rapport →</a></td>
-            </tr>
             <tr>
               <td class="mono">2026-11-09</td>
               <td class="mono"><strong>SHL.DE</strong></td>
