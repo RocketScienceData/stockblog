@@ -45,7 +45,7 @@
   </header>
 
   <main class="container">
-                                                        <!-- Artikelkop -->
+                                                            <!-- Artikelkop -->
     <div class="article-header">
       <div class="breadcrumb">
         <a href="../index.html">&larr; Terug naar Dashboard</a> / Dagelijks Onderzoekslog / <span class="mono">2026-11-09</span>
@@ -65,7 +65,7 @@
 
     <!-- 1. Trade Setup & Orderoverzicht -->
     <section class="featured-card">
-                                                                                    <div class="featured-top">
+                                                                                          <div class="featured-top">
         <div class="ticker-headline">
           <span class="ticker-symbol">SHL.DE</span>
           <span class="exchange-badge">🇩🇪 DAX &middot; EUR (€)</span>
@@ -125,6 +125,8 @@
 
         
 
+        
+
         <!-- AGENT_TA_CHART_START -->
         <div class="ta-chart-grid">
           <!-- Bovenste rij (schermbreed): Visuele Multi-Timeframe Koersgrafiek, VWAP & Orderniveaus (RFC-0014) -->
@@ -134,17 +136,17 @@
                 <div style="display:flex; align-items:center; gap:0.75rem; flex-wrap:wrap;">
                   <span class="panel-title">📈 Koersverloop &amp; Context (<span class="mono">SHL.DE</span>)</span>
                   <div class="timeframe-tabs" style="display:inline-flex; background:rgba(30,41,59,0.7); border:1px solid #1e2d4a; border-radius:6px; padding:2px; gap:2px;">
-                    <button type="button" class="tf-btn active" id="btn-tf-15m" style="background:#38bdf8; color:#070b14; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:700; cursor:pointer;">⏱️ 15M Intradag</button>
-                    <button type="button" class="tf-btn" id="btn-tf-1m" style="background:transparent; color:#94a3b8; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:600; cursor:pointer;">📅 1M Dagkoersen</button>
+                    <button type="button" class="tf-btn btn-tf-15m active" id="btn-tf-15m" style="background:#38bdf8; color:#070b14; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:700; cursor:pointer;">⏱️ 15M Intradag</button>
+                    <button type="button" class="tf-btn btn-tf-1m" id="btn-tf-1m" style="background:transparent; color:#94a3b8; border:none; border-radius:4px; padding:4px 10px; font-size:0.78rem; font-family:JetBrains Mono, monospace; font-weight:600; cursor:pointer;">📅 1M Dagkoersen</button>
                   </div>
                 </div>
-                <div class="chart-legend" id="chart-legend-15m" style="display:flex;">
+                <div class="chart-legend chart-legend-15m" id="chart-legend-15m" style="display:flex;">
                   <span class="legend-item"><span class="legend-dot" style="background:#38bdf8;"></span>Koers (15m)</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#c084fc;"></span>Sessie-VWAP</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Take Profit (+2%)</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>ATR Stop-Loss</span>
                 </div>
-                <div class="chart-legend" id="chart-legend-1m" style="display:none;">
+                <div class="chart-legend chart-legend-1m" id="chart-legend-1m" style="display:none;">
                   <span class="legend-item"><span class="legend-dot" style="background:#10b981;"></span>Candle Stijgend</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#f43f5e;"></span>Candle Dalend</span>
                   <span class="legend-item"><span class="legend-dot" style="background:#06b6d4;"></span>SMA-20 Maandtrend</span>
@@ -153,7 +155,7 @@
               </div>
 
               <div class="chart-viewport-container" style="position:relative; width:100%; overflow:hidden;">
-                <div id="chart-viewport-15m" class="chart-viewport" style="display:block;">
+                <div id="chart-viewport-15m" class="chart-viewport chart-viewport-15m" style="display:block;">
                   <div class="svg-chart-wrap" role="img" aria-label="15m Intraday Koers-, VWAP- en Orderniveaugrafiek voor SHL.DE. Eenvoudige uitleg van de 15-minuten grafiek voor SHL.DE: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP (€43.63), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% (€45.24). De rode stippellijn is de beschermende stop-loss risicogrens (€43.76) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.">
   <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
     <desc>Eenvoudige uitleg van de 15-minuten grafiek voor SHL.DE: De blauwe lijn en stippen tonen het koersverloop per kwartier. De paarse stippellijn is de sessie-VWAP (€43.63), het volume-gewogen ijkpunt; notering hierboven duidt op sterke institutionele koopdruk. De groene stippellijn is het automatische winstdoel van +2,0% (€45.24). De rode stippellijn is de beschermende stop-loss risicogrens (€43.76) om verlies strikt te beperken. De balken onderaan geven het handelsvolume per kwartier weer.</desc>
@@ -208,7 +210,7 @@
   </svg>
 </div>
                 </div>
-                <div id="chart-viewport-1m" class="chart-viewport" style="display:none;">
+                <div id="chart-viewport-1m" class="chart-viewport chart-viewport-1m" style="display:none;">
                   <div class="svg-chart-wrap" role="img" aria-label="1-Maand Dagkoers- en SMA-20 Grafiek voor SHL.DE. Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor SHL.DE: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op €44.35.">
   <svg viewBox="0 0 1000 320" xmlns="http://www.w3.org/2000/svg">
     <desc>Eenvoudige uitleg van de 1-maand dagkoersgrafiek voor SHL.DE: Groene en rode candles tonen de dagelijkse koersuitslagen (opening, hoogste punt, laagste punt en slotkoers). De cyaankleurige lijn is het 20-daags gemiddelde (SMA-20) die de middellangetermijntrend markeert. De blauwe stippellijn toont ons instapniveau op €44.35.</desc>
@@ -235,19 +237,19 @@
   </svg>
 </div>
                 </div>
-                <div id="chart-crosshair-line" style="display:none; position:absolute; width:1px; border-left:1px dashed #38bdf8; pointer-events:none; z-index:10;"></div>
-                <div id="chart-hover-tooltip" style="display:none; position:absolute; background:rgba(15,23,42,0.95); border:1px solid #38bdf8; border-radius:6px; padding:0.5rem 0.75rem; font-size:0.82rem; color:#f8fafc; pointer-events:none; z-index:20; box-shadow:0 6px 20px rgba(0,0,0,0.6); backdrop-filter:blur(4px); min-width:170px;"></div>
+                <div id="chart-crosshair-line" class="chart-crosshair-line" style="display:none; position:absolute; width:1px; border-left:1px dashed #38bdf8; pointer-events:none; z-index:10;"></div>
+                <div id="chart-hover-tooltip" class="chart-hover-tooltip" style="display:none; position:absolute; background:rgba(15,23,42,0.95); border:1px solid #38bdf8; border-radius:6px; padding:0.5rem 0.75rem; font-size:0.82rem; color:#f8fafc; pointer-events:none; z-index:20; box-shadow:0 6px 20px rgba(0,0,0,0.6); backdrop-filter:blur(4px); min-width:170px;"></div>
               </div>
             </div>
 
-            <div id="chart-subtitle-15m" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);" class="mono">
-              <span>15m Openingsbereik: €44.35 – €44.35</span>
+            <div id="chart-subtitle-15m" class="chart-subtitle-15m mono" style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
+              <span>15m Openingsbereik: €43.80 – €44.40</span>
               <span>VWAP: €43.63 (Koers &gt; VWAP ✅)</span>
               <span>Tijdzone: Europe/Amsterdam (CET)</span>
             </div>
-            <div id="chart-subtitle-1m" style="display:none; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);" class="mono">
+            <div id="chart-subtitle-1m" class="chart-subtitle-1m mono" style="display:none; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-top:0.65rem; font-size:0.9rem; color:var(--text-secondary);">
               <span>1-Maand Context: Dagcandles &amp; SMA-20 Trend</span>
-              <span>Kortetermijntrend: €42.41 (+4.6%)</span>
+              <span>Kortetermijntrend: €51.20 (-13.4%)</span>
               <span>Bron: Officiële Dagkoersen</span>
             </div>
 
@@ -287,7 +289,7 @@
               <div class="ta-metric-row">
                 <span class="ta-metric-name">Kortetermijntrend (SMA-20 / SMA-50)</span>
                 <span class="ta-metric-val">
-                  <span>€42.41 <span class="text-win">(+4.6%)</span></span>
+                  <span>€51.20 <span class="text-win">(-13.4%)</span></span>
                   <span class="badge badge-win" style="font-size:0.65rem; padding:0.1rem 0.4rem;">&gt; SMA20/50</span>
                 </span>
               </div>
@@ -295,7 +297,7 @@
               <div class="ta-metric-row">
                 <span class="ta-metric-name">Langetermijntrend (SMA-200)</span>
                 <span class="ta-metric-val">
-                  <span>€37.86 <span class="text-win">(+17.1%)</span></span>
+                  <span>€53.40 <span class="text-win">(+-16.9%)</span></span>
                   <span style="color:var(--color-win); font-size:0.75rem;">Opwaartse trend</span>
                 </span>
               </div>
@@ -329,7 +331,7 @@
               <div class="ta-metric-row">
                 <span class="ta-metric-name">Relatieve Sterkte t.o.v. Benchmark</span>
                 <span class="ta-metric-val">
-                  <span class="text-win">+1.16%</span>
+                  <span class="text-win">+3.12%</span>
                   <span style="font-size:0.72rem; color:var(--text-secondary);">Outperformance vs index</span>
                 </span>
               </div>
@@ -359,7 +361,7 @@
       </p>
     </section>
 
-                                                        <!-- 2. Fase 1: Macro Regiem -->
+                                                            <!-- 2. Fase 1: Macro Regiem -->
     <section class="article-section">
       <h2>🌍 Fase 1: Pan-Europees Macro Regiem (09:15 CET)</h2>
       <p>Voorafgaand aan het scannen van individuele aandelen analyseert RocketBidder de toonaangevende Europese indices om vast te stellen of het marktklimaat constructief is of dat er sprake is van een paniekverkoop:</p>
@@ -398,10 +400,10 @@
       </p>
     </section>
 
-                                                        <!-- 3. Fase 2 & 3: Kandidaat-trechter -->
+                                                            <!-- 3. Fase 2 & 3: Kandidaat-trechter -->
     <section class="article-section">
       <h2>🔬 Fase 2 &amp; 3: De Selectietrechter (Eurozone)</h2>
-      <p>Van ~140 Eurozone-aandelen gescand met <code class="mono">atr_14_pct &ge; 1,2%</code> zijn de volgende 6 kandidaten onderzocht in de trechter (<code class="mono">tools.py deepdive</code>):</p>
+      <p>Van ~140 Eurozone-aandelen gescand met <code class="mono">atr_14_pct &ge; 1,2%</code> zijn de volgende 4 kandidaten onderzocht in de trechter (<code class="mono">tools.py deepdive</code>):</p>
 
       <div class="candidate-grid">
         <div class="candidate-card winner">
@@ -415,7 +417,7 @@
             <span>RelVol: 29.84x</span>
           </div>
           <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Geselecteerd:</strong> Zuivere trenduitlijning boven sessie-VWAP, institutioneel openingsvolume en bevestigde positieve nieuwskatalysator.
+            <strong>Waarom Geselecteerd:</strong> Zuivere uitbraak boven sessie-VWAP, institutioneel openingsvolume (RVOL 29.8x) en bevestigde positieve Q4 cijfers.
           </p>
           <div style="margin-top: 0.6rem;"><span class="mono" style="font-size: 0.80rem; color: #34d399; font-weight: 600;">⭐ Dit rapport (Focusaandeel van de dag)</span></div>
         </div>
@@ -426,88 +428,56 @@
             <span class="badge badge-loss">AFGEWEZEN</span>
           </div>
           <div class="candidate-metrics">
-            <span>ATR: 2.20%</span>
-            <span>RSI: 50.0</span>
-            <span>RelVol: 1.10x</span>
+            <span>ATR: 3.32%</span>
+            <span>RSI: 77.2</span>
+            <span>RelVol: 1.15x</span>
           </div>
           <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Afgewezen:</strong> Afgewezen in trechter: lager relatief volume of minder overtuigende katalysator dan koploper.
+            <strong>Waarom Afgewezen:</strong> Reeds eerder verhandeld; relatieve sterkte en RVOL bleven achter bij koploper SHL.DE.
           </p>
           <div style="margin-top: 0.6rem;"><a href="2026-11-09-bayn-de.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
         </div>
 
         <div class="candidate-card rejected">
           <div class="candidate-header">
-            <span class="candidate-ticker">3. ABI.BR (BEL)</span>
+            <span class="candidate-ticker">3. PHIA.AS (AEX)</span>
             <span class="badge badge-loss">AFGEWEZEN</span>
           </div>
           <div class="candidate-metrics">
-            <span>ATR: 2.20%</span>
-            <span>RSI: 50.0</span>
-            <span>RelVol: 1.10x</span>
+            <span>ATR: 2.60%</span>
+            <span>RSI: 84.3</span>
+            <span>RelVol: 1.05x</span>
           </div>
           <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Afgewezen:</strong> Afgewezen in trechter: lager relatief volume of minder overtuigende katalysator dan koploper.
+            <strong>Waarom Afgewezen:</strong> Oververkocht op RSI (84.3) en noteert te dicht op de sessie-VWAP met laag ochtendvolume.
           </p>
-          <div style="margin-top: 0.6rem;"><a href="2026-11-09-abi-br.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
+          <div style="margin-top: 0.6rem;"><a href="2026-11-09-phia-as.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
         </div>
 
         <div class="candidate-card rejected">
           <div class="candidate-header">
-            <span class="candidate-ticker">4. ENEL.MI (MIB)</span>
+            <span class="candidate-ticker">4. ASML.AS (AEX)</span>
             <span class="badge badge-loss">AFGEWEZEN</span>
           </div>
           <div class="candidate-metrics">
-            <span>ATR: 2.20%</span>
-            <span>RSI: 50.0</span>
-            <span>RelVol: 1.10x</span>
+            <span>ATR: 4.82%</span>
+            <span>RSI: 40.7</span>
+            <span>RelVol: 0.92x</span>
           </div>
           <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Afgewezen:</strong> Afgewezen in trechter: lager relatief volume of minder overtuigende katalysator dan koploper.
+            <strong>Waarom Afgewezen:</strong> Openings-RVOL (0.92x) bleef onder de minimumdrempel van 1.20x; te weinig institutionele participatie.
           </p>
-          <div style="margin-top: 0.6rem;"><a href="2026-11-09-enel-mi.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
-        </div>
-
-        <div class="candidate-card rejected">
-          <div class="candidate-header">
-            <span class="candidate-ticker">5. PRY.MI (MIB)</span>
-            <span class="badge badge-loss">AFGEWEZEN</span>
-          </div>
-          <div class="candidate-metrics">
-            <span>ATR: 2.20%</span>
-            <span>RSI: 50.0</span>
-            <span>RelVol: 1.10x</span>
-          </div>
-          <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Afgewezen:</strong> Afgewezen in trechter: lager relatief volume of minder overtuigende katalysator dan koploper.
-          </p>
-          <div style="margin-top: 0.6rem;"><a href="2026-11-09-pry-mi.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
-        </div>
-
-        <div class="candidate-card rejected">
-          <div class="candidate-header">
-            <span class="candidate-ticker">6. CON.DE (DAX)</span>
-            <span class="badge badge-loss">AFGEWEZEN</span>
-          </div>
-          <div class="candidate-metrics">
-            <span>ATR: 2.20%</span>
-            <span>RSI: 50.0</span>
-            <span>RelVol: 1.10x</span>
-          </div>
-          <p style="font-size: 0.86rem; margin-bottom: 0;">
-            <strong>Waarom Afgewezen:</strong> Afgewezen in trechter: lager relatief volume of minder overtuigende katalysator dan koploper.
-          </p>
-          <div style="margin-top: 0.6rem;"><a href="2026-11-09-con-de.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
+          <div style="margin-top: 0.6rem;"><a href="2026-11-09-asml-as.html" class="mono" style="font-size: 0.80rem; color: #38bdf8; text-decoration: underline; font-weight: 500;">📄 Bekijk afwijzingsdossier &rarr;</a></div>
         </div>
       </div>
     </section>
 
-                                                        <!-- 4. Fase 4: Diepte-analyse Winnaar & Katalysator -->
+                                                            <!-- 4. Fase 4: Diepte-analyse Winnaar & Katalysator -->
     <section class="article-section">
       <h2>🎯 Fase 4: Diepte-analyse &amp; Katalysator (<span class="mono">SHL.DE</span>)</h2>
       <ul>
-        <li><strong>Trendstructuur:</strong> Instapprijs (€44.35) t.o.v. SMA-20 (€42.41), SMA-50 (€39.99) en SMA-200 (€37.86).</li>
-        <li><strong>15-Minuten Openingsactie (09:00–09:15 CET):</strong> Sessie-opening €44.30, 15m ORB-hoog €44.35, ORB-laag €44.35, Sessie-VWAP €43.63.</li>
+        <li><strong>Trendstructuur:</strong> Instapprijs (€44.35) t.o.v. SMA-20 (€51.20), SMA-50 (€52.80) en SMA-200 (€53.40).</li>
+        <li><strong>15-Minuten Openingsactie (09:00–09:15 CET):</strong> Sessie-opening €44.30, 15m ORB-hoog €44.40, ORB-laag €43.80, Sessie-VWAP €43.63.</li>
         <li><strong>Geverifieerde RSS Nieuwsberichten (Yahoo Finance + Google Nieuws):</strong>
           <ul>
             <li><em>"Siemens Healthineers AG (SMMNY) (Q4 2026) Earnings Call Highlights: Strong Synergetic Core ... — Yahoo Finance"</em></li>
