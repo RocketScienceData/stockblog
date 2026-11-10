@@ -4756,7 +4756,7 @@
     "current_price": 58.46,
     "exit_price": 57.55,
     "as_of_cet": "17:15 CET",
-    "data_age_min": 45,
+    "data_age_min": 105,
     "pnl_pct": -2.52,
     "to_target_pct": 4.64,
     "to_stop_pct": 0.0,
