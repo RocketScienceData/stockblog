@@ -1,56 +1,65 @@
 {
-  "date": "2026-11-09",
-  "ticker": "AVGO",
+  "date": "2026-11-10",
+  "entry_time": "16:15",
+  "ticker": "AMD",
   "exchange": "US",
-  "company_name": "Broadcom Inc.",
+  "company_name": "Advanced Micro Devices, Inc.",
   "currency": "USD",
   "sector": "Technology",
-  "entry_price": 319.61,
-  "target_price": 326.0,
-  "stop_loss": 309.77,
-  "vwap": 328.01,
-  "orb_15m_high": 313.53,
-  "orb_15m_low": 304.29,
-  "sma_20": 330.37,
-  "sma_50": 346.72,
-  "sma_200": 366.11,
-  "rsi_14": 44.7,
-  "atr_14_pct": 5.13,
-  "rel_vol_20d": 1.26,
-  "rs_vs_index_pct": 6.52,
+  "entry_price": 532.49,
+  "target_price": 543.14,
+  "stop_loss": 507.12,
+  "vwap": 525.33,
+  "orb_15m_high": 519.49,
+  "orb_15m_low": 500.25,
+  "sma_20": 519.35,
+  "sma_50": 548.9,
+  "sma_200": 418.63,
+  "rsi_14": 50.8,
+  "atr_14_pct": 7.94,
+  "rel_vol_20d": 3.27,
+  "rs_vs_index_pct": 5.11,
   "alpha_guardrails": {
     "alpha10": {
       "regime": "CHOPPY_MEAN_REVERTING",
-      "ts_min_4d": -33.95,
-      "ts_max_4d": 25.92,
+      "ts_min_4d": -84.38,
+      "ts_max_4d": 59.54,
       "is_mean_reversion_trap": false
     },
     "alpha20": {
-      "open_vs_prev_high": -6.23,
-      "open_vs_prev_close": 11.6,
-      "open_vs_prev_low": 15.52,
-      "gap_atr_ratio": 0.71,
+      "open_vs_prev_high": -12.18,
+      "open_vs_prev_close": -5.58,
+      "open_vs_prev_low": 34.79,
+      "gap_atr_ratio": -0.13,
       "is_exhaustion_gap_risk": false,
       "details": null
     },
     "guardrail_triggered": false,
     "rejection_reason": null
   },
-  "status": "WIN",
+  "status": "ACTIVE",
   "decision_source": "llm_decision",
   "conviction_score": 75,
   "override_quant_rank_1_rationale": "",
-  "testable_intraday_hypothesis": "AVGO zal om 17:35 CET boven de sessie-VWAP van \u20ac315.60 noteren, maar het winstdoel van \u20ac326.00 niet bereiken.",
-  "thesis": "RocketBidder initieert vandaag een longpositie in Broadcom (AVGO), gedreven door een positieve analystenupdate die aanzienlijk opwaarts potentieel signaleert en de strategische positionering van het bedrijf in de snelgroeiende AI-infrastructuurmarkt. De recente bijdrage aan de Cloud Native Computing Foundation onderstreept tevens de innovatiekracht van AVGO. Wij anticiperen op aanhoudende institutionele koopdruk die de koers richting ons intradag-winstdoel zal stuwen, ondanks de reeds gerealiseerde beweging.",
+  "testable_intraday_hypothesis": "AMD zal de intradag-sessie afsluiten met een positief rendement, gedragen door aanhoudende institutionele instroom als gevolg van de recente samenwerking en sectorale rugwind.",
+  "thesis": "Vandaag richten wij onze blik op Advanced Micro Devices (AMD), waar een recente samenwerking en gunstige sectorale dynamiek de koers ondersteunen. De markt reageert positief op de strategische ontwikkelingen en de verschuiving van kapitaal binnen de chipsector, wat een solide basis biedt voor verdere appreciatie.",
   "candidates_considered": [
+    "AMD",
     "AVGO"
   ],
   "candidate_audits": [
     {
+      "ticker": "AMD",
+      "catalyst_category": "CONTRACT_REGULATORY",
+      "catalyst_freshness": "FRESH_PRE_MARKET",
+      "setup_assessment": "De sterke, verse samenwerkingskatalysator biedt een solide basis voor de 70.4% break-even winrate, met nog voldoende ruimte binnen de ATR-beweging (69.7% verbruikt).",
+      "disqualified_by_llm": false
+    },
+    {
       "ticker": "AVGO",
       "catalyst_category": "ANALYST_UPGRADE",
       "catalyst_freshness": "FRESH_PRE_MARKET",
-      "setup_assessment": "De sterke analystenupgrade en AI-gerelateerde ontwikkelingen bieden een robuuste katalysator, echter, de reeds verbruikte ATR van 87.3% duidt op een aanzienlijk deel van de verwachte intradag-beweging die reeds is gerealiseerd, wat de ruimte naar het winstdoel beperkt ondanks een solide break-even winrate.",
+      "setup_assessment": "Ondanks de positieve analistennoot en sectorale rugwind, is het hoge ATR-verbruik van 83.0% een aandachtspunt voor de 61.0% break-even winrate.",
       "disqualified_by_llm": false
     }
   ],
@@ -67,468 +76,333 @@
   "prompt_version": "rfc-0012b-v1",
   "monthly_daily_bars": [
     {
-      "date": "2026-09-22",
-      "open": 363.23,
-      "high": 366.55,
-      "low": 359.29,
-      "close": 364.54,
-      "volume": 20570800,
-      "sma20": 358.73
-    },
-    {
       "date": "2026-09-23",
-      "open": 362.2,
-      "high": 362.9,
-      "low": 354.01,
-      "close": 354.99,
-      "volume": 23387700,
-      "sma20": 358.68
+      "open": 621.5,
+      "high": 624.69,
+      "low": 608.08,
+      "close": 614.61,
+      "volume": 16338200,
+      "sma20": 512.99
     },
     {
       "date": "2026-09-24",
-      "open": 349.21,
-      "high": 351.44,
-      "low": 346.89,
-      "close": 350.36,
-      "volume": 20930400,
-      "sma20": 358.45
+      "open": 600.27,
+      "high": 630.8,
+      "low": 599.24,
+      "close": 629.26,
+      "volume": 25318900,
+      "sma20": 520.41
     },
     {
       "date": "2026-09-25",
-      "open": 352.62,
-      "high": 354.43,
-      "low": 349.43,
-      "close": 352.81,
-      "volume": 16255500,
-      "sma20": 357.54
+      "open": 634.54,
+      "high": 639.0,
+      "low": 625.52,
+      "close": 630.63,
+      "volume": 17632100,
+      "sma20": 528.1
     },
     {
       "date": "2026-09-28",
-      "open": 352.87,
-      "high": 355.86,
-      "low": 347.32,
-      "close": 349.57,
-      "volume": 21527900,
-      "sma20": 356.62
+      "open": 624.9,
+      "high": 629.75,
+      "low": 596.07,
+      "close": 607.87,
+      "volume": 22124100,
+      "sma20": 535.22
     },
     {
       "date": "2026-09-29",
-      "open": 357.0,
-      "high": 361.86,
-      "low": 354.0,
-      "close": 355.1,
-      "volume": 19187400,
-      "sma20": 355.89
+      "open": 616.74,
+      "high": 624.13,
+      "low": 605.25,
+      "close": 607.57,
+      "volume": 16513900,
+      "sma20": 542.06
     },
     {
       "date": "2026-09-30",
-      "open": 356.9,
-      "high": 357.9,
-      "low": 350.69,
-      "close": 351.19,
-      "volume": 19760700,
-      "sma20": 355.0
+      "open": 609.89,
+      "high": 615.17,
+      "low": 600.1,
+      "close": 611.76,
+      "volume": 16749100,
+      "sma20": 549.67
     },
     {
       "date": "2026-10-01",
-      "open": 352.15,
-      "high": 354.45,
-      "low": 343.29,
-      "close": 343.64,
-      "volume": 24574100,
-      "sma20": 353.85
+      "open": 612.7,
+      "high": 619.3,
+      "low": 601.5,
+      "close": 615.73,
+      "volume": 17134500,
+      "sma20": 557.6
     },
     {
       "date": "2026-10-02",
-      "open": 349.86,
-      "high": 357.35,
-      "low": 347.42,
-      "close": 355.14,
-      "volume": 24639600,
-      "sma20": 353.78
+      "open": 635.95,
+      "high": 645.46,
+      "low": 628.55,
+      "close": 633.91,
+      "volume": 19865300,
+      "sma20": 566.49
     },
     {
       "date": "2026-10-05",
-      "open": 357.79,
-      "high": 363.87,
-      "low": 356.14,
-      "close": 362.51,
-      "volume": 21481600,
-      "sma20": 354.04
+      "open": 630.61,
+      "high": 633.5,
+      "low": 619.99,
+      "close": 631.75,
+      "volume": 13717500,
+      "sma20": 574.2
     },
     {
       "date": "2026-10-06",
-      "open": 367.03,
-      "high": 380.84,
-      "low": 364.01,
-      "close": 375.81,
-      "volume": 30834300,
-      "sma20": 354.44
+      "open": 648.04,
+      "high": 658.52,
+      "low": 628.0,
+      "close": 649.42,
+      "volume": 24245900,
+      "sma20": 581.38
     },
     {
       "date": "2026-10-07",
-      "open": 372.6,
-      "high": 376.97,
-      "low": 369.12,
-      "close": 376.51,
-      "volume": 18046100,
-      "sma20": 355.08
+      "open": 634.77,
+      "high": 648.48,
+      "low": 633.16,
+      "close": 645.86,
+      "volume": 18561100,
+      "sma20": 587.62
     },
     {
       "date": "2026-10-08",
-      "open": 370.62,
-      "high": 373.35,
-      "low": 357.41,
-      "close": 360.14,
-      "volume": 27145200,
-      "sma20": 355.08
+      "open": 639.36,
+      "high": 643.85,
+      "low": 613.34,
+      "close": 620.68,
+      "volume": 23488200,
+      "sma20": 593.47
     },
     {
       "date": "2026-10-09",
-      "open": 365.59,
-      "high": 366.63,
-      "low": 361.1,
-      "close": 361.54,
-      "volume": 16843800,
-      "sma20": 355.09
+      "open": 626.89,
+      "high": 627.37,
+      "low": 606.0,
+      "close": 608.1,
+      "volume": 13733300,
+      "sma20": 598.07
     },
     {
       "date": "2026-10-12",
-      "open": 359.43,
-      "high": 360.69,
-      "low": 354.22,
-      "close": 354.73,
-      "volume": 16336800,
-      "sma20": 355.62
+      "open": 599.93,
+      "high": 601.77,
+      "low": 586.54,
+      "close": 594.24,
+      "volume": 15379900,
+      "sma20": 603.11
     },
     {
       "date": "2026-10-13",
-      "open": 349.6,
-      "high": 359.25,
-      "low": 348.11,
-      "close": 357.31,
-      "volume": 17266700,
-      "sma20": 356.55
+      "open": 577.5,
+      "high": 606.2,
+      "low": 570.6,
+      "close": 605.53,
+      "volume": 17932700,
+      "sma20": 608.18
     },
     {
       "date": "2026-10-14",
-      "open": 352.19,
-      "high": 354.25,
-      "low": 342.82,
-      "close": 346.25,
-      "volume": 23127400,
-      "sma20": 356.92
+      "open": 589.57,
+      "high": 591.88,
+      "low": 567.0,
+      "close": 570.82,
+      "volume": 22319500,
+      "sma20": 611.1
     },
     {
       "date": "2026-10-15",
-      "open": 338.34,
-      "high": 344.7,
-      "low": 334.61,
-      "close": 344.33,
-      "volume": 28455800,
-      "sma20": 356.8
+      "open": 540.0,
+      "high": 568.62,
+      "low": 530.09,
+      "close": 562.23,
+      "volume": 28834600,
+      "sma20": 611.95
     },
     {
       "date": "2026-10-16",
-      "open": 338.48,
-      "high": 339.59,
-      "low": 328.58,
-      "close": 328.75,
-      "volume": 29839600,
-      "sma20": 355.39
+      "open": 547.55,
+      "high": 550.96,
+      "low": 526.83,
+      "close": 528.75,
+      "volume": 22575500,
+      "sma20": 610.4
     },
     {
       "date": "2026-10-19",
-      "open": 338.75,
-      "high": 340.2,
-      "low": 333.82,
-      "close": 334.59,
-      "volume": 17457600,
-      "sma20": 353.99
+      "open": 551.78,
+      "high": 554.41,
+      "low": 535.67,
+      "close": 538.05,
+      "volume": 20199700,
+      "sma20": 606.53
     },
     {
       "date": "2026-10-20",
-      "open": 334.0,
-      "high": 341.1,
-      "low": 330.8,
-      "close": 334.37,
-      "volume": 15951800,
-      "sma20": 352.48
+      "open": 530.02,
+      "high": 548.11,
+      "low": 524.6,
+      "close": 534.74,
+      "volume": 15187000,
+      "sma20": 602.08
     },
     {
       "date": "2026-10-21",
-      "open": 338.03,
-      "high": 339.24,
-      "low": 332.29,
-      "close": 337.8,
-      "volume": 17123600,
-      "sma20": 351.62
+      "open": 545.93,
+      "high": 556.79,
+      "low": 537.3,
+      "close": 552.72,
+      "volume": 17998600,
+      "sma20": 598.98
     },
     {
       "date": "2026-10-22",
-      "open": 326.53,
-      "high": 330.82,
-      "low": 321.02,
-      "close": 323.24,
-      "volume": 28139100,
-      "sma20": 350.27
+      "open": 524.1,
+      "high": 529.98,
+      "low": 502.6,
+      "close": 507.93,
+      "volume": 28007400,
+      "sma20": 592.91
     },
     {
       "date": "2026-10-23",
-      "open": 321.5,
-      "high": 327.7,
-      "low": 320.23,
-      "close": 321.68,
-      "volume": 15917000,
-      "sma20": 348.71
+      "open": 510.21,
+      "high": 523.92,
+      "low": 508.36,
+      "close": 516.79,
+      "volume": 15177900,
+      "sma20": 587.22
     },
     {
       "date": "2026-10-26",
-      "open": 324.53,
-      "high": 332.12,
-      "low": 323.25,
-      "close": 329.17,
-      "volume": 18646700,
-      "sma20": 347.69
+      "open": 522.79,
+      "high": 533.5,
+      "low": 514.01,
+      "close": 531.28,
+      "volume": 16796800,
+      "sma20": 583.39
     },
     {
       "date": "2026-10-27",
-      "open": 339.87,
-      "high": 345.67,
-      "low": 336.87,
-      "close": 342.33,
-      "volume": 25567200,
-      "sma20": 347.05
+      "open": 539.49,
+      "high": 563.92,
+      "low": 538.5,
+      "close": 560.26,
+      "volume": 20599900,
+      "sma20": 581.03
     },
     {
       "date": "2026-10-28",
-      "open": 349.22,
-      "high": 352.4,
-      "low": 344.35,
-      "close": 351.81,
-      "volume": 22718200,
-      "sma20": 347.08
+      "open": 573.08,
+      "high": 579.18,
+      "low": 560.52,
+      "close": 578.44,
+      "volume": 18848600,
+      "sma20": 579.36
     },
     {
       "date": "2026-10-29",
-      "open": 342.0,
-      "high": 346.15,
-      "low": 338.8,
-      "close": 345.0,
-      "volume": 17052700,
-      "sma20": 347.15
+      "open": 562.27,
+      "high": 575.1,
+      "low": 560.57,
+      "close": 566.42,
+      "volume": 16873300,
+      "sma20": 576.9
     },
     {
       "date": "2026-10-30",
-      "open": 330.72,
-      "high": 331.98,
-      "low": 319.3,
-      "close": 326.08,
-      "volume": 36511800,
-      "sma20": 345.7
+      "open": 508.53,
+      "high": 520.4,
+      "low": 492.21,
+      "close": 504.8,
+      "volume": 39697500,
+      "sma20": 570.44
     },
     {
       "date": "2026-11-02",
-      "open": 328.37,
-      "high": 333.56,
-      "low": 321.87,
-      "close": 322.23,
-      "volume": 20326900,
-      "sma20": 343.68
+      "open": 510.71,
+      "high": 512.82,
+      "low": 466.07,
+      "close": 466.84,
+      "volume": 32141000,
+      "sma20": 562.19
     },
     {
       "date": "2026-11-03",
-      "open": 328.97,
-      "high": 335.74,
-      "low": 326.6,
-      "close": 332.13,
-      "volume": 17274500,
-      "sma20": 341.5
+      "open": 479.99,
+      "high": 497.4,
+      "low": 473.54,
+      "close": 483.9,
+      "volume": 35255100,
+      "sma20": 553.92
     },
     {
       "date": "2026-11-04",
-      "open": 326.86,
-      "high": 334.12,
-      "low": 321.74,
-      "close": 325.48,
-      "volume": 23881800,
-      "sma20": 338.95
+      "open": 485.25,
+      "high": 514.61,
+      "low": 476.5,
+      "close": 488.78,
+      "volume": 50984800,
+      "sma20": 546.06
     },
     {
       "date": "2026-11-05",
-      "open": 311.89,
-      "high": 314.0,
-      "low": 290.12,
-      "close": 291.53,
-      "volume": 53835500,
-      "sma20": 335.52
+      "open": 452.5,
+      "high": 456.2,
+      "low": 402.1,
+      "close": 404.4,
+      "volume": 71237400,
+      "sma20": 535.25
     },
     {
       "date": "2026-11-06",
-      "open": 311.13,
-      "high": 311.52,
-      "low": 289.77,
-      "close": 293.69,
-      "volume": 32379300,
-      "sma20": 332.12
+      "open": 444.43,
+      "high": 459.8,
+      "low": 433.3,
+      "close": 449.04,
+      "volume": 45759800,
+      "sma20": 527.3
     },
     {
       "date": "2026-11-09",
-      "open": 305.29,
-      "high": 321.73,
-      "low": 304.29,
-      "close": 319.61,
-      "volume": 17202334,
-      "sma20": 330.37
+      "open": 473.39,
+      "high": 515.18,
+      "low": 468.21,
+      "close": 508.58,
+      "volume": 50987800,
+      "sma20": 523.01
+    },
+    {
+      "date": "2026-11-10",
+      "open": 503.0,
+      "high": 539.25,
+      "low": 500.25,
+      "close": 532.25,
+      "volume": 16998484,
+      "sma20": 519.35
     }
   ],
-  "bars": [
-    {
-      "time": "15:30",
-      "open": 316.76,
-      "high": 324.83,
-      "low": 316.69,
-      "close": 324.61,
-      "vwap": 322.04,
-      "vol": 278
-    },
-    {
-      "time": "15:45",
-      "open": 324.58,
-      "high": 332.42,
-      "low": 323.55,
-      "close": 331.52,
-      "vwap": 325.46,
-      "vol": 257
-    },
-    {
-      "time": "16:00",
-      "open": 331.5,
-      "high": 334.67,
-      "low": 330.7,
-      "close": 333.61,
-      "vwap": 327.69,
-      "vol": 225
-    },
-    {
-      "time": "16:15",
-      "open": 333.61,
-      "high": 333.71,
-      "low": 331.02,
-      "close": 332.3,
-      "vwap": 328.01,
-      "vol": 56
-    }
-  ],
-  "latest_price": 332.3,
-  "last_updated_cet": "16:15",
-  "intraday_verification": {
-    "outcome": "WIN",
-    "entry_time": "15:45",
-    "post_entry_high": 334.67,
-    "post_entry_low": 330.7,
-    "post_entry_high_time": "16:00",
-    "post_entry_low_time": "16:00",
-    "first_trigger_time": "16:00",
-    "exit_price": 326.0,
-    "return_pct": 2.0,
-    "high_before_low": true
-  },
-  "progress": {
-    "ticker": "AVGO",
-    "current_price": 332.3,
-    "exit_price": 326.0,
-    "as_of_cet": "16:15 CET",
-    "data_age_min": 1429,
-    "pnl_pct": 2.0,
-    "to_target_pct": 0.0,
-    "to_stop_pct": 4.98,
-    "progress_ratio": 1.0,
-    "entry_ratio": 0.6063,
-    "entry_price": 319.61,
-    "target_price": 326.0,
-    "stop_loss": 309.77,
-    "status": "DOEL_BEREIKT",
-    "plain_text_nl": "Doel gehaald: +2.00% winst (oefenspel)."
-  },
   "funnel_candidates": [
-    {
-      "ticker": "AVGO",
-      "exchange": "US",
-      "company_name": "Broadcom Inc.",
-      "price": 319.61,
-      "atr_14_pct": 5.13,
-      "rsi_14": 44.7,
-      "rel_vol_20d": 1.26,
-      "status": "SELECTED",
-      "reason": "Verse analistenupgrade en sterke AI-infrastructuur rugwind; noteert solide boven sessie-VWAP.",
-      "bars": [
-        {
-          "time": "15:30",
-          "open": 316.76,
-          "high": 324.83,
-          "low": 316.69,
-          "close": 324.61,
-          "vwap": 322.04,
-          "vol": 278
-        },
-        {
-          "time": "15:45",
-          "open": 324.58,
-          "high": 332.42,
-          "low": 323.55,
-          "close": 331.52,
-          "vwap": 325.46,
-          "vol": 257
-        },
-        {
-          "time": "16:00",
-          "open": 331.5,
-          "high": 334.67,
-          "low": 330.7,
-          "close": 333.61,
-          "vwap": 327.69,
-          "vol": 225
-        },
-        {
-          "time": "16:15",
-          "open": 333.61,
-          "high": 333.71,
-          "low": 331.02,
-          "close": 332.3,
-          "vwap": 328.01,
-          "vol": 56
-        }
-      ],
-      "vwap": 328.01,
-      "latest_price": 332.3,
-      "last_updated_cet": "16:15",
-      "entry_price": 319.61,
-      "target_price": 326.0,
-      "stop_loss": 303.21,
-      "intraday_verification": {
-        "outcome": "WIN",
-        "entry_time": "15:45",
-        "post_entry_high": 334.67,
-        "post_entry_low": 323.55,
-        "post_entry_high_time": "16:00",
-        "post_entry_low_time": "15:45",
-        "first_trigger_time": "15:45",
-        "exit_price": 326.0,
-        "return_pct": 2.0,
-        "high_before_low": true
-      }
-    },
     {
       "ticker": "AMD",
       "exchange": "US",
-      "company_name": "Advanced Micro Devices",
-      "price": 518.41,
-      "atr_14_pct": 8.01,
-      "rsi_14": 47.5,
-      "rel_vol_20d": 1.35,
-      "status": "REJECTED",
-      "reason": "Afgewezen via RFC-0008 Alpha#10 Noodrem: wispelturig 4-daags regime (CHOPPY_MEAN_REVERTING) met hoog bull-trap risico.",
+      "company_name": "AMD",
+      "price": 532.25,
+      "atr_14_pct": 7.94,
+      "rsi_14": 50.8,
+      "rel_vol_20d": 3.27,
+      "status": "SELECTED",
+      "rejection_reason": null,
+      "reason": "Zuivere trenduitlijning boven sessie-VWAP, institutioneel openingsvolume en bevestigde positieve nieuwskatalysator.",
       "bars": [
         {
           "time": "15:30",
@@ -561,45 +435,194 @@
           "time": "16:15",
           "open": 538.32,
           "high": 539.25,
-          "low": 531.91,
-          "close": 532.51,
-          "vwap": 524.35,
-          "vol": 102
+          "low": 530.87,
+          "close": 532.61,
+          "vwap": 525.33,
+          "vol": 273
+        },
+        {
+          "time": "16:30",
+          "open": 533.06,
+          "high": 533.06,
+          "low": 533.06,
+          "close": 533.06,
+          "vwap": 525.33,
+          "vol": 10
         }
       ],
-      "vwap": 524.35,
-      "latest_price": 532.51,
-      "last_updated_cet": "16:15",
-      "entry_price": 518.41,
-      "target_price": 528.78,
-      "stop_loss": 476.89,
+      "vwap": 525.33,
+      "latest_price": 533.06,
+      "last_updated_cet": "16:30",
+      "entry_price": 532.25,
+      "target_price": 542.89,
+      "stop_loss": 489.99,
       "intraday_verification": {
-        "outcome": "WIN",
+        "outcome": "SCRATCH / CLOSE",
         "entry_time": "15:45",
         "post_entry_high": 539.25,
         "post_entry_low": 513.53,
         "post_entry_high_time": "16:15",
         "post_entry_low_time": "15:45",
-        "first_trigger_time": "15:45",
-        "exit_price": 528.78,
-        "return_pct": 2.0,
-        "high_before_low": true
+        "first_trigger_time": null,
+        "exit_price": 533.06,
+        "return_pct": 0.15,
+        "high_before_low": false
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "exchange": "US",
+      "company_name": "AVGO",
+      "price": 330.86,
+      "atr_14_pct": 5.22,
+      "rsi_14": 49.1,
+      "rel_vol_20d": 1.99,
+      "status": "REJECTED",
+      "rejection_reason": null,
+      "reason": "Ondanks de positieve analistennoot en sectorale rugwind, is het hoge ATR-verbruik van 83.0% een aandachtspunt voor de 61.0% break-even winrate.",
+      "bars": [
+        {
+          "time": "15:30",
+          "open": 316.76,
+          "high": 324.83,
+          "low": 316.69,
+          "close": 324.61,
+          "vwap": 322.04,
+          "vol": 278
+        },
+        {
+          "time": "15:45",
+          "open": 324.58,
+          "high": 332.42,
+          "low": 323.55,
+          "close": 331.52,
+          "vwap": 325.46,
+          "vol": 257
+        },
+        {
+          "time": "16:00",
+          "open": 331.5,
+          "high": 334.67,
+          "low": 330.7,
+          "close": 333.61,
+          "vwap": 327.69,
+          "vol": 225
+        },
+        {
+          "time": "16:15",
+          "open": 333.61,
+          "high": 333.71,
+          "low": 330.41,
+          "close": 331.25,
+          "vwap": 328.23,
+          "vol": 114
+        },
+        {
+          "time": "16:30",
+          "open": 331.61,
+          "high": 331.61,
+          "low": 331.61,
+          "close": 331.61,
+          "vwap": 328.23,
+          "vol": 10
+        }
+      ],
+      "vwap": 328.23,
+      "latest_price": 331.61,
+      "last_updated_cet": "16:30",
+      "entry_price": 330.86,
+      "target_price": 337.48,
+      "stop_loss": 313.59,
+      "intraday_verification": {
+        "outcome": "SCRATCH / CLOSE",
+        "entry_time": "15:45",
+        "post_entry_high": 334.67,
+        "post_entry_low": 323.55,
+        "post_entry_high_time": "16:00",
+        "post_entry_low_time": "15:45",
+        "first_trigger_time": null,
+        "exit_price": 331.61,
+        "return_pct": 0.23,
+        "high_before_low": false
       }
     }
   ],
-  "evaluation": {
+  "bars": [
+    {
+      "time": "15:30",
+      "open": 503.0,
+      "high": 519.49,
+      "low": 500.25,
+      "close": 518.54,
+      "vwap": 512.76,
+      "vol": 597
+    },
+    {
+      "time": "15:45",
+      "open": 518.41,
+      "high": 535.13,
+      "low": 513.53,
+      "close": 534.3,
+      "vwap": 519.39,
+      "vol": 479
+    },
+    {
+      "time": "16:00",
+      "open": 534.28,
+      "high": 538.48,
+      "low": 533.0,
+      "close": 538.26,
+      "vwap": 523.62,
+      "vol": 350
+    },
+    {
+      "time": "16:15",
+      "open": 538.32,
+      "high": 539.25,
+      "low": 530.87,
+      "close": 532.61,
+      "vwap": 525.33,
+      "vol": 273
+    },
+    {
+      "time": "16:30",
+      "open": 533.06,
+      "high": 533.06,
+      "low": 533.06,
+      "close": 533.06,
+      "vwap": 525.33,
+      "vol": 10
+    }
+  ],
+  "latest_price": 533.06,
+  "last_updated_cet": "16:30",
+  "intraday_verification": {
     "outcome": "SCRATCH / CLOSE",
     "entry_time": "15:45",
-    "post_entry_high": 323.05,
-    "post_entry_low": 313.65,
-    "post_entry_high_time": "21:30",
-    "post_entry_low_time": "16:00",
+    "post_entry_high": 539.25,
+    "post_entry_low": 530.87,
+    "post_entry_high_time": "16:15",
+    "post_entry_low_time": "16:15",
     "first_trigger_time": null,
-    "exit_price": 319.53,
-    "return_pct": -0.03,
-    "high_before_low": false,
-    "has_1715_bar": true,
-    "has_closing_bar": true
+    "exit_price": 533.06,
+    "return_pct": 0.11,
+    "high_before_low": true
   },
-  "evaluation_frozen_at": "2026-11-09T23:02:22.956312+01:00"
+  "progress": {
+    "ticker": "AMD",
+    "current_price": 533.06,
+    "exit_price": 533.06,
+    "as_of_cet": "16:30 CET",
+    "data_age_min": 0,
+    "pnl_pct": 0.11,
+    "to_target_pct": 1.89,
+    "to_stop_pct": 4.87,
+    "progress_ratio": 0.7202,
+    "entry_ratio": 0.7043,
+    "entry_price": 532.49,
+    "target_price": 543.14,
+    "stop_loss": 507.12,
+    "status": "LOOPT",
+    "plain_text_nl": "Het aandeel doet nog bijna niets. Geduld."
+  }
 }
