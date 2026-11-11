@@ -1,409 +1,635 @@
 {
-  "date": "2026-11-10",
-  "entry_time": "09:45",
-  "ticker": "MT.AS",
-  "exchange": "AEX",
-  "company_name": "ArcelorMittal SA",
+  "date": "2026-11-11",
+  "entry_time": "09:15",
+  "ticker": "AIR.PA",
+  "exchange": "CAC",
+  "company_name": "AIRBUS SE",
   "currency": "EUR",
-  "sector": "Basic Materials",
-  "entry_price": 59.04,
-  "target_price": 60.22,
-  "stop_loss": 57.55,
-  "vwap": 58.35,
-  "orb_15m_high": 58.64,
-  "orb_15m_low": 57.54,
-  "sma_20": 55.23,
-  "sma_50": 59.11,
-  "sma_200": 55.65,
-  "rsi_14": 57.8,
-  "atr_14_pct": 4.23,
-  "rel_vol_20d": 1.6,
-  "rs_vs_index_pct": 1.2,
+  "sector": "Industrials",
+  "entry_price": 210.7,
+  "target_price": 214.91,
+  "stop_loss": 207.3,
+  "vwap": 0.0,
+  "orb_15m_high": 210.7,
+  "orb_15m_low": 210.7,
+  "sma_20": 196.3,
+  "sma_50": 194.38,
+  "sma_200": 187.14,
+  "rsi_14": 66.8,
+  "atr_14_pct": 2.69,
+  "rel_vol_20d": 20.66,
+  "rs_vs_index_pct": 4.34,
   "alpha_guardrails": {
     "alpha10": {
       "regime": "CHOPPY_MEAN_REVERTING",
-      "ts_min_4d": -0.62,
-      "ts_max_4d": 2.02,
+      "ts_min_4d": -2.48,
+      "ts_max_4d": 9.6,
       "is_mean_reversion_trap": false
     },
     "alpha20": {
-      "open_vs_prev_high": 0.38,
-      "open_vs_prev_close": 0.84,
-      "open_vs_prev_low": 2.78,
-      "gap_atr_ratio": 0.34,
+      "open_vs_prev_high": 4.75,
+      "open_vs_prev_close": 4.75,
+      "open_vs_prev_low": 14.97,
+      "gap_atr_ratio": 0.84,
       "is_exhaustion_gap_risk": false,
       "details": null
     },
     "guardrail_triggered": false,
     "rejection_reason": null
   },
-  "status": "LOSS_STOPPED",
+  "status": "ACTIVE",
   "decision_source": "llm_decision",
-  "conviction_score": 90,
-  "override_quant_rank_1_rationale": "",
-  "testable_intraday_hypothesis": "Koers consolideert boven VWAP na sterke Q3 cijfers en breekt uit richting winstdoel.",
-  "thesis": "De Selectietrechter van RocketBidder wijst vandaag op ArcelorMittal (MT.AS) als Focusaandeel van de dag. De Handelsthese & Katalysator is gebaseerd op de zojuist gepubliceerde, robuuste Q3-resultaten met een indrukwekkende EBITDA-groei en een opwaarts bijgestelde outlook voor 2027. Deze fundamentele kracht, gecombineerd met een gunstige Trade Setup & Orderoverzicht, cre\u00ebert een solide basis voor een potenti\u00eble opwaartse beweging richting ons Winstdoel (+2,0% Limiet), met een Stop-Loss (ATR-bewaakt) om kapitaal te beschermen.",
+  "conviction_score": 75,
+  "override_quant_rank_1_rationale": "AIR.PA, hoewel niet de kwantitatieve koploper, toont een superieure combinatie van meerdere verse, fundamenteel sterke katalysatoren en een uitzonderlijk lage atr_consumed_pct, wat duidt op een aanzienlijk onaangeboord intraday potentieel vergeleken met de andere kandidaten.",
+  "testable_intraday_hypothesis": "Airbus zal vandaag, gedreven door de verse orders en capaciteitsuitbreiding, een aanhoudende institutionele koopdruk ervaren die de koers richting het intraday winstdoel van +2,0% zal stuwen, met een significante toename in volume boven het daggemiddelde.",
+  "thesis": "Airbus staat vandaag in de schijnwerpers met een reeks positieve berichten, waaronder een omvangrijke order van Cathay Pacific en plannen voor capaciteitsuitbreiding als reactie op de aanhoudend hoge vraag. Deze fundamentele rugwind, gecombineerd met een nog beperkte koersreactie in de vroege handel, cre\u00ebert een gunstige dynamiek voor een verdere opwaartse beweging. Wij anticiperen op een voortzetting van de institutionele interesse gedurende de sessie.",
   "candidates_considered": [
-    "MT.AS",
-    "IFX.DE",
-    "SAB.MC",
-    "BAMNB.AS",
-    "RHM.DE",
-    "IAG.MC",
-    "UCG.MI",
-    "MELE.BR",
-    "BAMI.MI",
+    "LR.PA",
+    "STMPA.PA",
     "LDO.MI",
-    "AC.PA",
-    "ISP.MI"
+    "AIR.PA"
+  ],
+  "candidate_audits": [
+    {
+      "ticker": "LR.PA",
+      "catalyst_category": "EARNINGS_GUIDANCE",
+      "catalyst_freshness": "YESTERDAY_SESSION",
+      "setup_assessment": "De katalysator van verhoogde doelstellingen is sterk, maar de atr_consumed_pct van 7.3% en een break-even winrate van 54.2% suggereren een redelijke setup met reeds enige beweging.",
+      "disqualified_by_llm": false
+    },
+    {
+      "ticker": "STMPA.PA",
+      "catalyst_category": "SYMPATHY_ONLY",
+      "catalyst_freshness": "STALE_OR_NONE",
+      "setup_assessment": "Ondanks een lage atr_consumed_pct van 2.9% en een hoge break-even winrate van 64.1%, ontbreekt een concrete, verse katalysator, wat de setup minder robuust maakt.",
+      "disqualified_by_llm": false
+    },
+    {
+      "ticker": "LDO.MI",
+      "catalyst_category": "CONTRACT_REGULATORY",
+      "catalyst_freshness": "YESTERDAY_SESSION",
+      "setup_assessment": "De verse NAVAIR-contracttoekenning is een sterke katalysator, ondersteund door een lage atr_consumed_pct van 6.4%, hoewel de break-even winrate van 47.4% aan de lage kant is.",
+      "disqualified_by_llm": false
+    },
+    {
+      "ticker": "AIR.PA",
+      "catalyst_category": "CONTRACT_REGULATORY",
+      "catalyst_freshness": "FRESH_PRE_MARKET",
+      "setup_assessment": "Meerdere verse, positieve katalysatoren, waaronder een grote order en capaciteitsuitbreiding, gecombineerd met een zeer lage atr_consumed_pct van 0.9%, cre\u00ebren een aantrekkelijke setup, ondanks een break-even winrate van 44.6%.",
+      "disqualified_by_llm": false
+    }
+  ],
+  "scan_quality": {
+    "scan_errors": 0,
+    "data_gaps": 5,
+    "data_gap_tickers": [
+      "REL.AS",
+      "EXOR.AS",
+      "TKWY.AS",
+      "COFB.BR",
+      "POST.MI"
+    ],
+    "total_tickers": 143,
+    "error_rate_pct": 0.0,
+    "gap_rate_pct": 3.5,
+    "degraded": false
+  },
+  "model_used": "gemini-2.5-flash",
+  "prompt_version": "rfc-0012b-v1",
+  "monthly_daily_bars": [
+    {
+      "date": "2026-09-23",
+      "open": 195.5,
+      "high": 197.6,
+      "low": 192.64,
+      "close": 195.02,
+      "volume": 1024476,
+      "sma20": 197.15
+    },
+    {
+      "date": "2026-09-24",
+      "open": 194.32,
+      "high": 195.5,
+      "low": 190.92,
+      "close": 194.38,
+      "volume": 921803,
+      "sma20": 196.7
+    },
+    {
+      "date": "2026-09-25",
+      "open": 194.52,
+      "high": 195.36,
+      "low": 188.12,
+      "close": 192.4,
+      "volume": 1728900,
+      "sma20": 196.17
+    },
+    {
+      "date": "2026-09-28",
+      "open": 192.62,
+      "high": 195.7,
+      "low": 191.56,
+      "close": 193.1,
+      "volume": 912625,
+      "sma20": 195.96
+    },
+    {
+      "date": "2026-09-29",
+      "open": 193.16,
+      "high": 193.76,
+      "low": 189.95,
+      "close": 190.48,
+      "volume": 1083115,
+      "sma20": 195.67
+    },
+    {
+      "date": "2026-09-30",
+      "open": 190.54,
+      "high": 193.88,
+      "low": 189.68,
+      "close": 190.62,
+      "volume": 1072637,
+      "sma20": 195.36
+    },
+    {
+      "date": "2026-10-01",
+      "open": 189.46,
+      "high": 190.86,
+      "low": 185.6,
+      "close": 185.6,
+      "volume": 1231483,
+      "sma20": 194.79
+    },
+    {
+      "date": "2026-10-02",
+      "open": 185.6,
+      "high": 191.98,
+      "low": 185.58,
+      "close": 189.3,
+      "volume": 1310941,
+      "sma20": 194.31
+    },
+    {
+      "date": "2026-10-05",
+      "open": 189.2,
+      "high": 190.22,
+      "low": 188.1,
+      "close": 189.08,
+      "volume": 1319005,
+      "sma20": 193.83
+    },
+    {
+      "date": "2026-10-06",
+      "open": 190.18,
+      "high": 191.5,
+      "low": 187.06,
+      "close": 188.0,
+      "volume": 807739,
+      "sma20": 193.19
+    },
+    {
+      "date": "2026-10-07",
+      "open": 186.06,
+      "high": 188.76,
+      "low": 185.86,
+      "close": 187.44,
+      "volume": 991928,
+      "sma20": 192.75
+    },
+    {
+      "date": "2026-10-08",
+      "open": 186.0,
+      "high": 189.28,
+      "low": 183.84,
+      "close": 187.26,
+      "volume": 1084132,
+      "sma20": 192.32
+    },
+    {
+      "date": "2026-10-09",
+      "open": 189.14,
+      "high": 189.44,
+      "low": 186.34,
+      "close": 187.8,
+      "volume": 959019,
+      "sma20": 191.74
+    },
+    {
+      "date": "2026-10-12",
+      "open": 187.92,
+      "high": 188.74,
+      "low": 187.42,
+      "close": 188.14,
+      "volume": 551186,
+      "sma20": 191.4
+    },
+    {
+      "date": "2026-10-13",
+      "open": 187.4,
+      "high": 188.8,
+      "low": 186.14,
+      "close": 186.5,
+      "volume": 928422,
+      "sma20": 190.98
+    },
+    {
+      "date": "2026-10-14",
+      "open": 188.2,
+      "high": 192.6,
+      "low": 186.58,
+      "close": 190.22,
+      "volume": 1383229,
+      "sma20": 190.68
+    },
+    {
+      "date": "2026-10-15",
+      "open": 188.2,
+      "high": 195.06,
+      "low": 188.2,
+      "close": 194.78,
+      "volume": 1577437,
+      "sma20": 190.64
+    },
+    {
+      "date": "2026-10-16",
+      "open": 195.56,
+      "high": 200.4,
+      "low": 194.66,
+      "close": 198.82,
+      "volume": 1471547,
+      "sma20": 190.92
+    },
+    {
+      "date": "2026-10-19",
+      "open": 197.7,
+      "high": 197.88,
+      "low": 191.84,
+      "close": 194.34,
+      "volume": 835299,
+      "sma20": 190.89
+    },
+    {
+      "date": "2026-10-20",
+      "open": 191.66,
+      "high": 196.76,
+      "low": 190.6,
+      "close": 193.58,
+      "volume": 917317,
+      "sma20": 190.84
+    },
+    {
+      "date": "2026-10-21",
+      "open": 193.38,
+      "high": 199.16,
+      "low": 192.02,
+      "close": 198.78,
+      "volume": 1097329,
+      "sma20": 191.03
+    },
+    {
+      "date": "2026-10-22",
+      "open": 196.9,
+      "high": 197.46,
+      "low": 193.88,
+      "close": 194.78,
+      "volume": 846421,
+      "sma20": 191.05
+    },
+    {
+      "date": "2026-10-23",
+      "open": 194.86,
+      "high": 195.26,
+      "low": 190.88,
+      "close": 192.46,
+      "volume": 1012273,
+      "sma20": 191.05
+    },
+    {
+      "date": "2026-10-26",
+      "open": 193.48,
+      "high": 195.92,
+      "low": 192.24,
+      "close": 193.4,
+      "volume": 1107182,
+      "sma20": 191.07
+    },
+    {
+      "date": "2026-10-27",
+      "open": 192.0,
+      "high": 195.6,
+      "low": 191.14,
+      "close": 192.74,
+      "volume": 1270723,
+      "sma20": 191.18
+    },
+    {
+      "date": "2026-10-28",
+      "open": 195.48,
+      "high": 195.5,
+      "low": 190.88,
+      "close": 191.92,
+      "volume": 798148,
+      "sma20": 191.25
+    },
+    {
+      "date": "2026-10-29",
+      "open": 197.24,
+      "high": 199.6,
+      "low": 193.48,
+      "close": 196.34,
+      "volume": 1375928,
+      "sma20": 191.78
+    },
+    {
+      "date": "2026-10-30",
+      "open": 194.62,
+      "high": 195.14,
+      "low": 191.24,
+      "close": 192.4,
+      "volume": 1038240,
+      "sma20": 191.94
+    },
+    {
+      "date": "2026-11-02",
+      "open": 191.72,
+      "high": 196.66,
+      "low": 191.66,
+      "close": 196.08,
+      "volume": 934317,
+      "sma20": 192.29
+    },
+    {
+      "date": "2026-11-03",
+      "open": 194.0,
+      "high": 196.12,
+      "low": 191.8,
+      "close": 193.32,
+      "volume": 1036015,
+      "sma20": 192.56
+    },
+    {
+      "date": "2026-11-04",
+      "open": 193.0,
+      "high": 201.1,
+      "low": 191.7,
+      "close": 200.1,
+      "volume": 1569060,
+      "sma20": 193.19
+    },
+    {
+      "date": "2026-11-05",
+      "open": 203.6,
+      "high": 204.55,
+      "low": 197.38,
+      "close": 198.88,
+      "volume": 1674873,
+      "sma20": 193.77
+    },
+    {
+      "date": "2026-11-06",
+      "open": 195.8,
+      "high": 198.92,
+      "low": 195.28,
+      "close": 196.4,
+      "volume": 1197952,
+      "sma20": 194.2
+    },
+    {
+      "date": "2026-11-09",
+      "open": 196.08,
+      "high": 206.0,
+      "low": 195.78,
+      "close": 206.0,
+      "volume": 1368068,
+      "sma20": 195.09
+    },
+    {
+      "date": "2026-11-11",
+      "open": 210.75,
+      "high": 210.85,
+      "low": 210.25,
+      "close": 210.7,
+      "volume": 11880,
+      "sma20": 196.3
+    }
   ],
   "funnel_candidates": [
     {
-      "ticker": "MT.AS",
-      "exchange": "AEX",
-      "company_name": "ArcelorMittal SA",
-      "atr_14_pct": 4.23,
-      "rsi_14": 57.8,
-      "rel_vol_20d": 1.6,
-      "status": "SELECTED",
-      "reason": "Sterke Q3-bedrijfsresultaten met EBITDA-groei en verhoogde outlook voor 2027; consolidatie boven sessie-VWAP.",
+      "ticker": "IAG.MC",
+      "exchange": "IBEX",
+      "company_name": "IAG.MC",
+      "price": 5.39,
+      "atr_14_pct": 3.46,
+      "rsi_14": 65.6,
+      "rel_vol_20d": 36.01,
+      "status": "REJECTED",
+      "rejection_reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
       "bars": [
         {
           "time": "09:00",
-          "open": 57.68,
-          "high": 58.64,
-          "low": 57.54,
-          "close": 58.36,
-          "vwap": 58.18,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 58.38,
-          "high": 58.8,
-          "low": 58.34,
-          "close": 58.6,
-          "vwap": 58.35,
-          "vol": 10
-        },
-        {
-          "time": "09:30",
-          "open": 58.68,
-          "high": 58.88,
-          "low": 58.56,
-          "close": 58.76,
-          "vwap": 58.44,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 58.74,
-          "high": 59.12,
-          "low": 58.72,
-          "close": 59.04,
-          "vwap": 58.56,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 59.0,
-          "high": 59.0,
-          "low": 58.36,
-          "close": 58.6,
-          "vwap": 58.58,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 58.58,
-          "high": 58.76,
-          "low": 58.46,
-          "close": 58.76,
-          "vwap": 58.58,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 58.76,
-          "high": 58.84,
-          "low": 58.48,
-          "close": 58.54,
-          "vwap": 58.58,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 58.6,
-          "high": 58.62,
-          "low": 58.34,
-          "close": 58.34,
-          "vwap": 58.58,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 58.32,
-          "high": 58.38,
-          "low": 58.22,
-          "close": 58.26,
-          "vwap": 58.57,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 58.26,
-          "high": 58.32,
-          "low": 58.14,
-          "close": 58.2,
-          "vwap": 58.55,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 58.22,
-          "high": 58.32,
-          "low": 58.08,
-          "close": 58.14,
-          "vwap": 58.54,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 58.14,
-          "high": 58.42,
-          "low": 58.12,
-          "close": 58.36,
-          "vwap": 58.54,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 58.42,
-          "high": 58.42,
-          "low": 58.3,
-          "close": 58.36,
-          "vwap": 58.53,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 58.4,
-          "high": 58.52,
-          "low": 58.34,
-          "close": 58.52,
-          "vwap": 58.53,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 58.5,
-          "high": 58.52,
-          "low": 58.28,
-          "close": 58.34,
-          "vwap": 58.53,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 58.36,
-          "high": 58.36,
-          "low": 58.26,
-          "close": 58.3,
-          "vwap": 58.53,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 58.26,
-          "high": 58.4,
-          "low": 58.2,
-          "close": 58.3,
-          "vwap": 58.52,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 58.3,
-          "high": 58.34,
-          "low": 58.24,
-          "close": 58.3,
-          "vwap": 58.52,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 58.28,
-          "high": 58.28,
-          "low": 58.04,
-          "close": 58.04,
-          "vwap": 58.49,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 58.06,
-          "high": 58.26,
-          "low": 58.0,
-          "close": 58.26,
-          "vwap": 58.48,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 58.26,
-          "high": 58.3,
-          "low": 58.08,
-          "close": 58.1,
-          "vwap": 58.46,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 58.12,
-          "high": 58.26,
-          "low": 57.98,
-          "close": 58.04,
-          "vwap": 58.44,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 58.06,
-          "high": 58.08,
-          "low": 57.38,
-          "close": 57.76,
-          "vwap": 58.39,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 57.74,
-          "high": 57.78,
-          "low": 57.48,
-          "close": 57.48,
-          "vwap": 58.34,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 57.48,
-          "high": 57.72,
-          "low": 57.48,
-          "close": 57.66,
-          "vwap": 58.33,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 57.7,
-          "high": 57.76,
-          "low": 57.6,
-          "close": 57.64,
-          "vwap": 58.31,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 57.64,
-          "high": 57.76,
-          "low": 57.44,
-          "close": 57.76,
-          "vwap": 58.25,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 57.74,
-          "high": 58.62,
-          "low": 57.62,
-          "close": 58.62,
-          "vwap": 58.25,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 58.6,
-          "high": 59.04,
-          "low": 58.58,
-          "close": 58.98,
-          "vwap": 58.3,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 58.96,
-          "high": 59.0,
-          "low": 58.48,
-          "close": 58.5,
-          "vwap": 58.31,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 58.58,
-          "high": 58.72,
-          "low": 58.4,
-          "close": 58.58,
-          "vwap": 58.32,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 58.56,
-          "high": 58.76,
-          "low": 58.36,
-          "close": 58.66,
-          "vwap": 58.34,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 58.68,
-          "high": 58.8,
-          "low": 58.48,
-          "close": 58.48,
-          "vwap": 58.35,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 58.52,
-          "high": 58.64,
-          "low": 58.3,
-          "close": 58.46,
-          "vwap": 58.35,
+          "open": 5.49,
+          "high": 5.52,
+          "low": 5.48,
+          "close": 5.48,
+          "vwap": 0.0,
           "vol": 10
         }
       ],
-      "vwap": 58.35,
-      "latest_price": 58.46,
-      "last_updated_cet": "17:15",
-      "price": 58.38,
-      "entry_price": 58.38,
-      "target_price": 59.55,
-      "stop_loss": 55.91,
+      "vwap": 0.0,
+      "latest_price": 5.48,
+      "last_updated_cet": "09:00",
+      "entry_price": 5.39,
+      "target_price": 5.5,
+      "stop_loss": 5.2,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 59.12,
-        "post_entry_low": 57.38,
-        "post_entry_high_time": "09:45",
-        "post_entry_low_time": "14:30",
+        "post_entry_high": 5.48,
+        "post_entry_low": 5.48,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 58.46,
-        "return_pct": 0.14,
-        "high_before_low": true
+        "exit_price": 5.48,
+        "return_pct": 1.6,
+        "high_before_low": false
+      }
+    },
+    {
+      "ticker": "ABN.AS",
+      "exchange": "AEX",
+      "company_name": "ABN.AS",
+      "price": 42.67,
+      "atr_14_pct": 2.76,
+      "rsi_14": 60.8,
+      "rel_vol_20d": 32.91,
+      "status": "REJECTED",
+      "rejection_reason": "Kwartaalcijfers / earnings binnen 2 dagen (event-risk).",
+      "reason": "Kwartaalcijfers / earnings binnen 2 dagen (event-risk).",
+      "bars": [
+        {
+          "time": "09:00",
+          "open": 44.17,
+          "high": 44.4,
+          "low": 43.75,
+          "close": 43.75,
+          "vwap": 0.0,
+          "vol": 10
+        }
+      ],
+      "vwap": 0.0,
+      "latest_price": 43.75,
+      "last_updated_cet": "09:00",
+      "entry_price": 42.67,
+      "target_price": 43.52,
+      "stop_loss": 41.49,
+      "intraday_verification": {
+        "outcome": "SCRATCH / CLOSE",
+        "entry_time": "09:15",
+        "post_entry_high": 43.75,
+        "post_entry_low": 43.75,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
+        "first_trigger_time": null,
+        "exit_price": 43.75,
+        "return_pct": 2.53,
+        "high_before_low": false
+      }
+    },
+    {
+      "ticker": "BMED.MI",
+      "exchange": "MIB",
+      "company_name": "BMED.MI",
+      "price": 23.8,
+      "atr_14_pct": 2.39,
+      "rsi_14": 60.2,
+      "rel_vol_20d": 32.45,
+      "status": "REJECTED",
+      "rejection_reason": "Afgewezen via RFC-0008: Alpha#10 Alarm: Aandeel bevindt zich in een wispelturig 4-daags regime (CHOPPY_MEAN_REVERTING) met verhoogd risico op een bull-trap.",
+      "reason": "Afgewezen via RFC-0008: Alpha#10 Alarm: Aandeel bevindt zich in een wispelturig 4-daags regime (CHOPPY_MEAN_REVERTING) met verhoogd risico op een bull-trap.",
+      "bars": [
+        {
+          "time": "09:00",
+          "open": 24.3,
+          "high": 24.3,
+          "low": 24.18,
+          "close": 24.18,
+          "vwap": 0.0,
+          "vol": 10
+        }
+      ],
+      "vwap": 0.0,
+      "latest_price": 24.18,
+      "last_updated_cet": "09:00",
+      "entry_price": 23.8,
+      "target_price": 24.28,
+      "stop_loss": 23.23,
+      "intraday_verification": {
+        "outcome": "SCRATCH / CLOSE",
+        "entry_time": "09:15",
+        "post_entry_high": 24.18,
+        "post_entry_low": 24.18,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
+        "first_trigger_time": null,
+        "exit_price": 24.18,
+        "return_pct": 1.6,
+        "high_before_low": false
+      }
+    },
+    {
+      "ticker": "MELE.BR",
+      "exchange": "BEL",
+      "company_name": "MELE.BR",
+      "price": 54.4,
+      "atr_14_pct": 3.99,
+      "rsi_14": 37.2,
+      "rel_vol_20d": 32.38,
+      "status": "REJECTED",
+      "rejection_reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "bars": [
+        {
+          "time": "09:00",
+          "open": 56.25,
+          "high": 56.25,
+          "low": 55.3,
+          "close": 55.7,
+          "vwap": 0.0,
+          "vol": 10
+        }
+      ],
+      "vwap": 0.0,
+      "latest_price": 55.7,
+      "last_updated_cet": "09:00",
+      "entry_price": 54.4,
+      "target_price": 55.49,
+      "stop_loss": 52.23,
+      "intraday_verification": {
+        "outcome": "SCRATCH / CLOSE",
+        "entry_time": "09:15",
+        "post_entry_high": 55.7,
+        "post_entry_low": 55.7,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
+        "first_trigger_time": null,
+        "exit_price": 55.7,
+        "return_pct": 2.39,
+        "high_before_low": false
+      }
+    },
+    {
+      "ticker": "RHM.DE",
+      "exchange": "DAX",
+      "company_name": "RHM.DE",
+      "price": 845.4,
+      "atr_14_pct": 5.58,
+      "rsi_14": 32.3,
+      "rel_vol_20d": 25.3,
+      "status": "REJECTED",
+      "rejection_reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "bars": [
+        {
+          "time": "09:00",
+          "open": 860.0,
+          "high": 865.0,
+          "low": 846.0,
+          "close": 846.0,
+          "vwap": 0.0,
+          "vol": 10
+        }
+      ],
+      "vwap": 0.0,
+      "latest_price": 846.0,
+      "last_updated_cet": "09:00",
+      "entry_price": 845.4,
+      "target_price": 862.31,
+      "stop_loss": 798.23,
+      "intraday_verification": {
+        "outcome": "SCRATCH / CLOSE",
+        "entry_time": "09:15",
+        "post_entry_high": 846.0,
+        "post_entry_low": 846.0,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
+        "first_trigger_time": null,
+        "exit_price": 846.0,
+        "return_pct": 0.07,
+        "high_before_low": false
       }
     },
     {
       "ticker": "IFX.DE",
       "exchange": "DAX",
-      "company_name": "Infineon Technologies AG",
-      "atr_14_pct": 2.8,
-      "rsi_14": 62.0,
-      "rel_vol_20d": 2.1,
+      "company_name": "IFX.DE",
+      "price": 48.62,
+      "atr_14_pct": 6.08,
+      "rsi_14": 41.0,
+      "rel_vol_20d": 20.5,
       "status": "REJECTED",
-      "reason": "Kwartaalcijfers / earnings binnen 2 dagen (event-risk RFC-0004).",
+      "rejection_reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
       "bars": [
         {
           "time": "09:00",
@@ -715,10 +941,9 @@
       "vwap": 50.35,
       "latest_price": 49.3,
       "last_updated_cet": "17:15",
-      "price": 50.88,
-      "entry_price": 50.88,
-      "target_price": 51.9,
-      "stop_loss": 49.46,
+      "entry_price": 48.62,
+      "target_price": 49.59,
+      "stop_loss": 45.66,
       "intraday_verification": {
         "outcome": "WIN",
         "entry_time": "09:15",
@@ -726,4061 +951,299 @@
         "post_entry_low": 48.97,
         "post_entry_high_time": "10:45",
         "post_entry_low_time": "16:45",
-        "first_trigger_time": "10:30",
-        "exit_price": 51.9,
+        "first_trigger_time": "09:15",
+        "exit_price": 49.59,
         "return_pct": 2.0,
         "high_before_low": true
       }
     },
     {
-      "ticker": "SAB.MC",
-      "exchange": "IBEX",
-      "company_name": "Banco de Sabadell SA",
-      "atr_14_pct": 2.3,
-      "rsi_14": 44.0,
-      "rel_vol_20d": 1.3,
-      "status": "REJECTED",
-      "reason": "Afgewezen via RFC-0008: Alpha#10 Alarm (CHOPPY_MEAN_REVERTING) verhoogd bull-trap risico.",
-      "bars": [
-        {
-          "time": "09:00",
-          "open": 3.7,
-          "high": 3.76,
-          "low": 3.7,
-          "close": 3.74,
-          "vwap": 3.73,
-          "vol": 147
-        },
-        {
-          "time": "09:15",
-          "open": 3.74,
-          "high": 3.74,
-          "low": 3.73,
-          "close": 3.73,
-          "vwap": 3.73,
-          "vol": 30
-        },
-        {
-          "time": "09:30",
-          "open": 3.73,
-          "high": 3.76,
-          "low": 3.73,
-          "close": 3.75,
-          "vwap": 3.74,
-          "vol": 127
-        },
-        {
-          "time": "09:45",
-          "open": 3.75,
-          "high": 3.77,
-          "low": 3.75,
-          "close": 3.76,
-          "vwap": 3.74,
-          "vol": 80
-        },
-        {
-          "time": "10:00",
-          "open": 3.76,
-          "high": 3.77,
-          "low": 3.75,
-          "close": 3.77,
-          "vwap": 3.75,
-          "vol": 94
-        },
-        {
-          "time": "10:15",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.76,
-          "close": 3.78,
-          "vwap": 3.75,
-          "vol": 47
-        },
-        {
-          "time": "10:30",
-          "open": 3.78,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.75,
-          "vol": 42
-        },
-        {
-          "time": "10:45",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.78,
-          "vwap": 3.75,
-          "vol": 43
-        },
-        {
-          "time": "11:00",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.78,
-          "vwap": 3.75,
-          "vol": 26
-        },
-        {
-          "time": "11:15",
-          "open": 3.78,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.78,
-          "vwap": 3.76,
-          "vol": 35
-        },
-        {
-          "time": "11:30",
-          "open": 3.78,
-          "high": 3.78,
-          "low": 3.78,
-          "close": 3.78,
-          "vwap": 3.76,
-          "vol": 36
-        },
-        {
-          "time": "11:45",
-          "open": 3.78,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 52
-        },
-        {
-          "time": "12:00",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.78,
-          "vwap": 3.76,
-          "vol": 20
-        },
-        {
-          "time": "12:15",
-          "open": 3.78,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.78,
-          "vwap": 3.76,
-          "vol": 85
-        },
-        {
-          "time": "12:30",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 12
-        },
-        {
-          "time": "12:45",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 45
-        },
-        {
-          "time": "13:15",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 17
-        },
-        {
-          "time": "13:30",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 32
-        },
-        {
-          "time": "13:45",
-          "open": 3.77,
-          "high": 3.78,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 24
-        },
-        {
-          "time": "14:00",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 12
-        },
-        {
-          "time": "14:15",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 15
-        },
-        {
-          "time": "14:30",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.75,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 27
-        },
-        {
-          "time": "14:45",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.76,
-          "vwap": 3.76,
-          "vol": 13
-        },
-        {
-          "time": "15:00",
-          "open": 3.76,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 20
-        },
-        {
-          "time": "15:15",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 46
-        },
-        {
-          "time": "15:30",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 23
-        },
-        {
-          "time": "15:45",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 46
-        },
-        {
-          "time": "16:00",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 14
-        },
-        {
-          "time": "16:15",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 19
-        },
-        {
-          "time": "16:45",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.77,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 45
-        },
-        {
-          "time": "17:00",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 28
-        },
-        {
-          "time": "17:15",
-          "open": 3.77,
-          "high": 3.77,
-          "low": 3.76,
-          "close": 3.77,
-          "vwap": 3.76,
-          "vol": 41
-        }
-      ],
-      "vwap": 3.76,
-      "latest_price": 3.77,
-      "last_updated_cet": "17:15",
-      "price": 3.74,
-      "entry_price": 3.74,
-      "target_price": 3.81,
-      "stop_loss": 3.65,
-      "intraday_verification": {
-        "outcome": "SCRATCH / CLOSE",
-        "entry_time": "09:15",
-        "post_entry_high": 3.78,
-        "post_entry_low": 3.73,
-        "post_entry_high_time": "10:45",
-        "post_entry_low_time": "09:15",
-        "first_trigger_time": null,
-        "exit_price": 3.77,
-        "return_pct": 0.72,
-        "high_before_low": false
-      }
-    },
-    {
-      "ticker": "BAMNB.AS",
-      "exchange": "AEX",
-      "company_name": "Koninklijke BAM Groep NV",
-      "atr_14_pct": 2.5,
-      "rsi_14": 48.0,
-      "rel_vol_20d": 1.2,
-      "status": "REJECTED",
-      "reason": "Noteert onder de sessie-VWAP (trendbreuk).",
-      "bars": [
-        {
-          "time": "09:00",
-          "open": 13.35,
-          "high": 13.38,
-          "low": 13.24,
-          "close": 13.29,
-          "vwap": 13.3,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 13.28,
-          "high": 13.29,
-          "low": 13.23,
-          "close": 13.23,
-          "vwap": 13.29,
-          "vol": 10
-        },
-        {
-          "time": "09:30",
-          "open": 13.24,
-          "high": 13.32,
-          "low": 13.22,
-          "close": 13.31,
-          "vwap": 13.29,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 13.32,
-          "high": 13.4,
-          "low": 13.31,
-          "close": 13.39,
-          "vwap": 13.32,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 13.4,
-          "high": 13.43,
-          "low": 13.33,
-          "close": 13.38,
-          "vwap": 13.33,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 13.38,
-          "high": 13.44,
-          "low": 13.38,
-          "close": 13.43,
-          "vwap": 13.34,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 13.43,
-          "high": 13.45,
-          "low": 13.41,
-          "close": 13.44,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 13.44,
-          "high": 13.44,
-          "low": 13.4,
-          "close": 13.41,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 13.4,
-          "high": 13.4,
-          "low": 13.37,
-          "close": 13.37,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 13.38,
-          "high": 13.39,
-          "low": 13.37,
-          "close": 13.37,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 13.37,
-          "high": 13.38,
-          "low": 13.35,
-          "close": 13.36,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 13.33,
-          "high": 13.36,
-          "low": 13.32,
-          "close": 13.34,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 13.33,
-          "high": 13.34,
-          "low": 13.3,
-          "close": 13.33,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 13.32,
-          "high": 13.32,
-          "low": 13.3,
-          "close": 13.3,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 13.33,
-          "high": 13.35,
-          "low": 13.33,
-          "close": 13.35,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 13.34,
-          "high": 13.34,
-          "low": 13.33,
-          "close": 13.33,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 13.33,
-          "high": 13.33,
-          "low": 13.31,
-          "close": 13.33,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 13.33,
-          "high": 13.36,
-          "low": 13.31,
-          "close": 13.35,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 13.36,
-          "high": 13.36,
-          "low": 13.34,
-          "close": 13.34,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 13.33,
-          "high": 13.35,
-          "low": 13.33,
-          "close": 13.34,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 13.35,
-          "high": 13.35,
-          "low": 13.35,
-          "close": 13.35,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 13.33,
-          "high": 13.4,
-          "low": 13.33,
-          "close": 13.35,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 13.37,
-          "high": 13.37,
-          "low": 13.25,
-          "close": 13.29,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 13.31,
-          "high": 13.31,
-          "low": 13.29,
-          "close": 13.29,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 13.28,
-          "high": 13.34,
-          "low": 13.27,
-          "close": 13.34,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 13.34,
-          "high": 13.36,
-          "low": 13.34,
-          "close": 13.35,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 13.36,
-          "high": 13.38,
-          "low": 13.32,
-          "close": 13.36,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 13.36,
-          "high": 13.42,
-          "low": 13.34,
-          "close": 13.41,
-          "vwap": 13.35,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 13.42,
-          "high": 13.44,
-          "low": 13.39,
-          "close": 13.4,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 13.41,
-          "high": 13.42,
-          "low": 13.37,
-          "close": 13.38,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 13.37,
-          "high": 13.39,
-          "low": 13.36,
-          "close": 13.37,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 13.36,
-          "high": 13.36,
-          "low": 13.31,
-          "close": 13.33,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 13.35,
-          "high": 13.35,
-          "low": 13.31,
-          "close": 13.35,
-          "vwap": 13.36,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 13.35,
-          "high": 13.35,
-          "low": 13.3,
-          "close": 13.33,
-          "vwap": 13.36,
-          "vol": 10
-        }
-      ],
-      "vwap": 13.36,
-      "latest_price": 13.33,
-      "last_updated_cet": "17:15",
-      "price": 13.28,
-      "entry_price": 13.28,
-      "target_price": 13.55,
-      "stop_loss": 12.95,
-      "intraday_verification": {
-        "outcome": "SCRATCH / CLOSE",
-        "entry_time": "09:15",
-        "post_entry_high": 13.45,
-        "post_entry_low": 13.22,
-        "post_entry_high_time": "10:30",
-        "post_entry_low_time": "09:30",
-        "first_trigger_time": null,
-        "exit_price": 13.33,
-        "return_pct": 0.38,
-        "high_before_low": false
-      }
-    },
-    {
-      "ticker": "RHM.DE",
+      "ticker": "CBK.DE",
       "exchange": "DAX",
-      "company_name": "Rheinmetall AG",
-      "atr_14_pct": 2.1,
-      "rsi_14": 58.0,
-      "rel_vol_20d": 1.2,
+      "company_name": "CBK.DE",
+      "price": 39.7,
+      "atr_14_pct": 2.96,
+      "rsi_14": 56.4,
+      "rel_vol_20d": 23.13,
       "status": "REJECTED",
-      "reason": "Lager relatief momentum en minder direct katalysator-nieuws vergeleken met ArcelorMittal.",
+      "rejection_reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
+      "reason": "Opening gap-fade gedetecteerd (RFC-0002 filter).",
       "bars": [
         {
           "time": "09:00",
-          "open": 855.0,
-          "high": 876.2,
-          "low": 855.0,
-          "close": 871.4,
-          "vwap": 867.53,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 871.4,
-          "high": 883.0,
-          "low": 870.7,
-          "close": 883.0,
-          "vwap": 874.34,
-          "vol": 10
-        },
-        {
-          "time": "09:30",
-          "open": 883.5,
-          "high": 884.5,
-          "low": 880.0,
-          "close": 881.5,
-          "vwap": 875.64,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 881.1,
-          "high": 883.0,
-          "low": 876.0,
-          "close": 876.5,
-          "vwap": 875.99,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 876.2,
-          "high": 876.2,
-          "low": 871.3,
-          "close": 874.1,
-          "vwap": 875.69,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 874.2,
-          "high": 875.6,
-          "low": 872.6,
-          "close": 875.4,
-          "vwap": 875.63,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 875.5,
-          "high": 878.8,
-          "low": 871.0,
-          "close": 872.7,
-          "vwap": 875.52,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 873.6,
-          "high": 875.8,
-          "low": 872.4,
-          "close": 874.4,
-          "vwap": 875.48,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 874.3,
-          "high": 876.3,
-          "low": 873.4,
-          "close": 875.5,
-          "vwap": 875.46,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 875.4,
-          "high": 876.1,
-          "low": 870.6,
-          "close": 871.3,
-          "vwap": 875.0,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 871.2,
-          "high": 871.2,
-          "low": 862.7,
-          "close": 865.5,
-          "vwap": 874.49,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 865.5,
-          "high": 869.2,
-          "low": 864.2,
-          "close": 868.3,
-          "vwap": 874.31,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 868.2,
-          "high": 872.5,
-          "low": 868.0,
-          "close": 872.3,
-          "vwap": 874.25,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 872.8,
-          "high": 873.7,
-          "low": 868.2,
-          "close": 870.1,
-          "vwap": 874.13,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 870.0,
-          "high": 870.4,
-          "low": 868.0,
-          "close": 869.0,
-          "vwap": 874.06,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 869.2,
-          "high": 872.7,
-          "low": 866.8,
-          "close": 866.9,
-          "vwap": 873.97,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 866.2,
-          "high": 870.0,
-          "low": 864.4,
-          "close": 868.9,
-          "vwap": 873.77,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 868.7,
-          "high": 871.0,
-          "low": 868.0,
-          "close": 869.4,
-          "vwap": 873.69,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 869.4,
-          "high": 871.9,
-          "low": 868.3,
-          "close": 869.5,
-          "vwap": 873.63,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 870.1,
-          "high": 870.9,
-          "low": 867.2,
-          "close": 867.2,
-          "vwap": 873.51,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 867.3,
-          "high": 868.3,
-          "low": 865.4,
-          "close": 866.7,
-          "vwap": 873.42,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 866.9,
-          "high": 867.0,
-          "low": 861.1,
-          "close": 862.2,
-          "vwap": 873.12,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 862.2,
-          "high": 864.7,
-          "low": 859.8,
-          "close": 860.4,
-          "vwap": 872.59,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 860.4,
-          "high": 863.7,
-          "low": 860.4,
-          "close": 862.9,
-          "vwap": 872.35,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 862.6,
-          "high": 865.9,
-          "low": 862.6,
-          "close": 865.4,
-          "vwap": 872.24,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 865.2,
-          "high": 866.5,
-          "low": 863.6,
-          "close": 865.9,
-          "vwap": 872.12,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 866.0,
-          "high": 873.5,
-          "low": 864.7,
-          "close": 868.8,
-          "vwap": 872.01,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 868.5,
-          "high": 868.5,
-          "low": 862.0,
-          "close": 862.35,
-          "vwap": 871.79,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 862.5,
-          "high": 867.1,
-          "low": 860.0,
-          "close": 867.1,
-          "vwap": 871.64,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 867.0,
-          "high": 868.2,
-          "low": 863.5,
-          "close": 863.5,
-          "vwap": 871.54,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 863.8,
-          "high": 864.1,
-          "low": 859.5,
-          "close": 862.5,
-          "vwap": 871.34,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 862.5,
-          "high": 863.3,
-          "low": 859.3,
-          "close": 861.9,
-          "vwap": 870.98,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 861.7,
-          "high": 866.3,
-          "low": 861.5,
-          "close": 864.0,
-          "vwap": 870.75,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 864.1,
-          "high": 865.2,
-          "low": 857.2,
-          "close": 857.2,
-          "vwap": 870.19,
+          "open": 40.53,
+          "high": 40.58,
+          "low": 40.29,
+          "close": 40.29,
+          "vwap": 0.0,
           "vol": 10
         }
       ],
-      "vwap": 870.19,
-      "latest_price": 857.2,
-      "last_updated_cet": "17:15",
-      "price": 871.4,
-      "entry_price": 871.4,
-      "target_price": 888.83,
-      "stop_loss": 853.1,
+      "vwap": 0.0,
+      "latest_price": 40.29,
+      "last_updated_cet": "09:00",
+      "entry_price": 39.7,
+      "target_price": 40.49,
+      "stop_loss": 38.52,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 884.5,
-        "post_entry_low": 857.2,
-        "post_entry_high_time": "09:30",
-        "post_entry_low_time": "17:15",
+        "post_entry_high": 40.29,
+        "post_entry_low": 40.29,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 857.2,
-        "return_pct": -1.63,
-        "high_before_low": true
-      }
-    },
-    {
-      "ticker": "IAG.MC",
-      "exchange": "IBEX",
-      "company_name": "International Consolidated Airlines",
-      "atr_14_pct": 2.4,
-      "rsi_14": 52.0,
-      "rel_vol_20d": 1.1,
-      "status": "REJECTED",
-      "reason": "Lager institutioneel volume dan koploper.",
-      "bars": [
-        {
-          "time": "09:00",
-          "open": 5.49,
-          "high": 5.52,
-          "low": 5.48,
-          "close": 5.48,
-          "vwap": 5.49,
-          "vol": 29
-        },
-        {
-          "time": "09:15",
-          "open": 5.48,
-          "high": 5.5,
-          "low": 5.47,
-          "close": 5.5,
-          "vwap": 5.49,
-          "vol": 33
-        },
-        {
-          "time": "09:30",
-          "open": 5.5,
-          "high": 5.51,
-          "low": 5.49,
-          "close": 5.49,
-          "vwap": 5.49,
-          "vol": 19
-        },
-        {
-          "time": "09:45",
-          "open": 5.49,
-          "high": 5.51,
-          "low": 5.49,
-          "close": 5.5,
-          "vwap": 5.49,
-          "vol": 25
-        },
-        {
-          "time": "10:00",
-          "open": 5.5,
-          "high": 5.52,
-          "low": 5.48,
-          "close": 5.5,
-          "vwap": 5.5,
-          "vol": 28
-        },
-        {
-          "time": "10:15",
-          "open": 5.5,
-          "high": 5.51,
-          "low": 5.49,
-          "close": 5.5,
-          "vwap": 5.5,
-          "vol": 13
-        },
-        {
-          "time": "10:30",
-          "open": 5.5,
-          "high": 5.51,
-          "low": 5.49,
-          "close": 5.51,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 5.51,
-          "high": 5.51,
-          "low": 5.5,
-          "close": 5.5,
-          "vwap": 5.5,
-          "vol": 12
-        },
-        {
-          "time": "11:00",
-          "open": 5.5,
-          "high": 5.5,
-          "low": 5.49,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 5.5,
-          "high": 5.5,
-          "low": 5.49,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 11
-        },
-        {
-          "time": "11:45",
-          "open": 5.48,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.49,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.5,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.48,
-          "vwap": 5.49,
-          "vol": 15
-        },
-        {
-          "time": "12:45",
-          "open": 5.48,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.48,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 5.48,
-          "high": 5.48,
-          "low": 5.47,
-          "close": 5.47,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 5.47,
-          "high": 5.47,
-          "low": 5.46,
-          "close": 5.46,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 5.46,
-          "high": 5.48,
-          "low": 5.46,
-          "close": 5.48,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 5.48,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.49,
-          "vol": 15
-        },
-        {
-          "time": "14:00",
-          "open": 5.48,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.48,
-          "close": 5.49,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 5.49,
-          "high": 5.5,
-          "low": 5.46,
-          "close": 5.49,
-          "vwap": 5.49,
-          "vol": 11
-        },
-        {
-          "time": "14:45",
-          "open": 5.49,
-          "high": 5.49,
-          "low": 5.47,
-          "close": 5.47,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 5.47,
-          "high": 5.48,
-          "low": 5.47,
-          "close": 5.48,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 5.48,
-          "high": 5.48,
-          "low": 5.46,
-          "close": 5.47,
-          "vwap": 5.49,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 5.46,
-          "high": 5.47,
-          "low": 5.44,
-          "close": 5.45,
-          "vwap": 5.49,
-          "vol": 25
-        },
-        {
-          "time": "15:45",
-          "open": 5.45,
-          "high": 5.45,
-          "low": 5.43,
-          "close": 5.45,
-          "vwap": 5.48,
-          "vol": 20
-        },
-        {
-          "time": "16:00",
-          "open": 5.46,
-          "high": 5.47,
-          "low": 5.46,
-          "close": 5.47,
-          "vwap": 5.48,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 5.47,
-          "high": 5.47,
-          "low": 5.46,
-          "close": 5.46,
-          "vwap": 5.48,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 5.47,
-          "high": 5.48,
-          "low": 5.46,
-          "close": 5.46,
-          "vwap": 5.48,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 5.46,
-          "high": 5.47,
-          "low": 5.46,
-          "close": 5.47,
-          "vwap": 5.48,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 5.47,
-          "high": 5.48,
-          "low": 5.47,
-          "close": 5.47,
-          "vwap": 5.48,
-          "vol": 20
-        },
-        {
-          "time": "17:15",
-          "open": 5.47,
-          "high": 5.48,
-          "low": 5.46,
-          "close": 5.46,
-          "vwap": 5.48,
-          "vol": 25
-        }
-      ],
-      "vwap": 5.48,
-      "latest_price": 5.46,
-      "last_updated_cet": "17:15",
-      "price": 5.48,
-      "entry_price": 5.48,
-      "target_price": 5.59,
-      "stop_loss": 5.35,
-      "intraday_verification": {
-        "outcome": "SCRATCH / CLOSE",
-        "entry_time": "09:15",
-        "post_entry_high": 5.52,
-        "post_entry_low": 5.43,
-        "post_entry_high_time": "10:00",
-        "post_entry_low_time": "15:45",
-        "first_trigger_time": null,
-        "exit_price": 5.46,
-        "return_pct": -0.33,
-        "high_before_low": true
-      }
-    },
-    {
-      "ticker": "UCG.MI",
-      "exchange": "MIB",
-      "company_name": "UniCredit SpA",
-      "atr_14_pct": 2.0,
-      "rsi_14": 56.0,
-      "rel_vol_20d": 1.1,
-      "status": "REJECTED",
-      "reason": "Bankensector toont besluiteloosheid in de openingsbalken.",
-      "bars": [
-        {
-          "time": "09:00",
-          "open": 83.2,
-          "high": 84.0,
-          "low": 83.13,
-          "close": 83.37,
-          "vwap": 83.5,
-          "vol": 29
-        },
-        {
-          "time": "09:15",
-          "open": 83.35,
-          "high": 83.55,
-          "low": 83.28,
-          "close": 83.43,
-          "vwap": 83.46,
-          "vol": 28
-        },
-        {
-          "time": "09:30",
-          "open": 83.45,
-          "high": 83.93,
-          "low": 83.45,
-          "close": 83.92,
-          "vwap": 83.54,
-          "vol": 21
-        },
-        {
-          "time": "09:45",
-          "open": 83.92,
-          "high": 84.16,
-          "low": 83.83,
-          "close": 84.09,
-          "vwap": 83.68,
-          "vol": 31
-        },
-        {
-          "time": "10:00",
-          "open": 84.09,
-          "high": 84.39,
-          "low": 83.8,
-          "close": 84.27,
-          "vwap": 83.76,
-          "vol": 23
-        },
-        {
-          "time": "10:15",
-          "open": 84.3,
-          "high": 84.45,
-          "low": 84.1,
-          "close": 84.43,
-          "vwap": 83.83,
-          "vol": 17
-        },
-        {
-          "time": "10:30",
-          "open": 84.43,
-          "high": 84.46,
-          "low": 84.23,
-          "close": 84.4,
-          "vwap": 83.87,
-          "vol": 13
-        },
-        {
-          "time": "10:45",
-          "open": 84.38,
-          "high": 84.52,
-          "low": 84.32,
-          "close": 84.37,
-          "vwap": 83.92,
-          "vol": 15
-        },
-        {
-          "time": "11:00",
-          "open": 84.36,
-          "high": 84.54,
-          "low": 84.29,
-          "close": 84.39,
-          "vwap": 83.96,
-          "vol": 17
-        },
-        {
-          "time": "11:15",
-          "open": 84.42,
-          "high": 84.42,
-          "low": 84.22,
-          "close": 84.34,
-          "vwap": 83.98,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 84.35,
-          "high": 84.47,
-          "low": 84.31,
-          "close": 84.37,
-          "vwap": 83.99,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 84.35,
-          "high": 84.47,
-          "low": 84.33,
-          "close": 84.41,
-          "vwap": 84.01,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 84.44,
-          "high": 84.52,
-          "low": 84.4,
-          "close": 84.51,
-          "vwap": 84.03,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 84.52,
-          "high": 84.59,
-          "low": 84.39,
-          "close": 84.39,
-          "vwap": 84.04,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 84.36,
-          "high": 84.44,
-          "low": 84.26,
-          "close": 84.31,
-          "vwap": 84.05,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 84.32,
-          "high": 84.59,
-          "low": 84.32,
-          "close": 84.57,
-          "vwap": 84.06,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 84.56,
-          "high": 84.57,
-          "low": 84.44,
-          "close": 84.54,
-          "vwap": 84.08,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 84.54,
-          "high": 84.69,
-          "low": 84.51,
-          "close": 84.52,
-          "vwap": 84.11,
-          "vol": 14
-        },
-        {
-          "time": "13:30",
-          "open": 84.53,
-          "high": 84.54,
-          "low": 84.2,
-          "close": 84.34,
-          "vwap": 84.12,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 84.33,
-          "high": 84.43,
-          "low": 84.24,
-          "close": 84.37,
-          "vwap": 84.12,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 84.36,
-          "high": 84.38,
-          "low": 84.26,
-          "close": 84.37,
-          "vwap": 84.12,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 84.38,
-          "high": 84.42,
-          "low": 84.17,
-          "close": 84.24,
-          "vwap": 84.13,
-          "vol": 11
-        },
-        {
-          "time": "14:30",
-          "open": 84.23,
-          "high": 84.32,
-          "low": 83.87,
-          "close": 84.23,
-          "vwap": 84.13,
-          "vol": 26
-        },
-        {
-          "time": "14:45",
-          "open": 84.21,
-          "high": 84.26,
-          "low": 83.9,
-          "close": 83.92,
-          "vwap": 84.13,
-          "vol": 12
-        },
-        {
-          "time": "15:00",
-          "open": 83.92,
-          "high": 84.31,
-          "low": 83.85,
-          "close": 84.25,
-          "vwap": 84.13,
-          "vol": 13
-        },
-        {
-          "time": "15:15",
-          "open": 84.24,
-          "high": 84.27,
-          "low": 83.91,
-          "close": 83.94,
-          "vwap": 84.12,
-          "vol": 13
-        },
-        {
-          "time": "15:30",
-          "open": 83.94,
-          "high": 84.12,
-          "low": 83.7,
-          "close": 84.0,
-          "vwap": 84.11,
-          "vol": 21
-        },
-        {
-          "time": "15:45",
-          "open": 83.98,
-          "high": 84.05,
-          "low": 83.62,
-          "close": 84.05,
-          "vwap": 84.11,
-          "vol": 14
-        },
-        {
-          "time": "16:00",
-          "open": 84.03,
-          "high": 84.27,
-          "low": 83.99,
-          "close": 84.13,
-          "vwap": 84.11,
-          "vol": 47
-        },
-        {
-          "time": "16:15",
-          "open": 84.16,
-          "high": 84.18,
-          "low": 83.94,
-          "close": 84.02,
-          "vwap": 84.11,
-          "vol": 26
-        },
-        {
-          "time": "16:30",
-          "open": 84.05,
-          "high": 84.12,
-          "low": 83.92,
-          "close": 83.99,
-          "vwap": 84.1,
-          "vol": 28
-        },
-        {
-          "time": "16:45",
-          "open": 83.99,
-          "high": 84.14,
-          "low": 83.85,
-          "close": 84.06,
-          "vwap": 84.1,
-          "vol": 29
-        },
-        {
-          "time": "17:00",
-          "open": 84.05,
-          "high": 84.1,
-          "low": 83.9,
-          "close": 83.92,
-          "vwap": 84.09,
-          "vol": 38
-        },
-        {
-          "time": "17:15",
-          "open": 83.91,
-          "high": 83.99,
-          "low": 83.61,
-          "close": 83.68,
-          "vwap": 84.07,
-          "vol": 30
-        }
-      ],
-      "vwap": 84.07,
-      "latest_price": 83.68,
-      "last_updated_cet": "17:15",
-      "price": 83.35,
-      "entry_price": 83.35,
-      "target_price": 85.02,
-      "stop_loss": 81.68,
-      "intraday_verification": {
-        "outcome": "SCRATCH / CLOSE",
-        "entry_time": "09:15",
-        "post_entry_high": 84.69,
-        "post_entry_low": 83.28,
-        "post_entry_high_time": "13:15",
-        "post_entry_low_time": "09:15",
-        "first_trigger_time": null,
-        "exit_price": 83.68,
-        "return_pct": 0.4,
+        "exit_price": 40.29,
+        "return_pct": 1.49,
         "high_before_low": false
       }
     },
     {
-      "ticker": "MELE.BR",
-      "exchange": "BEL",
-      "company_name": "Melexis NV",
-      "atr_14_pct": 2.6,
-      "rsi_14": 51.0,
-      "rel_vol_20d": 1.0,
+      "ticker": "LR.PA",
+      "exchange": "CAC",
+      "company_name": "LR.PA",
+      "price": 133.95,
+      "atr_14_pct": 3.94,
+      "rsi_14": 57.7,
+      "rel_vol_20d": 22.3,
       "status": "REJECTED",
-      "reason": "Relatief volume onder de institutionele drempel.",
+      "rejection_reason": null,
+      "reason": "De katalysator van verhoogde doelstellingen is sterk, maar de atr_consumed_pct van 7.3% en een break-even winrate van 54.2% suggereren een redelijke setup met reeds enige beweging.",
       "bars": [
         {
           "time": "09:00",
-          "open": 54.7,
-          "high": 55.45,
-          "low": 54.55,
-          "close": 55.1,
-          "vwap": 55.03,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 55.15,
-          "high": 55.2,
-          "low": 54.85,
-          "close": 55.0,
-          "vwap": 55.02,
-          "vol": 10
-        },
-        {
-          "time": "09:30",
-          "open": 55.2,
-          "high": 55.35,
-          "low": 55.05,
-          "close": 55.3,
-          "vwap": 55.09,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 55.3,
-          "high": 55.5,
-          "low": 55.3,
-          "close": 55.35,
-          "vwap": 55.13,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 55.35,
-          "high": 55.35,
-          "low": 55.0,
-          "close": 55.35,
-          "vwap": 55.14,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 55.45,
-          "high": 55.85,
-          "low": 55.35,
-          "close": 55.8,
-          "vwap": 55.29,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 55.9,
-          "high": 55.95,
-          "low": 55.75,
-          "close": 55.8,
-          "vwap": 55.32,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 56.0,
-          "high": 56.05,
-          "low": 55.8,
-          "close": 55.95,
-          "vwap": 55.36,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 55.95,
-          "high": 55.95,
-          "low": 55.55,
-          "close": 55.7,
-          "vwap": 55.4,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 55.6,
-          "high": 55.75,
-          "low": 55.5,
-          "close": 55.5,
-          "vwap": 55.42,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 55.6,
-          "high": 55.65,
-          "low": 55.35,
-          "close": 55.35,
-          "vwap": 55.42,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 55.3,
-          "high": 55.45,
-          "low": 55.2,
-          "close": 55.45,
-          "vwap": 55.42,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 55.3,
-          "high": 55.5,
-          "low": 55.3,
-          "close": 55.35,
-          "vwap": 55.41,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 55.35,
-          "high": 55.35,
-          "low": 55.25,
-          "close": 55.3,
-          "vwap": 55.41,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 55.35,
-          "high": 55.35,
-          "low": 55.25,
-          "close": 55.25,
-          "vwap": 55.41,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 55.25,
-          "high": 55.4,
-          "low": 55.2,
-          "close": 55.2,
-          "vwap": 55.4,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 55.15,
-          "high": 55.3,
-          "low": 55.1,
-          "close": 55.3,
-          "vwap": 55.39,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 55.3,
-          "high": 55.3,
-          "low": 55.05,
-          "close": 55.1,
-          "vwap": 55.38,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 55.05,
-          "high": 55.15,
-          "low": 54.95,
-          "close": 54.95,
-          "vwap": 55.33,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 54.95,
-          "high": 55.1,
-          "low": 54.95,
-          "close": 55.1,
-          "vwap": 55.32,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 55.0,
-          "high": 55.0,
-          "low": 54.95,
-          "close": 54.95,
-          "vwap": 55.31,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 55.0,
-          "high": 55.2,
-          "low": 54.95,
-          "close": 55.15,
-          "vwap": 55.27,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 55.1,
-          "high": 55.1,
-          "low": 54.6,
-          "close": 54.75,
-          "vwap": 55.22,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 54.85,
-          "high": 54.9,
-          "low": 54.8,
-          "close": 54.8,
-          "vwap": 55.22,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 54.8,
-          "high": 55.0,
-          "low": 54.8,
-          "close": 54.9,
-          "vwap": 55.21,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 54.9,
-          "high": 54.9,
-          "low": 54.8,
-          "close": 54.85,
-          "vwap": 55.21,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 54.85,
-          "high": 54.9,
-          "low": 54.7,
-          "close": 54.9,
-          "vwap": 55.19,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 54.9,
-          "high": 55.3,
-          "low": 54.85,
-          "close": 55.3,
-          "vwap": 55.19,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 55.3,
-          "high": 55.35,
-          "low": 55.2,
-          "close": 55.25,
-          "vwap": 55.19,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 55.35,
-          "high": 55.4,
-          "low": 55.1,
-          "close": 55.15,
-          "vwap": 55.19,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 55.15,
-          "high": 55.25,
-          "low": 55.0,
-          "close": 55.0,
-          "vwap": 55.19,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 54.9,
-          "high": 54.9,
-          "low": 54.7,
-          "close": 54.85,
-          "vwap": 55.15,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 54.85,
-          "high": 54.95,
-          "low": 54.85,
-          "close": 54.85,
-          "vwap": 55.13,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 54.75,
-          "high": 54.9,
-          "low": 54.65,
-          "close": 54.75,
-          "vwap": 55.12,
-          "vol": 10
-        },
-        {
-          "time": "17:30",
-          "open": 54.8,
-          "high": 54.8,
-          "low": 54.8,
-          "close": 54.8,
-          "vwap": 54.97,
+          "open": 138.6,
+          "high": 139.25,
+          "low": 138.4,
+          "close": 138.65,
+          "vwap": 0.0,
           "vol": 10
         }
       ],
-      "vwap": 54.97,
-      "latest_price": 54.8,
-      "last_updated_cet": "17:30",
-      "price": 55.15,
-      "entry_price": 55.15,
-      "target_price": 56.25,
-      "stop_loss": 53.72,
+      "vwap": 0.0,
+      "latest_price": 138.65,
+      "last_updated_cet": "09:00",
+      "entry_price": 133.95,
+      "target_price": 136.63,
+      "stop_loss": 128.67,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 56.05,
-        "post_entry_low": 54.6,
-        "post_entry_high_time": "10:45",
-        "post_entry_low_time": "14:30",
+        "post_entry_high": 138.65,
+        "post_entry_low": 138.65,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 54.8,
-        "return_pct": -0.63,
-        "high_before_low": true
+        "exit_price": 138.65,
+        "return_pct": 3.51,
+        "high_before_low": false
       }
     },
     {
-      "ticker": "BAMI.MI",
-      "exchange": "MIB",
-      "company_name": "Banco BPM SpA",
-      "atr_14_pct": 2.2,
-      "rsi_14": 53.0,
-      "rel_vol_20d": 1.1,
+      "ticker": "STMPA.PA",
+      "exchange": "CAC",
+      "company_name": "STMPA.PA",
+      "price": 39.63,
+      "atr_14_pct": 5.95,
+      "rsi_14": 47.0,
+      "rel_vol_20d": 19.05,
       "status": "REJECTED",
-      "reason": "Minder overtuigende orderflow dan MT.AS.",
+      "rejection_reason": null,
+      "reason": "Ondanks een lage atr_consumed_pct van 2.9% en een hoge break-even winrate van 64.1%, ontbreekt een concrete, verse katalysator, wat de setup minder robuust maakt.",
       "bars": [
         {
           "time": "09:00",
-          "open": 15.02,
-          "high": 15.23,
-          "low": 15.02,
-          "close": 15.2,
-          "vwap": 15.15,
-          "vol": 24
-        },
-        {
-          "time": "09:15",
-          "open": 15.22,
-          "high": 15.22,
-          "low": 15.12,
-          "close": 15.14,
-          "vwap": 15.16,
-          "vol": 36
-        },
-        {
-          "time": "09:30",
-          "open": 15.14,
-          "high": 15.19,
-          "low": 15.14,
-          "close": 15.17,
-          "vwap": 15.16,
+          "open": 41.12,
+          "high": 41.37,
+          "low": 41.12,
+          "close": 41.35,
+          "vwap": 0.0,
           "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 15.17,
-          "high": 15.23,
-          "low": 15.17,
-          "close": 15.19,
-          "vwap": 15.17,
-          "vol": 18
-        },
-        {
-          "time": "10:00",
-          "open": 15.19,
-          "high": 15.24,
-          "low": 15.14,
-          "close": 15.2,
-          "vwap": 15.17,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 15.21,
-          "high": 15.27,
-          "low": 15.2,
-          "close": 15.27,
-          "vwap": 15.18,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 15.27,
-          "high": 15.27,
-          "low": 15.21,
-          "close": 15.23,
-          "vwap": 15.18,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 15.23,
-          "high": 15.3,
-          "low": 15.23,
-          "close": 15.26,
-          "vwap": 15.2,
-          "vol": 29
-        },
-        {
-          "time": "11:00",
-          "open": 15.26,
-          "high": 15.29,
-          "low": 15.25,
-          "close": 15.26,
-          "vwap": 15.2,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 15.26,
-          "high": 15.32,
-          "low": 15.24,
-          "close": 15.32,
-          "vwap": 15.21,
-          "vol": 23
-        },
-        {
-          "time": "11:30",
-          "open": 15.33,
-          "high": 15.37,
-          "low": 15.32,
-          "close": 15.33,
-          "vwap": 15.23,
-          "vol": 23
-        },
-        {
-          "time": "11:45",
-          "open": 15.33,
-          "high": 15.33,
-          "low": 15.31,
-          "close": 15.32,
-          "vwap": 15.23,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 15.31,
-          "high": 15.36,
-          "low": 15.31,
-          "close": 15.35,
-          "vwap": 15.23,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 15.35,
-          "high": 15.35,
-          "low": 15.29,
-          "close": 15.29,
-          "vwap": 15.24,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 15.28,
-          "high": 15.3,
-          "low": 15.23,
-          "close": 15.24,
-          "vwap": 15.24,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 15.24,
-          "high": 15.28,
-          "low": 15.24,
-          "close": 15.24,
-          "vwap": 15.24,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 15.24,
-          "high": 15.26,
-          "low": 15.23,
-          "close": 15.23,
-          "vwap": 15.24,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 15.24,
-          "high": 15.24,
-          "low": 15.23,
-          "close": 15.23,
-          "vwap": 15.24,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 15.23,
-          "high": 15.23,
-          "low": 15.19,
-          "close": 15.2,
-          "vwap": 15.23,
-          "vol": 14
-        },
-        {
-          "time": "13:45",
-          "open": 15.2,
-          "high": 15.2,
-          "low": 15.19,
-          "close": 15.19,
-          "vwap": 15.23,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 15.19,
-          "high": 15.19,
-          "low": 15.15,
-          "close": 15.17,
-          "vwap": 15.23,
-          "vol": 14
-        },
-        {
-          "time": "14:15",
-          "open": 15.17,
-          "high": 15.17,
-          "low": 15.13,
-          "close": 15.14,
-          "vwap": 15.23,
-          "vol": 12
-        },
-        {
-          "time": "14:30",
-          "open": 15.13,
-          "high": 15.15,
-          "low": 15.07,
-          "close": 15.1,
-          "vwap": 15.22,
-          "vol": 18
-        },
-        {
-          "time": "14:45",
-          "open": 15.1,
-          "high": 15.11,
-          "low": 15.02,
-          "close": 15.02,
-          "vwap": 15.21,
-          "vol": 15
-        },
-        {
-          "time": "15:00",
-          "open": 15.02,
-          "high": 15.07,
-          "low": 15.02,
-          "close": 15.07,
-          "vwap": 15.21,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 15.07,
-          "high": 15.08,
-          "low": 15.04,
-          "close": 15.06,
-          "vwap": 15.2,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 15.06,
-          "high": 15.07,
-          "low": 15.01,
-          "close": 15.04,
-          "vwap": 15.19,
-          "vol": 15
-        },
-        {
-          "time": "15:45",
-          "open": 15.05,
-          "high": 15.06,
-          "low": 15.0,
-          "close": 15.05,
-          "vwap": 15.19,
-          "vol": 11
-        },
-        {
-          "time": "16:00",
-          "open": 15.05,
-          "high": 15.06,
-          "low": 15.03,
-          "close": 15.03,
-          "vwap": 15.19,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 15.03,
-          "high": 15.03,
-          "low": 14.94,
-          "close": 14.94,
-          "vwap": 15.18,
-          "vol": 12
-        },
-        {
-          "time": "16:30",
-          "open": 14.94,
-          "high": 14.94,
-          "low": 14.87,
-          "close": 14.88,
-          "vwap": 15.17,
-          "vol": 15
-        },
-        {
-          "time": "16:45",
-          "open": 14.88,
-          "high": 14.89,
-          "low": 14.85,
-          "close": 14.86,
-          "vwap": 15.16,
-          "vol": 12
-        },
-        {
-          "time": "17:00",
-          "open": 14.86,
-          "high": 14.89,
-          "low": 14.84,
-          "close": 14.87,
-          "vwap": 15.15,
-          "vol": 17
-        },
-        {
-          "time": "17:15",
-          "open": 14.87,
-          "high": 14.88,
-          "low": 14.82,
-          "close": 14.85,
-          "vwap": 15.13,
-          "vol": 34
         }
       ],
-      "vwap": 15.13,
-      "latest_price": 14.85,
-      "last_updated_cet": "17:15",
-      "price": 15.22,
-      "entry_price": 15.22,
-      "target_price": 15.52,
-      "stop_loss": 14.89,
+      "vwap": 0.0,
+      "latest_price": 41.35,
+      "last_updated_cet": "09:00",
+      "entry_price": 39.63,
+      "target_price": 40.42,
+      "stop_loss": 37.27,
       "intraday_verification": {
-        "outcome": "LOSS_STOPPED",
+        "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 15.37,
-        "post_entry_low": 14.82,
-        "post_entry_high_time": "11:30",
-        "post_entry_low_time": "17:15",
-        "first_trigger_time": "16:30",
-        "exit_price": 14.89,
-        "return_pct": -2.17,
+        "post_entry_high": 41.35,
+        "post_entry_low": 41.35,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
+        "first_trigger_time": null,
+        "exit_price": 41.35,
+        "return_pct": 4.35,
         "high_before_low": false
       }
     },
     {
       "ticker": "LDO.MI",
       "exchange": "MIB",
-      "company_name": "Leonardo SpA",
-      "atr_14_pct": 2.3,
-      "rsi_14": 50.0,
-      "rel_vol_20d": 1.0,
+      "company_name": "LDO.MI",
+      "price": 50.43,
+      "atr_14_pct": 3.01,
+      "rsi_14": 59.5,
+      "rel_vol_20d": 20.75,
       "status": "REJECTED",
-      "reason": "Zwakke macro-trend in defensiesector tijdens de ochtend.",
+      "rejection_reason": null,
+      "reason": "De verse NAVAIR-contracttoekenning is een sterke katalysator, ondersteund door een lage atr_consumed_pct van 6.4%, hoewel de break-even winrate van 47.4% aan de lage kant is.",
       "bars": [
         {
           "time": "09:00",
-          "open": 51.0,
-          "high": 51.69,
-          "low": 50.82,
-          "close": 51.33,
-          "vwap": 51.28,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 51.34,
-          "high": 51.45,
-          "low": 51.12,
-          "close": 51.44,
-          "vwap": 51.31,
-          "vol": 12
-        },
-        {
-          "time": "09:30",
-          "open": 51.45,
-          "high": 51.49,
-          "low": 51.16,
-          "close": 51.19,
-          "vwap": 51.3,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 51.21,
-          "high": 51.3,
-          "low": 51.04,
-          "close": 51.13,
-          "vwap": 51.28,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 51.11,
-          "high": 51.17,
-          "low": 50.86,
-          "close": 50.92,
-          "vwap": 51.25,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 50.92,
-          "high": 51.13,
-          "low": 50.87,
-          "close": 51.13,
-          "vwap": 51.22,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 51.13,
-          "high": 51.46,
-          "low": 51.09,
-          "close": 51.38,
-          "vwap": 51.24,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 51.4,
-          "high": 51.47,
-          "low": 51.28,
-          "close": 51.42,
-          "vwap": 51.25,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 51.41,
-          "high": 51.48,
-          "low": 51.32,
-          "close": 51.4,
-          "vwap": 51.25,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 51.4,
-          "high": 51.49,
-          "low": 51.33,
-          "close": 51.36,
-          "vwap": 51.26,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 51.37,
-          "high": 51.45,
-          "low": 51.28,
-          "close": 51.38,
-          "vwap": 51.27,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 51.35,
-          "high": 51.43,
-          "low": 51.31,
-          "close": 51.41,
-          "vwap": 51.27,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 51.41,
-          "high": 51.69,
-          "low": 51.4,
-          "close": 51.67,
-          "vwap": 51.32,
-          "vol": 14
-        },
-        {
-          "time": "12:15",
-          "open": 51.67,
-          "high": 51.72,
-          "low": 51.61,
-          "close": 51.62,
-          "vwap": 51.33,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 51.61,
-          "high": 51.62,
-          "low": 51.38,
-          "close": 51.43,
-          "vwap": 51.34,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 51.43,
-          "high": 51.61,
-          "low": 51.4,
-          "close": 51.42,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 51.39,
-          "high": 51.5,
-          "low": 51.36,
-          "close": 51.48,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 51.5,
-          "high": 51.52,
-          "low": 51.38,
-          "close": 51.41,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 51.41,
-          "high": 51.5,
-          "low": 51.36,
-          "close": 51.41,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 51.42,
-          "high": 51.56,
-          "low": 51.4,
-          "close": 51.43,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 51.44,
-          "high": 51.45,
-          "low": 51.2,
-          "close": 51.27,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 51.29,
-          "high": 51.32,
-          "low": 51.16,
-          "close": 51.25,
-          "vwap": 51.35,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 51.25,
-          "high": 51.32,
-          "low": 51.14,
-          "close": 51.17,
-          "vwap": 51.34,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 51.19,
-          "high": 51.33,
-          "low": 51.18,
-          "close": 51.28,
-          "vwap": 51.34,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 51.25,
-          "high": 51.42,
-          "low": 51.25,
-          "close": 51.36,
-          "vwap": 51.34,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 51.35,
-          "high": 51.39,
-          "low": 51.27,
-          "close": 51.31,
-          "vwap": 51.34,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 51.32,
-          "high": 51.68,
-          "low": 51.31,
-          "close": 51.55,
-          "vwap": 51.36,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 51.54,
-          "high": 51.54,
-          "low": 51.31,
-          "close": 51.33,
-          "vwap": 51.36,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 51.36,
-          "high": 51.62,
-          "low": 51.29,
-          "close": 51.62,
-          "vwap": 51.36,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 51.6,
-          "high": 51.62,
-          "low": 51.42,
-          "close": 51.47,
-          "vwap": 51.37,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 51.48,
-          "high": 51.51,
-          "low": 51.31,
-          "close": 51.41,
-          "vwap": 51.37,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 51.41,
-          "high": 51.72,
-          "low": 51.39,
-          "close": 51.7,
-          "vwap": 51.38,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 51.69,
-          "high": 51.8,
-          "low": 51.68,
-          "close": 51.73,
-          "vwap": 51.4,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 51.74,
-          "high": 51.77,
-          "low": 51.49,
-          "close": 51.49,
-          "vwap": 51.41,
+          "open": 52.15,
+          "high": 52.25,
+          "low": 52.0,
+          "close": 52.0,
+          "vwap": 0.0,
           "vol": 10
         }
       ],
-      "vwap": 51.41,
-      "latest_price": 51.49,
-      "last_updated_cet": "17:15",
-      "price": 51.34,
-      "entry_price": 51.34,
-      "target_price": 52.37,
-      "stop_loss": 50.16,
+      "vwap": 0.0,
+      "latest_price": 52.0,
+      "last_updated_cet": "09:00",
+      "entry_price": 50.43,
+      "target_price": 51.44,
+      "stop_loss": 48.91,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 51.8,
-        "post_entry_low": 50.86,
-        "post_entry_high_time": "17:00",
-        "post_entry_low_time": "10:00",
+        "post_entry_high": 52.0,
+        "post_entry_low": 52.0,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 51.49,
-        "return_pct": 0.29,
+        "exit_price": 52.0,
+        "return_pct": 3.11,
         "high_before_low": false
       }
     },
     {
-      "ticker": "AC.PA",
+      "ticker": "AIR.PA",
       "exchange": "CAC",
-      "company_name": "Accor SA",
-      "atr_14_pct": 2.0,
-      "rsi_14": 49.0,
-      "rel_vol_20d": 0.9,
-      "status": "REJECTED",
-      "reason": "Volume bleef achter bij het 20-daags gemiddelde.",
+      "company_name": "AIR.PA",
+      "price": 206.0,
+      "atr_14_pct": 2.69,
+      "rsi_14": 66.8,
+      "rel_vol_20d": 20.66,
+      "status": "SELECTED",
+      "rejection_reason": null,
+      "reason": "Zuivere trenduitlijning boven sessie-VWAP, institutioneel openingsvolume en bevestigde positieve nieuwskatalysator.",
       "bars": [
         {
           "time": "09:00",
-          "open": 51.3,
-          "high": 52.18,
-          "low": 51.26,
-          "close": 51.88,
-          "vwap": 51.77,
-          "vol": 10
-        },
-        {
-          "time": "09:15",
-          "open": 51.9,
-          "high": 52.0,
-          "low": 51.72,
-          "close": 51.82,
-          "vwap": 51.81,
-          "vol": 10
-        },
-        {
-          "time": "09:30",
-          "open": 51.86,
-          "high": 51.92,
-          "low": 51.76,
-          "close": 51.8,
-          "vwap": 51.81,
-          "vol": 10
-        },
-        {
-          "time": "09:45",
-          "open": 51.82,
-          "high": 51.9,
-          "low": 51.74,
-          "close": 51.88,
-          "vwap": 51.82,
-          "vol": 10
-        },
-        {
-          "time": "10:00",
-          "open": 51.86,
-          "high": 51.98,
-          "low": 51.63,
-          "close": 51.82,
-          "vwap": 51.82,
-          "vol": 10
-        },
-        {
-          "time": "10:15",
-          "open": 51.84,
-          "high": 51.96,
-          "low": 51.84,
-          "close": 51.94,
-          "vwap": 51.83,
-          "vol": 10
-        },
-        {
-          "time": "10:30",
-          "open": 51.92,
-          "high": 52.02,
-          "low": 51.9,
-          "close": 51.98,
-          "vwap": 51.86,
-          "vol": 10
-        },
-        {
-          "time": "10:45",
-          "open": 51.98,
-          "high": 52.04,
-          "low": 51.96,
-          "close": 51.98,
-          "vwap": 51.87,
-          "vol": 10
-        },
-        {
-          "time": "11:00",
-          "open": 51.98,
-          "high": 52.02,
-          "low": 51.88,
-          "close": 51.88,
-          "vwap": 51.87,
-          "vol": 10
-        },
-        {
-          "time": "11:15",
-          "open": 51.88,
-          "high": 51.92,
-          "low": 51.84,
-          "close": 51.92,
-          "vwap": 51.87,
-          "vol": 10
-        },
-        {
-          "time": "11:30",
-          "open": 51.9,
-          "high": 51.92,
-          "low": 51.88,
-          "close": 51.88,
-          "vwap": 51.87,
-          "vol": 10
-        },
-        {
-          "time": "11:45",
-          "open": 51.88,
-          "high": 51.92,
-          "low": 51.88,
-          "close": 51.9,
-          "vwap": 51.88,
-          "vol": 10
-        },
-        {
-          "time": "12:00",
-          "open": 51.91,
-          "high": 52.02,
-          "low": 51.9,
-          "close": 52.02,
-          "vwap": 51.88,
-          "vol": 10
-        },
-        {
-          "time": "12:15",
-          "open": 52.02,
-          "high": 52.02,
-          "low": 51.9,
-          "close": 51.92,
-          "vwap": 51.88,
-          "vol": 10
-        },
-        {
-          "time": "12:30",
-          "open": 51.92,
-          "high": 51.98,
-          "low": 51.88,
-          "close": 51.9,
-          "vwap": 51.89,
-          "vol": 10
-        },
-        {
-          "time": "12:45",
-          "open": 51.94,
-          "high": 52.0,
-          "low": 51.94,
-          "close": 51.98,
-          "vwap": 51.89,
-          "vol": 10
-        },
-        {
-          "time": "13:00",
-          "open": 51.98,
-          "high": 52.08,
-          "low": 51.96,
-          "close": 52.08,
-          "vwap": 51.9,
-          "vol": 10
-        },
-        {
-          "time": "13:15",
-          "open": 52.1,
-          "high": 52.12,
-          "low": 52.06,
-          "close": 52.08,
-          "vwap": 51.91,
-          "vol": 10
-        },
-        {
-          "time": "13:30",
-          "open": 52.06,
-          "high": 52.22,
-          "low": 52.06,
-          "close": 52.22,
-          "vwap": 51.92,
-          "vol": 10
-        },
-        {
-          "time": "13:45",
-          "open": 52.24,
-          "high": 52.32,
-          "low": 52.24,
-          "close": 52.32,
-          "vwap": 51.94,
-          "vol": 10
-        },
-        {
-          "time": "14:00",
-          "open": 52.32,
-          "high": 52.36,
-          "low": 52.24,
-          "close": 52.36,
-          "vwap": 51.97,
-          "vol": 10
-        },
-        {
-          "time": "14:15",
-          "open": 52.38,
-          "high": 52.38,
-          "low": 52.28,
-          "close": 52.35,
-          "vwap": 51.98,
-          "vol": 10
-        },
-        {
-          "time": "14:30",
-          "open": 52.38,
-          "high": 52.5,
-          "low": 52.06,
-          "close": 52.44,
-          "vwap": 52.02,
-          "vol": 10
-        },
-        {
-          "time": "14:45",
-          "open": 52.42,
-          "high": 52.46,
-          "low": 52.3,
-          "close": 52.3,
-          "vwap": 52.02,
-          "vol": 10
-        },
-        {
-          "time": "15:00",
-          "open": 52.3,
-          "high": 52.46,
-          "low": 52.3,
-          "close": 52.46,
-          "vwap": 52.04,
-          "vol": 10
-        },
-        {
-          "time": "15:15",
-          "open": 52.48,
-          "high": 52.48,
-          "low": 52.26,
-          "close": 52.26,
-          "vwap": 52.06,
-          "vol": 10
-        },
-        {
-          "time": "15:30",
-          "open": 52.3,
-          "high": 52.44,
-          "low": 52.22,
-          "close": 52.3,
-          "vwap": 52.08,
-          "vol": 10
-        },
-        {
-          "time": "15:45",
-          "open": 52.3,
-          "high": 52.3,
-          "low": 52.16,
-          "close": 52.26,
-          "vwap": 52.09,
-          "vol": 10
-        },
-        {
-          "time": "16:00",
-          "open": 52.3,
-          "high": 52.38,
-          "low": 52.3,
-          "close": 52.36,
-          "vwap": 52.1,
-          "vol": 10
-        },
-        {
-          "time": "16:15",
-          "open": 52.36,
-          "high": 52.46,
-          "low": 52.34,
-          "close": 52.36,
-          "vwap": 52.11,
-          "vol": 10
-        },
-        {
-          "time": "16:30",
-          "open": 52.38,
-          "high": 52.48,
-          "low": 52.34,
-          "close": 52.42,
-          "vwap": 52.14,
-          "vol": 10
-        },
-        {
-          "time": "16:45",
-          "open": 52.4,
-          "high": 52.46,
-          "low": 52.34,
-          "close": 52.44,
-          "vwap": 52.15,
-          "vol": 10
-        },
-        {
-          "time": "17:00",
-          "open": 52.42,
-          "high": 52.5,
-          "low": 52.4,
-          "close": 52.42,
-          "vwap": 52.18,
-          "vol": 10
-        },
-        {
-          "time": "17:15",
-          "open": 52.44,
-          "high": 52.5,
-          "low": 52.38,
-          "close": 52.44,
-          "vwap": 52.2,
+          "open": 210.75,
+          "high": 210.85,
+          "low": 210.2,
+          "close": 210.2,
+          "vwap": 0.0,
           "vol": 10
         }
       ],
-      "vwap": 52.2,
-      "latest_price": 52.44,
-      "last_updated_cet": "17:15",
-      "price": 51.9,
-      "entry_price": 51.9,
-      "target_price": 52.94,
-      "stop_loss": 50.86,
+      "vwap": 0.0,
+      "latest_price": 210.2,
+      "last_updated_cet": "09:00",
+      "entry_price": 206.0,
+      "target_price": 210.12,
+      "stop_loss": 200.46,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 52.5,
-        "post_entry_low": 51.63,
-        "post_entry_high_time": "14:30",
-        "post_entry_low_time": "10:00",
+        "post_entry_high": 210.2,
+        "post_entry_low": 210.2,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 52.44,
-        "return_pct": 1.04,
+        "exit_price": 210.2,
+        "return_pct": 2.04,
         "high_before_low": false
       }
     },
     {
-      "ticker": "ISP.MI",
-      "exchange": "MIB",
-      "company_name": "Intesa Sanpaolo SpA",
-      "atr_14_pct": 1.9,
-      "rsi_14": 54.0,
-      "rel_vol_20d": 1.0,
+      "ticker": "HEN3.DE",
+      "exchange": "DAX",
+      "company_name": "HEN3.DE",
+      "price": 83.7,
+      "atr_14_pct": 1.87,
+      "rsi_14": 79.0,
+      "rel_vol_20d": 24.04,
       "status": "REJECTED",
-      "reason": "Beperkte intradag bandbreedte vergeleken met AEX-koploper.",
+      "rejection_reason": "Afgewezen via RFC-0008: Alpha#10 Alarm: Aandeel bevindt zich in een wispelturig 4-daags regime (CHOPPY_MEAN_REVERTING) met verhoogd risico op een bull-trap.",
+      "reason": "Afgewezen via RFC-0008: Alpha#10 Alarm: Aandeel bevindt zich in een wispelturig 4-daags regime (CHOPPY_MEAN_REVERTING) met verhoogd risico op een bull-trap.",
       "bars": [
         {
           "time": "09:00",
-          "open": 6.42,
-          "high": 6.48,
-          "low": 6.41,
-          "close": 6.46,
-          "vwap": 6.45,
-          "vol": 240
-        },
-        {
-          "time": "09:15",
-          "open": 6.46,
-          "high": 6.46,
-          "low": 6.43,
-          "close": 6.44,
-          "vwap": 6.45,
-          "vol": 235
-        },
-        {
-          "time": "09:30",
-          "open": 6.44,
-          "high": 6.46,
-          "low": 6.44,
-          "close": 6.45,
-          "vwap": 6.45,
-          "vol": 124
-        },
-        {
-          "time": "09:45",
-          "open": 6.45,
-          "high": 6.47,
-          "low": 6.45,
-          "close": 6.47,
-          "vwap": 6.45,
-          "vol": 109
-        },
-        {
-          "time": "10:00",
-          "open": 6.47,
-          "high": 6.48,
-          "low": 6.45,
-          "close": 6.47,
-          "vwap": 6.45,
-          "vol": 190
-        },
-        {
-          "time": "10:15",
-          "open": 6.47,
-          "high": 6.49,
-          "low": 6.47,
-          "close": 6.49,
-          "vwap": 6.46,
-          "vol": 147
-        },
-        {
-          "time": "10:30",
-          "open": 6.49,
-          "high": 6.49,
-          "low": 6.48,
-          "close": 6.49,
-          "vwap": 6.46,
-          "vol": 70
-        },
-        {
-          "time": "10:45",
-          "open": 6.49,
-          "high": 6.49,
-          "low": 6.48,
-          "close": 6.48,
-          "vwap": 6.46,
-          "vol": 110
-        },
-        {
-          "time": "11:00",
-          "open": 6.48,
-          "high": 6.49,
-          "low": 6.48,
-          "close": 6.48,
-          "vwap": 6.46,
-          "vol": 92
-        },
-        {
-          "time": "11:15",
-          "open": 6.48,
-          "high": 6.48,
-          "low": 6.46,
-          "close": 6.48,
-          "vwap": 6.46,
-          "vol": 186
-        },
-        {
-          "time": "11:30",
-          "open": 6.48,
-          "high": 6.48,
-          "low": 6.47,
-          "close": 6.48,
-          "vwap": 6.47,
-          "vol": 63
-        },
-        {
-          "time": "11:45",
-          "open": 6.47,
-          "high": 6.48,
-          "low": 6.47,
-          "close": 6.48,
-          "vwap": 6.47,
-          "vol": 47
-        },
-        {
-          "time": "12:00",
-          "open": 6.48,
-          "high": 6.49,
-          "low": 6.48,
-          "close": 6.48,
-          "vwap": 6.47,
-          "vol": 54
-        },
-        {
-          "time": "12:15",
-          "open": 6.49,
-          "high": 6.49,
-          "low": 6.48,
-          "close": 6.48,
-          "vwap": 6.47,
-          "vol": 50
-        },
-        {
-          "time": "12:30",
-          "open": 6.48,
-          "high": 6.48,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 46
-        },
-        {
-          "time": "12:45",
-          "open": 6.47,
-          "high": 6.48,
-          "low": 6.47,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 33
-        },
-        {
-          "time": "13:00",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 59
-        },
-        {
-          "time": "13:15",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 41
-        },
-        {
-          "time": "13:30",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.45,
-          "close": 6.46,
-          "vwap": 6.47,
-          "vol": 55
-        },
-        {
-          "time": "13:45",
-          "open": 6.46,
-          "high": 6.47,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 29
-        },
-        {
-          "time": "14:00",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.47,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 34
-        },
-        {
-          "time": "14:15",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 58
-        },
-        {
-          "time": "14:30",
-          "open": 6.47,
-          "high": 6.48,
-          "low": 6.45,
-          "close": 6.47,
-          "vwap": 6.47,
-          "vol": 154
-        },
-        {
-          "time": "14:45",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.45,
-          "close": 6.45,
-          "vwap": 6.47,
-          "vol": 61
-        },
-        {
-          "time": "15:00",
-          "open": 6.45,
-          "high": 6.46,
-          "low": 6.45,
-          "close": 6.46,
-          "vwap": 6.47,
-          "vol": 86
-        },
-        {
-          "time": "15:15",
-          "open": 6.46,
-          "high": 6.46,
-          "low": 6.45,
-          "close": 6.45,
-          "vwap": 6.47,
-          "vol": 57
-        },
-        {
-          "time": "15:30",
-          "open": 6.46,
-          "high": 6.46,
-          "low": 6.45,
-          "close": 6.46,
-          "vwap": 6.47,
-          "vol": 108
-        },
-        {
-          "time": "15:45",
-          "open": 6.46,
-          "high": 6.46,
-          "low": 6.44,
-          "close": 6.46,
-          "vwap": 6.46,
-          "vol": 94
-        },
-        {
-          "time": "16:00",
-          "open": 6.46,
-          "high": 6.47,
-          "low": 6.46,
-          "close": 6.47,
-          "vwap": 6.46,
-          "vol": 37
-        },
-        {
-          "time": "16:15",
-          "open": 6.47,
-          "high": 6.47,
-          "low": 6.44,
-          "close": 6.45,
-          "vwap": 6.46,
-          "vol": 85
-        },
-        {
-          "time": "16:30",
-          "open": 6.45,
-          "high": 6.46,
-          "low": 6.44,
-          "close": 6.44,
-          "vwap": 6.46,
-          "vol": 90
-        },
-        {
-          "time": "16:45",
-          "open": 6.44,
-          "high": 6.45,
-          "low": 6.43,
-          "close": 6.44,
-          "vwap": 6.46,
-          "vol": 93
-        },
-        {
-          "time": "17:00",
-          "open": 6.44,
-          "high": 6.44,
-          "low": 6.43,
-          "close": 6.43,
-          "vwap": 6.46,
-          "vol": 89
-        },
-        {
-          "time": "17:15",
-          "open": 6.43,
-          "high": 6.43,
-          "low": 6.41,
-          "close": 6.41,
-          "vwap": 6.46,
-          "vol": 235
+          "open": 86.62,
+          "high": 86.68,
+          "low": 86.43,
+          "close": 86.68,
+          "vwap": 0.0,
+          "vol": 10
         }
       ],
-      "vwap": 6.46,
-      "latest_price": 6.41,
-      "last_updated_cet": "17:15",
-      "price": 6.46,
-      "entry_price": 6.46,
-      "target_price": 6.59,
-      "stop_loss": 6.34,
+      "vwap": 0.0,
+      "latest_price": 86.68,
+      "last_updated_cet": "09:00",
+      "entry_price": 83.7,
+      "target_price": 85.37,
+      "stop_loss": 82.13,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 6.49,
-        "post_entry_low": 6.41,
-        "post_entry_high_time": "10:30",
-        "post_entry_low_time": "17:15",
+        "post_entry_high": 86.68,
+        "post_entry_low": 86.68,
+        "post_entry_high_time": null,
+        "post_entry_low_time": null,
         "first_trigger_time": null,
-        "exit_price": 6.41,
-        "return_pct": -0.79,
-        "high_before_low": true
+        "exit_price": 86.68,
+        "return_pct": 3.56,
+        "high_before_low": false
       }
-    }
-  ],
-  "monthly_daily_bars": [
-    {
-      "date": "2026-09-23",
-      "open": 64.2,
-      "high": 64.3,
-      "low": 62.96,
-      "close": 63.38,
-      "volume": 1032597,
-      "sma20": 64.63
-    },
-    {
-      "date": "2026-09-24",
-      "open": 62.9,
-      "high": 63.76,
-      "low": 62.0,
-      "close": 62.0,
-      "volume": 1183522,
-      "sma20": 64.54
-    },
-    {
-      "date": "2026-09-25",
-      "open": 63.0,
-      "high": 63.78,
-      "low": 61.78,
-      "close": 61.78,
-      "volume": 1191480,
-      "sma20": 64.4
-    },
-    {
-      "date": "2026-09-28",
-      "open": 61.3,
-      "high": 61.84,
-      "low": 59.66,
-      "close": 61.3,
-      "volume": 2541333,
-      "sma20": 64.26
-    },
-    {
-      "date": "2026-09-29",
-      "open": 61.76,
-      "high": 62.08,
-      "low": 59.82,
-      "close": 59.82,
-      "volume": 1681730,
-      "sma20": 64.06
-    },
-    {
-      "date": "2026-09-30",
-      "open": 59.98,
-      "high": 60.46,
-      "low": 59.18,
-      "close": 59.36,
-      "volume": 1253769,
-      "sma20": 63.82
-    },
-    {
-      "date": "2026-10-01",
-      "open": 59.0,
-      "high": 59.62,
-      "low": 56.52,
-      "close": 56.74,
-      "volume": 2277560,
-      "sma20": 63.37
-    },
-    {
-      "date": "2026-10-02",
-      "open": 57.12,
-      "high": 58.02,
-      "low": 56.4,
-      "close": 57.28,
-      "volume": 1760241,
-      "sma20": 62.87
-    },
-    {
-      "date": "2026-10-05",
-      "open": 56.72,
-      "high": 57.68,
-      "low": 55.98,
-      "close": 57.6,
-      "volume": 1349972,
-      "sma20": 62.37
-    },
-    {
-      "date": "2026-10-06",
-      "open": 58.0,
-      "high": 59.26,
-      "low": 57.36,
-      "close": 58.24,
-      "volume": 1410067,
-      "sma20": 61.94
-    },
-    {
-      "date": "2026-10-07",
-      "open": 57.62,
-      "high": 57.94,
-      "low": 55.52,
-      "close": 55.58,
-      "volume": 1647154,
-      "sma20": 61.4
-    },
-    {
-      "date": "2026-10-08",
-      "open": 54.52,
-      "high": 54.98,
-      "low": 53.18,
-      "close": 54.22,
-      "volume": 2506427,
-      "sma20": 60.88
-    },
-    {
-      "date": "2026-10-09",
-      "open": 55.3,
-      "high": 57.62,
-      "low": 55.26,
-      "close": 57.28,
-      "volume": 1838066,
-      "sma20": 60.52
-    },
-    {
-      "date": "2026-10-12",
-      "open": 56.84,
-      "high": 57.54,
-      "low": 56.04,
-      "close": 56.82,
-      "volume": 935239,
-      "sma20": 60.23
-    },
-    {
-      "date": "2026-10-13",
-      "open": 56.5,
-      "high": 57.62,
-      "low": 56.44,
-      "close": 56.44,
-      "volume": 1006027,
-      "sma20": 59.89
-    },
-    {
-      "date": "2026-10-14",
-      "open": 57.0,
-      "high": 57.32,
-      "low": 56.0,
-      "close": 56.26,
-      "volume": 1179390,
-      "sma20": 59.47
-    },
-    {
-      "date": "2026-10-15",
-      "open": 54.9,
-      "high": 56.72,
-      "low": 54.88,
-      "close": 56.68,
-      "volume": 1515368,
-      "sma20": 59.03
-    },
-    {
-      "date": "2026-10-16",
-      "open": 57.16,
-      "high": 57.5,
-      "low": 56.7,
-      "close": 56.8,
-      "volume": 1265648,
-      "sma20": 58.71
-    },
-    {
-      "date": "2026-10-19",
-      "open": 56.04,
-      "high": 57.26,
-      "low": 55.58,
-      "close": 56.52,
-      "volume": 1401505,
-      "sma20": 58.4
-    },
-    {
-      "date": "2026-10-20",
-      "open": 55.76,
-      "high": 57.22,
-      "low": 54.76,
-      "close": 56.12,
-      "volume": 1274712,
-      "sma20": 58.01
-    },
-    {
-      "date": "2026-10-21",
-      "open": 56.22,
-      "high": 56.84,
-      "low": 55.42,
-      "close": 56.24,
-      "volume": 1012063,
-      "sma20": 57.65
-    },
-    {
-      "date": "2026-10-22",
-      "open": 55.22,
-      "high": 55.46,
-      "low": 53.74,
-      "close": 53.92,
-      "volume": 1226044,
-      "sma20": 57.25
-    },
-    {
-      "date": "2026-10-23",
-      "open": 53.76,
-      "high": 53.92,
-      "low": 52.46,
-      "close": 53.3,
-      "volume": 1691626,
-      "sma20": 56.83
-    },
-    {
-      "date": "2026-10-26",
-      "open": 53.24,
-      "high": 53.62,
-      "low": 52.7,
-      "close": 52.82,
-      "volume": 1223128,
-      "sma20": 56.4
-    },
-    {
-      "date": "2026-10-27",
-      "open": 53.18,
-      "high": 54.8,
-      "low": 52.62,
-      "close": 54.54,
-      "volume": 1318395,
-      "sma20": 56.14
-    },
-    {
-      "date": "2026-10-28",
-      "open": 55.02,
-      "high": 55.32,
-      "low": 52.74,
-      "close": 53.5,
-      "volume": 1631680,
-      "sma20": 55.84
-    },
-    {
-      "date": "2026-10-29",
-      "open": 53.56,
-      "high": 55.15,
-      "low": 53.5,
-      "close": 54.78,
-      "volume": 1172848,
-      "sma20": 55.75
-    },
-    {
-      "date": "2026-10-30",
-      "open": 54.06,
-      "high": 54.44,
-      "low": 53.28,
-      "close": 53.6,
-      "volume": 1585528,
-      "sma20": 55.56
-    },
-    {
-      "date": "2026-11-02",
-      "open": 53.78,
-      "high": 55.74,
-      "low": 53.62,
-      "close": 55.5,
-      "volume": 1235463,
-      "sma20": 55.46
-    },
-    {
-      "date": "2026-11-03",
-      "open": 54.08,
-      "high": 55.96,
-      "low": 53.46,
-      "close": 54.16,
-      "volume": 1269003,
-      "sma20": 55.25
-    },
-    {
-      "date": "2026-11-04",
-      "open": 54.4,
-      "high": 56.94,
-      "low": 54.1,
-      "close": 55.12,
-      "volume": 1878368,
-      "sma20": 55.23
-    },
-    {
-      "date": "2026-11-05",
-      "open": 57.08,
-      "high": 58.78,
-      "low": 52.76,
-      "close": 54.5,
-      "volume": 2850273,
-      "sma20": 55.24
-    },
-    {
-      "date": "2026-11-06",
-      "open": 53.02,
-      "high": 56.58,
-      "low": 52.94,
-      "close": 54.82,
-      "volume": 1788430,
-      "sma20": 55.12
-    },
-    {
-      "date": "2026-11-09",
-      "open": 55.12,
-      "high": 57.3,
-      "low": 54.9,
-      "close": 56.84,
-      "volume": 1541255,
-      "sma20": 55.12
-    },
-    {
-      "date": "2026-11-10",
-      "open": 57.68,
-      "high": 59.12,
-      "low": 57.54,
-      "close": 58.52,
-      "volume": 451720,
-      "sma20": 55.23
     }
   ],
   "bars": [
     {
       "time": "09:00",
-      "open": 57.68,
-      "high": 58.64,
-      "low": 57.54,
-      "close": 58.36,
-      "vwap": 58.18,
-      "vol": 10
-    },
-    {
-      "time": "09:15",
-      "open": 58.38,
-      "high": 58.8,
-      "low": 58.34,
-      "close": 58.6,
-      "vwap": 58.35,
-      "vol": 10
-    },
-    {
-      "time": "09:30",
-      "open": 58.68,
-      "high": 58.88,
-      "low": 58.56,
-      "close": 58.76,
-      "vwap": 58.44,
-      "vol": 10
-    },
-    {
-      "time": "09:45",
-      "open": 58.74,
-      "high": 59.12,
-      "low": 58.72,
-      "close": 59.04,
-      "vwap": 58.56,
-      "vol": 10
-    },
-    {
-      "time": "10:00",
-      "open": 59.0,
-      "high": 59.0,
-      "low": 58.36,
-      "close": 58.6,
-      "vwap": 58.58,
-      "vol": 10
-    },
-    {
-      "time": "10:15",
-      "open": 58.58,
-      "high": 58.76,
-      "low": 58.46,
-      "close": 58.76,
-      "vwap": 58.58,
-      "vol": 10
-    },
-    {
-      "time": "10:30",
-      "open": 58.76,
-      "high": 58.84,
-      "low": 58.48,
-      "close": 58.54,
-      "vwap": 58.58,
-      "vol": 10
-    },
-    {
-      "time": "10:45",
-      "open": 58.6,
-      "high": 58.62,
-      "low": 58.34,
-      "close": 58.34,
-      "vwap": 58.58,
-      "vol": 10
-    },
-    {
-      "time": "11:00",
-      "open": 58.32,
-      "high": 58.38,
-      "low": 58.22,
-      "close": 58.26,
-      "vwap": 58.57,
-      "vol": 10
-    },
-    {
-      "time": "11:15",
-      "open": 58.26,
-      "high": 58.32,
-      "low": 58.14,
-      "close": 58.2,
-      "vwap": 58.55,
-      "vol": 10
-    },
-    {
-      "time": "11:30",
-      "open": 58.22,
-      "high": 58.32,
-      "low": 58.08,
-      "close": 58.14,
-      "vwap": 58.54,
-      "vol": 10
-    },
-    {
-      "time": "11:45",
-      "open": 58.14,
-      "high": 58.42,
-      "low": 58.12,
-      "close": 58.36,
-      "vwap": 58.54,
-      "vol": 10
-    },
-    {
-      "time": "12:00",
-      "open": 58.42,
-      "high": 58.42,
-      "low": 58.3,
-      "close": 58.36,
-      "vwap": 58.53,
-      "vol": 10
-    },
-    {
-      "time": "12:15",
-      "open": 58.4,
-      "high": 58.52,
-      "low": 58.34,
-      "close": 58.52,
-      "vwap": 58.53,
-      "vol": 10
-    },
-    {
-      "time": "12:30",
-      "open": 58.5,
-      "high": 58.52,
-      "low": 58.28,
-      "close": 58.34,
-      "vwap": 58.53,
-      "vol": 10
-    },
-    {
-      "time": "12:45",
-      "open": 58.36,
-      "high": 58.36,
-      "low": 58.26,
-      "close": 58.3,
-      "vwap": 58.53,
-      "vol": 10
-    },
-    {
-      "time": "13:00",
-      "open": 58.26,
-      "high": 58.4,
-      "low": 58.2,
-      "close": 58.3,
-      "vwap": 58.52,
-      "vol": 10
-    },
-    {
-      "time": "13:15",
-      "open": 58.3,
-      "high": 58.34,
-      "low": 58.24,
-      "close": 58.3,
-      "vwap": 58.52,
-      "vol": 10
-    },
-    {
-      "time": "13:30",
-      "open": 58.28,
-      "high": 58.28,
-      "low": 58.04,
-      "close": 58.04,
-      "vwap": 58.49,
-      "vol": 10
-    },
-    {
-      "time": "13:45",
-      "open": 58.06,
-      "high": 58.26,
-      "low": 58.0,
-      "close": 58.26,
-      "vwap": 58.48,
-      "vol": 10
-    },
-    {
-      "time": "14:00",
-      "open": 58.26,
-      "high": 58.3,
-      "low": 58.08,
-      "close": 58.1,
-      "vwap": 58.46,
-      "vol": 10
-    },
-    {
-      "time": "14:15",
-      "open": 58.12,
-      "high": 58.26,
-      "low": 57.98,
-      "close": 58.04,
-      "vwap": 58.44,
-      "vol": 10
-    },
-    {
-      "time": "14:30",
-      "open": 58.06,
-      "high": 58.08,
-      "low": 57.38,
-      "close": 57.76,
-      "vwap": 58.39,
-      "vol": 10
-    },
-    {
-      "time": "14:45",
-      "open": 57.74,
-      "high": 57.78,
-      "low": 57.48,
-      "close": 57.48,
-      "vwap": 58.34,
-      "vol": 10
-    },
-    {
-      "time": "15:00",
-      "open": 57.48,
-      "high": 57.72,
-      "low": 57.48,
-      "close": 57.66,
-      "vwap": 58.33,
-      "vol": 10
-    },
-    {
-      "time": "15:15",
-      "open": 57.7,
-      "high": 57.76,
-      "low": 57.6,
-      "close": 57.64,
-      "vwap": 58.31,
-      "vol": 10
-    },
-    {
-      "time": "15:30",
-      "open": 57.64,
-      "high": 57.76,
-      "low": 57.44,
-      "close": 57.76,
-      "vwap": 58.25,
-      "vol": 10
-    },
-    {
-      "time": "15:45",
-      "open": 57.74,
-      "high": 58.62,
-      "low": 57.62,
-      "close": 58.62,
-      "vwap": 58.25,
-      "vol": 10
-    },
-    {
-      "time": "16:00",
-      "open": 58.6,
-      "high": 59.04,
-      "low": 58.58,
-      "close": 58.98,
-      "vwap": 58.3,
-      "vol": 10
-    },
-    {
-      "time": "16:15",
-      "open": 58.96,
-      "high": 59.0,
-      "low": 58.48,
-      "close": 58.5,
-      "vwap": 58.31,
-      "vol": 10
-    },
-    {
-      "time": "16:30",
-      "open": 58.58,
-      "high": 58.72,
-      "low": 58.4,
-      "close": 58.58,
-      "vwap": 58.32,
-      "vol": 10
-    },
-    {
-      "time": "16:45",
-      "open": 58.56,
-      "high": 58.76,
-      "low": 58.36,
-      "close": 58.66,
-      "vwap": 58.34,
-      "vol": 10
-    },
-    {
-      "time": "17:00",
-      "open": 58.68,
-      "high": 58.8,
-      "low": 58.48,
-      "close": 58.48,
-      "vwap": 58.35,
-      "vol": 10
-    },
-    {
-      "time": "17:15",
-      "open": 58.52,
-      "high": 58.64,
-      "low": 58.3,
-      "close": 58.46,
-      "vwap": 58.35,
+      "open": 210.75,
+      "high": 210.85,
+      "low": 210.2,
+      "close": 210.2,
+      "vwap": 0.0,
       "vol": 10
     }
   ],
-  "latest_price": 58.46,
-  "last_updated_cet": "17:15",
+  "latest_price": 210.2,
+  "last_updated_cet": "09:00",
   "intraday_verification": {
-    "outcome": "LOSS_STOPPED",
+    "outcome": "SCRATCH / CLOSE",
     "entry_time": "09:15",
-    "post_entry_high": 59.12,
-    "post_entry_low": 57.38,
-    "post_entry_high_time": "09:45",
-    "post_entry_low_time": "14:30",
-    "first_trigger_time": "14:30",
-    "exit_price": 57.55,
-    "return_pct": -2.52,
+    "post_entry_high": 210.2,
+    "post_entry_low": 210.2,
+    "post_entry_high_time": null,
+    "post_entry_low_time": null,
+    "first_trigger_time": null,
+    "exit_price": 210.2,
+    "return_pct": -0.24,
     "high_before_low": false
   },
   "progress": {
-    "ticker": "MT.AS",
-    "current_price": 58.46,
-    "exit_price": 57.55,
-    "as_of_cet": "17:15 CET",
-    "data_age_min": 885,
-    "pnl_pct": -2.52,
-    "to_target_pct": 4.64,
-    "to_stop_pct": 0.0,
-    "progress_ratio": 0.0,
-    "entry_ratio": 0.5581,
-    "entry_price": 59.04,
-    "target_price": 60.22,
-    "stop_loss": 57.55,
-    "status": "STOP_GERAAKT",
-    "plain_text_nl": "Stop geraakt: -2.52% verlies (oefenspel)."
-  },
-  "evaluation": {
-    "outcome": "LOSS_STOPPED",
-    "entry_time": "09:15",
-    "post_entry_high": 59.12,
-    "post_entry_low": 57.38,
-    "post_entry_high_time": "09:45",
-    "post_entry_low_time": "14:30",
-    "first_trigger_time": "14:30",
-    "exit_price": 57.55,
-    "return_pct": -2.52,
-    "high_before_low": false,
-    "has_1715_bar": true,
-    "has_closing_bar": true
-  },
-  "evaluation_frozen_at": "2026-11-10T18:15:08.353539+01:00"
+    "ticker": "AIR.PA",
+    "current_price": 210.2,
+    "exit_price": 210.2,
+    "as_of_cet": "09:00 CET",
+    "data_age_min": 1,
+    "pnl_pct": -0.24,
+    "to_target_pct": 2.24,
+    "to_stop_pct": 1.38,
+    "progress_ratio": 0.3811,
+    "entry_ratio": 0.4468,
+    "entry_price": 210.7,
+    "target_price": 214.91,
+    "stop_loss": 207.3,
+    "status": "LOOPT",
+    "plain_text_nl": "Het aandeel doet nog bijna niets. Geduld."
+  }
 }
