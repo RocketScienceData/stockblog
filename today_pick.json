@@ -37,7 +37,7 @@
     "guardrail_triggered": false,
     "rejection_reason": null
   },
-  "status": "ACTIVE",
+  "status": "WIN",
   "decision_source": "llm_decision",
   "conviction_score": 75,
   "override_quant_rank_1_rationale": "De kwantitatieve rangschikking plaatst ASM.AS hoger, maar de fundamentele kracht van de verse, opwaarts bijgestelde winstverwachting en de daaropvolgende analistenupgrades voor Telefonica (TEF.MC) bieden een significant robuustere katalysator voor aanhoudende institutionele koopdruk. De directe en concrete aard van deze katalysator weegt zwaarder dan de indirecte sectorale dynamiek van ASM.AS.",
@@ -458,7 +458,7 @@
           "high": 79.25,
           "low": 79.15,
           "close": 79.2,
-          "vwap": 79.36,
+          "vwap": 79.35,
           "vol": 10
         },
         {
@@ -467,7 +467,7 @@
           "high": 79.2,
           "low": 79.1,
           "close": 79.15,
-          "vwap": 79.34,
+          "vwap": 79.33,
           "vol": 10
         },
         {
@@ -485,7 +485,7 @@
           "high": 79.2,
           "low": 79.2,
           "close": 79.2,
-          "vwap": 79.31,
+          "vwap": 79.3,
           "vol": 10
         },
         {
@@ -494,7 +494,7 @@
           "high": 79.3,
           "low": 79.15,
           "close": 79.25,
-          "vwap": 79.3,
+          "vwap": 79.29,
           "vol": 10
         },
         {
@@ -503,7 +503,7 @@
           "high": 79.4,
           "low": 79.25,
           "close": 79.4,
-          "vwap": 79.3,
+          "vwap": 79.29,
           "vol": 10
         },
         {
@@ -593,7 +593,7 @@
           "high": 79.7,
           "low": 79.7,
           "close": 79.7,
-          "vwap": 79.5,
+          "vwap": 79.51,
           "vol": 10
         },
         {
@@ -602,7 +602,7 @@
           "high": 79.65,
           "low": 79.65,
           "close": 79.65,
-          "vwap": 79.5,
+          "vwap": 79.51,
           "vol": 10
         },
         {
@@ -638,7 +638,7 @@
           "high": 79.55,
           "low": 79.5,
           "close": 79.55,
-          "vwap": 79.51,
+          "vwap": 79.52,
           "vol": 10
         },
         {
@@ -721,11 +721,38 @@
           "close": 79.45,
           "vwap": 79.51,
           "vol": 10
+        },
+        {
+          "time": "17:00",
+          "open": 79.45,
+          "high": 79.65,
+          "low": 79.45,
+          "close": 79.62,
+          "vwap": 79.51,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 79.6,
+          "high": 79.6,
+          "low": 79.45,
+          "close": 79.6,
+          "vwap": 79.52,
+          "vol": 10
+        },
+        {
+          "time": "17:30",
+          "open": 79.2,
+          "high": 79.2,
+          "low": 79.2,
+          "close": 79.2,
+          "vwap": 79.31,
+          "vol": 10
         }
       ],
-      "vwap": 79.51,
-      "latest_price": 79.45,
-      "last_updated_cet": "16:45",
+      "vwap": 79.31,
+      "latest_price": 79.2,
+      "last_updated_cet": "17:30",
       "entry_price": 80.0,
       "target_price": 81.6,
       "stop_loss": 78.19,
@@ -737,8 +764,8 @@
         "post_entry_high_time": "12:30",
         "post_entry_low_time": "09:45",
         "first_trigger_time": null,
-        "exit_price": 79.45,
-        "return_pct": -0.69,
+        "exit_price": 79.2,
+        "return_pct": -1.0,
         "high_before_low": false
       }
     },
@@ -769,7 +796,7 @@
           "high": 714.4,
           "low": 712.0,
           "close": 713.6,
-          "vwap": 715.0,
+          "vwap": 714.78,
           "vol": 10
         },
         {
@@ -778,7 +805,7 @@
           "high": 714.2,
           "low": 710.2,
           "close": 710.8,
-          "vwap": 713.82,
+          "vwap": 713.49,
           "vol": 10
         },
         {
@@ -787,7 +814,7 @@
           "high": 712.4,
           "low": 709.2,
           "close": 710.6,
-          "vwap": 712.51,
+          "vwap": 712.21,
           "vol": 10
         },
         {
@@ -796,7 +823,7 @@
           "high": 714.8,
           "low": 710.0,
           "close": 714.4,
-          "vwap": 712.58,
+          "vwap": 712.33,
           "vol": 10
         },
         {
@@ -805,7 +832,7 @@
           "high": 716.8,
           "low": 714.2,
           "close": 715.6,
-          "vwap": 712.93,
+          "vwap": 712.74,
           "vol": 10
         },
         {
@@ -814,7 +841,7 @@
           "high": 716.0,
           "low": 714.4,
           "close": 714.8,
-          "vwap": 713.04,
+          "vwap": 712.86,
           "vol": 10
         },
         {
@@ -823,7 +850,7 @@
           "high": 716.0,
           "low": 713.2,
           "close": 714.4,
-          "vwap": 713.28,
+          "vwap": 713.15,
           "vol": 10
         },
         {
@@ -832,7 +859,7 @@
           "high": 716.8,
           "low": 714.4,
           "close": 716.6,
-          "vwap": 713.4,
+          "vwap": 713.28,
           "vol": 10
         },
         {
@@ -841,7 +868,7 @@
           "high": 717.2,
           "low": 716.2,
           "close": 716.8,
-          "vwap": 713.48,
+          "vwap": 713.37,
           "vol": 10
         },
         {
@@ -850,7 +877,7 @@
           "high": 718.6,
           "low": 716.8,
           "close": 718.6,
-          "vwap": 713.66,
+          "vwap": 713.56,
           "vol": 10
         },
         {
@@ -859,7 +886,7 @@
           "high": 720.2,
           "low": 717.8,
           "close": 719.6,
-          "vwap": 714.02,
+          "vwap": 713.94,
           "vol": 10
         },
         {
@@ -868,7 +895,7 @@
           "high": 720.4,
           "low": 718.6,
           "close": 719.0,
-          "vwap": 714.38,
+          "vwap": 714.33,
           "vol": 10
         },
         {
@@ -877,7 +904,7 @@
           "high": 719.4,
           "low": 717.4,
           "close": 717.8,
-          "vwap": 714.47,
+          "vwap": 714.42,
           "vol": 10
         },
         {
@@ -886,7 +913,7 @@
           "high": 720.0,
           "low": 717.4,
           "close": 720.0,
-          "vwap": 714.67,
+          "vwap": 714.63,
           "vol": 10
         },
         {
@@ -895,7 +922,7 @@
           "high": 724.4,
           "low": 719.8,
           "close": 724.0,
-          "vwap": 716.03,
+          "vwap": 716.04,
           "vol": 10
         },
         {
@@ -904,7 +931,7 @@
           "high": 725.2,
           "low": 722.0,
           "close": 723.2,
-          "vwap": 716.68,
+          "vwap": 716.71,
           "vol": 10
         },
         {
@@ -913,7 +940,7 @@
           "high": 723.4,
           "low": 719.4,
           "close": 719.4,
-          "vwap": 716.94,
+          "vwap": 716.98,
           "vol": 10
         },
         {
@@ -922,7 +949,7 @@
           "high": 720.4,
           "low": 716.6,
           "close": 717.0,
-          "vwap": 717.02,
+          "vwap": 717.06,
           "vol": 10
         },
         {
@@ -931,7 +958,7 @@
           "high": 717.0,
           "low": 714.6,
           "close": 715.8,
-          "vwap": 716.83,
+          "vwap": 716.85,
           "vol": 10
         },
         {
@@ -940,7 +967,7 @@
           "high": 716.0,
           "low": 712.8,
           "close": 713.0,
-          "vwap": 716.69,
+          "vwap": 716.71,
           "vol": 10
         },
         {
@@ -949,7 +976,7 @@
           "high": 714.6,
           "low": 711.2,
           "close": 714.0,
-          "vwap": 716.42,
+          "vwap": 716.43,
           "vol": 10
         },
         {
@@ -958,7 +985,7 @@
           "high": 716.2,
           "low": 711.2,
           "close": 712.4,
-          "vwap": 716.2,
+          "vwap": 716.21,
           "vol": 10
         },
         {
@@ -976,7 +1003,7 @@
           "high": 713.2,
           "low": 710.2,
           "close": 712.2,
-          "vwap": 715.62,
+          "vwap": 715.61,
           "vol": 10
         },
         {
@@ -985,7 +1012,7 @@
           "high": 712.6,
           "low": 708.4,
           "close": 708.4,
-          "vwap": 715.23,
+          "vwap": 715.22,
           "vol": 10
         },
         {
@@ -994,7 +1021,7 @@
           "high": 714.0,
           "low": 706.4,
           "close": 708.6,
-          "vwap": 714.32,
+          "vwap": 714.3,
           "vol": 10
         },
         {
@@ -1003,7 +1030,7 @@
           "high": 710.6,
           "low": 702.4,
           "close": 704.0,
-          "vwap": 713.22,
+          "vwap": 713.2,
           "vol": 10
         },
         {
@@ -1012,7 +1039,7 @@
           "high": 704.8,
           "low": 695.2,
           "close": 695.4,
-          "vwap": 711.61,
+          "vwap": 711.58,
           "vol": 10
         },
         {
@@ -1021,7 +1048,7 @@
           "high": 701.4,
           "low": 694.2,
           "close": 700.4,
-          "vwap": 710.14,
+          "vwap": 710.1,
           "vol": 10
         },
         {
@@ -1030,7 +1057,7 @@
           "high": 701.4,
           "low": 692.2,
           "close": 695.2,
-          "vwap": 708.98,
+          "vwap": 708.93,
           "vol": 10
         },
         {
@@ -1039,22 +1066,31 @@
           "high": 697.2,
           "low": 690.6,
           "close": 692.4,
-          "vwap": 707.83,
+          "vwap": 707.77,
           "vol": 10
         },
         {
           "time": "17:00",
-          "open": 692.8,
-          "high": 692.8,
-          "low": 692.8,
-          "close": 692.8,
-          "vwap": 707.83,
+          "open": 692.6,
+          "high": 694.2,
+          "low": 689.0,
+          "close": 690.6,
+          "vwap": 706.3,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 690.8,
+          "high": 695.6,
+          "low": 689.0,
+          "close": 694.2,
+          "vwap": 704.88,
           "vol": 10
         }
       ],
-      "vwap": 707.83,
-      "latest_price": 692.8,
-      "last_updated_cet": "17:00",
+      "vwap": 704.88,
+      "latest_price": 694.2,
+      "last_updated_cet": "17:15",
       "entry_price": 727.6,
       "target_price": 742.15,
       "stop_loss": 686.85,
@@ -1062,12 +1098,12 @@
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
         "post_entry_high": 725.2,
-        "post_entry_low": 690.6,
+        "post_entry_low": 689.0,
         "post_entry_high_time": "13:00",
-        "post_entry_low_time": "16:45",
+        "post_entry_low_time": "17:00",
         "first_trigger_time": null,
-        "exit_price": 692.8,
-        "return_pct": -4.78,
+        "exit_price": 694.2,
+        "return_pct": -4.59,
         "high_before_low": true
       }
     },
@@ -1090,7 +1126,7 @@
           "low": 83.99,
           "close": 84.36,
           "vwap": 84.26,
-          "vol": 14
+          "vol": 10
         },
         {
           "time": "09:15",
@@ -1098,7 +1134,7 @@
           "high": 84.52,
           "low": 84.29,
           "close": 84.49,
-          "vwap": 84.33,
+          "vwap": 84.36,
           "vol": 10
         },
         {
@@ -1107,7 +1143,7 @@
           "high": 84.5,
           "low": 84.3,
           "close": 84.33,
-          "vwap": 84.33,
+          "vwap": 84.36,
           "vol": 10
         },
         {
@@ -1116,7 +1152,7 @@
           "high": 84.38,
           "low": 84.22,
           "close": 84.25,
-          "vwap": 84.33,
+          "vwap": 84.35,
           "vol": 10
         },
         {
@@ -1125,7 +1161,7 @@
           "high": 84.4,
           "low": 84.17,
           "close": 84.25,
-          "vwap": 84.32,
+          "vwap": 84.34,
           "vol": 10
         },
         {
@@ -1134,7 +1170,7 @@
           "high": 84.4,
           "low": 84.17,
           "close": 84.25,
-          "vwap": 84.32,
+          "vwap": 84.33,
           "vol": 10
         },
         {
@@ -1143,7 +1179,7 @@
           "high": 84.3,
           "low": 84.15,
           "close": 84.25,
-          "vwap": 84.31,
+          "vwap": 84.32,
           "vol": 10
         },
         {
@@ -1152,7 +1188,7 @@
           "high": 84.35,
           "low": 84.24,
           "close": 84.34,
-          "vwap": 84.31,
+          "vwap": 84.32,
           "vol": 10
         },
         {
@@ -1179,7 +1215,7 @@
           "high": 84.37,
           "low": 84.22,
           "close": 84.24,
-          "vwap": 84.3,
+          "vwap": 84.31,
           "vol": 10
         },
         {
@@ -1188,7 +1224,7 @@
           "high": 84.3,
           "low": 84.19,
           "close": 84.26,
-          "vwap": 84.3,
+          "vwap": 84.31,
           "vol": 10
         },
         {
@@ -1197,7 +1233,7 @@
           "high": 84.31,
           "low": 84.12,
           "close": 84.14,
-          "vwap": 84.29,
+          "vwap": 84.3,
           "vol": 10
         },
         {
@@ -1206,7 +1242,7 @@
           "high": 84.15,
           "low": 83.94,
           "close": 83.94,
-          "vwap": 84.27,
+          "vwap": 84.28,
           "vol": 10
         },
         {
@@ -1251,7 +1287,7 @@
           "high": 83.75,
           "low": 83.58,
           "close": 83.64,
-          "vwap": 84.18,
+          "vwap": 84.17,
           "vol": 10
         },
         {
@@ -1260,7 +1296,7 @@
           "high": 83.79,
           "low": 83.58,
           "close": 83.76,
-          "vwap": 84.16,
+          "vwap": 84.15,
           "vol": 10
         },
         {
@@ -1269,7 +1305,7 @@
           "high": 83.75,
           "low": 83.63,
           "close": 83.64,
-          "vwap": 84.14,
+          "vwap": 84.13,
           "vol": 10
         },
         {
@@ -1278,7 +1314,7 @@
           "high": 83.73,
           "low": 83.6,
           "close": 83.67,
-          "vwap": 84.13,
+          "vwap": 84.12,
           "vol": 10
         },
         {
@@ -1287,7 +1323,7 @@
           "high": 83.96,
           "low": 83.6,
           "close": 83.78,
-          "vwap": 84.12,
+          "vwap": 84.11,
           "vol": 10
         },
         {
@@ -1296,7 +1332,7 @@
           "high": 83.81,
           "low": 83.51,
           "close": 83.56,
-          "vwap": 84.1,
+          "vwap": 84.09,
           "vol": 10
         },
         {
@@ -1305,7 +1341,7 @@
           "high": 83.6,
           "low": 83.47,
           "close": 83.58,
-          "vwap": 84.08,
+          "vwap": 84.07,
           "vol": 10
         },
         {
@@ -1314,7 +1350,7 @@
           "high": 83.66,
           "low": 83.53,
           "close": 83.64,
-          "vwap": 84.07,
+          "vwap": 84.06,
           "vol": 10
         },
         {
@@ -1323,7 +1359,7 @@
           "high": 83.75,
           "low": 83.6,
           "close": 83.6,
-          "vwap": 83.99,
+          "vwap": 83.98,
           "vol": 29
         },
         {
@@ -1332,7 +1368,7 @@
           "high": 83.72,
           "low": 83.49,
           "close": 83.68,
-          "vwap": 83.98,
+          "vwap": 83.97,
           "vol": 10
         },
         {
@@ -1341,7 +1377,7 @@
           "high": 83.72,
           "low": 83.54,
           "close": 83.55,
-          "vwap": 83.97,
+          "vwap": 83.96,
           "vol": 10
         },
         {
@@ -1350,7 +1386,7 @@
           "high": 83.67,
           "low": 83.48,
           "close": 83.61,
-          "vwap": 83.97,
+          "vwap": 83.95,
           "vol": 10
         },
         {
@@ -1359,7 +1395,7 @@
           "high": 83.72,
           "low": 83.58,
           "close": 83.68,
-          "vwap": 83.96,
+          "vwap": 83.94,
           "vol": 10
         },
         {
@@ -1368,22 +1404,31 @@
           "high": 83.91,
           "low": 83.68,
           "close": 83.87,
-          "vwap": 83.95,
+          "vwap": 83.94,
           "vol": 10
         },
         {
           "time": "17:00",
-          "open": 83.86,
-          "high": 83.86,
-          "low": 83.86,
+          "open": 83.87,
+          "high": 83.98,
+          "low": 83.79,
           "close": 83.86,
-          "vwap": 83.95,
+          "vwap": 83.94,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 83.87,
+          "high": 83.88,
+          "low": 83.69,
+          "close": 83.72,
+          "vwap": 83.93,
           "vol": 10
         }
       ],
-      "vwap": 83.95,
-      "latest_price": 83.86,
-      "last_updated_cet": "17:00",
+      "vwap": 83.93,
+      "latest_price": 83.72,
+      "last_updated_cet": "17:15",
       "entry_price": 84.24,
       "target_price": 85.92,
       "stop_loss": 81.86,
@@ -1395,8 +1440,8 @@
         "post_entry_high_time": "09:15",
         "post_entry_low_time": "15:00",
         "first_trigger_time": null,
-        "exit_price": 83.86,
-        "return_pct": -0.45,
+        "exit_price": 83.72,
+        "return_pct": -0.62,
         "high_before_low": true
       }
     },
@@ -1427,7 +1472,7 @@
           "high": 14.8,
           "low": 14.76,
           "close": 14.8,
-          "vwap": 14.76,
+          "vwap": 14.77,
           "vol": 10
         },
         {
@@ -1445,7 +1490,7 @@
           "high": 14.76,
           "low": 14.73,
           "close": 14.73,
-          "vwap": 14.76,
+          "vwap": 14.77,
           "vol": 10
         },
         {
@@ -1472,7 +1517,7 @@
           "high": 14.78,
           "low": 14.77,
           "close": 14.77,
-          "vwap": 14.76,
+          "vwap": 14.77,
           "vol": 10
         },
         {
@@ -1499,7 +1544,7 @@
           "high": 14.84,
           "low": 14.81,
           "close": 14.84,
-          "vwap": 14.77,
+          "vwap": 14.78,
           "vol": 10
         },
         {
@@ -1508,7 +1553,7 @@
           "high": 14.84,
           "low": 14.81,
           "close": 14.81,
-          "vwap": 14.78,
+          "vwap": 14.79,
           "vol": 10
         },
         {
@@ -1634,7 +1679,7 @@
           "high": 14.7,
           "low": 14.69,
           "close": 14.69,
-          "vwap": 14.75,
+          "vwap": 14.76,
           "vol": 10
         },
         {
@@ -1661,7 +1706,7 @@
           "high": 14.69,
           "low": 14.66,
           "close": 14.67,
-          "vwap": 14.74,
+          "vwap": 14.75,
           "vol": 10
         },
         {
@@ -1679,7 +1724,7 @@
           "high": 14.66,
           "low": 14.64,
           "close": 14.66,
-          "vwap": 14.73,
+          "vwap": 14.74,
           "vol": 10
         },
         {
@@ -1699,11 +1744,29 @@
           "close": 14.66,
           "vwap": 14.73,
           "vol": 10
+        },
+        {
+          "time": "17:00",
+          "open": 14.66,
+          "high": 14.69,
+          "low": 14.66,
+          "close": 14.68,
+          "vwap": 14.73,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 14.68,
+          "high": 14.68,
+          "low": 14.65,
+          "close": 14.66,
+          "vwap": 14.73,
+          "vol": 10
         }
       ],
       "vwap": 14.73,
       "latest_price": 14.66,
-      "last_updated_cet": "16:45",
+      "last_updated_cet": "17:15",
       "entry_price": 14.87,
       "target_price": 15.17,
       "stop_loss": 14.53,
@@ -1716,7 +1779,7 @@
         "post_entry_low_time": "16:15",
         "first_trigger_time": null,
         "exit_price": 14.66,
-        "return_pct": -1.41,
+        "return_pct": -1.38,
         "high_before_low": true
       }
     },
@@ -1747,7 +1810,7 @@
           "high": 92.8,
           "low": 92.25,
           "close": 92.55,
-          "vwap": 93.08,
+          "vwap": 93.02,
           "vol": 10
         },
         {
@@ -1756,7 +1819,7 @@
           "high": 92.55,
           "low": 91.65,
           "close": 91.65,
-          "vwap": 92.79,
+          "vwap": 92.7,
           "vol": 10
         },
         {
@@ -1765,7 +1828,7 @@
           "high": 91.75,
           "low": 90.95,
           "close": 91.3,
-          "vwap": 92.53,
+          "vwap": 92.41,
           "vol": 10
         },
         {
@@ -1774,7 +1837,7 @@
           "high": 91.45,
           "low": 91.1,
           "close": 91.25,
-          "vwap": 92.33,
+          "vwap": 92.21,
           "vol": 10
         },
         {
@@ -1783,7 +1846,7 @@
           "high": 91.55,
           "low": 91.25,
           "close": 91.5,
-          "vwap": 92.2,
+          "vwap": 92.11,
           "vol": 10
         },
         {
@@ -1792,7 +1855,7 @@
           "high": 91.9,
           "low": 91.4,
           "close": 91.6,
-          "vwap": 92.15,
+          "vwap": 92.07,
           "vol": 10
         },
         {
@@ -1801,7 +1864,7 @@
           "high": 91.6,
           "low": 91.35,
           "close": 91.45,
-          "vwap": 92.11,
+          "vwap": 92.03,
           "vol": 10
         },
         {
@@ -1810,7 +1873,7 @@
           "high": 91.6,
           "low": 91.35,
           "close": 91.5,
-          "vwap": 92.08,
+          "vwap": 91.99,
           "vol": 10
         },
         {
@@ -1819,7 +1882,7 @@
           "high": 91.6,
           "low": 91.4,
           "close": 91.6,
-          "vwap": 92.06,
+          "vwap": 91.98,
           "vol": 10
         },
         {
@@ -1828,7 +1891,7 @@
           "high": 91.85,
           "low": 91.65,
           "close": 91.65,
-          "vwap": 92.04,
+          "vwap": 91.97,
           "vol": 10
         },
         {
@@ -1837,7 +1900,7 @@
           "high": 91.75,
           "low": 91.6,
           "close": 91.75,
-          "vwap": 92.02,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1846,7 +1909,7 @@
           "high": 92.05,
           "low": 91.7,
           "close": 91.95,
-          "vwap": 92.01,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1855,7 +1918,7 @@
           "high": 92.1,
           "low": 92.0,
           "close": 92.05,
-          "vwap": 92.01,
+          "vwap": 91.96,
           "vol": 10
         },
         {
@@ -1864,7 +1927,7 @@
           "high": 92.15,
           "low": 91.6,
           "close": 92.0,
-          "vwap": 92.0,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1873,7 +1936,7 @@
           "high": 92.2,
           "low": 92.0,
           "close": 92.1,
-          "vwap": 92.0,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1882,7 +1945,7 @@
           "high": 92.15,
           "low": 91.95,
           "close": 92.05,
-          "vwap": 92.0,
+          "vwap": 91.96,
           "vol": 10
         },
         {
@@ -1891,7 +1954,7 @@
           "high": 92.05,
           "low": 91.8,
           "close": 91.8,
-          "vwap": 92.0,
+          "vwap": 91.96,
           "vol": 10
         },
         {
@@ -1900,7 +1963,7 @@
           "high": 91.8,
           "low": 91.6,
           "close": 91.65,
-          "vwap": 91.99,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1909,7 +1972,7 @@
           "high": 91.8,
           "low": 91.6,
           "close": 91.75,
-          "vwap": 91.98,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1918,7 +1981,7 @@
           "high": 91.85,
           "low": 91.7,
           "close": 91.75,
-          "vwap": 91.98,
+          "vwap": 91.95,
           "vol": 10
         },
         {
@@ -1927,7 +1990,7 @@
           "high": 91.9,
           "low": 91.6,
           "close": 91.7,
-          "vwap": 91.98,
+          "vwap": 91.94,
           "vol": 10
         },
         {
@@ -1936,7 +1999,7 @@
           "high": 92.1,
           "low": 91.5,
           "close": 91.75,
-          "vwap": 91.97,
+          "vwap": 91.94,
           "vol": 10
         },
         {
@@ -1945,7 +2008,7 @@
           "high": 91.8,
           "low": 91.4,
           "close": 91.55,
-          "vwap": 91.97,
+          "vwap": 91.93,
           "vol": 10
         },
         {
@@ -1954,7 +2017,7 @@
           "high": 91.6,
           "low": 91.35,
           "close": 91.5,
-          "vwap": 91.96,
+          "vwap": 91.93,
           "vol": 10
         },
         {
@@ -1963,7 +2026,7 @@
           "high": 91.55,
           "low": 91.2,
           "close": 91.2,
-          "vwap": 91.94,
+          "vwap": 91.91,
           "vol": 10
         },
         {
@@ -1972,7 +2035,7 @@
           "high": 91.6,
           "low": 91.15,
           "close": 91.25,
-          "vwap": 91.88,
+          "vwap": 91.87,
           "vol": 10
         },
         {
@@ -1981,7 +2044,7 @@
           "high": 91.3,
           "low": 90.9,
           "close": 91.1,
-          "vwap": 91.83,
+          "vwap": 91.81,
           "vol": 10
         },
         {
@@ -1999,7 +2062,7 @@
           "high": 91.05,
           "low": 90.55,
           "close": 91.0,
-          "vwap": 91.69,
+          "vwap": 91.68,
           "vol": 10
         },
         {
@@ -2008,7 +2071,7 @@
           "high": 91.0,
           "low": 90.65,
           "close": 90.75,
-          "vwap": 91.67,
+          "vwap": 91.66,
           "vol": 10
         },
         {
@@ -2017,13 +2080,31 @@
           "high": 90.9,
           "low": 90.75,
           "close": 90.85,
-          "vwap": 91.64,
+          "vwap": 91.63,
+          "vol": 10
+        },
+        {
+          "time": "17:00",
+          "open": 90.8,
+          "high": 90.85,
+          "low": 90.45,
+          "close": 90.45,
+          "vwap": 91.55,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 90.45,
+          "high": 90.85,
+          "low": 90.35,
+          "close": 90.85,
+          "vwap": 91.45,
           "vol": 10
         }
       ],
-      "vwap": 91.64,
+      "vwap": 91.45,
       "latest_price": 90.85,
-      "last_updated_cet": "16:45",
+      "last_updated_cet": "17:15",
       "entry_price": 92.95,
       "target_price": 94.81,
       "stop_loss": 89.8,
@@ -2031,9 +2112,9 @@
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
         "post_entry_high": 92.8,
-        "post_entry_low": 90.55,
+        "post_entry_low": 90.35,
         "post_entry_high_time": "09:15",
-        "post_entry_low_time": "16:00",
+        "post_entry_low_time": "17:15",
         "first_trigger_time": null,
         "exit_price": 90.85,
         "return_pct": -2.26,
@@ -2067,7 +2148,7 @@
           "high": 58.08,
           "low": 57.61,
           "close": 57.78,
-          "vwap": 57.95,
+          "vwap": 57.94,
           "vol": 10
         },
         {
@@ -2076,7 +2157,7 @@
           "high": 57.9,
           "low": 57.62,
           "close": 57.68,
-          "vwap": 57.92,
+          "vwap": 57.91,
           "vol": 10
         },
         {
@@ -2085,7 +2166,7 @@
           "high": 57.66,
           "low": 57.38,
           "close": 57.42,
-          "vwap": 57.81,
+          "vwap": 57.8,
           "vol": 10
         },
         {
@@ -2094,7 +2175,7 @@
           "high": 57.66,
           "low": 57.38,
           "close": 57.5,
-          "vwap": 57.76,
+          "vwap": 57.75,
           "vol": 10
         },
         {
@@ -2103,7 +2184,7 @@
           "high": 57.78,
           "low": 57.5,
           "close": 57.68,
-          "vwap": 57.74,
+          "vwap": 57.73,
           "vol": 10
         },
         {
@@ -2121,7 +2202,7 @@
           "high": 57.7,
           "low": 57.6,
           "close": 57.7,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2130,7 +2211,7 @@
           "high": 57.74,
           "low": 57.6,
           "close": 57.68,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2139,7 +2220,7 @@
           "high": 57.74,
           "low": 57.66,
           "close": 57.74,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2148,7 +2229,7 @@
           "high": 57.82,
           "low": 57.72,
           "close": 57.76,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2184,7 +2265,7 @@
           "high": 57.68,
           "low": 57.56,
           "close": 57.58,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2193,7 +2274,7 @@
           "high": 57.76,
           "low": 57.58,
           "close": 57.68,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2202,7 +2283,7 @@
           "high": 57.74,
           "low": 57.68,
           "close": 57.7,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2211,7 +2292,7 @@
           "high": 57.68,
           "low": 57.64,
           "close": 57.66,
-          "vwap": 57.73,
+          "vwap": 57.72,
           "vol": 10
         },
         {
@@ -2229,7 +2310,7 @@
           "high": 57.6,
           "low": 57.54,
           "close": 57.56,
-          "vwap": 57.72,
+          "vwap": 57.71,
           "vol": 10
         },
         {
@@ -2256,7 +2337,7 @@
           "high": 57.98,
           "low": 57.66,
           "close": 57.74,
-          "vwap": 57.72,
+          "vwap": 57.71,
           "vol": 10
         },
         {
@@ -2283,7 +2364,7 @@
           "high": 57.6,
           "low": 57.52,
           "close": 57.54,
-          "vwap": 57.71,
+          "vwap": 57.7,
           "vol": 10
         },
         {
@@ -2319,7 +2400,7 @@
           "high": 57.2,
           "low": 56.84,
           "close": 57.04,
-          "vwap": 57.62,
+          "vwap": 57.61,
           "vol": 10
         },
         {
@@ -2343,16 +2424,25 @@
         {
           "time": "17:00",
           "open": 56.94,
-          "high": 56.94,
-          "low": 56.94,
-          "close": 56.94,
-          "vwap": 57.55,
+          "high": 57.12,
+          "low": 56.88,
+          "close": 57.02,
+          "vwap": 57.53,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 57.02,
+          "high": 57.16,
+          "low": 56.96,
+          "close": 57.12,
+          "vwap": 57.5,
           "vol": 10
         }
       ],
-      "vwap": 57.55,
-      "latest_price": 56.94,
-      "last_updated_cet": "17:00",
+      "vwap": 57.5,
+      "latest_price": 57.12,
+      "last_updated_cet": "17:15",
       "entry_price": 59.39,
       "target_price": 60.58,
       "stop_loss": 58.68,
@@ -2388,7 +2478,7 @@
           "low": 3.43,
           "close": 3.45,
           "vwap": 3.45,
-          "vol": 27
+          "vol": 12
         },
         {
           "time": "09:15",
@@ -2424,7 +2514,7 @@
           "low": 3.45,
           "close": 3.46,
           "vwap": 3.45,
-          "vol": 13
+          "vol": 12
         },
         {
           "time": "10:15",
@@ -2442,7 +2532,7 @@
           "low": 3.45,
           "close": 3.46,
           "vwap": 3.45,
-          "vol": 26
+          "vol": 23
         },
         {
           "time": "10:45",
@@ -2505,7 +2595,7 @@
           "low": 3.45,
           "close": 3.46,
           "vwap": 3.45,
-          "vol": 11
+          "vol": 10
         },
         {
           "time": "12:30",
@@ -2550,7 +2640,7 @@
           "low": 3.43,
           "close": 3.43,
           "vwap": 3.45,
-          "vol": 23
+          "vol": 20
         },
         {
           "time": "13:45",
@@ -2568,7 +2658,7 @@
           "low": 3.43,
           "close": 3.45,
           "vwap": 3.45,
-          "vol": 22
+          "vol": 19
         },
         {
           "time": "14:15",
@@ -2586,7 +2676,7 @@
           "low": 3.44,
           "close": 3.45,
           "vwap": 3.45,
-          "vol": 20
+          "vol": 16
         },
         {
           "time": "14:45",
@@ -2595,7 +2685,7 @@
           "low": 3.44,
           "close": 3.45,
           "vwap": 3.45,
-          "vol": 12
+          "vol": 10
         },
         {
           "time": "15:00",
@@ -2631,7 +2721,7 @@
           "low": 3.44,
           "close": 3.45,
           "vwap": 3.45,
-          "vol": 11
+          "vol": 10
         },
         {
           "time": "16:00",
@@ -2668,24 +2758,42 @@
           "close": 3.47,
           "vwap": 3.45,
           "vol": 10
+        },
+        {
+          "time": "17:00",
+          "open": 3.47,
+          "high": 3.48,
+          "low": 3.47,
+          "close": 3.48,
+          "vwap": 3.45,
+          "vol": 25
+        },
+        {
+          "time": "17:15",
+          "open": 3.48,
+          "high": 3.48,
+          "low": 3.47,
+          "close": 3.48,
+          "vwap": 3.45,
+          "vol": 45
         }
       ],
       "vwap": 3.45,
-      "latest_price": 3.47,
-      "last_updated_cet": "16:45",
+      "latest_price": 3.48,
+      "last_updated_cet": "17:15",
       "entry_price": 3.51,
       "target_price": 3.58,
       "stop_loss": 3.42,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 3.47,
+        "post_entry_high": 3.48,
         "post_entry_low": 3.43,
-        "post_entry_high_time": "16:30",
+        "post_entry_high_time": "17:15",
         "post_entry_low_time": "13:45",
         "first_trigger_time": null,
-        "exit_price": 3.47,
-        "return_pct": -1.14,
+        "exit_price": 3.48,
+        "return_pct": -0.83,
         "high_before_low": false
       }
     },
@@ -2734,7 +2842,7 @@
           "high": 30.44,
           "low": 30.38,
           "close": 30.42,
-          "vwap": 30.27,
+          "vwap": 30.28,
           "vol": 10
         },
         {
@@ -2743,7 +2851,7 @@
           "high": 30.47,
           "low": 30.37,
           "close": 30.43,
-          "vwap": 30.3,
+          "vwap": 30.31,
           "vol": 10
         },
         {
@@ -2752,7 +2860,7 @@
           "high": 30.47,
           "low": 30.4,
           "close": 30.43,
-          "vwap": 30.31,
+          "vwap": 30.32,
           "vol": 10
         },
         {
@@ -2761,7 +2869,7 @@
           "high": 30.41,
           "low": 30.36,
           "close": 30.4,
-          "vwap": 30.32,
+          "vwap": 30.33,
           "vol": 10
         },
         {
@@ -2779,7 +2887,7 @@
           "high": 30.41,
           "low": 30.34,
           "close": 30.35,
-          "vwap": 30.33,
+          "vwap": 30.34,
           "vol": 10
         },
         {
@@ -2797,7 +2905,7 @@
           "high": 30.36,
           "low": 30.3,
           "close": 30.35,
-          "vwap": 30.33,
+          "vwap": 30.34,
           "vol": 10
         },
         {
@@ -2806,7 +2914,7 @@
           "high": 30.4,
           "low": 30.34,
           "close": 30.36,
-          "vwap": 30.33,
+          "vwap": 30.34,
           "vol": 10
         },
         {
@@ -2815,7 +2923,7 @@
           "high": 30.37,
           "low": 30.34,
           "close": 30.36,
-          "vwap": 30.33,
+          "vwap": 30.34,
           "vol": 10
         },
         {
@@ -2851,7 +2959,7 @@
           "high": 30.43,
           "low": 30.39,
           "close": 30.42,
-          "vwap": 30.35,
+          "vwap": 30.36,
           "vol": 10
         },
         {
@@ -2860,7 +2968,7 @@
           "high": 30.42,
           "low": 30.36,
           "close": 30.37,
-          "vwap": 30.35,
+          "vwap": 30.36,
           "vol": 10
         },
         {
@@ -2869,7 +2977,7 @@
           "high": 30.39,
           "low": 30.36,
           "close": 30.37,
-          "vwap": 30.35,
+          "vwap": 30.36,
           "vol": 10
         },
         {
@@ -2950,7 +3058,7 @@
           "high": 30.67,
           "low": 30.41,
           "close": 30.63,
-          "vwap": 30.42,
+          "vwap": 30.41,
           "vol": 10
         },
         {
@@ -2986,31 +3094,40 @@
           "high": 30.72,
           "low": 30.58,
           "close": 30.71,
-          "vwap": 30.45,
+          "vwap": 30.44,
           "vol": 10
         },
         {
           "time": "17:00",
           "open": 30.71,
-          "high": 30.71,
-          "low": 30.71,
+          "high": 30.74,
+          "low": 30.69,
+          "close": 30.7,
+          "vwap": 30.46,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 30.69,
+          "high": 30.73,
+          "low": 30.68,
           "close": 30.71,
-          "vwap": 30.45,
+          "vwap": 30.48,
           "vol": 10
         }
       ],
-      "vwap": 30.45,
+      "vwap": 30.48,
       "latest_price": 30.71,
-      "last_updated_cet": "17:00",
+      "last_updated_cet": "17:15",
       "entry_price": 29.56,
       "target_price": 30.15,
       "stop_loss": 28.46,
       "intraday_verification": {
         "outcome": "WIN",
         "entry_time": "09:15",
-        "post_entry_high": 30.72,
+        "post_entry_high": 30.74,
         "post_entry_low": 30.18,
-        "post_entry_high_time": "16:45",
+        "post_entry_high_time": "17:00",
         "post_entry_low_time": "09:15",
         "first_trigger_time": "09:15",
         "exit_price": 30.15,
@@ -3045,7 +3162,7 @@
           "high": 27.69,
           "low": 27.62,
           "close": 27.62,
-          "vwap": 27.72,
+          "vwap": 27.71,
           "vol": 10
         },
         {
@@ -3054,7 +3171,7 @@
           "high": 27.66,
           "low": 27.61,
           "close": 27.66,
-          "vwap": 27.71,
+          "vwap": 27.69,
           "vol": 10
         },
         {
@@ -3063,7 +3180,7 @@
           "high": 27.69,
           "low": 27.63,
           "close": 27.66,
-          "vwap": 27.7,
+          "vwap": 27.69,
           "vol": 10
         },
         {
@@ -3072,7 +3189,7 @@
           "high": 27.7,
           "low": 27.65,
           "close": 27.7,
-          "vwap": 27.7,
+          "vwap": 27.69,
           "vol": 10
         },
         {
@@ -3081,7 +3198,7 @@
           "high": 27.74,
           "low": 27.69,
           "close": 27.71,
-          "vwap": 27.7,
+          "vwap": 27.69,
           "vol": 10
         },
         {
@@ -3090,7 +3207,7 @@
           "high": 27.74,
           "low": 27.72,
           "close": 27.73,
-          "vwap": 27.71,
+          "vwap": 27.7,
           "vol": 10
         },
         {
@@ -3099,7 +3216,7 @@
           "high": 27.74,
           "low": 27.71,
           "close": 27.73,
-          "vwap": 27.71,
+          "vwap": 27.7,
           "vol": 10
         },
         {
@@ -3135,7 +3252,7 @@
           "high": 27.79,
           "low": 27.73,
           "close": 27.77,
-          "vwap": 27.72,
+          "vwap": 27.71,
           "vol": 10
         },
         {
@@ -3144,7 +3261,7 @@
           "high": 27.78,
           "low": 27.74,
           "close": 27.74,
-          "vwap": 27.72,
+          "vwap": 27.71,
           "vol": 10
         },
         {
@@ -3189,7 +3306,7 @@
           "high": 27.92,
           "low": 27.89,
           "close": 27.9,
-          "vwap": 27.77,
+          "vwap": 27.78,
           "vol": 10
         },
         {
@@ -3234,7 +3351,7 @@
           "high": 27.85,
           "low": 27.82,
           "close": 27.84,
-          "vwap": 27.78,
+          "vwap": 27.79,
           "vol": 10
         },
         {
@@ -3320,17 +3437,26 @@
         },
         {
           "time": "17:00",
-          "open": 27.76,
+          "open": 27.75,
           "high": 27.76,
-          "low": 27.76,
-          "close": 27.76,
-          "vwap": 27.77,
+          "low": 27.67,
+          "close": 27.7,
+          "vwap": 27.76,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 27.69,
+          "high": 27.75,
+          "low": 27.68,
+          "close": 27.7,
+          "vwap": 27.76,
           "vol": 10
         }
       ],
-      "vwap": 27.77,
-      "latest_price": 27.76,
-      "last_updated_cet": "17:00",
+      "vwap": 27.76,
+      "latest_price": 27.7,
+      "last_updated_cet": "17:15",
       "entry_price": 27.49,
       "target_price": 28.04,
       "stop_loss": 26.62,
@@ -3342,8 +3468,8 @@
         "post_entry_high_time": "13:00",
         "post_entry_low_time": "09:30",
         "first_trigger_time": null,
-        "exit_price": 27.76,
-        "return_pct": 0.98,
+        "exit_price": 27.7,
+        "return_pct": 0.76,
         "high_before_low": false
       }
     },
@@ -3374,7 +3500,7 @@
           "high": 43.89,
           "low": 43.71,
           "close": 43.81,
-          "vwap": 43.71,
+          "vwap": 43.74,
           "vol": 10
         },
         {
@@ -3383,7 +3509,7 @@
           "high": 43.88,
           "low": 43.76,
           "close": 43.82,
-          "vwap": 43.74,
+          "vwap": 43.77,
           "vol": 10
         },
         {
@@ -3392,7 +3518,7 @@
           "high": 43.84,
           "low": 43.77,
           "close": 43.83,
-          "vwap": 43.76,
+          "vwap": 43.77,
           "vol": 10
         },
         {
@@ -3401,7 +3527,7 @@
           "high": 43.9,
           "low": 43.82,
           "close": 43.9,
-          "vwap": 43.77,
+          "vwap": 43.79,
           "vol": 10
         },
         {
@@ -3410,7 +3536,7 @@
           "high": 44.02,
           "low": 43.9,
           "close": 44.01,
-          "vwap": 43.82,
+          "vwap": 43.83,
           "vol": 10
         },
         {
@@ -3419,7 +3545,7 @@
           "high": 44.04,
           "low": 43.96,
           "close": 44.0,
-          "vwap": 43.84,
+          "vwap": 43.85,
           "vol": 10
         },
         {
@@ -3428,7 +3554,7 @@
           "high": 43.99,
           "low": 43.78,
           "close": 43.86,
-          "vwap": 43.85,
+          "vwap": 43.86,
           "vol": 10
         },
         {
@@ -3437,7 +3563,7 @@
           "high": 43.84,
           "low": 43.73,
           "close": 43.74,
-          "vwap": 43.84,
+          "vwap": 43.85,
           "vol": 10
         },
         {
@@ -3446,7 +3572,7 @@
           "high": 43.77,
           "low": 43.65,
           "close": 43.68,
-          "vwap": 43.82,
+          "vwap": 43.83,
           "vol": 10
         },
         {
@@ -3455,7 +3581,7 @@
           "high": 43.8,
           "low": 43.69,
           "close": 43.74,
-          "vwap": 43.82,
+          "vwap": 43.83,
           "vol": 10
         },
         {
@@ -3464,7 +3590,7 @@
           "high": 43.81,
           "low": 43.75,
           "close": 43.81,
-          "vwap": 43.82,
+          "vwap": 43.83,
           "vol": 10
         },
         {
@@ -3473,7 +3599,7 @@
           "high": 43.84,
           "low": 43.8,
           "close": 43.8,
-          "vwap": 43.82,
+          "vwap": 43.83,
           "vol": 10
         },
         {
@@ -3491,7 +3617,7 @@
           "high": 43.79,
           "low": 43.77,
           "close": 43.77,
-          "vwap": 43.81,
+          "vwap": 43.82,
           "vol": 10
         },
         {
@@ -3500,7 +3626,7 @@
           "high": 43.79,
           "low": 43.73,
           "close": 43.76,
-          "vwap": 43.81,
+          "vwap": 43.82,
           "vol": 10
         },
         {
@@ -3509,7 +3635,7 @@
           "high": 43.8,
           "low": 43.72,
           "close": 43.73,
-          "vwap": 43.8,
+          "vwap": 43.81,
           "vol": 10
         },
         {
@@ -3518,7 +3644,7 @@
           "high": 43.72,
           "low": 43.64,
           "close": 43.64,
-          "vwap": 43.8,
+          "vwap": 43.81,
           "vol": 10
         },
         {
@@ -3527,7 +3653,7 @@
           "high": 43.7,
           "low": 43.62,
           "close": 43.62,
-          "vwap": 43.8,
+          "vwap": 43.81,
           "vol": 10
         },
         {
@@ -3545,7 +3671,7 @@
           "high": 43.74,
           "low": 43.68,
           "close": 43.73,
-          "vwap": 43.79,
+          "vwap": 43.8,
           "vol": 10
         },
         {
@@ -3554,7 +3680,7 @@
           "high": 43.8,
           "low": 43.7,
           "close": 43.79,
-          "vwap": 43.79,
+          "vwap": 43.8,
           "vol": 10
         },
         {
@@ -3563,7 +3689,7 @@
           "high": 43.83,
           "low": 43.73,
           "close": 43.81,
-          "vwap": 43.79,
+          "vwap": 43.8,
           "vol": 10
         },
         {
@@ -3572,7 +3698,7 @@
           "high": 43.84,
           "low": 43.8,
           "close": 43.8,
-          "vwap": 43.79,
+          "vwap": 43.8,
           "vol": 10
         },
         {
@@ -3617,7 +3743,7 @@
           "high": 44.06,
           "low": 43.96,
           "close": 43.99,
-          "vwap": 43.84,
+          "vwap": 43.85,
           "vol": 10
         },
         {
@@ -3646,24 +3772,42 @@
           "close": 44.04,
           "vwap": 43.87,
           "vol": 10
+        },
+        {
+          "time": "17:00",
+          "open": 44.05,
+          "high": 44.15,
+          "low": 44.01,
+          "close": 44.08,
+          "vwap": 43.88,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 44.09,
+          "high": 44.12,
+          "low": 44.0,
+          "close": 44.1,
+          "vwap": 43.89,
+          "vol": 10
         }
       ],
-      "vwap": 43.87,
-      "latest_price": 44.04,
-      "last_updated_cet": "16:45",
+      "vwap": 43.89,
+      "latest_price": 44.1,
+      "last_updated_cet": "17:15",
       "entry_price": 43.52,
       "target_price": 44.39,
       "stop_loss": 42.45,
       "intraday_verification": {
         "outcome": "SCRATCH / CLOSE",
         "entry_time": "09:15",
-        "post_entry_high": 44.12,
+        "post_entry_high": 44.15,
         "post_entry_low": 43.62,
-        "post_entry_high_time": "16:45",
+        "post_entry_high_time": "17:00",
         "post_entry_low_time": "13:30",
         "first_trigger_time": null,
-        "exit_price": 44.04,
-        "return_pct": 1.19,
+        "exit_price": 44.1,
+        "return_pct": 1.33,
         "high_before_low": false
       }
     },
@@ -3694,7 +3838,7 @@
           "high": 62.4,
           "low": 62.2,
           "close": 62.28,
-          "vwap": 62.27,
+          "vwap": 62.28,
           "vol": 10
         },
         {
@@ -3721,7 +3865,7 @@
           "high": 62.44,
           "low": 62.22,
           "close": 62.34,
-          "vwap": 62.28,
+          "vwap": 62.29,
           "vol": 10
         },
         {
@@ -3739,7 +3883,7 @@
           "high": 62.56,
           "low": 62.4,
           "close": 62.56,
-          "vwap": 62.32,
+          "vwap": 62.33,
           "vol": 10
         },
         {
@@ -3775,7 +3919,7 @@
           "high": 62.66,
           "low": 62.56,
           "close": 62.64,
-          "vwap": 62.38,
+          "vwap": 62.39,
           "vol": 10
         },
         {
@@ -3784,7 +3928,7 @@
           "high": 62.66,
           "low": 62.6,
           "close": 62.6,
-          "vwap": 62.39,
+          "vwap": 62.4,
           "vol": 10
         },
         {
@@ -3793,7 +3937,7 @@
           "high": 62.66,
           "low": 62.52,
           "close": 62.52,
-          "vwap": 62.4,
+          "vwap": 62.41,
           "vol": 10
         },
         {
@@ -3820,7 +3964,7 @@
           "high": 62.56,
           "low": 62.44,
           "close": 62.52,
-          "vwap": 62.42,
+          "vwap": 62.43,
           "vol": 10
         },
         {
@@ -3856,7 +4000,7 @@
           "high": 62.54,
           "low": 62.48,
           "close": 62.54,
-          "vwap": 62.43,
+          "vwap": 62.44,
           "vol": 10
         },
         {
@@ -3874,7 +4018,7 @@
           "high": 62.68,
           "low": 62.56,
           "close": 62.62,
-          "vwap": 62.45,
+          "vwap": 62.46,
           "vol": 10
         },
         {
@@ -3892,7 +4036,7 @@
           "high": 62.58,
           "low": 62.52,
           "close": 62.52,
-          "vwap": 62.46,
+          "vwap": 62.47,
           "vol": 10
         },
         {
@@ -3901,7 +4045,7 @@
           "high": 62.52,
           "low": 62.44,
           "close": 62.48,
-          "vwap": 62.46,
+          "vwap": 62.47,
           "vol": 10
         },
         {
@@ -3919,7 +4063,7 @@
           "high": 62.88,
           "low": 62.54,
           "close": 62.88,
-          "vwap": 62.49,
+          "vwap": 62.5,
           "vol": 10
         },
         {
@@ -3928,7 +4072,7 @@
           "high": 62.86,
           "low": 62.58,
           "close": 62.62,
-          "vwap": 62.5,
+          "vwap": 62.51,
           "vol": 10
         },
         {
@@ -3971,15 +4115,24 @@
           "time": "17:00",
           "open": 62.54,
           "high": 62.54,
-          "low": 62.54,
-          "close": 62.54,
+          "low": 62.44,
+          "close": 62.44,
           "vwap": 62.52,
+          "vol": 10
+        },
+        {
+          "time": "17:15",
+          "open": 62.42,
+          "high": 62.46,
+          "low": 62.26,
+          "close": 62.34,
+          "vwap": 62.51,
           "vol": 10
         }
       ],
-      "vwap": 62.52,
-      "latest_price": 62.54,
-      "last_updated_cet": "17:00",
+      "vwap": 62.51,
+      "latest_price": 62.34,
+      "last_updated_cet": "17:15",
       "entry_price": 62.3,
       "target_price": 63.55,
       "stop_loss": 60.66,
@@ -3991,8 +4144,8 @@
         "post_entry_high_time": "15:30",
         "post_entry_low_time": "09:45",
         "first_trigger_time": null,
-        "exit_price": 62.54,
-        "return_pct": 0.39,
+        "exit_price": 62.34,
+        "return_pct": 0.06,
         "high_before_low": false
       }
     },
@@ -4015,7 +4168,7 @@
           "low": 44.28,
           "close": 44.51,
           "vwap": 44.46,
-          "vol": 14
+          "vol": 10
         },
         {
           "time": "09:15",
@@ -4023,7 +4176,7 @@
           "high": 44.6,
           "low": 44.47,
           "close": 44.51,
-          "vwap": 44.48,
+          "vwap": 44.49,
           "vol": 10
         },
         {
@@ -4032,7 +4185,7 @@
           "high": 44.67,
           "low": 44.51,
           "close": 44.65,
-          "vwap": 44.52,
+          "vwap": 44.53,
           "vol": 10
         },
         {
@@ -4041,7 +4194,7 @@
           "high": 44.7,
           "low": 44.64,
           "close": 44.69,
-          "vwap": 44.54,
+          "vwap": 44.55,
           "vol": 10
         },
         {
@@ -4050,7 +4203,7 @@
           "high": 44.73,
           "low": 44.6,
           "close": 44.71,
-          "vwap": 44.56,
+          "vwap": 44.57,
           "vol": 10
         },
         {
@@ -4059,7 +4212,7 @@
           "high": 44.72,
           "low": 44.66,
           "close": 44.68,
-          "vwap": 44.57,
+          "vwap": 44.58,
           "vol": 10
         },
         {
@@ -4068,7 +4221,7 @@
           "high": 44.72,
           "low": 44.66,
           "close": 44.72,
-          "vwap": 44.58,
+          "vwap": 44.6,
           "vol": 10
         },
         {
@@ -4077,7 +4230,7 @@
           "high": 44.74,
           "low": 44.7,
           "close": 44.71,
-          "vwap": 44.59,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4086,7 +4239,7 @@
           "high": 44.72,
           "low": 44.6,
           "close": 44.61,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4095,7 +4248,7 @@
           "high": 44.61,
           "low": 44.56,
           "close": 44.58,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4104,7 +4257,7 @@
           "high": 44.6,
           "low": 44.55,
           "close": 44.58,
-          "vwap": 44.59,
+          "vwap": 44.6,
           "vol": 10
         },
         {
@@ -4113,7 +4266,7 @@
           "high": 44.65,
           "low": 44.58,
           "close": 44.6,
-          "vwap": 44.59,
+          "vwap": 44.6,
           "vol": 10
         },
         {
@@ -4131,7 +4284,7 @@
           "high": 44.67,
           "low": 44.6,
           "close": 44.67,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4140,7 +4293,7 @@
           "high": 44.69,
           "low": 44.65,
           "close": 44.65,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4149,7 +4302,7 @@
           "high": 44.69,
           "low": 44.66,
           "close": 44.66,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4158,7 +4311,7 @@
           "high": 44.71,
           "low": 44.65,
           "close": 44.7,
-          "vwap": 44.6,
+          "vwap": 44.61,
           "vol": 10
         },
         {
@@ -4176,7 +4329,7 @@
           "high": 44.74,
           "low": 44.69,
           "close": 44.73,
-          "vwap": 44.61,
+          "vwap": 44.62,
           "vol": 10
         },
         {
@@ -4185,7 +4338,7 @@
           "high": 44.82,
           "low": 44.72,
           "close": 44.8,
-          "vwap": 44.63,
+          "vwap": 44.64,
           "vol": 10
         },
         {
@@ -4194,7 +4347,7 @@
           "high": 44.81,
           "low": 44.76,
           "close": 44.76,
-          "vwap": 44.63,
+          "vwap": 44.64,
           "vol": 10
         },
         {
@@ -4203,7 +4356,7 @@
           "high": 44.78,
           "low": 44.71,
           "close": 44.75,
-          "vwap": 44.64,
+          "vwap": 44.65,
           "vol": 10
         },
         {
@@ -4212,7 +4365,7 @@
           "high": 44.83,
           "low": 44.69,
           "close": 44.83,
-          "vwap": 44.65,
+          "vwap": 44.66,
           "vol": 10
         },
         {
@@ -4230,7 +4383,7 @@
           "high": 44.85,
           "low": 44.79,
           "close": 44.83,
-          "vwap": 44.68,
+          "vwap": 44.69,
           "vol": 10
         },
         {
@@ -4239,7 +4392,7 @@
           "high": 44.87,
           "low": 44.81,
           "close": 44.81,
-          "vwap": 44.69,
+          "vwap": 44.7,
           "vol": 10
         },
         {
@@ -4248,7 +4401,7 @@
           "high": 44.83,
           "low": 44.49,
           "close": 44.49,
-          "vwap": 44.67,
+          "vwap": 44.68,
           "vol": 32
         },
         {
@@ -4257,7 +4410,7 @@
           "high": 44.78,
           "low": 44.47,
           "close": 44.76,
-          "vwap": 44.67,
+          "vwap": 44.68,
           "vol": 19
         },
         {
@@ -4266,7 +4419,7 @@
           "high": 44.85,
           "low": 44.69,
           "close": 44.76,
-          "vwap": 44.68,
+          "vwap": 44.69,
           "vol": 18
         },
         {
@@ -4275,7 +4428,7 @@
           "high": 44.86,
           "low": 44.76,
           "close": 44.86,
-          "vwap": 44.69,
+          "vwap": 44.7,
           "vol": 17
         },
         {
@@ -4284,7 +4437,7 @@
           "high": 44.9,
           "low": 44.78,
           "close": 44.78,
-          "vwap": 44.7,
+          "vwap": 44.71,
           "vol": 16
         },
         {
@@ -4293,22 +4446,31 @@
           "high": 44.88,
           "low": 44.77,
           "close": 44.87,
-          "vwap": 44.71,
+          "vwap": 44.72,
           "vol": 24
         },
         {
           "time": "17:00",
           "open": 44.87,
-          "high": 44.87,
-          "low": 44.87,
+          "high": 44.88,
+          "low": 44.81,
           "close": 44.87,
-          "vwap": 44.71,
-          "vol": 10
+          "vwap": 44.73,
+          "vol": 36
+        },
+        {
+          "time": "17:15",
+          "open": 44.86,
+          "high": 44.86,
+          "low": 44.78,
+          "close": 44.78,
+          "vwap": 44.74,
+          "vol": 33
         }
       ],
-      "vwap": 44.71,
-      "latest_price": 44.87,
-      "last_updated_cet": "17:00",
+      "vwap": 44.74,
+      "latest_price": 44.78,
+      "last_updated_cet": "17:15",
       "entry_price": 43.74,
       "target_price": 44.61,
       "stop_loss": 43.22,
@@ -4334,7 +4496,7 @@
       "low": 3.43,
       "close": 3.45,
       "vwap": 3.45,
-      "vol": 27
+      "vol": 12
     },
     {
       "time": "09:15",
@@ -4370,7 +4532,7 @@
       "low": 3.45,
       "close": 3.46,
       "vwap": 3.45,
-      "vol": 13
+      "vol": 12
     },
     {
       "time": "10:15",
@@ -4388,7 +4550,7 @@
       "low": 3.45,
       "close": 3.46,
       "vwap": 3.45,
-      "vol": 26
+      "vol": 23
     },
     {
       "time": "10:45",
@@ -4451,7 +4613,7 @@
       "low": 3.45,
       "close": 3.46,
       "vwap": 3.45,
-      "vol": 11
+      "vol": 10
     },
     {
       "time": "12:30",
@@ -4496,7 +4658,7 @@
       "low": 3.43,
       "close": 3.43,
       "vwap": 3.45,
-      "vol": 23
+      "vol": 20
     },
     {
       "time": "13:45",
@@ -4514,7 +4676,7 @@
       "low": 3.43,
       "close": 3.45,
       "vwap": 3.45,
-      "vol": 22
+      "vol": 19
     },
     {
       "time": "14:15",
@@ -4532,7 +4694,7 @@
       "low": 3.44,
       "close": 3.45,
       "vwap": 3.45,
-      "vol": 20
+      "vol": 16
     },
     {
       "time": "14:45",
@@ -4541,7 +4703,7 @@
       "low": 3.44,
       "close": 3.45,
       "vwap": 3.45,
-      "vol": 12
+      "vol": 10
     },
     {
       "time": "15:00",
@@ -4577,7 +4739,7 @@
       "low": 3.44,
       "close": 3.45,
       "vwap": 3.45,
-      "vol": 11
+      "vol": 10
     },
     {
       "time": "16:00",
@@ -4614,37 +4776,70 @@
       "close": 3.47,
       "vwap": 3.45,
       "vol": 10
+    },
+    {
+      "time": "17:00",
+      "open": 3.47,
+      "high": 3.48,
+      "low": 3.47,
+      "close": 3.48,
+      "vwap": 3.45,
+      "vol": 25
+    },
+    {
+      "time": "17:15",
+      "open": 3.48,
+      "high": 3.48,
+      "low": 3.47,
+      "close": 3.48,
+      "vwap": 3.45,
+      "vol": 45
     }
   ],
-  "latest_price": 3.47,
-  "last_updated_cet": "16:45",
+  "latest_price": 3.48,
+  "last_updated_cet": "17:15",
   "intraday_verification": {
-    "outcome": "SCRATCH / CLOSE",
+    "outcome": "WIN",
     "entry_time": "09:15",
-    "post_entry_high": 3.47,
+    "post_entry_high": 3.48,
     "post_entry_low": 3.43,
-    "post_entry_high_time": "16:30",
+    "post_entry_high_time": "17:15",
     "post_entry_low_time": "13:45",
-    "first_trigger_time": null,
-    "exit_price": 3.47,
-    "return_pct": 1.76,
-    "high_before_low": false
+    "first_trigger_time": "17:00",
+    "exit_price": 3.48,
+    "return_pct": 2.05,
+    "high_before_low": true
   },
   "progress": {
     "ticker": "TEF.MC",
-    "current_price": 3.47,
-    "exit_price": 3.47,
-    "as_of_cet": "16:45 CET",
-    "data_age_min": 15,
-    "pnl_pct": 1.76,
-    "to_target_pct": 0.29,
-    "to_stop_pct": 3.17,
-    "progress_ratio": 0.9167,
+    "current_price": 3.48,
+    "exit_price": 3.48,
+    "as_of_cet": "17:15 CET",
+    "data_age_min": 45,
+    "pnl_pct": 2.05,
+    "to_target_pct": 0.0,
+    "to_stop_pct": 3.45,
+    "progress_ratio": 1.0,
     "entry_ratio": 0.4167,
     "entry_price": 3.41,
     "target_price": 3.48,
     "stop_loss": 3.36,
-    "status": "LOOPT",
-    "plain_text_nl": "Ruim halverwege het doel. Gaat goed."
-  }
+    "status": "DOEL_BEREIKT",
+    "plain_text_nl": "Doel gehaald: +2.05% winst (oefenspel)."
+  },
+  "evaluation": {
+    "outcome": "WIN",
+    "entry_time": "09:15",
+    "post_entry_high": 3.48,
+    "post_entry_low": 3.43,
+    "post_entry_high_time": "17:15",
+    "post_entry_low_time": "13:45",
+    "first_trigger_time": "17:00",
+    "exit_price": 3.48,
+    "return_pct": 2.05,
+    "high_before_low": true,
+    "has_1715_bar": true,
+    "has_closing_bar": true
+  },
+  "evaluation_frozen_at": "2026-11-13T18:15:08.146699+01:00"
 }
