@@ -4815,7 +4815,7 @@
     "current_price": 3.48,
     "exit_price": 3.48,
     "as_of_cet": "17:15 CET",
-    "data_age_min": 465,
+    "data_age_min": 525,
     "pnl_pct": 2.05,
     "to_target_pct": 0.0,
     "to_stop_pct": 3.45,
