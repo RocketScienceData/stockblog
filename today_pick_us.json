@@ -9,7 +9,7 @@
   "entry_price": 532.49,
   "target_price": 543.14,
   "stop_loss": 507.12,
-  "vwap": 513.27,
+  "vwap": 512.65,
   "orb_15m_high": 519.49,
   "orb_15m_low": 500.25,
   "sma_20": 519.35,
@@ -505,17 +505,53 @@
         },
         {
           "time": "18:15",
-          "open": 508.36,
-          "high": 508.36,
-          "low": 508.36,
-          "close": 508.36,
-          "vwap": 513.27,
+          "open": 508.59,
+          "high": 508.93,
+          "low": 505.17,
+          "close": 506.3,
+          "vwap": 513.07,
+          "vol": 63
+        },
+        {
+          "time": "18:30",
+          "open": 506.28,
+          "high": 509.0,
+          "low": 506.11,
+          "close": 508.05,
+          "vwap": 512.93,
+          "vol": 56
+        },
+        {
+          "time": "18:45",
+          "open": 507.99,
+          "high": 509.58,
+          "low": 507.07,
+          "close": 508.42,
+          "vwap": 512.81,
+          "vol": 59
+        },
+        {
+          "time": "19:00",
+          "open": 508.42,
+          "high": 508.5,
+          "low": 505.82,
+          "close": 506.13,
+          "vwap": 512.65,
+          "vol": 59
+        },
+        {
+          "time": "19:15",
+          "open": 506.14,
+          "high": 506.14,
+          "low": 506.14,
+          "close": 506.14,
+          "vwap": 512.65,
           "vol": 10
         }
       ],
-      "vwap": 513.27,
-      "latest_price": 508.36,
-      "last_updated_cet": "18:15",
+      "vwap": 512.65,
+      "latest_price": 506.14,
+      "last_updated_cet": "19:15",
       "entry_price": 525.15,
       "target_price": 535.65,
       "stop_loss": 483.45,
@@ -527,8 +563,8 @@
         "post_entry_high_time": "15:45",
         "post_entry_low_time": "16:30",
         "first_trigger_time": null,
-        "exit_price": 508.36,
-        "return_pct": -3.2,
+        "exit_price": 506.14,
+        "return_pct": -3.62,
         "high_before_low": true
       }
     },
@@ -645,17 +681,53 @@
         },
         {
           "time": "18:15",
-          "open": 334.72,
-          "high": 334.72,
-          "low": 334.72,
-          "close": 334.72,
-          "vwap": 332.74,
+          "open": 334.77,
+          "high": 334.92,
+          "low": 333.09,
+          "close": 333.46,
+          "vwap": 332.78,
+          "vol": 33
+        },
+        {
+          "time": "18:30",
+          "open": 333.45,
+          "high": 334.15,
+          "low": 333.27,
+          "close": 333.66,
+          "vwap": 332.8,
+          "vol": 31
+        },
+        {
+          "time": "18:45",
+          "open": 333.64,
+          "high": 333.99,
+          "low": 332.24,
+          "close": 332.72,
+          "vwap": 332.81,
+          "vol": 43
+        },
+        {
+          "time": "19:00",
+          "open": 332.66,
+          "high": 332.68,
+          "low": 331.82,
+          "close": 332.39,
+          "vwap": 332.79,
+          "vol": 49
+        },
+        {
+          "time": "19:15",
+          "open": 332.38,
+          "high": 332.38,
+          "low": 332.38,
+          "close": 332.38,
+          "vwap": 332.79,
           "vol": 10
         }
       ],
-      "vwap": 332.74,
-      "latest_price": 334.72,
-      "last_updated_cet": "18:15",
+      "vwap": 332.79,
+      "latest_price": 332.38,
+      "last_updated_cet": "19:15",
       "entry_price": 349.11,
       "target_price": 356.09,
       "stop_loss": 330.89,
@@ -775,16 +847,52 @@
     },
     {
       "time": "18:15",
-      "open": 508.36,
-      "high": 508.36,
-      "low": 508.36,
-      "close": 508.36,
-      "vwap": 513.27,
+      "open": 508.59,
+      "high": 508.93,
+      "low": 505.17,
+      "close": 506.3,
+      "vwap": 513.07,
+      "vol": 63
+    },
+    {
+      "time": "18:30",
+      "open": 506.28,
+      "high": 509.0,
+      "low": 506.11,
+      "close": 508.05,
+      "vwap": 512.93,
+      "vol": 56
+    },
+    {
+      "time": "18:45",
+      "open": 507.99,
+      "high": 509.58,
+      "low": 507.07,
+      "close": 508.42,
+      "vwap": 512.81,
+      "vol": 59
+    },
+    {
+      "time": "19:00",
+      "open": 508.42,
+      "high": 508.5,
+      "low": 505.82,
+      "close": 506.13,
+      "vwap": 512.65,
+      "vol": 59
+    },
+    {
+      "time": "19:15",
+      "open": 506.14,
+      "high": 506.14,
+      "low": 506.14,
+      "close": 506.14,
+      "vwap": 512.65,
       "vol": 10
     }
   ],
-  "latest_price": 508.36,
-  "last_updated_cet": "18:15",
+  "latest_price": 506.14,
+  "last_updated_cet": "19:15",
   "intraday_verification": {
     "outcome": "LOSS_STOPPED",
     "entry_time": "15:45",
@@ -799,9 +907,9 @@
   },
   "progress": {
     "ticker": "AMD",
-    "current_price": 508.36,
+    "current_price": 506.14,
     "exit_price": 507.12,
-    "as_of_cet": "18:15 CET",
+    "as_of_cet": "19:15 CET",
     "data_age_min": 8625,
     "pnl_pct": -4.76,
     "to_target_pct": 7.1,
