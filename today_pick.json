@@ -4830,7 +4830,7 @@
     "current_price": 125.45,
     "exit_price": 125.73,
     "as_of_cet": "17:15 CET",
-    "data_age_min": 645,
+    "data_age_min": 705,
     "pnl_pct": -1.66,
     "to_target_pct": 3.72,
     "to_stop_pct": 0.0,
