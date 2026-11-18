@@ -114,7 +114,7 @@
     <header>
         <div>
             <h1>🚀 RocketBidder — Alpaca Positie & Profit Analyse</h1>
-            <div class="subtitle">Bron: dairycampus2.wurnet.nl (Docker: alpacca-worker & alpacca-forecast) • Gegenereerd op: 18-11-2026 14:44:30</div>
+            <div class="subtitle">Bron: dairycampus2.wurnet.nl (Docker: alpacca-worker & alpacca-forecast) • Gegenereerd op: 18-11-2026 14:49:30</div>
         </div>
         <div style="text-align: right;">
             <div style="font-size: 13px; color: var(--muted);">Strategie Config (v2.9b)</div>
@@ -190,17 +190,31 @@
             <tbody>
                 
             <tr>
-                <td><span class="badge-ticker">NVDA</span></td>
-                <td class="pos"><strong>+0.333%</strong></td>
-                <td><span class="badge-win">BUY ALLOWED (&ge;+0.03%)</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:38:00</td>
-            </tr>
-            
-            <tr>
                 <td><span class="badge-ticker">SOXX</span></td>
                 <td class="pos"><strong>+0.064%</strong></td>
                 <td><span class="badge-win">BUY ALLOWED (&ge;+0.03%)</span></td>
                 <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:39:00</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge-ticker">TSLA</span></td>
+                <td class="neg"><strong>-0.068%</strong></td>
+                <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:44:00</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge-ticker">NVDA</span></td>
+                <td class="neg"><strong>-0.126%</strong></td>
+                <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:44:00</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge-ticker">NBIS</span></td>
+                <td class="neg"><strong>-0.143%</strong></td>
+                <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:43:00</td>
             </tr>
             
             <tr>
@@ -218,17 +232,17 @@
             </tr>
             
             <tr>
-                <td><span class="badge-ticker">TSLA</span></td>
-                <td class="neg"><strong>-0.392%</strong></td>
+                <td><span class="badge-ticker">SMH</span></td>
+                <td class="neg"><strong>-0.505%</strong></td>
                 <td><span class="badge-loss">CRASH BLOCK</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:43:00</td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:47:00</td>
             </tr>
             
             <tr>
-                <td><span class="badge-ticker">NBIS</span></td>
-                <td class="neg"><strong>-0.473%</strong></td>
+                <td><span class="badge-ticker">AVGO</span></td>
+                <td class="neg"><strong>-0.513%</strong></td>
                 <td><span class="badge-loss">CRASH BLOCK</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:37:00</td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:45:00</td>
             </tr>
             
             <tr>
@@ -239,24 +253,17 @@
             </tr>
             
             <tr>
-                <td><span class="badge-ticker">COHR</span></td>
-                <td class="neg"><strong>-1.728%</strong></td>
-                <td><span class="badge-loss">CRASH BLOCK</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:33:00</td>
-            </tr>
-            
-            <tr>
-                <td><span class="badge-ticker">AVGO</span></td>
-                <td class="neg"><strong>-1.758%</strong></td>
-                <td><span class="badge-loss">CRASH BLOCK</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:43:00</td>
-            </tr>
-            
-            <tr>
                 <td><span class="badge-ticker">DRAM</span></td>
                 <td class="neg"><strong>-1.842%</strong></td>
                 <td><span class="badge-loss">CRASH BLOCK</span></td>
                 <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:38:00</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge-ticker">CRWV</span></td>
+                <td class="neg"><strong>-2.109%</strong></td>
+                <td><span class="badge-loss">CRASH BLOCK</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-18 13:44:00</td>
             </tr>
             
             </tbody>
@@ -387,16 +394,6 @@
 
     <h2>🖥️ Live Worker Container Logs (Laatste 40 regels van Eltorro)</h2>
     <div class="table-wrap" style="padding: 16px; background: #090d16; font-family: monospace; font-size: 12px; color: #38bdf8; overflow-x: auto; white-space: pre-wrap; line-height: 1.5;">
-[14:25:39] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 111 (+2 ≈ 4/min)
-[14:26:09] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 115 (+4 ≈ 8/min)
-[14:26:39] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 117 (+2 ≈ 4/min)
-🔄 Universe geüpdatet (Top-30 Liquid Bulls, &gt;=$10, excl. 2x/3x ETFs): 30 -&gt; 30 symbols (nieuw: 2, eraf: 2, behouden m.b.t. posities: 0) | Top-10: NVDA, SPCX, SOXX, SNDK, TSLA, AVGO, CRWV, NBIS, MRVL, SMH
-📡 WS unsubscribe: PG, T (2 sym)
-📡 WS subscribe: DRAM, LITE (2 sym)
-📡 WebSocket Subscribed: 28/30 live Trade-streams ACTIEF!
-📡 WebSocket Subscribed: 30/30 live Trade-streams ACTIEF!
-📊 [TA WARM-START] 2/2 symbols geladen met 1m OHLCV + SQLite WAL (REST fetch: 2)
-[14:27:09] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 117 (+0 ≈ 0/min)
 [14:27:39] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 119 (+2 ≈ 4/min)
 [14:28:09] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 119 (+0 ≈ 0/min)
 [14:28:39] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 119 (+0 ≈ 0/min)
@@ -437,6 +434,16 @@
 [14:43:10] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 172 (+15 ≈ 30/min)
 [14:43:40] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 179 (+7 ≈ 14/min)
 [14:44:11] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 189 (+10 ≈ 20/min)
+[14:44:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 197 (+8 ≈ 16/min)
+[14:45:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 201 (+4 ≈ 8/min)
+[14:45:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 203 (+2 ≈ 4/min)
+[14:46:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 207 (+4 ≈ 8/min)
+[14:46:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 207 (+0 ≈ 0/min)
+[14:47:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 207 (+0 ≈ 0/min)
+[14:47:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 208 (+1 ≈ 2/min)
+[14:48:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 209 (+1 ≈ 2/min)
+[14:48:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 210 (+1 ≈ 2/min)
+[14:49:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 211 (+1 ≈ 2/min)
     </div>
 </div>
 </body>
