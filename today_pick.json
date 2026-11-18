@@ -4823,7 +4823,7 @@
     "current_price": 60.28,
     "exit_price": 60.21,
     "as_of_cet": "17:15 CET",
-    "data_age_min": 405,
+    "data_age_min": 465,
     "pnl_pct": -1.2,
     "to_target_pct": 3.24,
     "to_stop_pct": 0.0,
