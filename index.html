@@ -114,7 +114,7 @@
     <header>
         <div>
             <h1>🚀 RocketBidder — Alpaca Positie & Profit Analyse</h1>
-            <div class="subtitle">Bron: dairycampus2.wurnet.nl (Docker: alpacca-worker & alpacca-forecast) • Gegenereerd op: 23-11-2026 22:19:01</div>
+            <div class="subtitle">Bron: dairycampus2.wurnet.nl (Docker: alpacca-worker & alpacca-forecast) • Gegenereerd op: 23-11-2026 22:24:08</div>
         </div>
         <div style="text-align: right;">
             <div style="font-size: 13px; color: var(--muted);">Strategie Config (v2.9b)</div>
@@ -197,17 +197,24 @@
             </tr>
             
             <tr>
-                <td><span class="badge-ticker">SOXX</span></td>
-                <td class="pos"><strong>+0.041%</strong></td>
-                <td><span class="badge-win">BUY ALLOWED (&ge;+0.03%)</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-23 21:15:00</td>
+                <td><span class="badge-ticker">CSCO</span></td>
+                <td class="neg"><strong>-0.109%</strong></td>
+                <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-23 21:20:00</td>
             </tr>
             
             <tr>
-                <td><span class="badge-ticker">QQQ</span></td>
-                <td class="neg"><strong>-0.079%</strong></td>
+                <td><span class="badge-ticker">SOXX</span></td>
+                <td class="neg"><strong>-0.168%</strong></td>
                 <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
-                <td style="color: var(--muted); font-size: 13px;">2026-11-23 21:10:00</td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-23 21:19:00</td>
+            </tr>
+            
+            <tr>
+                <td><span class="badge-ticker">AMD</span></td>
+                <td class="neg"><strong>-0.306%</strong></td>
+                <td><span style="color:var(--muted); font-size:12px;">BLOCKED (&lt;0.03%)</span></td>
+                <td style="color: var(--muted); font-size: 13px;">2026-11-23 21:18:00</td>
             </tr>
             
             </tbody>
@@ -828,16 +835,6 @@
 
     <h2>🖥️ Live Worker Container Logs (Laatste 40 regels van Eltorro)</h2>
     <div class="table-wrap" style="padding: 16px; background: #090d16; font-family: monospace; font-size: 12px; color: #38bdf8; overflow-x: auto; white-space: pre-wrap; line-height: 1.5;">
-[21:59:43] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,740,878 (+0 ≈ 0/min)
-[22:00:14] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,066 (+188 ≈ 376/min)
-[22:00:44] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,066 (+0 ≈ 0/min)
-[22:01:15] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,068 (+2 ≈ 4/min)
-[22:01:46] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,075 (+7 ≈ 14/min)
-🔄 Universe geüpdatet (Top-30 Liquid Bulls, &gt;=$10, excl. 2x/3x ETFs): 30 -&gt; 30 symbols (nieuw: 2, eraf: 2, behouden m.b.t. posities: 0) | Top-10: MU, TSLA, INTC, AAPL, META, PLTR, SCHD, WMT, MCHP, CSCO
-📡 WS unsubscribe: NOW, OTLY (2 sym)
-📡 WebSocket Subscribed: 28/30 live Trade-streams ACTIEF!
-📡 WS subscribe: LLY, AVGO (2 sym)
-📡 WebSocket Subscribed: 30/30 live Trade-streams ACTIEF!
 📊 [TA WARM-START] 2/2 symbols geladen met 1m OHLCV + SQLite WAL (REST fetch: 2)
 [22:02:17] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,079 (+4 ≈ 8/min)
 [22:02:49] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,081 (+2 ≈ 4/min)
@@ -878,6 +875,16 @@
 [22:17:40] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,125 (+0 ≈ 0/min)
 [22:18:10] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,126 (+1 ≈ 2/min)
 [22:18:41] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,126 (+0 ≈ 0/min)
+[22:19:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,128 (+2 ≈ 4/min)
+[22:19:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,130 (+2 ≈ 4/min)
+[22:20:12] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,133 (+3 ≈ 6/min)
+[22:20:42] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,134 (+1 ≈ 2/min)
+[22:21:15] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,138 (+4 ≈ 8/min)
+[22:21:46] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,147 (+9 ≈ 18/min)
+[22:22:16] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,147 (+0 ≈ 0/min)
+[22:22:46] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,147 (+0 ≈ 0/min)
+[22:23:16] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,147 (+0 ≈ 0/min)
+[22:23:47] 💓 HEARTBEAT | 🟢 LIVE | RTH: GESLOTEN | LLM: RISK_OFF (85%) | 🎰 SLOTS [0/1]: 0 open (100% CASH) | Universe: 30 sym (TA: 30/30) | ⚡ Ticks totaal: 1,741,147 (+0 ≈ 0/min)
     </div>
 </div>
 </body>
